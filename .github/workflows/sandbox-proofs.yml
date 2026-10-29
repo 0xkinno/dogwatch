@@ -1,0 +1,92 @@
+name: sandbox-proofs
+# Runs the OpenShell sandbox proofs (P1 on the running sandbox, P2, P4, P5, the advisor flow) on a GitHub Actions
+# ubuntu-24.04 runner, because the build machine's WSL kernel (5.10) has no Landlock ABI 3. Manual trigger only.
+# Needs the repository secret NVIDIA_API_KEY. The host is labelled "GitHub Actions ubuntu-24.04 runner", not the seafarer's machine.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sandbox-proofs:
+    name: sandbox-proofs
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+      MODEL_ROUTE: nvidia_build
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Host check (kernel and Landlock)
+        run: |
+          mkdir -p evidence/boundary
+          uname -r | tee evidence/boundary/host-kernel.txt
+          cat /sys/kernel/security/lsm | tee evidence/boundary/host-lsm.txt
+          echo
+          cat > evidence/boundary/host.json <<EOF
+          {"host": "GitHub Actions ubuntu-24.04 runner", "kernel": "$(uname -r)", "lsm": "$(cat /sys/kernel/security/lsm)",
+           "run_url": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}
+          EOF
+          if ! grep -q landlock /sys/kernel/security/lsm; then
+            echo "FAIL: the Landlock LSM is not enabled on this runner, OpenShell cannot start a sandbox here."; exit 1
+          fi
+          [ -n "$NVIDIA_API_KEY" ] || { echo "FAIL: add the repository secret NVIDIA_API_KEY"; exit 1; }
+          echo "Landlock present on kernel $(uname -r)"
+
+      - name: Docker Engine 28 or newer
+        run: |
+          v=$(docker version --format '{{.Server.Version}}'); echo "docker $v"
+          if [ "${v%%.*}" -lt 28 ]; then curl -fsSL https://get.docker.com | sudo sh; sudo usermod -aG docker "$USER"; sudo chmod 666 /var/run/docker.sock; docker version --format '{{.Server.Version}}'; fi
+
+      - name: Install OpenShell 0.1.6 (official installer)
+        run: |
+          curl -fsSL https://raw.githubusercontent.com/NVIDIA/OpenShell/main/install.sh -o /tmp/install.sh
+          sudo OPENSHELL_VERSION=v0.1.6 sh /tmp/install.sh || sudo sh /tmp/install.sh
+          openshell --version; openshell-prover --version
+
+      - name: Gateway, Seal, provider, sandbox
+        run: bash openshell/scripts/runner-up.sh
+
+      - name: P1 prover on the running sandbox's effective policy and the attack proposals
+        run: bash openshell/scripts/prove.sh
+
+      - name: Canaries
+        run: |
+          python3 eval/canary.py evidence/boundary/canary-unsandboxed.jsonl 9098 &
+          python3 eval/canary.py evidence/boundary/canary-sandboxed.jsonl 9099 &
+          sleep 2
+
+      - name: Install python deps for the host-side scripts
+        run: pip install httpx openai
+
+      - name: P5 credential placeholder
+        run: python3 eval/sandbox_proofs.py p5
+
+      - name: P2 injection, without and with the sandbox
+        run: python3 eval/sandbox_proofs.py p2
+
+      - name: Advisor flow
+        run: python3 eval/sandbox_proofs.py advisor
+
+      - name: P4 fail closed (kills the Seal)
+        run: python3 eval/sandbox_proofs.py p4
+
+      - name: Gateway and sandbox logs (secrets are never in them)
+        if: always()
+        run: |
+          mkdir -p evidence/boundary
+          sed 's/\x1b\[[0-9;]*m//g' ~/.local/state/dogwatch/gateway.log | tail -300 > evidence/boundary/gateway-tail.log || true
+          openshell logs dogwatch --since 90m 2>&1 | sed 's/\x1b\[[0-9;]*m//g' | tail -400 > evidence/boundary/sandbox-logs-tail.log || true
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sandbox-evidence
+          path: |
+            evidence/
+            eval/results/p2_injection.json
+            eval/results/p5_credential.json
+            eval/results/p4_fail_closed.json
+            eval/results/advisor_flow.json
+          if-no-files-found: warn

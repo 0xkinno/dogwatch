@@ -12,6 +12,8 @@ mkdir -p evidence/prover
 awk '/^network_middlewares:/{skip=1; next} /^[a-z_]+:/{skip=0} !skip' openshell/policy/dogwatch.yaml > evidence/prover/candidate.yaml
 if [ -d /proc ] && openshell sandbox get dogwatch --policy-only > evidence/prover/effective.yaml 2>/dev/null; then
   openshell-prover check evidence/prover/effective.yaml --boundary openshell/policy/boundary.yaml | tee evidence/prover/effective.result.txt
+  awk '/^network_middlewares:/{skip=1; next} /^[a-z_]+:/{skip=0} !skip' evidence/prover/effective.yaml > evidence/prover/effective.stripped.yaml
+  openshell-prover check evidence/prover/effective.stripped.yaml --boundary openshell/policy/boundary.yaml | tee evidence/prover/effective-stripped.result.txt
 else
   echo "no running sandbox: effective export not available, declared candidate checked instead" | tee -a evidence/prover/RUN.txt
 fi

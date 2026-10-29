@@ -60,8 +60,12 @@ for (const vp of VIEWPORTS) {
         if (vp.width < 768) {
           await expect(page.locator(".nav .menu-btn")).toBeVisible();
           await expect(page.locator(".nav .cta")).toBeHidden();
-        } else {
+        } else if (vp.width >= 1100) {
           await expect(page.locator(".nav .menu-btn")).toBeHidden();
+        } else {
+          // 768 to 1099: "For judges" lives in the menu, the other links stay inline
+          await expect(page.locator(".nav .menu-btn")).toBeVisible();
+          await expect(page.locator(".nav .nav-links li.overflow")).toBeHidden();
         }
 
         const axe = await new AxeBuilder({ page }).analyze();
