@@ -75,7 +75,7 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [ ] Hermes tier: skills loaded in `nemohermes` (only if the probe passed; otherwise marked designed, not run)
 
 ## Phase 7. Proof campaign
-- [ ] `eval/cases/prereg.json` committed and its SHA-256 recorded before any run
+- [x] `eval/cases/prereg.json` committed and its SHA-256 recorded before any run
 - [ ] P1 boundary proven
 - [ ] P2 injection inbox with and without the sandbox
 - [ ] P3 encoding corpus: literal guard vs Seal, both directions

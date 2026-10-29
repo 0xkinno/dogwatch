@@ -1,0 +1,762 @@
+[
+ {
+  "id": "C001",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-14",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 350
+ },
+ {
+  "id": "C002",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-13",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 351
+ },
+ {
+  "id": "C003",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-12",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 352
+ },
+ {
+  "id": "C004",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-11",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 353
+ },
+ {
+  "id": "C005",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-10",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 354
+ },
+ {
+  "id": "C006",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-09",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 355
+ },
+ {
+  "id": "C007",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-08",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 356
+ },
+ {
+  "id": "C008",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-07",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 357
+ },
+ {
+  "id": "C009",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-06",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 358
+ },
+ {
+  "id": "C010",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-05",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 359
+ },
+ {
+  "id": "C011",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-04",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 360
+ },
+ {
+  "id": "C012",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-03",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 361
+ },
+ {
+  "id": "C013",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-02",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 362
+ },
+ {
+  "id": "C014",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-02-01",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 363
+ },
+ {
+  "id": "C015",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-31",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 364
+ },
+ {
+  "id": "C016",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-30",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 365
+ },
+ {
+  "id": "C017",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-29",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 366
+ },
+ {
+  "id": "C018",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-28",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 367
+ },
+ {
+  "id": "C019",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-27",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 368
+ },
+ {
+  "id": "C020",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-26",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 369
+ },
+ {
+  "id": "C021",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-25",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 370
+ },
+ {
+  "id": "C022",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-24",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 371
+ },
+ {
+  "id": "C023",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-23",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 372
+ },
+ {
+  "id": "C024",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-22",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 373
+ },
+ {
+  "id": "C025",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-21",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 374
+ },
+ {
+  "id": "C026",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-01-20",
+    "sign_off": "2027-01-29"
+   }
+  ],
+  "inclusive_days": 375
+ },
+ {
+  "id": "C027",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-23",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 78
+ },
+ {
+  "id": "C028",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-22",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 79
+ },
+ {
+  "id": "C029",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-21",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 80
+ },
+ {
+  "id": "C030",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-20",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 81
+ },
+ {
+  "id": "C031",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-19",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 82
+ },
+ {
+  "id": "C032",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-18",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 83
+ },
+ {
+  "id": "C033",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-17",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 84
+ },
+ {
+  "id": "C034",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-16",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 85
+ },
+ {
+  "id": "C035",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-15",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 86
+ },
+ {
+  "id": "C036",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-14",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 87
+ },
+ {
+  "id": "C037",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-13",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 88
+ },
+ {
+  "id": "C038",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-12",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 89
+ },
+ {
+  "id": "C039",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-11",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 90
+ },
+ {
+  "id": "C040",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-10",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 91
+ },
+ {
+  "id": "C041",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-09",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 92
+ },
+ {
+  "id": "C042",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-08",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 93
+ },
+ {
+  "id": "C043",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-07",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 94
+ },
+ {
+  "id": "C044",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-06",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 95
+ },
+ {
+  "id": "C045",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-05",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 96
+ },
+ {
+  "id": "C046",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-04",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 97
+ },
+ {
+  "id": "C047",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-03",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 98
+ },
+ {
+  "id": "C048",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-02",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 99
+ },
+ {
+  "id": "C049",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-11-01",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 100
+ },
+ {
+  "id": "C050",
+  "rule": "UK-SS-3M-6M",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2026-10-31",
+    "sign_off": "2027-02-08"
+   }
+  ],
+  "inclusive_days": 101
+ },
+ {
+  "id": "C051",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2025-03-31",
+    "sign_off": "2025-09-17"
+   },
+   {
+    "sign_on": "2025-09-13",
+    "sign_off": "2026-03-17"
+   }
+  ],
+  "inclusive_days": null
+ },
+ {
+  "id": "C052",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2025-03-31",
+    "sign_off": "2025-09-17"
+   },
+   {
+    "sign_on": "2025-09-14",
+    "sign_off": "2026-03-18"
+   }
+  ],
+  "inclusive_days": null
+ },
+ {
+  "id": "C053",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2025-03-31",
+    "sign_off": "2025-09-17"
+   },
+   {
+    "sign_on": "2025-09-15",
+    "sign_off": "2026-03-19"
+   }
+  ],
+  "inclusive_days": null
+ },
+ {
+  "id": "C054",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2025-03-31",
+    "sign_off": "2025-09-17"
+   },
+   {
+    "sign_on": "2025-09-16",
+    "sign_off": "2026-03-20"
+   }
+  ],
+  "inclusive_days": null
+ },
+ {
+  "id": "C055",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2025-03-31",
+    "sign_off": "2025-09-17"
+   },
+   {
+    "sign_on": "2025-09-17",
+    "sign_off": "2026-03-21"
+   }
+  ],
+  "inclusive_days": null
+ },
+ {
+  "id": "C056",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2025-03-31",
+    "sign_off": "2025-09-17"
+   },
+   {
+    "sign_on": "2025-09-18",
+    "sign_off": "2026-03-22"
+   }
+  ],
+  "inclusive_days": null
+ },
+ {
+  "id": "C057",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2025-03-31",
+    "sign_off": "2025-09-17"
+   },
+   {
+    "sign_on": "2025-09-19",
+    "sign_off": "2026-03-23"
+   }
+  ],
+  "inclusive_days": null
+ },
+ {
+  "id": "C058",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2025-03-31",
+    "sign_off": "2025-09-17"
+   },
+   {
+    "sign_on": "2025-09-20",
+    "sign_off": "2026-03-24"
+   }
+  ],
+  "inclusive_days": null
+ },
+ {
+  "id": "C059",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2025-03-31",
+    "sign_off": "2025-09-17"
+   },
+   {
+    "sign_on": "2025-09-21",
+    "sign_off": "2026-03-25"
+   }
+  ],
+  "inclusive_days": null
+ },
+ {
+  "id": "C060",
+  "rule": "AU-SS-360D-5Y",
+  "apply_date": "2027-03-01",
+  "entries": [
+   {
+    "sign_on": "2025-03-31",
+    "sign_off": "2025-09-17"
+   },
+   {
+    "sign_on": "2025-09-22",
+    "sign_off": "2026-03-26"
+   }
+  ],
+  "inclusive_days": null
+ }
+]

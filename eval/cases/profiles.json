@@ -1,0 +1,2051 @@
+[
+ {
+  "id": "P001",
+  "category": "boundary_end",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc0",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical0",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-07-29",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P002",
+  "category": "boundary_end",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc1",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical1",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-07-30",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P003",
+  "category": "boundary_end",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc2",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical2",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-07-31",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P004",
+  "category": "boundary_end",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc3",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical3",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-08-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P005",
+  "category": "boundary_end",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc4",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical4",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-08-02",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P006",
+  "category": "boundary_end",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc5",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical5",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-08-30",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P007",
+  "category": "boundary_start",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc0",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical0",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-01-30",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P008",
+  "category": "boundary_start",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc1",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical1",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-01-31",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P009",
+  "category": "boundary_start",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc2",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical2",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-02-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P010",
+  "category": "boundary_start",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc3",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical3",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-02-02",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P011",
+  "category": "travel_buffer",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc0",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical0",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-08-02",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ],
+   "travel_after": 0
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P012",
+  "category": "travel_buffer",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc1",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical1",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-08-02",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ],
+   "travel_after": 1
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P013",
+  "category": "travel_buffer",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc2",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical2",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-08-02",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ],
+   "travel_after": 3
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P014",
+  "category": "travel_buffer",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc3",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical3",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-08-02",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ],
+   "travel_after": 7
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P015",
+  "category": "travel_buffer_before",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc0",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2027-01-27",
+    "unread": false
+   },
+   {
+    "id": "medical0",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-01-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ],
+   "travel_before": 0
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P016",
+  "category": "travel_buffer_before",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc1",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2027-01-27",
+    "unread": false
+   },
+   {
+    "id": "medical1",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-01-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ],
+   "travel_before": 5
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P017",
+  "category": "leap_year",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc0",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2032-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical0",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-02-29",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2028-02-01",
+   "end": "2028-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P018",
+  "category": "leap_year",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc1",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2032-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical1",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-03-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2028-02-01",
+   "end": "2028-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P019",
+  "category": "leap_year",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc2",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2032-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical2",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-02-28",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-12-01",
+   "end": "2028-05-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P020",
+  "category": "leap_year",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc3",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2032-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical3",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-05-31",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-12-01",
+   "end": "2028-05-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P021",
+  "category": "leap_year",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc4",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2032-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical4",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-12-30",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2028-01-15",
+   "end": "2028-12-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P022",
+  "category": "leap_year",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc5",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2032-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical5",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-12-31",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2028-01-15",
+   "end": "2028-12-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P023",
+  "category": "leap_year",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc6",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2032-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical6",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-02-28",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P024",
+  "category": "leap_year",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc7",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2032-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical7",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-03-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-03-01",
+   "end": "2027-08-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P025",
+  "category": "missing_document",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc0",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P026",
+  "category": "missing_document",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "medical1",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2031-01-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P027",
+  "category": "missing_document",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "passport2",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": "2031-01-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P028",
+  "category": "missing_document",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc3",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "passport3",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": "2031-01-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P029",
+  "category": "missing_document",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "medical4",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "passport4",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": "2031-01-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P030",
+  "category": "missing_document",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc5",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical5",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2031-01-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P031",
+  "category": "missing_document",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc6",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical6",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "passport6",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": "2031-01-01",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P032",
+  "category": "missing_document",
+  "synthetic": true,
+  "documents": [],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P033",
+  "category": "missing_fact",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc0",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical0",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": null,
+    "unread": true
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P034",
+  "category": "missing_fact",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc1",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical1",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-03-14",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P035",
+  "category": "missing_fact",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc2",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical2",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": null,
+    "unread": true
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P036",
+  "category": "missing_fact",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc3",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical3",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-03-14",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P037",
+  "category": "missing_fact",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc4",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical4",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": null,
+    "unread": true
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P038",
+  "category": "missing_fact",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc5",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical5",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-03-14",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P039",
+  "category": "missing_fact",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc6",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical6",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": null,
+    "unread": true
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "CANNOT_VERIFY"
+ },
+ {
+  "id": "P040",
+  "category": "missing_fact",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc7",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical7",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-03-14",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P041",
+  "category": "many_documents",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc0",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical0",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "passport0",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": "2027-07-28",
+    "unread": false
+   },
+   {
+    "id": "bst0",
+    "doc_type": "bst",
+    "administration": "India",
+    "label": "bst",
+    "expiry": "2030-05-05",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport",
+    "bst"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P042",
+  "category": "many_documents",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc1",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical1",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "passport1",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": "2027-07-29",
+    "unread": false
+   },
+   {
+    "id": "bst1",
+    "doc_type": "bst",
+    "administration": "India",
+    "label": "bst",
+    "expiry": "2030-05-05",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport",
+    "bst"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P043",
+  "category": "many_documents",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc2",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical2",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "passport2",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": "2027-07-30",
+    "unread": false
+   },
+   {
+    "id": "bst2",
+    "doc_type": "bst",
+    "administration": "India",
+    "label": "bst",
+    "expiry": "2030-05-05",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport",
+    "bst"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P044",
+  "category": "many_documents",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc3",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical3",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "passport3",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": "2027-07-31",
+    "unread": false
+   },
+   {
+    "id": "bst3",
+    "doc_type": "bst",
+    "administration": "India",
+    "label": "bst",
+    "expiry": "2030-05-05",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport",
+    "bst"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P045",
+  "category": "many_documents",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc4",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical4",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "passport4",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": "2027-08-01",
+    "unread": false
+   },
+   {
+    "id": "bst4",
+    "doc_type": "bst",
+    "administration": "India",
+    "label": "bst",
+    "expiry": "2030-05-05",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport",
+    "bst"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P046",
+  "category": "many_documents",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc5",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical5",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "passport5",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": "2027-08-02",
+    "unread": false
+   },
+   {
+    "id": "bst5",
+    "doc_type": "bst",
+    "administration": "India",
+    "label": "bst",
+    "expiry": "2030-05-05",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport",
+    "bst"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P047",
+  "category": "contract_length",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc0",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical0",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-02-29",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-02-28",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P048",
+  "category": "contract_length",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc1",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical1",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-02-29",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-12-31",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P049",
+  "category": "contract_length",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc2",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical2",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-02-29",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2026-12-31",
+   "end": "2027-01-01",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P050",
+  "category": "contract_length",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc3",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical3",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-02-29",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-06-01",
+   "end": "2027-06-01",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P051",
+  "category": "contract_length",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc4",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical4",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-02-29",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2028-02-01",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P052",
+  "category": "contract_length",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc5",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2029-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical5",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2028-02-29",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-02-01",
+   "required_types": [
+    "coc",
+    "medical"
+   ]
+  },
+  "expected": "READY"
+ },
+ {
+  "id": "P053",
+  "category": "mixed",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc0",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical0",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-02-21",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P054",
+  "category": "mixed",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc1",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical1",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-03-13",
+    "unread": false
+   },
+   {
+    "id": "passport1",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": null,
+    "unread": true
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P055",
+  "category": "mixed",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc2",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical2",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-04-02",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P056",
+  "category": "mixed",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc3",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical3",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-04-22",
+    "unread": false
+   },
+   {
+    "id": "passport3",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": null,
+    "unread": true
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P057",
+  "category": "mixed",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc4",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical4",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-05-12",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P058",
+  "category": "mixed",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc5",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical5",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-06-01",
+    "unread": false
+   },
+   {
+    "id": "passport5",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": null,
+    "unread": true
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P059",
+  "category": "mixed",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc6",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical6",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-06-21",
+    "unread": false
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "NOT_READY"
+ },
+ {
+  "id": "P060",
+  "category": "mixed",
+  "synthetic": true,
+  "documents": [
+   {
+    "id": "coc7",
+    "doc_type": "coc",
+    "administration": "India",
+    "label": "coc",
+    "expiry": "2031-01-01",
+    "unread": false
+   },
+   {
+    "id": "medical7",
+    "doc_type": "medical",
+    "administration": "India",
+    "label": "medical",
+    "expiry": "2027-07-11",
+    "unread": false
+   },
+   {
+    "id": "passport7",
+    "doc_type": "passport",
+    "administration": "India",
+    "label": "passport",
+    "expiry": null,
+    "unread": true
+   }
+  ],
+  "contract": {
+   "start": "2027-02-01",
+   "end": "2027-07-31",
+   "required_types": [
+    "coc",
+    "medical",
+    "passport"
+   ]
+  },
+  "expected": "NOT_READY"
+ }
+]

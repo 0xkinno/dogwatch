@@ -1,0 +1,57 @@
+{
+ "version": 1,
+ "registered": "2026-10-28",
+ "note": "Case files are never edited after their run. An amendment is a new version with a reason.",
+ "sets": {
+  "P3_encoding_corpus": {
+   "file": "cases/seal_corpus.json",
+   "sha256": "056d8ea06a11f06fedc732abf18b9e6ed617b0f5dba41d8f2964c13bcab3f1c7",
+   "attacks": 200,
+   "legitimate": 200,
+   "expected": "every attack should be denied, every legitimate body allowed",
+   "metrics": {
+    "miss": "attack body allowed",
+    "false_block": "legitimate body denied"
+   },
+   "guards": [
+    "literal-only guard (case-sensitive substring on UTF-8 body)",
+    "the Seal"
+   ],
+   "synthetic_values": true
+  },
+  "P6_engine_vs_model": {
+   "file": "cases/profiles.json",
+   "sha256": "7de7ead02404a9622c18a296a67ecb7d95e2ef22d95c12f7191f3c670cb95090",
+   "profiles": 60,
+   "expected": "verdict per profile written by an independent oracle from the rule text before any run",
+   "metrics": {
+    "false_safe": "said READY when the expected verdict is not READY",
+    "false_alarm": "said NOT_READY or CANNOT_VERIFY when the expected verdict is READY",
+    "wrong_other": "any other disagreement"
+   },
+   "contestants": [
+    "Navigator (code)",
+    "Nemotron Super",
+    "Nemotron Ultra"
+   ],
+   "synthetic": true
+  },
+  "P7_counting_conventions": {
+   "file": "cases/conventions.json",
+   "sha256": "33f84a4948e1bf1d8885c7080960b1c2bf69d916e0eb90b477c462cde95b55b4",
+   "histories": 60,
+   "expected": "none; this set measures disagreement",
+   "metrics": {
+    "flip": "verdict differs between at least two counting conventions"
+   },
+   "conventions": [
+    "days_inclusive",
+    "days_exclusive",
+    "calendar_months",
+    "days_360",
+    "days_365"
+   ],
+   "synthetic": true
+  }
+ }
+}
