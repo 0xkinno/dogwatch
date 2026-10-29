@@ -16,7 +16,7 @@ export default function Outbox() {
         lede="A draft holds placeholders, never identifiers. Arjun approves a digest of exactly what will be sent. Sending recomputes the digest and refuses on any mismatch."
         mode={{ label: "RECORDED", detail: `${R.run_id} ${R.recorded_at}` }}
       />
-      <section className="wrap" style={{ paddingBottom: 64 }}>
+      <section className="wrap" data-shot="outbox" style={{ paddingBottom: 64 }}>
         <div className="two-col" style={{ alignItems: "start" }}>
           <GlowCard className="stack">
             <div className="row"><h2 className="h-md display">Draft for the manning agent</h2><span className="chip chip-window">APPROVAL PENDING</span></div>

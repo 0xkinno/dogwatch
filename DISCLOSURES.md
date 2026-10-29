@@ -2,7 +2,7 @@
 
 ## AI assistance
 
-This project was built with AI coding assistance under the direction of the repository owner. The owner reviewed and directed the work. Commits are authored by the owner only.
+This project was built with an AI coding assistant (a large language model agent run in the terminal) under the direction of the repository owner. The owner reviewed and directed the work and approved the commits, which are authored by the owner only. Models inside the product are NVIDIA Nemotron, served through the NVIDIA API Catalog (development route) and, when a key exists, Nebius Token Factory.
 
 ## Data
 

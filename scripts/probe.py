@@ -46,7 +46,7 @@ PREFER = {
 
 def chat_status(base: str, key: str, model: str) -> int:
     """One-word chat. A listed model can still answer 404, so the list alone is not trusted."""
-    for _ in range(2):
+    for _ in range(5):
         try:
             r = httpx.post(base.rstrip("/") + "/chat/completions", headers={"Authorization": f"Bearer {key}"},
                            json={"model": model, "messages": [{"role": "user", "content": "Reply with the single word ok."}],
@@ -55,7 +55,7 @@ def chat_status(base: str, key: str, model: str) -> int:
             return 0
         if r.status_code != 503:
             return r.status_code
-        time.sleep(3)
+        time.sleep(6)
     return 503
 
 

@@ -32,6 +32,10 @@ python scripts/check_facts.py
 
 3. Reproduce a number: `docs/FACTS.json` is written by `scripts/facts.py` from `eval/results/`, and `scripts/check_facts.py` fails if the README or the UI disagrees.
 
+## Which route ran the models
+
+Every live model result ran on the NVIDIA API Catalog (development route); Nebius Token Factory is the submission target and its key was not available. Each result says which route produced it. `bash scripts/switch_to_tokenfactory.sh` re-runs the evidence on Token Factory.
+
 ## What to look for
 
 - The Navigator never calls a model. Every verdict carries rule ids, source quotes, URLs, the pack hash and the arithmetic.

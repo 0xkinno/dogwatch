@@ -8,6 +8,7 @@ export const metadata = { title: "Proof | Dogwatch" };
 type P3Case = { id: string; transform: string; literal_denied: boolean; seal_denied: boolean };
 
 export default function Proof() {
+  const live = R.live as Record<string, any>;
   const p3 = R.proof.p3 as Record<string, any>;
   const v1 = R.proof.p3_v1 as Record<string, any>;
   const p7 = R.proof.p7 as Record<string, any>;
@@ -26,7 +27,7 @@ export default function Proof() {
         lede="Each set was pre-registered: case files and expected outcomes committed, and their SHA-256 recorded, before the run. These are internal measurements on sets this project built, labelled that way."
         mode={{ label: "RECORDED", detail: `${R.run_id} ${R.recorded_at}` }}
       />
-      <section className="wrap stack" style={{ paddingBottom: 64 }}>
+      <section className="wrap stack" data-shot="proof" style={{ paddingBottom: 64 }}>
         <GlowCard>
           <div className="row"><h2 className="h-md display">Pre-registration</h2></div>
           <p className="mono" style={{ wordBreak: "break-all", marginBottom: 0 }}>prereg SHA-256 <span data-fact="proof.prereg_sha256">{fact("proof.prereg_sha256")}</span></p>
@@ -79,7 +80,23 @@ export default function Proof() {
           <p>
             <span data-fact="p6.engine.correct">{fact("p6.engine.correct")}</span> of <span data-fact="p6.profiles">{fact("p6.profiles")}</span> synthetic profiles matched the verdict written by an independent oracle before the run; false-safe <span data-fact="p6.engine.false_safe">{fact("p6.engine.false_safe")}</span>. This is a self-built set, so it is not the headline.
           </p>
-          <div className="callout">The same profiles against Nemotron Super and Ultra: <strong>NOT RUN</strong>. It needs a Token Factory key. The counterfactual is the headline result and will appear here, with its false-safe count, as soon as it runs.</div>
+          <div className="callout">
+            <div className="row" style={{ marginBottom: 8 }}><ModeChip mode={String(live.p6_model.route_label)} /><span className="src">Thinking off, rule text supplied, one verdict per profile.</span></div>
+            <div className="table-wrap" tabIndex={0} role="region" aria-label="Scrollable table">
+              <table>
+                <thead><tr><th scope="col">Contestant</th><th scope="col">Correct</th><th scope="col">False-safe</th><th scope="col">False alarm</th></tr></thead>
+                <tbody>
+                  <tr><td>Navigator (code)</td><td>{fact("p6.engine.correct")} of {fact("p6.profiles")}</td><td>{fact("p6.engine.false_safe")}</td><td>0</td></tr>
+                  {Object.entries(live.p6_model.contestants as Record<string, any>).map(([k, c]) => (
+                    <tr key={k}><td>Nemotron {k}<div className="src mono">{c.model}</div></td><td>{c.correct} of {live.p6_model.profiles}</td><td>{c.false_safe}</td><td>{c.false_alarm}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="src" style={{ margin: "8px 0 0" }}>
+              Super missed profiles: {(live.p6_model.contestants.super.miss_ids as string[]).join(", ")}. Ultra missed: {(live.p6_model.contestants.ultra.miss_ids as string[]).join(", ")}.
+            </p>
+          </div>
         </GlowCard>
 
         <GlowCard className="stack">
@@ -90,9 +107,33 @@ export default function Proof() {
           <p className="src" style={{ margin: 0 }}>{p11.transport}</p>
         </GlowCard>
 
+        <GlowCard className="stack">
+          <div className="row"><h2 className="h-md display">P8 Reading specimen certificates</h2><ModeChip mode={String(live.p8.route_label)} /></div>
+          <p>
+            <span data-fact="p8.exact">{fact("p8.exact")}</span> of <span data-fact="p8.specimens">{fact("p8.specimens")}</span> specimens read with the exact expiry date; <span data-fact="p8.unread">{fact("p8.unread")}</span> left UNREAD; <span data-fact="p8.wrong_confident">{fact("p8.wrong_confident")}</span> read wrongly without a flag. OCR runs locally with Tesseract; only placeholder text reaches the model.
+          </p>
+          <div className="callout">
+            The first run found <strong data-fact="p8.v1_leaks">{fact("p8.v1_leaks")}</strong> identifier leaks in the outgoing request bodies: OCR split numbers with spaces and the holder&apos;s name has no pattern, so the detectors missed them. The detectors were made OCR tolerant and the name is matched from the vault&apos;s own table. The second run scanned <span data-fact="p8.bodies">{fact("p8.bodies")}</span> bodies and found <span data-fact="p8.leaks">{fact("p8.leaks")}</span>. Both result files are committed.
+          </div>
+          <p className="src" style={{ margin: 0 }}>By variant: {Object.entries(live.p8.by_variant as Record<string, { n: number; exact: number }>).map(([k, v]) => `${k} ${v.exact} of ${v.n}`).join("; ")}. Missed: {(live.p8.miss_ids as string[]).join(", ") || "none"}.</p>
+        </GlowCard>
+
+        <GlowCard tone="amber" className="stack">
+          <div className="row"><h2 className="h-md display">P9 Drift watch, P10 unattended, P12 cost</h2><ModeChip mode={String(live.p9.route_label)} /></div>
+          <p>
+            P9: the Lookout searched five administration domains with live Tavily ({live.p9.tavily_requests_by_path["/search"]} searches, {live.p9.tavily_requests_by_path["/extract"]} extracts). <span data-fact="p9.searched">{fact("p9.searched")}</span> pages returned, {live.p9.gates.keyword_miss} rejected by the keyword gate, {live.p9.gates.already_seen} already seen, <span data-fact="p9.classified">{fact("p9.classified")}</span> classified by Nemotron Nano, <span data-fact="p9.items">{fact("p9.items")}</span> raised as review items. There is no ground truth for new rule text, so this reports behaviour, not accuracy; the high count shows the classifier is eager and a person reviews every item.
+          </p>
+          <p>
+            P10: the service loop woke four times; it ran <span data-fact="p10.daily">{fact("p10.daily")}</span> daily and <span data-fact="p10.weekly">{fact("p10.weekly")}</span> weekly run, once each, and raised the medical lapse alert. Trace: <span className="mono">evidence/unattended/trace.json</span>.
+          </p>
+          <p style={{ margin: 0 }}>
+            P12: one weekly drift check across all administrations used <span data-fact="p12.weekly_tokens">{fact("p12.weekly_tokens")}</span> tokens. A readiness run uses 0 tokens because the Navigator calls no model. Ultra answered the same prompts about <span data-fact="p12.latency_ratio">{fact("p12.latency_ratio")}</span> times slower than Super. No dollar figure is shown: this route has no list price.
+          </p>
+        </GlowCard>
+
         <GlowCard tone="port" className="stack">
           <div className="row"><h2 className="h-md display">Not run yet</h2><ModeChip mode="NOT RUN" /></div>
-          <p style={{ margin: 0 }}>P1 prover on the sandbox effective policy, P2 injection inbox with and without the sandbox, P4 fail closed, P5 credential placeholder, P6 against Nemotron, P8 reading on specimen images, P9 drift watch, P10 unattended runs, P12 cost. Each needs a key or the running OpenShell stack.</p>
+          <p style={{ margin: 0 }}>P1 on the sandbox effective policy, P2 injection inbox with and without the sandbox, P4 fail closed, and P5 credential placeholder. OpenShell 0.1.6 needs Landlock ABI 3, which arrives with Linux 6.2; this machine runs WSL kernel 5.10, so the sandbox cannot start here. The gateway, the Seal registration and the sandbox image all ran; the supervisor exited before it became ready. Needs a Linux 6.2 or newer host.</p>
         </GlowCard>
       </section>
     </>

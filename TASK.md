@@ -19,9 +19,9 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [x] Depth ladder written for OpenShell, Token Factory and Nemotron (shallow, deep, newest)
 
 ## Phase 2. Platform probe
-- [ ] Token Factory `GET /v1/models` output saved; exact Nemotron ids recorded
-- [ ] Thinking on vs off measured on one real extraction (tokens, latency, cost)
-- [ ] JSON schema enforcement tested; repair path confirmed
+- [x] Token Factory `GET /v1/models` output saved; exact Nemotron ids recorded (done on the NVIDIA API Catalog route; Token Factory NOT RUN, no key)
+- [x] Thinking on vs off measured on one real extraction (tokens, latency, cost) (NVIDIA API Catalog route)
+- [x] JSON schema enforcement tested; repair path confirmed (NVIDIA API Catalog route)
 - [ ] OpenShell installed on WSL2; `openshell sandbox create` works
 - [ ] `nebius-token-factory.yaml` profile linted, imported, attached; a sandboxed call to Token Factory succeeds with a placeholder key
 - [ ] Content-guard middleware example smoke test runs (or the failure is recorded)
@@ -42,7 +42,7 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [x] Identifier detectors with check-digit tests (MRZ, passport, CoC, INDoS, CDC, CoE, email, phone)
 - [x] Placeholder replacement with stable ids and overlap handling
 - [ ] Local OCR in the sandbox image
-- [ ] Bosun structuring with Nemotron Super, thinking off, Pydantic validation, one repair retry
+- [x] Bosun structuring with Nemotron Super, thinking off, Pydantic validation, one repair retry (NVIDIA API Catalog route)
 - [x] Quote verification in code; dates parsed from verified quotes only
 - [x] Rule pack format, loader, SHA-256 per pack
 - [ ] Rule packs: stcw-core, in-dgs, uk-mca, sg-mpa, au-amsa, ng-nimasa, every quote verified against a snapshot by test
@@ -62,7 +62,7 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [ ] Email send to the test "manning agent" inbox; record in `evidence/actions/` with recipient redacted
 - [ ] `.ics` booking window sent to Telegram
 - [ ] Discharge-book photo flow updates the ledger
-- [ ] Lookout drift watch with Tavily Search and Extract, domain and keyword gates, review items only
+- [x] Lookout drift watch with Tavily Search and Extract, domain and keyword gates, review items only
 - [x] Six skills with `SKILL.md` and CLI entries
 
 ## Phase 6. OpenShell integration
@@ -81,13 +81,13 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [x] P3 encoding corpus: literal guard vs Seal, both directions
 - [ ] P4 fail closed
 - [ ] P5 credential placeholder
-- [ ] P6 engine vs Nemotron alone (Super and Ultra)
+- [x] P6 engine vs Nemotron alone (Super and Ultra) (NVIDIA API Catalog route)
 - [x] P7 counting-convention finding
-- [ ] P8 reading on specimen certificates; no identifier in any request body
-- [ ] P9 drift watch
-- [ ] P10 unattended daily and weekly runs recorded
+- [x] P8 reading on specimen certificates; no identifier in any request body (NVIDIA API Catalog route)
+- [x] P9 drift watch (NVIDIA API Catalog route)
+- [x] P10 unattended daily and weekly runs recorded (NVIDIA API Catalog route)
 - [x] P11 restart with a pending approval, no duplicate send
-- [ ] P12 cost per weekly check and per readiness run
+- [x] P12 cost per weekly check and per readiness run (NVIDIA API Catalog route)
 - [x] `scripts/facts.py` writes `docs/FACTS.json`; `scripts/check_facts.py` in CI
 - [x] `PROOF.md` and `EVIDENCE.md` with LIVE RUN / LOCAL BUILD / FIXTURE / NOT RUN states
 

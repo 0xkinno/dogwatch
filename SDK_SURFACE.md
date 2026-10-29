@@ -4,17 +4,19 @@ Every sponsor feature, where it is used, its version, and whether it is live, re
 
 | Feature | Where | State | Note |
 |---|---|---|---|
-| OpenShell policy prover (`openshell-prover check`) | `openshell/scripts/prove.sh`, `evidence/prover/` | LIVE RUN on the build machine | Candidate is the declared policy; the sandbox effective export is NOT RUN |
-| OpenShell policy schema (filesystem, network_policies, L7 rules) | `openshell/policy/dogwatch.yaml`, `openshell/policy/boundary.yaml` | LOCAL BUILD | Checked by the prover; not applied to a running sandbox |
-| OpenShell provider profile format | `openshell/profiles/nebius-token-factory.yaml:9`, `openshell/profiles/tavily.yaml:2` | WRITTEN | Lint and import NOT RUN (needs the gateway) |
-| OpenShell supervisor middleware service (`SupervisorMiddleware`) | `seal/seal/server.py:49` (`Describe`), `seal/seal/server.py:66` (`EvaluateHttpRequest`) | LOCAL BUILD | Implemented against `seal/proto/supervisor_middleware.proto`, exercised over gRPC in `seal/tests/test_seal.py`. Registered in a running gateway: NOT RUN |
-| Middleware registration with `on_error: fail_closed` | `openshell/policy/dogwatch.yaml:12` | WRITTEN | Fail-closed behaviour (P4) NOT RUN |
-| 4.5 MiB gRPC message limit | `seal/seal/server.py:84` | LOCAL BUILD | A 3 MB body is handled in the Seal tests |
-| OpenShell policy advisor (`policy.local`) | doors diagram on `/boundary` | NOT RUN | Designed |
-| OpenShell sandbox and credential placeholders | `openshell/scripts/up.sh` | NOT RUN | Needs the gateway |
-| Nebius Token Factory chat completions | `core/dogwatch/model/client.py:80` (thinking flag), `:99` (`structured`) | NOT RUN against the live API | Tested against a fake client including the repair retry |
-| Nemotron Nano, Super, Ultra routing | `core/dogwatch/model/routing.py` | NOT RUN | Ids unconfirmed until the probe writes `docs/models.json` |
-| Tavily Search and Extract | `core/dogwatch/lookout/tavily.py`, `core/dogwatch/lookout/drift.py:67` | NOT RUN against the live API | Tested against a fake transport |
+| OpenShell policy prover (`openshell-prover check`) | `openshell/scripts/prove.sh`, `evidence/prover/` | LIVE RUN, release 0.1.6 | Declared policy checked; the sandbox effective export is NOT RUN |
+| OpenShell policy schema (filesystem, process, network_policies, L7 rules) | `openshell/policy/dogwatch.yaml`, `boundary.yaml` | LIVE RUN (prover) | Not applied to a running sandbox |
+| OpenShell gateway | `openshell/scripts/wsl-start.sh`, `seal-up.sh` | LIVE RUN | Started by hand; the systemd unit needs a user systemd session |
+| Provider profile, stock NVIDIA | `openshell/profiles/nvidia-build.yaml` | LIVE RUN | lint, import, `provider create` succeeded; attached to the dev route |
+| Provider profile, Nebius Token Factory | `openshell/profiles/nebius-token-factory.yaml` | WRITTEN, unattached | `switch_to_tokenfactory.sh` imports and attaches it |
+| Supervisor middleware service (the Seal) | `seal/seal/server.py` (`Describe`, `EvaluateHttpRequest`) | LIVE RUN: registered with the gateway; LOCAL BUILD over gRPC | Traffic decisions through a running sandbox NOT RUN |
+| Middleware registration, `on_error: fail_closed` | `openshell/policy/dogwatch.yaml`, gateway TOML written by `seal-up.sh` | LIVE RUN (admission refused an unregistered middleware) | Runtime fail-closed (P4) NOT RUN |
+| Sandbox image | `openshell/sandbox/Dockerfile` | LIVE RUN (built) | |
+| OpenShell sandbox, policy advisor, credential placeholders at egress | `openshell/scripts/up.sh` | NOT RUN | supervisor exits: Landlock ABI 3 needs Linux 6.2, kernel is 5.10 |
+| Model route: NVIDIA API Catalog (development) | `core/dogwatch/model/routes.py`, `client.py` | LIVE RUN | probe, P6, P8, P9, P10, P12 |
+| Model route: Nebius Token Factory | `core/dogwatch/model/routes.py` | NOT RUN | no key; default whenever `NEBIUS_API_KEY` exists |
+| Nemotron Nano, Super, Ultra routing | `core/dogwatch/model/routing.py`, `docs/models.json` | LIVE RUN (dev route) | ids confirmed from `GET /models` plus a chat check |
+| Tavily Search and Extract | `core/dogwatch/lookout/tavily.py`, `drift.py` | LIVE RUN | P9 and P10 |
 | NVIDIA NemoClaw | not used | NOT USED | Not used, so not claimed |
-| Hermes Agent (`nemohermes`) | skills are in `skills/` as SKILL.md folders | DESIGNED | Not run inside Hermes, so reuse by Hermes is not claimed |
+| Hermes Agent (`nemohermes`) | skills are in `skills/` as SKILL.md folders | DESIGNED | Not run inside Hermes |
 | Nebius Serverless | not used | NOT USED | Not used, so not claimed |

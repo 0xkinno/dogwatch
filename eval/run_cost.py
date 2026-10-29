@@ -24,17 +24,19 @@ def agg(rows):
 
 
 def main():
-    p6 = load("p6-nvidia_build.jsonl")
+    import os, sys
+    route = os.environ.get("MODEL_ROUTE") or "nvidia_build"
+    p6 = load(f"p6-{route}.jsonl")
     by_model = defaultdict(list)
     for r in p6:
         by_model[r["model"]].append(r)
-    p8, p9, p10 = load("p8-nvidia_build.jsonl"), load("p9-drift.jsonl"), load("p10-unattended.jsonl")
+    p8, p9, p10 = load(f"p8-{route}.jsonl"), load("p9-drift.jsonl"), load("p10-unattended.jsonl")
     ultra = next((m for m in by_model if "ultra" in m), None)
     sup = next((m for m in by_model if "super" in m), None)
     per_call_ultra = agg(by_model[ultra]) if ultra else None
     per_call_super = agg(by_model[sup]) if sup else None
     out = {
-        "set": "P12_cost", "route": "nvidia_build", "route_label": "Route: NVIDIA API Catalog (development)", "price_available": False,
+        "set": "P12_cost", "route": route, "route_label": "Route: Nebius Token Factory" if route == "tokenfactory" else "Route: NVIDIA API Catalog (development)", "price_available": route == "tokenfactory" and (HERE.parent / "docs" / "pricing.json").exists(),
         "note": "No list price exists for this route, so no dollar figure is shown. Token Factory prices are measured once a key exists (scripts/switch_to_tokenfactory.sh).",
         "p6_by_model": {m: agg(v) for m, v in by_model.items()},
         "p8_reading_per_specimen": {**agg(p8), "per_specimen_tokens_in": int(sum(r["tokens_in"] for r in p8) / max(1, len(p8))), "per_specimen_tokens_out": int(sum(r["tokens_out"] for r in p8) / max(1, len(p8)))},

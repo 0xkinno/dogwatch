@@ -34,13 +34,13 @@ export default function Boundary() {
         lede="The sandbox can reach four destinations. A gateway the agent cannot reach enforces that, an SMT prover checks the policy against a boundary, and the Seal refuses any request carrying a vault value."
         mode={{ label: "RECORDED", detail: "prover run on the build machine" }}
       />
-      <section className="wrap stack" style={{ paddingBottom: 64 }}>
+      <section className="wrap stack" data-shot="boundary" style={{ paddingBottom: 64 }}>
         <GlowCard><Doors /></GlowCard>
 
         <GlowCard tone="amber" className="stack">
           <div className="row"><h2 className="h-md display">Prover results</h2><ModeChip mode="LOCAL BUILD" /></div>
           <p className="src" style={{ margin: 0 }}>
-            {runNote ? runNote.split("\n").filter((l) => l.startsWith("#")).join(" ") : "No prover run recorded yet."} The prover checks the declared policy; it does not model network middleware, so the Seal is tested separately. The sandbox effective export is NOT RUN yet because the gateway has not been started.
+            {runNote ? runNote.split("\n").filter((l) => l.startsWith("#")).join(" ") : "No prover run recorded yet."} The prover checks the declared policy; it does not model network middleware, so the Seal is tested separately. The sandbox effective export is NOT RUN: the sandbox cannot start on this kernel (see below).
           </p>
           <div className="table-wrap" tabIndex={0} role="region" aria-label="Scrollable table">
             <table>
@@ -77,7 +77,10 @@ export default function Boundary() {
           <GlowCard tone="port" className="stack">
             <div className="row"><h2 className="h-md display">Denials and advisor proposals</h2><ModeChip mode="NOT RUN" /></div>
             <p>
-              The injected-inbox run with and without the sandbox (P2), the fail-closed test (P4), the credential placeholder test (P5) and the advisor flow where a denied request becomes a proposal Arjun rejects from Telegram need the OpenShell sandbox running. They are not run yet, so nothing is shown here for them.
+              What ran on this machine, live: OpenShell 0.1.6 installed, the gateway started, the Seal registered with it (the gateway log names the registration), the stock NVIDIA provider profile linted, imported and attached as a provider, and the Dogwatch sandbox image built. A policy that named the Seal before it was registered was refused at admission.
+            </p>
+            <p>
+              What did not: the sandbox itself. The supervisor started, then exited before it was ready. OpenShell requires the Landlock LSM at ABI 3 or newer, which arrives with Linux 6.2, and this WSL kernel is 5.10. So the injected-inbox run with and without the sandbox (P2), the fail-closed test (P4), the credential placeholder test (P5) and the advisor flow are NOT RUN, and nothing is shown for them. They need a Linux 6.2 or newer host.
             </p>
           </GlowCard>
         </div>

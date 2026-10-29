@@ -1,7 +1,7 @@
 {
  "mode": "RECORDED",
- "run_id": "build-6da910b",
- "recorded_at": "2026-10-28",
+ "run_id": "build-65c0ad7",
+ "recorded_at": "2026-10-29",
  "persona": {
   "name": "Arjun Menon",
   "role": "Second Officer, product tanker",
@@ -177,6 +177,42 @@
    "source": "eval/results/p6_engine.json#false_safe",
    "tag": "MEASURED"
   },
+  "p6.super.false_safe": {
+   "claim": "super said READY when it should not",
+   "value": 22,
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED"
+  },
+  "p6.super.false_alarm": {
+   "claim": "super raised an alarm on a READY profile",
+   "value": 0,
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED"
+  },
+  "p6.super.correct": {
+   "claim": "super matched the pre-registered verdict",
+   "value": 30,
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED"
+  },
+  "p6.ultra.false_safe": {
+   "claim": "ultra said READY when it should not",
+   "value": 0,
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED"
+  },
+  "p6.ultra.false_alarm": {
+   "claim": "ultra raised an alarm on a READY profile",
+   "value": 8,
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED"
+  },
+  "p6.ultra.correct": {
+   "claim": "ultra matched the pre-registered verdict",
+   "value": 47,
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED"
+  },
   "p7.histories": {
    "claim": "Sea-service histories checked under every convention",
    "value": 60,
@@ -225,6 +261,96 @@
    "source": "evidence/prover/dogwatch-declared.result.txt",
    "tag": "MEASURED"
   },
+  "p8.specimens": {
+   "claim": "Specimen certificates read",
+   "value": 40,
+   "source": "eval/results/p8_reading.json#specimens",
+   "tag": "MEASURED"
+  },
+  "p8.exact": {
+   "claim": "Specimens whose expiry date was read exactly",
+   "value": 39,
+   "source": "eval/results/p8_reading.json#exact",
+   "tag": "MEASURED"
+  },
+  "p8.unread": {
+   "claim": "Specimens left UNREAD",
+   "value": 1,
+   "source": "eval/results/p8_reading.json#unread",
+   "tag": "MEASURED"
+  },
+  "p8.wrong_confident": {
+   "claim": "Specimens read with a wrong date and no UNREAD flag",
+   "value": 0,
+   "source": "eval/results/p8_reading.json#wrong_but_confident",
+   "tag": "MEASURED"
+  },
+  "p8.bodies": {
+   "claim": "Outgoing model request bodies scanned for identifiers",
+   "value": 40,
+   "source": "eval/results/p8_reading.json#request_bodies_scanned",
+   "tag": "MEASURED"
+  },
+  "p8.leaks": {
+   "claim": "Identifier leaks found in those bodies (detectors v2)",
+   "value": 0,
+   "source": "eval/results/p8_reading.json#identifier_leaks_in_request_bodies",
+   "tag": "MEASURED"
+  },
+  "p8.v1_leaks": {
+   "claim": "Identifier leaks found in the first run (detectors v1)",
+   "value": 12,
+   "source": "eval/results/p8_reading_v1.json#identifier_leaks_in_request_bodies",
+   "tag": "MEASURED"
+  },
+  "p9.searched": {
+   "claim": "Pages returned by Tavily search in the drift run",
+   "value": 49,
+   "source": "eval/results/p9_drift.json#gates.searched",
+   "tag": "MEASURED"
+  },
+  "p9.classified": {
+   "claim": "Pages classified by Nemotron Nano",
+   "value": 29,
+   "source": "eval/results/p9_drift.json#gates.classified",
+   "tag": "MEASURED"
+  },
+  "p9.items": {
+   "claim": "Review items raised",
+   "value": 27,
+   "source": "eval/results/p9_drift.json#review_items",
+   "tag": "MEASURED"
+  },
+  "p9.requests": {
+   "claim": "Tavily requests made",
+   "value": 52,
+   "source": "eval/results/p9_drift.json#tavily_requests",
+   "tag": "MEASURED"
+  },
+  "p10.daily": {
+   "claim": "Daily runs triggered by the timer loop",
+   "value": 1,
+   "source": "eval/results/p10_unattended.json#daily_runs",
+   "tag": "MEASURED"
+  },
+  "p10.weekly": {
+   "claim": "Weekly runs triggered by the timer loop",
+   "value": 1,
+   "source": "eval/results/p10_unattended.json#weekly_runs",
+   "tag": "MEASURED"
+  },
+  "p12.weekly_tokens": {
+   "claim": "Tokens used by one weekly drift check across all administrations",
+   "value": 49201,
+   "source": "eval/results/p12_cost.json#weekly_check_tokens",
+   "tag": "MEASURED"
+  },
+  "p12.latency_ratio": {
+   "claim": "Latency of Ultra over Super on the same prompts",
+   "value": 2.35,
+   "source": "eval/results/p12_cost.json",
+   "tag": "MEASURED"
+  },
   "p11.sends": {
    "claim": "Emails sent after a kill and restart with one pending approval (local capture transport)",
    "value": 1,
@@ -262,6 +388,3336 @@
    "tag": "MEASURED"
   }
  },
+ "probe": {
+  "route": "nvidia_build",
+  "route_label": "Route: NVIDIA API Catalog (development)",
+  "probed_at": "2026-10-29T12:49:04+00:00",
+  "models_http": 200,
+  "models_latency_ms": 2174,
+  "total_models": 84,
+  "nemotron_models": [
+   "nvidia/llama-3.1-nemotron-51b-instruct",
+   "nvidia/llama-3.1-nemotron-70b-instruct",
+   "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+   "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+   "nvidia/llama-nemotron-embed-vl-1b-v2",
+   "nvidia/nemotron-3-embed-1b",
+   "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+   "nvidia/nemotron-3-super-120b-a12b",
+   "nvidia/nemotron-3-ultra-550b-a55b",
+   "nvidia/nemotron-3.5-bolt-e4b",
+   "nvidia/nemotron-3.5-content-safety",
+   "nvidia/nemotron-3.5-embed-1b",
+   "nvidia/nemotron-3.5-embed-8b",
+   "nvidia/nemotron-3.5-lightning-30b-a3b",
+   "nvidia/nemotron-3.5-super-vl-120b-a12b",
+   "nvidia/nemotron-4-340b-instruct",
+   "nvidia/nemotron-4-340b-reward",
+   "nvidia/nemotron-nano-3-30b-a3b",
+   "nvidia/nemotron-parse",
+   "nvidia/nemotron-parse-2.0"
+  ],
+  "chat_check": {
+   "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": 200,
+   "nvidia/nemotron-3-super-120b-a12b": 404,
+   "nvidia/nemotron-3.5-super-vl-120b-a12b": 200,
+   "nvidia/nemotron-3-ultra-550b-a55b": 200
+  },
+  "confirmed_by_size": {
+   "nano": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+   "super": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+   "ultra": "nvidia/nemotron-3-ultra-550b-a55b"
+  },
+  "extraction_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "thinking_comparison": [
+   {
+    "thinking": false,
+    "latency_ms": 2541,
+    "tokens_in": 193,
+    "tokens_out": 150,
+    "reasoning_tokens": 0,
+    "reasoning_field_present": false,
+    "content_chars": 419,
+    "valid_schema_reply": true,
+    "expiry_quote_found": true
+   },
+   {
+    "thinking": true,
+    "latency_ms": 4459,
+    "tokens_in": 193,
+    "tokens_out": 719,
+    "reasoning_tokens": 568,
+    "reasoning_field_present": true,
+    "content_chars": 419,
+    "valid_schema_reply": true,
+    "expiry_quote_found": true
+   }
+  ],
+  "schema_enforcement_trials": [
+   "schema_valid",
+   "schema_valid",
+   "schema_valid"
+  ],
+  "schema_enforced_server_side": true,
+  "repair_probe": {
+   "calls": 1,
+   "repair_used": false
+  },
+  "state": "LIVE RUN"
+ },
+ "live": {
+  "p6_model": {
+   "set": "P6_engine_vs_model",
+   "status": "RUN",
+   "route": "nvidia_build",
+   "route_label": "Route: NVIDIA API Catalog (development)",
+   "ran_at": "2026-10-29T12:28:25+00:00",
+   "profiles": 60,
+   "thinking": "off",
+   "contestants": {
+    "super": {
+     "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+     "correct": 30,
+     "false_safe": 22,
+     "false_alarm": 0,
+     "errors": 0,
+     "unparsed": 0,
+     "miss_ids": [
+      "P001",
+      "P002",
+      "P007",
+      "P008",
+      "P009",
+      "P010",
+      "P013",
+      "P014",
+      "P015",
+      "P016",
+      "P017",
+      "P018",
+      "P021",
+      "P023",
+      "P024",
+      "P034",
+      "P036",
+      "P038",
+      "P040",
+      "P041",
+      "P042",
+      "P043",
+      "P053",
+      "P054",
+      "P055",
+      "P056",
+      "P057",
+      "P058",
+      "P059",
+      "P060"
+     ],
+     "tokens_in": 17641,
+     "tokens_out": 579,
+     "cases": [
+      {
+       "id": "P001",
+       "category": "boundary_end",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P002",
+       "category": "boundary_end",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P003",
+       "category": "boundary_end",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P004",
+       "category": "boundary_end",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P005",
+       "category": "boundary_end",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P006",
+       "category": "boundary_end",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P007",
+       "category": "boundary_start",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P008",
+       "category": "boundary_start",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P009",
+       "category": "boundary_start",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P010",
+       "category": "boundary_start",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P011",
+       "category": "travel_buffer",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 294,
+       "tokens_out": 9
+      },
+      {
+       "id": "P012",
+       "category": "travel_buffer",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 294,
+       "tokens_out": 9
+      },
+      {
+       "id": "P013",
+       "category": "travel_buffer",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 294,
+       "tokens_out": 9
+      },
+      {
+       "id": "P014",
+       "category": "travel_buffer",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 294,
+       "tokens_out": 9
+      },
+      {
+       "id": "P015",
+       "category": "travel_buffer_before",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 294,
+       "tokens_out": 9
+      },
+      {
+       "id": "P016",
+       "category": "travel_buffer_before",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 294,
+       "tokens_out": 9
+      },
+      {
+       "id": "P017",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P018",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P019",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P020",
+       "category": "leap_year",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P021",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P022",
+       "category": "leap_year",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P023",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P024",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P025",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 261,
+       "tokens_out": 11
+      },
+      {
+       "id": "P026",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 261,
+       "tokens_out": 11
+      },
+      {
+       "id": "P027",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 261,
+       "tokens_out": 11
+      },
+      {
+       "id": "P028",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P029",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P030",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P031",
+       "category": "missing_document",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 321,
+       "tokens_out": 9
+      },
+      {
+       "id": "P032",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 230,
+       "tokens_out": 11
+      },
+      {
+       "id": "P033",
+       "category": "missing_fact",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 277,
+       "tokens_out": 11
+      },
+      {
+       "id": "P034",
+       "category": "missing_fact",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P035",
+       "category": "missing_fact",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 277,
+       "tokens_out": 11
+      },
+      {
+       "id": "P036",
+       "category": "missing_fact",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P037",
+       "category": "missing_fact",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 277,
+       "tokens_out": 11
+      },
+      {
+       "id": "P038",
+       "category": "missing_fact",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P039",
+       "category": "missing_fact",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 277,
+       "tokens_out": 11
+      },
+      {
+       "id": "P040",
+       "category": "missing_fact",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P041",
+       "category": "many_documents",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 353,
+       "tokens_out": 9
+      },
+      {
+       "id": "P042",
+       "category": "many_documents",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 353,
+       "tokens_out": 9
+      },
+      {
+       "id": "P043",
+       "category": "many_documents",
+       "expected": "NOT_READY",
+       "got": "READY",
+       "ok": false,
+       "tokens_in": 353,
+       "tokens_out": 9
+      },
+      {
+       "id": "P044",
+       "category": "many_documents",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 353,
+       "tokens_out": 9
+      },
+      {
+       "id": "P045",
+       "category": "many_documents",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 353,
+       "tokens_out": 9
+      },
+      {
+       "id": "P046",
+       "category": "many_documents",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 353,
+       "tokens_out": 9
+      },
+      {
+       "id": "P047",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P048",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P049",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P050",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P051",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P052",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P053",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P054",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 311,
+       "tokens_out": 11
+      },
+      {
+       "id": "P055",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P056",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 311,
+       "tokens_out": 11
+      },
+      {
+       "id": "P057",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P058",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 311,
+       "tokens_out": 11
+      },
+      {
+       "id": "P059",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P060",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 311,
+       "tokens_out": 11
+      }
+     ]
+    },
+    "ultra": {
+     "model": "nvidia/nemotron-3-ultra-550b-a55b",
+     "correct": 47,
+     "false_safe": 0,
+     "false_alarm": 8,
+     "errors": 0,
+     "unparsed": 0,
+     "miss_ids": [
+      "P004",
+      "P005",
+      "P006",
+      "P011",
+      "P012",
+      "P044",
+      "P045",
+      "P046",
+      "P053",
+      "P054",
+      "P055",
+      "P056",
+      "P060"
+     ],
+     "tokens_in": 17641,
+     "tokens_out": 606,
+     "cases": [
+      {
+       "id": "P001",
+       "category": "boundary_end",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P002",
+       "category": "boundary_end",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P003",
+       "category": "boundary_end",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P004",
+       "category": "boundary_end",
+       "expected": "READY",
+       "got": "NOT_READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P005",
+       "category": "boundary_end",
+       "expected": "READY",
+       "got": "NOT_READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P006",
+       "category": "boundary_end",
+       "expected": "READY",
+       "got": "NOT_READY",
+       "ok": false,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P007",
+       "category": "boundary_start",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P008",
+       "category": "boundary_start",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P009",
+       "category": "boundary_start",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P010",
+       "category": "boundary_start",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P011",
+       "category": "travel_buffer",
+       "expected": "READY",
+       "got": "NOT_READY",
+       "ok": false,
+       "tokens_in": 294,
+       "tokens_out": 10
+      },
+      {
+       "id": "P012",
+       "category": "travel_buffer",
+       "expected": "READY",
+       "got": "NOT_READY",
+       "ok": false,
+       "tokens_in": 294,
+       "tokens_out": 10
+      },
+      {
+       "id": "P013",
+       "category": "travel_buffer",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 294,
+       "tokens_out": 10
+      },
+      {
+       "id": "P014",
+       "category": "travel_buffer",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 294,
+       "tokens_out": 10
+      },
+      {
+       "id": "P015",
+       "category": "travel_buffer_before",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 294,
+       "tokens_out": 10
+      },
+      {
+       "id": "P016",
+       "category": "travel_buffer_before",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 294,
+       "tokens_out": 10
+      },
+      {
+       "id": "P017",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P018",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P019",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P020",
+       "category": "leap_year",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P021",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P022",
+       "category": "leap_year",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P023",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P024",
+       "category": "leap_year",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P025",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 261,
+       "tokens_out": 11
+      },
+      {
+       "id": "P026",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 261,
+       "tokens_out": 11
+      },
+      {
+       "id": "P027",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 261,
+       "tokens_out": 11
+      },
+      {
+       "id": "P028",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P029",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P030",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P031",
+       "category": "missing_document",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 321,
+       "tokens_out": 9
+      },
+      {
+       "id": "P032",
+       "category": "missing_document",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 230,
+       "tokens_out": 11
+      },
+      {
+       "id": "P033",
+       "category": "missing_fact",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 277,
+       "tokens_out": 11
+      },
+      {
+       "id": "P034",
+       "category": "missing_fact",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P035",
+       "category": "missing_fact",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 277,
+       "tokens_out": 11
+      },
+      {
+       "id": "P036",
+       "category": "missing_fact",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P037",
+       "category": "missing_fact",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 277,
+       "tokens_out": 11
+      },
+      {
+       "id": "P038",
+       "category": "missing_fact",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P039",
+       "category": "missing_fact",
+       "expected": "CANNOT_VERIFY",
+       "got": "CANNOT_VERIFY",
+       "ok": true,
+       "tokens_in": 277,
+       "tokens_out": 11
+      },
+      {
+       "id": "P040",
+       "category": "missing_fact",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 10
+      },
+      {
+       "id": "P041",
+       "category": "many_documents",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 353,
+       "tokens_out": 10
+      },
+      {
+       "id": "P042",
+       "category": "many_documents",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 353,
+       "tokens_out": 10
+      },
+      {
+       "id": "P043",
+       "category": "many_documents",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 353,
+       "tokens_out": 10
+      },
+      {
+       "id": "P044",
+       "category": "many_documents",
+       "expected": "READY",
+       "got": "NOT_READY",
+       "ok": false,
+       "tokens_in": 353,
+       "tokens_out": 10
+      },
+      {
+       "id": "P045",
+       "category": "many_documents",
+       "expected": "READY",
+       "got": "NOT_READY",
+       "ok": false,
+       "tokens_in": 353,
+       "tokens_out": 10
+      },
+      {
+       "id": "P046",
+       "category": "many_documents",
+       "expected": "READY",
+       "got": "NOT_READY",
+       "ok": false,
+       "tokens_in": 353,
+       "tokens_out": 10
+      },
+      {
+       "id": "P047",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P048",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P049",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P050",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P051",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P052",
+       "category": "contract_length",
+       "expected": "READY",
+       "got": "READY",
+       "ok": true,
+       "tokens_in": 287,
+       "tokens_out": 9
+      },
+      {
+       "id": "P053",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P054",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 311,
+       "tokens_out": 11
+      },
+      {
+       "id": "P055",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 291,
+       "tokens_out": 11
+      },
+      {
+       "id": "P056",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 311,
+       "tokens_out": 11
+      },
+      {
+       "id": "P057",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 291,
+       "tokens_out": 10
+      },
+      {
+       "id": "P058",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 311,
+       "tokens_out": 10
+      },
+      {
+       "id": "P059",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "NOT_READY",
+       "ok": true,
+       "tokens_in": 291,
+       "tokens_out": 10
+      },
+      {
+       "id": "P060",
+       "category": "mixed",
+       "expected": "NOT_READY",
+       "got": "CANNOT_VERIFY",
+       "ok": false,
+       "tokens_in": 311,
+       "tokens_out": 11
+      }
+     ]
+    }
+   }
+  },
+  "p8": {
+   "set": "P8_reading",
+   "detectors": "v2 (OCR-tolerant, after the v1 run found 12 identifier leaks in request bodies)",
+   "route": "nvidia_build",
+   "route_label": "Route: NVIDIA API Catalog (development)",
+   "ran_at": "2026-10-29T12:33:47+00:00",
+   "specimens": 40,
+   "exact": 39,
+   "unread": 1,
+   "wrong_but_confident": 0,
+   "quotes_refused": 0,
+   "request_bodies_scanned": 40,
+   "identifier_leaks_in_request_bodies": 0,
+   "by_variant": {
+    "blur": {
+     "n": 5,
+     "exact": 5
+    },
+    "clean": {
+     "n": 10,
+     "exact": 10
+    },
+    "lowlight": {
+     "n": 5,
+     "exact": 5
+    },
+    "noise": {
+     "n": 5,
+     "exact": 5
+    },
+    "rot_blur": {
+     "n": 5,
+     "exact": 4
+    },
+    "rot_left": {
+     "n": 5,
+     "exact": 5
+    },
+    "rot_right": {
+     "n": 5,
+     "exact": 5
+    }
+   },
+   "miss_ids": [
+    "S40"
+   ]
+  },
+  "p8_v1": {
+   "set": "P8_reading",
+   "route": "nvidia_build",
+   "route_label": "Route: NVIDIA API Catalog (development)",
+   "ran_at": "2026-10-29T12:32:16+00:00",
+   "specimens": 40,
+   "exact": 39,
+   "unread": 1,
+   "wrong_but_confident": 0,
+   "quotes_refused": 0,
+   "request_bodies_scanned": 40,
+   "identifier_leaks_in_request_bodies": 12,
+   "by_variant": {
+    "blur": {
+     "n": 5,
+     "exact": 5
+    },
+    "clean": {
+     "n": 10,
+     "exact": 10
+    },
+    "lowlight": {
+     "n": 5,
+     "exact": 5
+    },
+    "noise": {
+     "n": 5,
+     "exact": 5
+    },
+    "rot_blur": {
+     "n": 5,
+     "exact": 4
+    },
+    "rot_left": {
+     "n": 5,
+     "exact": 5
+    },
+    "rot_right": {
+     "n": 5,
+     "exact": 5
+    }
+   },
+   "miss_ids": [
+    "S40"
+   ]
+  },
+  "p9": {
+   "set": "P9_drift",
+   "route": "nvidia_build",
+   "route_label": "Route: NVIDIA API Catalog (development)",
+   "ran_at": "2026-10-29T12:38:00+00:00",
+   "status": "OK",
+   "detail": "",
+   "review_items": 27,
+   "items": [
+    {
+     "administration": "in-dgs",
+     "topic": "medical",
+     "url": "https://www.dgshipping.gov.in/writereaddata/News/202507181056461001460NT-DGSCircularNo31of25.pdf",
+     "quote": "Rule 5(1)(d) of the MS-RPSL Rules mandates that recruitment and placement service providers must verify that the seafarers recruited or placed by them are duly qualified and possess all documents necessary for the jobs concerned.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "in-dgs",
+     "topic": "medical",
+     "url": "https://dgshipping.gov.in/WriteReadData/News/202507181056461001460NT-DGSCircularNo31of25.pdf",
+     "quote": "The STCW Rules mandate that the training and assessment of seafarers are to be administered, supervised, and monitored in accordance with the STCW Convention.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "in-dgs",
+     "topic": "medical",
+     "url": "https://www.dgshipping.gov.in/writereaddata/News/202406031237419982356DGSAdvisorytoseafarers.pdf",
+     "quote": "The seafarers are advised to conduct a thorough research and vetting of recruitment agencies before entering into the Seafarers Employment Agreements (SEA).",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "sg-mpa",
+     "topic": "revalidation",
+     "url": "https://www.mpa.gov.sg/api/media/04abe1ae-11d6-4f78-99c6-2700ded6d09f/sc_no_2_of_2023_rev1.pdf",
+     "quote": "With effect from 1st Jan 2024, List of Active Shipping Circulars will not be published. The circulars which are found on MPA\u2019s website are deemed active.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "sg-mpa",
+     "topic": "revalidation",
+     "url": "https://www.mpa.gov.sg/api/media/ea1998d5-c095-46c4-957e-d65eefdc7463/-sc_no_23_of_2015.pdf",
+     "quote": "The resolutions adopted by MSC 95 include the following: a. Resolution MSC.391(95) \u2013 Adoption of the International Code of Safety for Ships using Gases or Other Low-Flashpoint Fuels (IGF Code) The resolution adopts the Code of Safety for Ships Using Gases or Other Low-Flashpoint Fuels (IGF Code). The IGF Code will not be applicable to ships covered by the International Code of the Construction and Equipment of Ships Carrying Liquefied Gases in Bulk (IGC Code). The IGF Code will take effect on 1 January 2017.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "sg-mpa",
+     "topic": "revalidation",
+     "url": "https://www.mpa.gov.sg/api/media/3b148f4f-78ba-4784-99e6-35aec9d0a7a0/msc-108-20-add-1---report-of-the-maritime-safety-committee-on-its-108th-session-(secretariat).pdf",
+     "quote": "THE MARITIME SAFETY COMMITTEE, RECALLING Article 28(b) of the Convention on the International Maritime Organization concerning the functions of the Committee, RECALLING ALSO article VIII(b) of the International Convention for the Safety of Life at Sea, 1974 (",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "sg-mpa",
+     "topic": "revalidation",
+     "url": "https://www.mpa.gov.sg/api/media/3edce392-fba8-43a3-a348-95cb082d9cb1/msc-102-24-add-1---report-of-the-maritime-safety-committeeon-its-102nd-session-(secretariat).pdf",
+     "quote": "1.3 For the purpose of this chapter: .1 the expression ships constructed means ships the keels of which are laid or which are at a similar stage of construction; .2 the expression sh",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "sg-mpa",
+     "topic": "medical",
+     "url": "https://www.mpa.gov.sg/api/media/9e9c2803-7367-4646-a0ba-03000c32d714/-sc_no_21_of_2015.pdf",
+     "quote": "The resolution adopts the Polar Code to provide a mandatory framework for ships operating in polar waters to ensure safe ship operation and protection of the polar environment.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "sg-mpa",
+     "topic": "medical",
+     "url": "https://www.mpa.gov.sg/port-marine-ops/harbourcraft-and-pleasure-craft-regulations/licensing-of-pleasure-craft",
+     "quote": "Pleasure craft means any craft which is intended for use within the port exclusively for sport or pleasure purposes but does not include any craft which is used to carry passengers on sightseeing tours within the port for which each such passenger is charged a separate and distinct fare.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "au-amsa",
+     "topic": "revalidation",
+     "url": "http://www.amsa.gov.au/about/regulations-and-standards",
+     "quote": "Marine Order 16 implements international load line standards for regulated Australian vessels (RAVs) and foreign vessels, including marking, overloading and logbook entry requirements.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "au-amsa",
+     "topic": "revalidation",
+     "url": "http://www.amsa.gov.au/qualifications-training/international-qualifications/approved-training-courses",
+     "quote": "You are reminded that colleges set and charge their own fees for courses. The AMSA fee for sea service assessment, issue or revalidation of a certificate and the oral examination are separate and in addition to the college fee.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "au-amsa",
+     "topic": "revalidation",
+     "url": "http://www.amsa.gov.au/qualifications-training/equivalent-qualifications-and-skill-recognition/country-eligibility",
+     "quote": "You **cannot transfer or convert** a certificate from a recognised country into an Australian-issued STCW certificate of proficiency or certificate of competency.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "au-amsa",
+     "topic": "revalidation",
+     "url": "http://www.amsa.gov.au/about/regulations-and-standards/index-marine-notices",
+     "quote": "A marine notice provides important safety related information, general guidance and details about upcoming changes to legislation to the shipping and maritime community.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "au-amsa",
+     "topic": "medical",
+     "url": "https://www.amsa.gov.au/sites/default/files/a-guide-to-the-implementation-of-the-mlc-in-australia.pdf",
+     "quote": "The Australian Maritime Safety Authority (AMSA) is the competent authority responsible for regulation of the Convention and its requirements in Australia.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "au-amsa",
+     "topic": "medical",
+     "url": "http://www.amsa.gov.au/forms/seafarer-form-419",
+     "quote": "You must complete and download a new copy of form 419 each time you apply for, revalidate, replace or add an endorsement to an STCW certificate.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "uk-mca",
+     "topic": "revalidation",
+     "url": "https://assets.publishing.service.gov.uk/media/5e565d82e90e07111270580b/MSN_1861_to_tag.doc.pdf",
+     "quote": "To revalidate a United Kingdom (UK) STCW Certificate of Competency you must: \u2022 Hold a UK Certificate of Competency; \u2022 Demonstrate continued competence, relevant to the functions of the Certificate of Competency held by either: o Completing a minimum period of seagoing service; o Demonstrating occupational experience the MCA considers as being equivalent to the seagoing service requirement for revalidation; o Completing the required examinations and, if applicable, additional seagoing service; \u2022 Meet medical standards (including eyesight); \u2022 After 31 December 2016 update or complete safety training; \u2022 If applicable, some ancillary technical training.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "uk-mca",
+     "topic": "revalidation",
+     "url": "https://www.gov.uk/guidance/how-to-revalidate-a-uk-certificate-of-competency",
+     "quote": "You can apply for revalidation if you\u2019ve completed one of the following:",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "uk-mca",
+     "topic": "revalidation",
+     "url": "https://assets.publishing.service.gov.uk/media/5eaaa31986650c4353446225/MGN_496_-_Tagged.pdf",
+     "quote": "The Certificate of Competency issued will be Master Workboat less than 500 GT unlimited area.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "uk-mca",
+     "topic": "revalidation",
+     "url": "https://assets.publishing.service.gov.uk/media/63a045b88fa8f5390e5603ed/Merchant_Shipping_Notice_1856__Amendment_1_.pdf",
+     "quote": "The 2022 Regulations revoked and replaced the previous regulations, the Merchant Shipping (Standards of Training, Certification and Watchkeeping) Regulations 2015 (SI 2015/782).",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "uk-mca",
+     "topic": "medical",
+     "url": "https://assets.publishing.service.gov.uk/media/5a81c70fe5274a2e8ab55c54/MSN_1839.pdf",
+     "quote": "The requirements do not apply to seafarers on fishing vessels, pleasure vessels (not used commercially) and offshore installations whilst on their working stations.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "uk-mca",
+     "topic": "medical",
+     "url": "https://assets.publishing.service.gov.uk/media/5a80e41fed915d74e33fcfe9/MSN1856.pdf",
+     "quote": "This Merchant Shipping Notice (MSN) sets out and explains the regulatory requirements regarding the implementation of training elements applicable under Chapter II of the Standards of Training, Certification and Watchkeeping (STCW) Convention and Code.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "uk-mca",
+     "topic": "medical",
+     "url": "https://assets.publishing.service.gov.uk/media/5a80116fe5274a2e8ab4dfe4/MSN_1857.pdf",
+     "quote": "It also details the requirements to obtain non-STCW Marine Engineer Operators Licences (MEOL) and Senior Marine Engineer Operators Licences (SMEOL).",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "ng-nimasa",
+     "topic": "revalidation",
+     "url": "https://nimasa.gov.ng/wp-content/uploads/2023/04/MTI-New-Guidelines-Final-Copy-pdf-version.pdf",
+     "quote": "20.0 The Application Package",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "ng-nimasa",
+     "topic": "revalidation",
+     "url": "https://nimasa.gov.ng/wp-content/uploads/2025/01/nig92406.pdf",
+     "quote": "2. Agency for Maritime Safety Administration.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "ng-nimasa",
+     "topic": "medical",
+     "url": "https://nimasa.gov.ng/wp-content/uploads/2022/03/Compendium.pdf",
+     "quote": "The Internal management policies contained in this compilation have been approved by the Governing Board to address far-reaching process requirements and employees\u2019 work-life and performance management balance.",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "ng-nimasa",
+     "topic": "medical",
+     "url": "https://nimasa.gov.ng/what-we-do/maritime-labour-employment/maritime-labour-convention",
+     "quote": "Regulation 1.1 \u2013 Minimum age",
+     "action": "review: a person decides whether to release a new rule pack"
+    },
+    {
+     "administration": "ng-nimasa",
+     "topic": "medical",
+     "url": "https://nimasa.gov.ng/what-we-do/maritime-safety-security/tanker-endorsement-of-certificate-of-competency",
+     "quote": "Officer or rating assigned specific duties or responsibilities related to cargo or cargo equipment on tankers must complete basic training for tanker operations before taking up such duties.",
+     "action": "review: a person decides whether to release a new rule pack"
+    }
+   ],
+   "gates": {
+    "searched": 49,
+    "off_domain": 0,
+    "keyword_miss": 13,
+    "already_seen": 7,
+    "quote_refused": 1,
+    "classified": 29
+   },
+   "tavily_requests": 52,
+   "tavily_requests_by_path": {
+    "/search": 10,
+    "/extract": 42
+   },
+   "queries": [
+    "revalidation certificate of competency circular DG Shipping India",
+    "seafarer medical fitness certificate validity circular DG Shipping India",
+    "revalidation certificate of competency circular MPA Singapore",
+    "seafarer medical fitness certificate validity circular MPA Singapore",
+    "revalidation certificate of competency circular AMSA Australia",
+    "seafarer medical fitness certificate validity circular AMSA Australia",
+    "revalidation certificate of competency circular MCA United Kingdom",
+    "seafarer medical fitness certificate validity circular MCA United Kingdom",
+    "revalidation certificate of competency circular NIMASA Nigeria",
+    "seafarer medical fitness certificate validity circular NIMASA Nigeria"
+   ]
+  },
+  "p10": {
+   "set": "P10_unattended",
+   "route": "nvidia_build",
+   "route_label": "Route: NVIDIA API Catalog (development)",
+   "timer": "service loop, wake every 6 seconds (runner.tick)",
+   "wakes": [
+    {
+     "wake": 1,
+     "ts": "2026-10-29T12:38:57+00:00",
+     "ran": [
+      "daily",
+      "weekly"
+     ]
+    },
+    {
+     "wake": 2,
+     "ts": "2026-10-29T12:39:03+00:00",
+     "ran": []
+    },
+    {
+     "wake": 3,
+     "ts": "2026-10-29T12:39:09+00:00",
+     "ran": []
+    },
+    {
+     "wake": 4,
+     "ts": "2026-10-29T12:39:15+00:00",
+     "ran": []
+    }
+   ],
+   "runs": [
+    {
+     "kind": "daily",
+     "started": "2026-10-29T12:38:21+00:00",
+     "finished": "2026-10-29T12:38:22+00:00",
+     "summary": {
+      "checked_offers": 1,
+      "notes": [
+       {
+        "contract": "2027-02-01",
+        "overall": "NOT_READY",
+        "summary": "Not ready: Medical fitness certificate lapses 2027-03-14 (day 42 of 181)."
+       }
+      ]
+     }
+    },
+    {
+     "kind": "weekly",
+     "started": "2026-10-29T12:38:22+00:00",
+     "finished": "2026-10-29T12:38:57+00:00",
+     "summary": {
+      "review_items": 4,
+      "lookout_ran": true
+     }
+    }
+   ],
+   "alerts": [
+    {
+     "ts": "2026-10-29T12:38:22+00:00",
+     "kind": "lapse",
+     "text": "Not ready: Medical fitness certificate lapses 2027-03-14 (day 42 of 181)."
+    }
+   ],
+   "tavily_requests": 10,
+   "daily_runs": 1,
+   "weekly_runs": 1
+  },
+  "p12": {
+   "set": "P12_cost",
+   "route": "nvidia_build",
+   "route_label": "Route: NVIDIA API Catalog (development)",
+   "price_available": false,
+   "note": "No list price exists for this route, so no dollar figure is shown. Token Factory prices are measured once a key exists (scripts/switch_to_tokenfactory.sh).",
+   "p6_by_model": {
+    "nvidia/nemotron-3.5-super-vl-120b-a12b": {
+     "calls": 60,
+     "tokens_in": 17641,
+     "tokens_out": 579,
+     "mean_latency_ms": 1184,
+     "reasoning_tokens": 0
+    },
+    "nvidia/nemotron-3-ultra-550b-a55b": {
+     "calls": 60,
+     "tokens_in": 17641,
+     "tokens_out": 606,
+     "mean_latency_ms": 2787,
+     "reasoning_tokens": 0
+    }
+   },
+   "p8_reading_per_specimen": {
+    "calls": 40,
+    "tokens_in": 9436,
+    "tokens_out": 5961,
+    "mean_latency_ms": 4255,
+    "reasoning_tokens": 0,
+    "per_specimen_tokens_in": 235,
+    "per_specimen_tokens_out": 149
+   },
+   "p9_drift_week": {
+    "calls": 29,
+    "tokens_in": 47626,
+    "tokens_out": 1575,
+    "mean_latency_ms": 4248,
+    "reasoning_tokens": 0
+   },
+   "p10_weekly_check_one_administration": {
+    "calls": 7,
+    "tokens_in": 11781,
+    "tokens_out": 338,
+    "mean_latency_ms": 4049,
+    "reasoning_tokens": 0
+   },
+   "weekly_check_tokens": 49201,
+   "readiness_run_tokens": 0,
+   "readiness_run_note": "The Navigator computes the verdict in code and calls no model.",
+   "counterfactual_ultra_for_every_call": {
+    "mean_latency_ms_if_ultra": 2787,
+    "mean_latency_ms_actual_super": 1184,
+    "latency_ratio_ultra_over_super": 2.35,
+    "note": "Same prompts (P6), so token counts are equal; the difference is latency and the larger model's price, which is not available on this route."
+   }
+  }
+ },
+ "p6_model_cases": {
+  "super": [
+   {
+    "id": "P001",
+    "category": "boundary_end",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P002",
+    "category": "boundary_end",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P003",
+    "category": "boundary_end",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P004",
+    "category": "boundary_end",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P005",
+    "category": "boundary_end",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P006",
+    "category": "boundary_end",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P007",
+    "category": "boundary_start",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P008",
+    "category": "boundary_start",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P009",
+    "category": "boundary_start",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P010",
+    "category": "boundary_start",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P011",
+    "category": "travel_buffer",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 294,
+    "tokens_out": 9
+   },
+   {
+    "id": "P012",
+    "category": "travel_buffer",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 294,
+    "tokens_out": 9
+   },
+   {
+    "id": "P013",
+    "category": "travel_buffer",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 294,
+    "tokens_out": 9
+   },
+   {
+    "id": "P014",
+    "category": "travel_buffer",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 294,
+    "tokens_out": 9
+   },
+   {
+    "id": "P015",
+    "category": "travel_buffer_before",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 294,
+    "tokens_out": 9
+   },
+   {
+    "id": "P016",
+    "category": "travel_buffer_before",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 294,
+    "tokens_out": 9
+   },
+   {
+    "id": "P017",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P018",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P019",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P020",
+    "category": "leap_year",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P021",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P022",
+    "category": "leap_year",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P023",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P024",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P025",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 261,
+    "tokens_out": 11
+   },
+   {
+    "id": "P026",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 261,
+    "tokens_out": 11
+   },
+   {
+    "id": "P027",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 261,
+    "tokens_out": 11
+   },
+   {
+    "id": "P028",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P029",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P030",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P031",
+    "category": "missing_document",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 321,
+    "tokens_out": 9
+   },
+   {
+    "id": "P032",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 230,
+    "tokens_out": 11
+   },
+   {
+    "id": "P033",
+    "category": "missing_fact",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 277,
+    "tokens_out": 11
+   },
+   {
+    "id": "P034",
+    "category": "missing_fact",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P035",
+    "category": "missing_fact",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 277,
+    "tokens_out": 11
+   },
+   {
+    "id": "P036",
+    "category": "missing_fact",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P037",
+    "category": "missing_fact",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 277,
+    "tokens_out": 11
+   },
+   {
+    "id": "P038",
+    "category": "missing_fact",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P039",
+    "category": "missing_fact",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 277,
+    "tokens_out": 11
+   },
+   {
+    "id": "P040",
+    "category": "missing_fact",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P041",
+    "category": "many_documents",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 353,
+    "tokens_out": 9
+   },
+   {
+    "id": "P042",
+    "category": "many_documents",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 353,
+    "tokens_out": 9
+   },
+   {
+    "id": "P043",
+    "category": "many_documents",
+    "expected": "NOT_READY",
+    "got": "READY",
+    "ok": false,
+    "tokens_in": 353,
+    "tokens_out": 9
+   },
+   {
+    "id": "P044",
+    "category": "many_documents",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 353,
+    "tokens_out": 9
+   },
+   {
+    "id": "P045",
+    "category": "many_documents",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 353,
+    "tokens_out": 9
+   },
+   {
+    "id": "P046",
+    "category": "many_documents",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 353,
+    "tokens_out": 9
+   },
+   {
+    "id": "P047",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P048",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P049",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P050",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P051",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P052",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P053",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P054",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 311,
+    "tokens_out": 11
+   },
+   {
+    "id": "P055",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P056",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 311,
+    "tokens_out": 11
+   },
+   {
+    "id": "P057",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P058",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 311,
+    "tokens_out": 11
+   },
+   {
+    "id": "P059",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P060",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 311,
+    "tokens_out": 11
+   }
+  ],
+  "ultra": [
+   {
+    "id": "P001",
+    "category": "boundary_end",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P002",
+    "category": "boundary_end",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P003",
+    "category": "boundary_end",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P004",
+    "category": "boundary_end",
+    "expected": "READY",
+    "got": "NOT_READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P005",
+    "category": "boundary_end",
+    "expected": "READY",
+    "got": "NOT_READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P006",
+    "category": "boundary_end",
+    "expected": "READY",
+    "got": "NOT_READY",
+    "ok": false,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P007",
+    "category": "boundary_start",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P008",
+    "category": "boundary_start",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P009",
+    "category": "boundary_start",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P010",
+    "category": "boundary_start",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P011",
+    "category": "travel_buffer",
+    "expected": "READY",
+    "got": "NOT_READY",
+    "ok": false,
+    "tokens_in": 294,
+    "tokens_out": 10
+   },
+   {
+    "id": "P012",
+    "category": "travel_buffer",
+    "expected": "READY",
+    "got": "NOT_READY",
+    "ok": false,
+    "tokens_in": 294,
+    "tokens_out": 10
+   },
+   {
+    "id": "P013",
+    "category": "travel_buffer",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 294,
+    "tokens_out": 10
+   },
+   {
+    "id": "P014",
+    "category": "travel_buffer",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 294,
+    "tokens_out": 10
+   },
+   {
+    "id": "P015",
+    "category": "travel_buffer_before",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 294,
+    "tokens_out": 10
+   },
+   {
+    "id": "P016",
+    "category": "travel_buffer_before",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 294,
+    "tokens_out": 10
+   },
+   {
+    "id": "P017",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P018",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P019",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P020",
+    "category": "leap_year",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P021",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P022",
+    "category": "leap_year",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P023",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P024",
+    "category": "leap_year",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P025",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 261,
+    "tokens_out": 11
+   },
+   {
+    "id": "P026",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 261,
+    "tokens_out": 11
+   },
+   {
+    "id": "P027",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 261,
+    "tokens_out": 11
+   },
+   {
+    "id": "P028",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P029",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P030",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P031",
+    "category": "missing_document",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 321,
+    "tokens_out": 9
+   },
+   {
+    "id": "P032",
+    "category": "missing_document",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 230,
+    "tokens_out": 11
+   },
+   {
+    "id": "P033",
+    "category": "missing_fact",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 277,
+    "tokens_out": 11
+   },
+   {
+    "id": "P034",
+    "category": "missing_fact",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P035",
+    "category": "missing_fact",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 277,
+    "tokens_out": 11
+   },
+   {
+    "id": "P036",
+    "category": "missing_fact",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P037",
+    "category": "missing_fact",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 277,
+    "tokens_out": 11
+   },
+   {
+    "id": "P038",
+    "category": "missing_fact",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P039",
+    "category": "missing_fact",
+    "expected": "CANNOT_VERIFY",
+    "got": "CANNOT_VERIFY",
+    "ok": true,
+    "tokens_in": 277,
+    "tokens_out": 11
+   },
+   {
+    "id": "P040",
+    "category": "missing_fact",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 10
+   },
+   {
+    "id": "P041",
+    "category": "many_documents",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 353,
+    "tokens_out": 10
+   },
+   {
+    "id": "P042",
+    "category": "many_documents",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 353,
+    "tokens_out": 10
+   },
+   {
+    "id": "P043",
+    "category": "many_documents",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 353,
+    "tokens_out": 10
+   },
+   {
+    "id": "P044",
+    "category": "many_documents",
+    "expected": "READY",
+    "got": "NOT_READY",
+    "ok": false,
+    "tokens_in": 353,
+    "tokens_out": 10
+   },
+   {
+    "id": "P045",
+    "category": "many_documents",
+    "expected": "READY",
+    "got": "NOT_READY",
+    "ok": false,
+    "tokens_in": 353,
+    "tokens_out": 10
+   },
+   {
+    "id": "P046",
+    "category": "many_documents",
+    "expected": "READY",
+    "got": "NOT_READY",
+    "ok": false,
+    "tokens_in": 353,
+    "tokens_out": 10
+   },
+   {
+    "id": "P047",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P048",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P049",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P050",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P051",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P052",
+    "category": "contract_length",
+    "expected": "READY",
+    "got": "READY",
+    "ok": true,
+    "tokens_in": 287,
+    "tokens_out": 9
+   },
+   {
+    "id": "P053",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P054",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 311,
+    "tokens_out": 11
+   },
+   {
+    "id": "P055",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 291,
+    "tokens_out": 11
+   },
+   {
+    "id": "P056",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 311,
+    "tokens_out": 11
+   },
+   {
+    "id": "P057",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 291,
+    "tokens_out": 10
+   },
+   {
+    "id": "P058",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 311,
+    "tokens_out": 10
+   },
+   {
+    "id": "P059",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "NOT_READY",
+    "ok": true,
+    "tokens_in": 291,
+    "tokens_out": 10
+   },
+   {
+    "id": "P060",
+    "category": "mixed",
+    "expected": "NOT_READY",
+    "got": "CANNOT_VERIFY",
+    "ok": false,
+    "tokens_in": 311,
+    "tokens_out": 11
+   }
+  ]
+ },
+ "p8_cases": [
+  {
+   "id": "S01",
+   "style": "India",
+   "variant": "clean",
+   "expected": "2028-12-22",
+   "got": "2028-12-22",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S02",
+   "style": "India",
+   "variant": "clean",
+   "expected": "2028-02-15",
+   "got": "2028-02-15",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S03",
+   "style": "India",
+   "variant": "rot_left",
+   "expected": "2028-05-21",
+   "got": "2028-05-21",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S04",
+   "style": "India",
+   "variant": "rot_right",
+   "expected": "2029-02-16",
+   "got": "2029-02-16",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S05",
+   "style": "India",
+   "variant": "blur",
+   "expected": "2028-01-24",
+   "got": "2028-01-24",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S06",
+   "style": "India",
+   "variant": "lowlight",
+   "expected": "2028-09-27",
+   "got": "2028-09-27",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S07",
+   "style": "India",
+   "variant": "noise",
+   "expected": "2028-05-24",
+   "got": "2028-05-24",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S08",
+   "style": "India",
+   "variant": "rot_blur",
+   "expected": "2028-04-20",
+   "got": "2028-04-20",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S09",
+   "style": "United Kingdom",
+   "variant": "clean",
+   "expected": "2028-05-29",
+   "got": "2028-05-29",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S10",
+   "style": "United Kingdom",
+   "variant": "clean",
+   "expected": "2028-06-21",
+   "got": "2028-06-21",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S11",
+   "style": "United Kingdom",
+   "variant": "rot_left",
+   "expected": "2028-01-16",
+   "got": "2028-01-16",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S12",
+   "style": "United Kingdom",
+   "variant": "rot_right",
+   "expected": "2027-12-14",
+   "got": "2027-12-14",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S13",
+   "style": "United Kingdom",
+   "variant": "blur",
+   "expected": "2028-12-18",
+   "got": "2028-12-18",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S14",
+   "style": "United Kingdom",
+   "variant": "lowlight",
+   "expected": "2028-09-09",
+   "got": "2028-09-09",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S15",
+   "style": "United Kingdom",
+   "variant": "noise",
+   "expected": "2027-07-29",
+   "got": "2027-07-29",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S16",
+   "style": "United Kingdom",
+   "variant": "rot_blur",
+   "expected": "2029-05-29",
+   "got": "2029-05-29",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S17",
+   "style": "Singapore",
+   "variant": "clean",
+   "expected": "2028-09-23",
+   "got": "2028-09-23",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S18",
+   "style": "Singapore",
+   "variant": "clean",
+   "expected": "2028-10-23",
+   "got": "2028-10-23",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S19",
+   "style": "Singapore",
+   "variant": "rot_left",
+   "expected": "2029-05-17",
+   "got": "2029-05-17",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S20",
+   "style": "Singapore",
+   "variant": "rot_right",
+   "expected": "2028-07-01",
+   "got": "2028-07-01",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S21",
+   "style": "Singapore",
+   "variant": "blur",
+   "expected": "2027-12-15",
+   "got": "2027-12-15",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S22",
+   "style": "Singapore",
+   "variant": "lowlight",
+   "expected": "2029-02-12",
+   "got": "2029-02-12",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S23",
+   "style": "Singapore",
+   "variant": "noise",
+   "expected": "2027-11-20",
+   "got": "2027-11-20",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S24",
+   "style": "Singapore",
+   "variant": "rot_blur",
+   "expected": "2028-12-26",
+   "got": "2028-12-26",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S25",
+   "style": "Australia",
+   "variant": "clean",
+   "expected": "2027-05-08",
+   "got": "2027-05-08",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S26",
+   "style": "Australia",
+   "variant": "clean",
+   "expected": "2028-02-10",
+   "got": "2028-02-10",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S27",
+   "style": "Australia",
+   "variant": "rot_left",
+   "expected": "2028-11-08",
+   "got": "2028-11-08",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S28",
+   "style": "Australia",
+   "variant": "rot_right",
+   "expected": "2028-07-23",
+   "got": "2028-07-23",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S29",
+   "style": "Australia",
+   "variant": "blur",
+   "expected": "2028-05-31",
+   "got": "2028-05-31",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S30",
+   "style": "Australia",
+   "variant": "lowlight",
+   "expected": "2029-02-15",
+   "got": "2029-02-15",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S31",
+   "style": "Australia",
+   "variant": "noise",
+   "expected": "2028-05-10",
+   "got": "2028-05-10",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S32",
+   "style": "Australia",
+   "variant": "rot_blur",
+   "expected": "2029-02-23",
+   "got": "2029-02-23",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S33",
+   "style": "Nigeria",
+   "variant": "clean",
+   "expected": "2029-01-10",
+   "got": "2029-01-10",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S34",
+   "style": "Nigeria",
+   "variant": "clean",
+   "expected": "2027-04-18",
+   "got": "2027-04-18",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S35",
+   "style": "Nigeria",
+   "variant": "rot_left",
+   "expected": "2027-09-06",
+   "got": "2027-09-06",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S36",
+   "style": "Nigeria",
+   "variant": "rot_right",
+   "expected": "2028-09-20",
+   "got": "2028-09-20",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S37",
+   "style": "Nigeria",
+   "variant": "blur",
+   "expected": "2027-03-19",
+   "got": "2027-03-19",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S38",
+   "style": "Nigeria",
+   "variant": "lowlight",
+   "expected": "2029-06-06",
+   "got": "2029-06-06",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S39",
+   "style": "Nigeria",
+   "variant": "noise",
+   "expected": "2028-03-28",
+   "got": "2028-03-28",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S40",
+   "style": "Nigeria",
+   "variant": "rot_blur",
+   "expected": "2028-05-12",
+   "got": null,
+   "exact": false,
+   "unread": true,
+   "unread_fields": [
+    "capacity",
+    "expiry_date"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  }
+ ],
  "proof": {
   "p3": {
    "set": "P3_encoding_corpus",
@@ -4047,39 +7503,56 @@
   {
    "role": "triage",
    "size": "nano",
-   "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+   "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
    "thinking": false,
    "max_tokens": 400,
-   "confirmed": false
+   "confirmed": true
   },
   {
    "role": "structure",
    "size": "super",
-   "model": "nvidia/nemotron-3-super-120b-a12b",
+   "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
    "thinking": false,
    "max_tokens": 2000,
-   "confirmed": false
+   "confirmed": true
   },
   {
    "role": "plan",
    "size": "ultra",
-   "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
    "thinking": true,
    "max_tokens": 3000,
-   "confirmed": false
+   "confirmed": true
   },
   {
    "role": "drift",
    "size": "nano",
-   "model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+   "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
    "thinking": false,
    "max_tokens": 600,
-   "confirmed": false
+   "confirmed": true
   }
  ],
  "receipts": {
-  "count": 0,
-  "note": "No Token Factory call has been recorded yet."
+  "count": 197,
+  "by_model": {
+   "nvidia_build|nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": {
+    "calls": 36,
+    "tokens_in": 59407,
+    "tokens_out": 1913
+   },
+   "nvidia_build|nvidia/nemotron-3.5-super-vl-120b-a12b": {
+    "calls": 101,
+    "tokens_in": 27152,
+    "tokens_out": 6567
+   },
+   "nvidia_build|nvidia/nemotron-3-ultra-550b-a55b": {
+    "calls": 60,
+    "tokens_in": 17641,
+    "tokens_out": 606
+   }
+  },
+  "note": "No Token Factory call has been recorded; every receipt below is from the NVIDIA API Catalog development route."
  },
  "outbox": {
   "packet": {
@@ -4406,7 +7879,7 @@
    ]
   }
  },
- "policy": "# Dogwatch sandbox policy. Field names follow docs/how-it-works/policies/schema.mdx in NVIDIA/OpenShell.\n# Status: written from the schema, not yet applied (see PLATFORM_PROBE.md).\nversion: 1\nfilesystem_policy:\n  read_only: [/usr, /etc, /lib, /vault]\n  read_write: [/sandbox, /tmp]\nnetwork_middlewares:\n  dogwatch-seal:\n    name: Dogwatch Seal\n    middleware: dogwatch-seal\n    order: 10\n    on_error: fail_closed\n    endpoints:\n      include: [api.tokenfactory.nebius.com, api.tavily.com, host.openshell.internal]\nnetwork_policies:\n  token-factory:\n    name: Nebius Token Factory chat only\n    endpoints:\n      - host: api.tokenfactory.nebius.com\n        port: 443\n        protocol: rest\n        enforcement: enforce\n        rules:\n          - allow: { method: POST, path: /v1/chat/completions }\n          - allow: { method: GET, path: /v1/models }\n    binaries: [{ path: /sandbox/.venv/bin/python3 }]\n  tavily:\n    name: Tavily search and extract\n    endpoints:\n      - host: api.tavily.com\n        port: 443\n        protocol: rest\n        enforcement: enforce\n        rules:\n          - allow: { method: POST, path: /search }\n          - allow: { method: POST, path: /extract }\n    binaries: [{ path: /sandbox/.venv/bin/python3 }]\n  radio-officer:\n    name: Radio Officer drafts and questions\n    endpoints:\n      - host: host.openshell.internal\n        port: 8787\n        protocol: rest\n        enforcement: enforce\n        rules:\n          - allow: { method: POST, path: /drafts }\n          - allow: { method: POST, path: /questions }\n          - allow: { method: GET, path: /inbox }\n          - allow: { method: POST, path: /vault/identifiers }\n    binaries: [{ path: /sandbox/.venv/bin/python3 }]\n",
+ "policy": "# Dogwatch sandbox policy. Field names follow docs/how-it-works/policies/schema.mdx in NVIDIA/OpenShell.\n# Status: written from the schema, not yet applied (see PLATFORM_PROBE.md).\nversion: 1\nfilesystem_policy:\n  read_only: [/usr, /etc, /lib, /vault]\n  read_write: [/sandbox, /tmp]\nprocess:\n  run_as_user: sandbox\n  run_as_group: sandbox\nnetwork_middlewares:\n  dogwatch-seal:\n    name: Dogwatch Seal\n    middleware: dogwatch-seal\n    order: 10\n    on_error: fail_closed\n    endpoints:\n      include: [api.tokenfactory.nebius.com, integrate.api.nvidia.com, api.tavily.com, host.openshell.internal]\nnetwork_policies:\n  token-factory:\n    name: Nebius Token Factory chat only\n    endpoints:\n      - host: api.tokenfactory.nebius.com\n        port: 443\n        protocol: rest\n        enforcement: enforce\n        rules:\n          - allow: { method: POST, path: /v1/chat/completions }\n          - allow: { method: GET, path: /v1/models }\n    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/curl }]\n  nvidia-api-catalog:\n    name: NVIDIA API Catalog chat only (development route)\n    endpoints:\n      - host: integrate.api.nvidia.com\n        port: 443\n        protocol: rest\n        enforcement: enforce\n        rules:\n          - allow: { method: POST, path: /v1/chat/completions }\n          - allow: { method: GET, path: /v1/models }\n    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/curl }]\n  tavily:\n    name: Tavily search and extract\n    endpoints:\n      - host: api.tavily.com\n        port: 443\n        protocol: rest\n        enforcement: enforce\n        rules:\n          - allow: { method: POST, path: /search }\n          - allow: { method: POST, path: /extract }\n    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/curl }]\n  radio-officer:\n    name: Radio Officer drafts and questions\n    endpoints:\n      - host: host.openshell.internal\n        port: 8787\n        protocol: rest\n        enforcement: enforce\n        rules:\n          - allow: { method: POST, path: /drafts }\n          - allow: { method: POST, path: /questions }\n          - allow: { method: GET, path: /inbox }\n          - allow: { method: POST, path: /vault/identifiers }\n    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/curl }]\n",
  "prover": {
   "01-webhook-host.result.txt": "result: exceeds_boundary\ncoverage: domains=filesystem,network_l4,network_rest,process,landlock\ncounterexample: network binary=- ancestor_binary=- binary_identity_required=false host=webhook.site:443 destination_ip=8.8.8.8 trusted_gateway=false protocol=rest method=POST path=/a\n",
   "02-wildcard-host.result.txt": "result: unsupported\ncoverage: domains=filesystem,network_l4,network_rest,process,landlock\nreason: candidate policy has overlapping exact and wildcard endpoints with different implicit destination IP modes\n",

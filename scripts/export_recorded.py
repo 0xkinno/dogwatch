@@ -46,10 +46,17 @@ def extras(readiness):
     plan = planner.write_plan(readiness, writer=lambda s, u: (_ for _ in ()).throw(__import__("dogwatch.model.client", fromlist=["x"]).ModelUnavailable("recorded export")))
     pk = build_packet(readiness, plan, identifier_lines={"Seafarer": "[[NAME_1]]", "CoC number": "[[COC_1]]", "Passport": "[[PASSPORT_1]]"}, recipient="manning-agent@example.test")
     routes = [{"role": r, "size": route(r).size, "model": route(r).model, "thinking": route(r).thinking, "max_tokens": route(r).max_tokens, "confirmed": route(r).confirmed} for r in ROLES]
-    rs = rc.load_all()
+    import glob, collections
+    rs = []
+    for f in glob.glob(str(ROOT / "evidence" / "receipts" / "*.jsonl")):
+        rs += [json.loads(x) for x in open(f, encoding="utf-8").read().splitlines() if x.strip()]
+    by = collections.defaultdict(lambda: {"calls": 0, "tokens_in": 0, "tokens_out": 0})
+    for r in rs:
+        k = f"{r.get('route','?')}|{r['model']}"
+        by[k]["calls"] += 1; by[k]["tokens_in"] += r["tokens_in"]; by[k]["tokens_out"] += r["tokens_out"]
     return {
         "ledger": ARJUN["ledger"], "ledger_window": [ws.isoformat(), today.isoformat()], "ledger_totals": totals,
-        "routing": routes, "receipts": {"count": len(rs), "note": "No Token Factory call has been recorded yet." if not rs else ""},
+        "routing": routes, "receipts": {"count": len(rs), "by_model": dict(by), "note": "No Token Factory call has been recorded; every receipt below is from the NVIDIA API Catalog development route."},
         "outbox": {"packet": pk["packet"], "recipients": pk["recipients"], "digest": pk["digest"], "status": "PENDING", "plan_source": plan["source"], "sent": []},
     }
 
@@ -67,6 +74,10 @@ def main():
         "persona": {"name": ARJUN["name"], "role": ARJUN["role"], "today": DEMO_TODAY, "contract": CONTRACT_OFFER},
         "readiness": readiness,
         "facts": facts.build()["facts"],
+        "probe": json.loads((ROOT / "evidence" / "probe" / "nvidia_build.json").read_text(encoding="utf-8")) if (ROOT / "evidence" / "probe" / "nvidia_build.json").exists() else None,
+        "live": {n: slim(res(f)) for n, f in (("p6_model", "p6_model_alone.json"), ("p8", "p8_reading.json"), ("p8_v1", "p8_reading_v1.json"), ("p9", "p9_drift.json"), ("p10", "p10_unattended.json"), ("p12", "p12_cost.json"))},
+        "p6_model_cases": {k: v["cases"] for k, v in (res("p6_model_alone.json") or {"contestants": {}})["contestants"].items()},
+        "p8_cases": (res("p8_reading.json") or {}).get("cases"),
         "proof": {"p3": slim(p3), "p3_v1": slim(p3v1), "p6": slim(p6), "p7": slim(p7), "p11": slim(p11),
                   "p3_cases": ((p3 or {}).get("cases") or {}).get("attacks"), "p6_cases": (p6 or {}).get("cases"), "p7_cases": (p7 or {}).get("cases")},
         **extras(readiness),

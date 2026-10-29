@@ -1,7 +1,7 @@
 import { PageHead } from "../../components/PageHead";
 import { WatchDial } from "../../components/WatchDial";
 import { GlowCard } from "../../components/GlowCard";
-import { Chip } from "../../components/Chip";
+import { Chip, ModeChip } from "../../components/Chip";
 import { R, fmtDate } from "../../lib/data";
 
 export const metadata = { title: "Arjun's watch | Dogwatch" };
@@ -26,7 +26,7 @@ export default function Watch() {
         mode={{ label: "RECORDED", detail: `${R.run_id} ${R.recorded_at}` }}
       />
       <section className="wrap" style={{ paddingBottom: 64 }}>
-        <div className="two-col" style={{ alignItems: "start" }}>
+        <div className="two-col" data-shot="watch" style={{ alignItems: "start" }}>
           <GlowCard>
             <div style={{ maxWidth: 380, margin: "0 auto" }}>
               <WatchDial id="watch-dial" documents={docs} label="Watch dial: documents by expiry month" />
@@ -84,7 +84,7 @@ export default function Watch() {
           </GlowCard>
 
           <GlowCard tone="green" className="stack">
-            <h2 className="h-md display">Model routing and cost</h2>
+            <div className="row"><h2 className="h-md display">Model routing and cost</h2><ModeChip mode="Route: NVIDIA API Catalog (development)" /></div>
             <div className="table-wrap" tabIndex={0} role="region" aria-label="Scrollable table">
               <table>
                 <thead><tr><th scope="col">Job</th><th scope="col">Model</th><th scope="col">Thinking</th></tr></thead>
@@ -92,7 +92,7 @@ export default function Watch() {
                   {R.routing.map((r) => (
                     <tr key={r.role}>
                       <td>{r.role}</td>
-                      <td className="mono">{r.model}{r.confirmed ? "" : " (id not yet confirmed by a probe)"}</td>
+                      <td className="mono">{r.model}{r.confirmed ? "" : " (not answering on this route; falls back)"}</td>
                       <td>{r.thinking ? "on, capped" : "off"}</td>
                     </tr>
                   ))}
@@ -100,7 +100,7 @@ export default function Watch() {
               </table>
             </div>
             <p className="src" style={{ margin: 0 }}>
-              Receipts recorded: {R.receipts.count}. {R.receipts.note} Cost per weekly check and the cost if the largest model handled every call appear here once real calls are recorded; no number is shown before then.
+              Receipts recorded: {R.receipts.count}, all from the development route. {R.receipts.note} Thinking on cost about ten times the tokens and time of thinking off on one real extraction (probe). A readiness run costs 0 tokens, because the Navigator calls no model. No dollar figure is shown: this route has no list price, and a price is never invented.
             </p>
           </GlowCard>
         </div>

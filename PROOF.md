@@ -36,6 +36,20 @@ Numbers below are generated from `eval/results/` through `docs/FACTS.json`; `scr
 
 - After a kill with one approved packet pending and a restart: <!--fact:p11.sends-->1<!--/fact--> send, <!--fact:p11.duplicates-->0<!--/fact--> duplicates. The mail transport is a local capture, so this proves the state machine and the idempotency key, not a mail provider.
 
+### P6 Nemotron alone (Route: NVIDIA API Catalog (development))
+
+- Same <!--fact:p6.profiles-->60<!--/fact--> profiles, thinking off, rule text supplied. Nemotron Super alone: <!--fact:p6.super.correct-->30<!--/fact--> correct, <!--fact:p6.super.false_safe-->22<!--/fact--> false-safe (said READY when not). Nemotron Ultra alone: <!--fact:p6.ultra.correct-->47<!--/fact--> correct, <!--fact:p6.ultra.false_safe-->0<!--/fact--> false-safe, <!--fact:p6.ultra.false_alarm-->8<!--/fact--> false alarms. Misses by id are in `eval/results/p6_model_alone.json`. Models: `nvidia/nemotron-3.5-super-vl-120b-a12b`, `nvidia/nemotron-3-ultra-550b-a55b`.
+
+### P8 Reading (Route: NVIDIA API Catalog (development))
+
+- <!--fact:p8.exact-->39<!--/fact--> of <!--fact:p8.specimens-->40<!--/fact--> specimens exact, <!--fact:p8.unread-->1<!--/fact--> UNREAD (S40, rotated and blurred), <!--fact:p8.wrong_confident-->0<!--/fact--> wrong without a flag. <!--fact:p8.leaks-->0<!--/fact--> identifiers in <!--fact:p8.bodies-->40<!--/fact--> outgoing request bodies. The first run (`eval/results/p8_reading_v1.json`) found <!--fact:p8.v1_leaks-->12<!--/fact-->: OCR split passport and CoC numbers with spaces, and a holder's name has no pattern. Detectors were made OCR tolerant and the name is matched from the vault table; the specimens and cases were not changed.
+
+### P9, P10, P12 (Route: NVIDIA API Catalog (development))
+
+- P9: <!--fact:p9.requests-->52<!--/fact--> Tavily requests, <!--fact:p9.searched-->49<!--/fact--> pages, <!--fact:p9.classified-->29<!--/fact--> classified, <!--fact:p9.items-->27<!--/fact--> review items. No ground truth exists for new rule text, so this is behaviour and gates, not accuracy.
+- P10: <!--fact:p10.daily-->1<!--/fact--> daily and <!--fact:p10.weekly-->1<!--/fact--> weekly run triggered by the timer loop, `evidence/unattended/trace.json`.
+- P12: <!--fact:p12.weekly_tokens-->49201<!--/fact--> tokens for one weekly drift check; a readiness run uses 0 tokens; Ultra about <!--fact:p12.latency_ratio-->2.35<!--/fact--> times slower than Super. No price exists on this route, so no dollar figure.
+
 ## NOT RUN yet
 
-P1 prover (needs OpenShell), P2 injection inbox, P4 fail closed, P5 credential placeholder, P6 against Nemotron, P8 reading, P9 drift, P10 unattended, P12 cost. Each needs a key or the OpenShell stack and is tracked in `TASK.md`.
+P1 on the sandbox effective policy, P2 injection inbox, P4 fail closed, P5 credential placeholder: all need the OpenShell sandbox, which cannot start on this host (Linux 5.10, Landlock ABI 3 needs 6.2). Everything on Nebius Token Factory: no key. Tracked in `TASK.md`.

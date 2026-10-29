@@ -13,7 +13,7 @@ export default function Contract() {
         serif="for this contract?"
         lede="Enter a contract window. The Navigator compares every document with it, in code, and shows the arithmetic and the rule behind each answer."
       />
-      <section className="wrap" style={{ paddingBottom: 64 }}>
+      <section className="wrap" data-shot="contract" style={{ paddingBottom: 64 }}>
         <GlowCard><ContractRunner showApproval /></GlowCard>
       </section>
     </>

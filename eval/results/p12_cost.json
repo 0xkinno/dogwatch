@@ -47,8 +47,8 @@
  "readiness_run_tokens": 0,
  "readiness_run_note": "The Navigator computes the verdict in code and calls no model.",
  "counterfactual_ultra_for_every_call": {
-  "p8_mean_latency_ms_if_ultra": 2787,
-  "p8_mean_latency_ms_actual_super": 1184,
+  "mean_latency_ms_if_ultra": 2787,
+  "mean_latency_ms_actual_super": 1184,
   "latency_ratio_ultra_over_super": 2.35,
   "note": "Same prompts (P6), so token counts are equal; the difference is latency and the larger model's price, which is not available on this route."
  }

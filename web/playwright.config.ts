@@ -1,6 +1,6 @@
 import { defineConfig } from "@playwright/test";
 
-const port = Number(process.env.PORT ?? 3100);
+const port = Number(process.env.PORT ?? 3217);
 
 export default defineConfig({
   testDir: "./tests",
@@ -12,7 +12,7 @@ export default defineConfig({
   webServer: {
     command: `npx next start -p ${port}`,
     url: `http://localhost:${port}`,
-    reuseExistingServer: true,
+    reuseExistingServer: false,
     timeout: 60_000,
   },
 });

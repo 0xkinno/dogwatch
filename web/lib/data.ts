@@ -44,6 +44,8 @@ export const R = recorded as unknown as {
   routing: { role: string; size: string; model: string; thinking: boolean; max_tokens: number; confirmed: boolean }[];
   receipts: { count: number; note: string };
   outbox: { packet: any; recipients: string[]; digest: string; status: string; plan_source: string; sent: unknown[] };
+  live: Record<string, any>;
+  probe: Record<string, any> | null;
 };
 
 export function fact(key: string): string {

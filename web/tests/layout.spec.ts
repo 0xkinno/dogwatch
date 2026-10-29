@@ -43,19 +43,17 @@ for (const vp of VIEWPORTS) {
         expect(scrollW, "horizontal overflow in px").toBeLessThanOrEqual(1);
 
         if (route === "/") {
+          // full-bleed hero: headline and calls to action are visible and inside the viewport width
           const h1 = await box(page, "#hero-title");
-          const img = await box(page, ".hero-media");
-          const dial = await box(page, ".hero-dial");
-          const lede = await box(page, ".hero-copy .lede");
+          const strip = await box(page, ".hero-strip");
           const actions = await box(page, ".hero-actions");
-          const nav = await box(page, "nav.nav");
-          expect(h1 && img && dial && lede && actions && nav).toBeTruthy();
-          // the image never covers headline text, the dial never covers text or buttons
-          expect(overlap(h1!, img!), "headline overlaps image").toBe(false);
-          expect(overlap(h1!, dial!), "headline overlaps dial").toBe(false);
-          expect(overlap(lede!, dial!), "lede overlaps dial").toBe(false);
-          expect(overlap(actions!, dial!), "buttons overlap dial").toBe(false);
-          expect(overlap(lede!, img!), "lede overlaps image").toBe(false);
+          expect(h1 && strip && actions).toBeTruthy();
+          expect(h1!.x + h1!.w, "headline inside viewport").toBeLessThanOrEqual(vp.width + 1);
+          expect(overlap(actions!, strip!), "buttons overlap the fact strip").toBe(false);
+          expect(overlap(h1!, strip!), "headline overlaps the fact strip").toBe(false);
+          await expect(page.locator(".hero-pill")).toBeVisible();
+          // the specimen badge is not part of the hero image
+          expect(await page.locator(".hero-full").getByText("SPECIMEN PROFILE").count()).toBe(0);
         }
 
         // mobile nav collapses below 768
@@ -72,7 +70,7 @@ for (const vp of VIEWPORTS) {
         expect(errors, "console errors").toEqual([]);
 
         fs.mkdirSync(SHOTS, { recursive: true });
-        await page.screenshot({ path: path.join(SHOTS, `${route === "/" ? "home" : route.slice(1)}-${vp.name}.png`), fullPage: route !== "/" ? true : false });
+        await page.screenshot({ path: path.join(SHOTS, `${route === "/" ? "home" : route.slice(1)}-${vp.name}.png`), fullPage: false });
       });
     }
   });
