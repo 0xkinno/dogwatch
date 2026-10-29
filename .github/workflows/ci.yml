@@ -16,3 +16,18 @@ jobs:
           python-version: "3.12"
       - name: House style (no emoji, no dashes, banned words)
         run: python scripts/check_copy.py
+  tests:
+    name: tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: core
+        run: cd core && python -m pytest -q
+      - name: radio
+        run: cd radio && python -m pytest -q
+      - name: seal
+        run: cd seal && python -m pytest -q

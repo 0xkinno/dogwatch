@@ -51,19 +51,19 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [x] Receipts for every model call (id, model, tokens, latency, cost)
 
 ## Phase 5. Always-on loop and human actions
-- [ ] Officer of the Watch loop with daily and weekly timers, durable state, restart safe
-- [ ] Nano triage of incoming messages (no tools)
-- [ ] Ultra plan writer around locked value tokens; free-digit check falls back to template
-- [ ] Interruption budget in code (two questions per day; lapses and approvals always pass)
+- [x] Officer of the Watch loop with daily and weekly timers, durable state, restart safe
+- [x] Nano triage of incoming messages (no tools)
+- [x] Ultra plan writer around locked value tokens; free-digit check falls back to template
+- [x] Interruption budget in code (two questions per day; lapses and approvals always pass)
 - [ ] Radio Officer: Telegram pairing and long polling
-- [ ] Approval tokens bound to packet digest; single use; expiry
-- [ ] Recipient allowlist
-- [ ] Rehydration and PDF packet built host side
+- [x] Approval tokens bound to packet digest; single use; expiry
+- [x] Recipient allowlist
+- [x] Rehydration and PDF packet built host side
 - [ ] Email send to the test "manning agent" inbox; record in `evidence/actions/` with recipient redacted
 - [ ] `.ics` booking window sent to Telegram
 - [ ] Discharge-book photo flow updates the ledger
 - [ ] Lookout drift watch with Tavily Search and Extract, domain and keyword gates, review items only
-- [ ] Six skills with `SKILL.md` and CLI entries
+- [x] Six skills with `SKILL.md` and CLI entries
 
 ## Phase 6. OpenShell integration
 - [ ] Sandbox image with Python venv, OCR, Dogwatch core; vault mounted read only

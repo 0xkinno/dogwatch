@@ -1,0 +1,14 @@
+fastapi==0.162.0
+grpcio==1.85.0
+grpcio-tools==1.85.0
+httpx==0.28.1
+openai==3.40.0
+pillow==13.0.0
+protobuf==7.36.2
+pydantic==2.14.1
+PyNaCl==1.6.2
+pytest==9.2.0
+python-dateutil==3.0.0
+PyYAML==6.0.3
+reportlab==5.1.0
+uvicorn==0.54.0
