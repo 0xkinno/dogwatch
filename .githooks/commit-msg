@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Strip any AI attribution lines and refuse non-0xkinno identities.
+sed -i -E '/^[[:space:]]*Co-authored-by:.*(claude|anthropic)/Id; /generated with.*claude code/Id; /^claude-session:/Id' "$1"
+name="$(git config user.name)"
+email="$(git config user.email)"
+if [ "$name" != "0xkinno" ]; then echo "Commit refused: author must be 0xkinno" >&2; exit 1; fi
+if printf '%s %s %s %s' "$email" "${GIT_AUTHOR_NAME:-}" "${GIT_AUTHOR_EMAIL:-}" "${GIT_COMMITTER_EMAIL:-}" | grep -Eiq 'claude|anthropic'; then
+  echo "Commit refused: identity must not reference an AI tool" >&2; exit 1
+fi

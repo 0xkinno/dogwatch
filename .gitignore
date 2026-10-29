@@ -1,0 +1,46 @@
+# Private study material: never committed
+/reference/
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Vault and key material (anchored so core/dogwatch/vault/ stays tracked)
+/vault/
+.dogwatch/
+*.age
+*.key
+*.pem
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+
+# Node and web
+node_modules/
+web/.next/
+web/out/
+.vercel/
+
+# Test output
+test-results/
+playwright-report/
+coverage/
+.coverage
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local agent state (settings.json stays tracked)
+.claude/*
+!.claude/settings.json
