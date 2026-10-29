@@ -1,0 +1,609 @@
+{
+ "set": "P8_reading",
+ "route": "nvidia_build",
+ "route_label": "Route: NVIDIA API Catalog (development)",
+ "ran_at": "2026-10-29T12:32:16+00:00",
+ "specimens": 40,
+ "exact": 39,
+ "unread": 1,
+ "wrong_but_confident": 0,
+ "quotes_refused": 0,
+ "request_bodies_scanned": 40,
+ "identifier_leaks_in_request_bodies": 12,
+ "by_variant": {
+  "blur": {
+   "n": 5,
+   "exact": 5
+  },
+  "clean": {
+   "n": 10,
+   "exact": 10
+  },
+  "lowlight": {
+   "n": 5,
+   "exact": 5
+  },
+  "noise": {
+   "n": 5,
+   "exact": 5
+  },
+  "rot_blur": {
+   "n": 5,
+   "exact": 4
+  },
+  "rot_left": {
+   "n": 5,
+   "exact": 5
+  },
+  "rot_right": {
+   "n": 5,
+   "exact": 5
+  }
+ },
+ "miss_ids": [
+  "S40"
+ ],
+ "cases": [
+  {
+   "id": "S01",
+   "style": "India",
+   "variant": "clean",
+   "expected": "2028-12-22",
+   "got": "2028-12-22",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S02",
+   "style": "India",
+   "variant": "clean",
+   "expected": "2028-02-15",
+   "got": "2028-02-15",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S03",
+   "style": "India",
+   "variant": "rot_left",
+   "expected": "2028-05-21",
+   "got": "2028-05-21",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S04",
+   "style": "India",
+   "variant": "rot_right",
+   "expected": "2029-02-16",
+   "got": "2029-02-16",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S05",
+   "style": "India",
+   "variant": "blur",
+   "expected": "2028-01-24",
+   "got": "2028-01-24",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S06",
+   "style": "India",
+   "variant": "lowlight",
+   "expected": "2028-09-27",
+   "got": "2028-09-27",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S07",
+   "style": "India",
+   "variant": "noise",
+   "expected": "2028-05-24",
+   "got": "2028-05-24",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S08",
+   "style": "India",
+   "variant": "rot_blur",
+   "expected": "2028-04-20",
+   "got": "2028-04-20",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S09",
+   "style": "United Kingdom",
+   "variant": "clean",
+   "expected": "2028-05-29",
+   "got": "2028-05-29",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S10",
+   "style": "United Kingdom",
+   "variant": "clean",
+   "expected": "2028-06-21",
+   "got": "2028-06-21",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S11",
+   "style": "United Kingdom",
+   "variant": "rot_left",
+   "expected": "2028-01-16",
+   "got": "2028-01-16",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S12",
+   "style": "United Kingdom",
+   "variant": "rot_right",
+   "expected": "2027-12-14",
+   "got": "2027-12-14",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S13",
+   "style": "United Kingdom",
+   "variant": "blur",
+   "expected": "2028-12-18",
+   "got": "2028-12-18",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S14",
+   "style": "United Kingdom",
+   "variant": "lowlight",
+   "expected": "2028-09-09",
+   "got": "2028-09-09",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S15",
+   "style": "United Kingdom",
+   "variant": "noise",
+   "expected": "2027-07-29",
+   "got": "2027-07-29",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S16",
+   "style": "United Kingdom",
+   "variant": "rot_blur",
+   "expected": "2029-05-29",
+   "got": "2029-05-29",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S17",
+   "style": "Singapore",
+   "variant": "clean",
+   "expected": "2028-09-23",
+   "got": "2028-09-23",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S18",
+   "style": "Singapore",
+   "variant": "clean",
+   "expected": "2028-10-23",
+   "got": "2028-10-23",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S19",
+   "style": "Singapore",
+   "variant": "rot_left",
+   "expected": "2029-05-17",
+   "got": "2029-05-17",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S20",
+   "style": "Singapore",
+   "variant": "rot_right",
+   "expected": "2028-07-01",
+   "got": "2028-07-01",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S21",
+   "style": "Singapore",
+   "variant": "blur",
+   "expected": "2027-12-15",
+   "got": "2027-12-15",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S22",
+   "style": "Singapore",
+   "variant": "lowlight",
+   "expected": "2029-02-12",
+   "got": "2029-02-12",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S23",
+   "style": "Singapore",
+   "variant": "noise",
+   "expected": "2027-11-20",
+   "got": "2027-11-20",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 1
+  },
+  {
+   "id": "S24",
+   "style": "Singapore",
+   "variant": "rot_blur",
+   "expected": "2028-12-26",
+   "got": "2028-12-26",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S25",
+   "style": "Australia",
+   "variant": "clean",
+   "expected": "2027-05-08",
+   "got": "2027-05-08",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S26",
+   "style": "Australia",
+   "variant": "clean",
+   "expected": "2028-02-10",
+   "got": "2028-02-10",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S27",
+   "style": "Australia",
+   "variant": "rot_left",
+   "expected": "2028-11-08",
+   "got": "2028-11-08",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S28",
+   "style": "Australia",
+   "variant": "rot_right",
+   "expected": "2028-07-23",
+   "got": "2028-07-23",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S29",
+   "style": "Australia",
+   "variant": "blur",
+   "expected": "2028-05-31",
+   "got": "2028-05-31",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S30",
+   "style": "Australia",
+   "variant": "lowlight",
+   "expected": "2029-02-15",
+   "got": "2029-02-15",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S31",
+   "style": "Australia",
+   "variant": "noise",
+   "expected": "2028-05-10",
+   "got": "2028-05-10",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S32",
+   "style": "Australia",
+   "variant": "rot_blur",
+   "expected": "2029-02-23",
+   "got": "2029-02-23",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S33",
+   "style": "Nigeria",
+   "variant": "clean",
+   "expected": "2029-01-10",
+   "got": "2029-01-10",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S34",
+   "style": "Nigeria",
+   "variant": "clean",
+   "expected": "2027-04-18",
+   "got": "2027-04-18",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S35",
+   "style": "Nigeria",
+   "variant": "rot_left",
+   "expected": "2027-09-06",
+   "got": "2027-09-06",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S36",
+   "style": "Nigeria",
+   "variant": "rot_right",
+   "expected": "2028-09-20",
+   "got": "2028-09-20",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  },
+  {
+   "id": "S37",
+   "style": "Nigeria",
+   "variant": "blur",
+   "expected": "2027-03-19",
+   "got": "2027-03-19",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S38",
+   "style": "Nigeria",
+   "variant": "lowlight",
+   "expected": "2029-06-06",
+   "got": "2029-06-06",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S39",
+   "style": "Nigeria",
+   "variant": "noise",
+   "expected": "2028-03-28",
+   "got": "2028-03-28",
+   "exact": true,
+   "unread": false,
+   "unread_fields": [
+    "capacity"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 3
+  },
+  {
+   "id": "S40",
+   "style": "Nigeria",
+   "variant": "rot_blur",
+   "expected": "2028-05-12",
+   "got": null,
+   "exact": false,
+   "unread": true,
+   "unread_fields": [
+    "capacity",
+    "expiry_date"
+   ],
+   "quotes_refused": 0,
+   "identifiers_replaced": 2
+  }
+ ]
+}

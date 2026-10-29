@@ -48,21 +48,27 @@ def _results() -> dict:
     return out
 
 
-def _probe_token_factory() -> dict:
-    """A real call to GET /v1/models, measured in this process, with a timestamp. Never hard-coded."""
+def _probe_model_route() -> dict:
+    """A real call to GET /models on the selected route, measured in this process, with a timestamp. Never hard-coded."""
+    from ..model.routes import api_key, selected_route
+
     t0 = time.time()
-    key = os.environ.get("NEBIUS_API_KEY")
-    base = os.environ.get("TOKEN_FACTORY_BASE_URL", client.BASE)
-    if not key:
-        return {"state": "NOT_CONFIGURED", "checked_at": t0}
     try:
-        r = httpx.get(base.rstrip("/") + "/models", headers={"Authorization": f"Bearer {key}"}, timeout=15)
-        ids = [m["id"] for m in r.json().get("data", [])] if r.status_code == 200 else []
-        return {"state": "UP" if r.status_code == 200 else "ERROR", "http": r.status_code,
+        r = selected_route()
+    except ValueError as e:
+        return {"state": "ERROR", "error": str(e), "checked_at": t0}
+    out = {"route": r.name, "route_label": f"Route: {r.label}", "checked_at": t0}
+    key = api_key(r)
+    if not key:
+        return {**out, "state": "NOT_CONFIGURED"}
+    try:
+        resp = httpx.get(r.base_url.rstrip("/") + "/models", headers={"Authorization": f"Bearer {key}"}, timeout=15)
+        ids = [m["id"] for m in resp.json().get("data", [])] if resp.status_code == 200 else []
+        return {**out, "state": "UP" if resp.status_code == 200 else "ERROR", "http": resp.status_code,
                 "nemotron_models": sorted(i for i in ids if "nemotron" in i.lower()),
-                "latency_ms": int((time.time() - t0) * 1000), "checked_at": t0}
+                "latency_ms": int((time.time() - t0) * 1000)}
     except httpx.HTTPError as e:
-        return {"state": "DOWN", "error": type(e).__name__, "checked_at": t0}
+        return {**out, "state": "DOWN", "error": type(e).__name__}
 
 
 def _probe_tavily() -> dict:
@@ -91,7 +97,7 @@ def create_app(caps: Caps | None = None) -> FastAPI:
             "mode": mode,
             "host": os.environ.get("DOGWATCH_HOST_LABEL", "API host (substitute; the product itself runs on the seafarer's machine)"),
             "sandboxed": False,
-            "token_factory": _probe_token_factory(),
+            "model_route": _probe_model_route(),
             "tavily": _probe_tavily(),
             "kill_switch": caps.killed(),
             "caps": caps.describe(),

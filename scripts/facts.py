@@ -62,6 +62,33 @@ def build() -> dict:
         add("p1.unsupported", "Attack proposals the prover refused to bless (unsupported)", sum(v == "unsupported" for v in atk.values()), "evidence/prover/*.result.txt")
         add("p1.within", "Attack proposals the prover reported within_boundary", sum(v == "within_boundary" for v in atk.values()), "evidence/prover/*.result.txt")
         add("p1.declared_within", "Declared Dogwatch policy reported within_boundary (1 = yes)", int(first.get("dogwatch-declared.result.txt") == "within_boundary"), "evidence/prover/dogwatch-declared.result.txt")
+    p8 = load("p8_reading.json")
+    p8v1 = load("p8_reading_v1.json")
+    if p8:
+        add("p8.specimens", "Specimen certificates read", p8["specimens"], "eval/results/p8_reading.json#specimens")
+        add("p8.exact", "Specimens whose expiry date was read exactly", p8["exact"], "eval/results/p8_reading.json#exact")
+        add("p8.unread", "Specimens left UNREAD", p8["unread"], "eval/results/p8_reading.json#unread")
+        add("p8.wrong_confident", "Specimens read with a wrong date and no UNREAD flag", p8["wrong_but_confident"], "eval/results/p8_reading.json#wrong_but_confident")
+        add("p8.bodies", "Outgoing model request bodies scanned for identifiers", p8["request_bodies_scanned"], "eval/results/p8_reading.json#request_bodies_scanned")
+        add("p8.leaks", "Identifier leaks found in those bodies (detectors v2)", p8["identifier_leaks_in_request_bodies"], "eval/results/p8_reading.json#identifier_leaks_in_request_bodies")
+    if p8v1:
+        add("p8.v1_leaks", "Identifier leaks found in the first run (detectors v1)", p8v1["identifier_leaks_in_request_bodies"], "eval/results/p8_reading_v1.json#identifier_leaks_in_request_bodies")
+    p9 = load("p9_drift.json")
+    if p9:
+        add("p9.searched", "Pages returned by Tavily search in the drift run", p9["gates"]["searched"], "eval/results/p9_drift.json#gates.searched")
+        add("p9.classified", "Pages classified by Nemotron Nano", p9["gates"]["classified"], "eval/results/p9_drift.json#gates.classified")
+        add("p9.items", "Review items raised", p9["review_items"], "eval/results/p9_drift.json#review_items")
+        add("p9.requests", "Tavily requests made", p9["tavily_requests"], "eval/results/p9_drift.json#tavily_requests")
+    p10 = load("p10_unattended.json")
+    if p10:
+        add("p10.daily", "Daily runs triggered by the timer loop", p10["daily_runs"], "eval/results/p10_unattended.json#daily_runs")
+        add("p10.weekly", "Weekly runs triggered by the timer loop", p10["weekly_runs"], "eval/results/p10_unattended.json#weekly_runs")
+    p12 = load("p12_cost.json")
+    if p12:
+        add("p12.weekly_tokens", "Tokens used by one weekly drift check across all administrations", p12["weekly_check_tokens"], "eval/results/p12_cost.json#weekly_check_tokens")
+        cf = p12.get("counterfactual_ultra_for_every_call")
+        if cf:
+            add("p12.latency_ratio", "Latency of Ultra over Super on the same prompts", cf["latency_ratio_ultra_over_super"], "eval/results/p12_cost.json")
     p11 = load("p11_restart.json")
     if p11:
         add("p11.sends", "Emails sent after a kill and restart with one pending approval (local capture transport)", p11["sends_observed"], "eval/results/p11_restart.json#sends_observed")

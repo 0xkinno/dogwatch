@@ -1,0 +1,1 @@
+{"response_id": "chatcmpl-356e1914-9372-4783-92ef-ee9c891c38dd", "model": "nvidia/nemotron-3.5-super-vl-120b-a12b", "role": "structure", "route": "nvidia_build", "tokens_in": 75, "tokens_out": 27, "reasoning_tokens": 0, "latency_ms": 891, "attempt": 1, "cost_usd": null, "ts": 1793275360.524116}

@@ -1,0 +1,1162 @@
+{
+ "set": "P6_engine_vs_model",
+ "status": "RUN",
+ "route": "nvidia_build",
+ "route_label": "Route: NVIDIA API Catalog (development)",
+ "ran_at": "2026-10-29T12:28:25+00:00",
+ "profiles": 60,
+ "thinking": "off",
+ "contestants": {
+  "super": {
+   "model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+   "correct": 30,
+   "false_safe": 22,
+   "false_alarm": 0,
+   "errors": 0,
+   "unparsed": 0,
+   "miss_ids": [
+    "P001",
+    "P002",
+    "P007",
+    "P008",
+    "P009",
+    "P010",
+    "P013",
+    "P014",
+    "P015",
+    "P016",
+    "P017",
+    "P018",
+    "P021",
+    "P023",
+    "P024",
+    "P034",
+    "P036",
+    "P038",
+    "P040",
+    "P041",
+    "P042",
+    "P043",
+    "P053",
+    "P054",
+    "P055",
+    "P056",
+    "P057",
+    "P058",
+    "P059",
+    "P060"
+   ],
+   "tokens_in": 17641,
+   "tokens_out": 579,
+   "cases": [
+    {
+     "id": "P001",
+     "category": "boundary_end",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P002",
+     "category": "boundary_end",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P003",
+     "category": "boundary_end",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P004",
+     "category": "boundary_end",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P005",
+     "category": "boundary_end",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P006",
+     "category": "boundary_end",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P007",
+     "category": "boundary_start",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P008",
+     "category": "boundary_start",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P009",
+     "category": "boundary_start",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P010",
+     "category": "boundary_start",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P011",
+     "category": "travel_buffer",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 294,
+     "tokens_out": 9
+    },
+    {
+     "id": "P012",
+     "category": "travel_buffer",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 294,
+     "tokens_out": 9
+    },
+    {
+     "id": "P013",
+     "category": "travel_buffer",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 294,
+     "tokens_out": 9
+    },
+    {
+     "id": "P014",
+     "category": "travel_buffer",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 294,
+     "tokens_out": 9
+    },
+    {
+     "id": "P015",
+     "category": "travel_buffer_before",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 294,
+     "tokens_out": 9
+    },
+    {
+     "id": "P016",
+     "category": "travel_buffer_before",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 294,
+     "tokens_out": 9
+    },
+    {
+     "id": "P017",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P018",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P019",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P020",
+     "category": "leap_year",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P021",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P022",
+     "category": "leap_year",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P023",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P024",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P025",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 261,
+     "tokens_out": 11
+    },
+    {
+     "id": "P026",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 261,
+     "tokens_out": 11
+    },
+    {
+     "id": "P027",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 261,
+     "tokens_out": 11
+    },
+    {
+     "id": "P028",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P029",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P030",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P031",
+     "category": "missing_document",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 321,
+     "tokens_out": 9
+    },
+    {
+     "id": "P032",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 230,
+     "tokens_out": 11
+    },
+    {
+     "id": "P033",
+     "category": "missing_fact",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 277,
+     "tokens_out": 11
+    },
+    {
+     "id": "P034",
+     "category": "missing_fact",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P035",
+     "category": "missing_fact",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 277,
+     "tokens_out": 11
+    },
+    {
+     "id": "P036",
+     "category": "missing_fact",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P037",
+     "category": "missing_fact",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 277,
+     "tokens_out": 11
+    },
+    {
+     "id": "P038",
+     "category": "missing_fact",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P039",
+     "category": "missing_fact",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 277,
+     "tokens_out": 11
+    },
+    {
+     "id": "P040",
+     "category": "missing_fact",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P041",
+     "category": "many_documents",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 353,
+     "tokens_out": 9
+    },
+    {
+     "id": "P042",
+     "category": "many_documents",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 353,
+     "tokens_out": 9
+    },
+    {
+     "id": "P043",
+     "category": "many_documents",
+     "expected": "NOT_READY",
+     "got": "READY",
+     "ok": false,
+     "tokens_in": 353,
+     "tokens_out": 9
+    },
+    {
+     "id": "P044",
+     "category": "many_documents",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 353,
+     "tokens_out": 9
+    },
+    {
+     "id": "P045",
+     "category": "many_documents",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 353,
+     "tokens_out": 9
+    },
+    {
+     "id": "P046",
+     "category": "many_documents",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 353,
+     "tokens_out": 9
+    },
+    {
+     "id": "P047",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P048",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P049",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P050",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P051",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P052",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P053",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P054",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 311,
+     "tokens_out": 11
+    },
+    {
+     "id": "P055",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P056",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 311,
+     "tokens_out": 11
+    },
+    {
+     "id": "P057",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P058",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 311,
+     "tokens_out": 11
+    },
+    {
+     "id": "P059",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P060",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 311,
+     "tokens_out": 11
+    }
+   ]
+  },
+  "ultra": {
+   "model": "nvidia/nemotron-3-ultra-550b-a55b",
+   "correct": 47,
+   "false_safe": 0,
+   "false_alarm": 8,
+   "errors": 0,
+   "unparsed": 0,
+   "miss_ids": [
+    "P004",
+    "P005",
+    "P006",
+    "P011",
+    "P012",
+    "P044",
+    "P045",
+    "P046",
+    "P053",
+    "P054",
+    "P055",
+    "P056",
+    "P060"
+   ],
+   "tokens_in": 17641,
+   "tokens_out": 606,
+   "cases": [
+    {
+     "id": "P001",
+     "category": "boundary_end",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P002",
+     "category": "boundary_end",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P003",
+     "category": "boundary_end",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P004",
+     "category": "boundary_end",
+     "expected": "READY",
+     "got": "NOT_READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P005",
+     "category": "boundary_end",
+     "expected": "READY",
+     "got": "NOT_READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P006",
+     "category": "boundary_end",
+     "expected": "READY",
+     "got": "NOT_READY",
+     "ok": false,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P007",
+     "category": "boundary_start",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P008",
+     "category": "boundary_start",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P009",
+     "category": "boundary_start",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P010",
+     "category": "boundary_start",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P011",
+     "category": "travel_buffer",
+     "expected": "READY",
+     "got": "NOT_READY",
+     "ok": false,
+     "tokens_in": 294,
+     "tokens_out": 10
+    },
+    {
+     "id": "P012",
+     "category": "travel_buffer",
+     "expected": "READY",
+     "got": "NOT_READY",
+     "ok": false,
+     "tokens_in": 294,
+     "tokens_out": 10
+    },
+    {
+     "id": "P013",
+     "category": "travel_buffer",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 294,
+     "tokens_out": 10
+    },
+    {
+     "id": "P014",
+     "category": "travel_buffer",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 294,
+     "tokens_out": 10
+    },
+    {
+     "id": "P015",
+     "category": "travel_buffer_before",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 294,
+     "tokens_out": 10
+    },
+    {
+     "id": "P016",
+     "category": "travel_buffer_before",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 294,
+     "tokens_out": 10
+    },
+    {
+     "id": "P017",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P018",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P019",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P020",
+     "category": "leap_year",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P021",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P022",
+     "category": "leap_year",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P023",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P024",
+     "category": "leap_year",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P025",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 261,
+     "tokens_out": 11
+    },
+    {
+     "id": "P026",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 261,
+     "tokens_out": 11
+    },
+    {
+     "id": "P027",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 261,
+     "tokens_out": 11
+    },
+    {
+     "id": "P028",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P029",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P030",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P031",
+     "category": "missing_document",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 321,
+     "tokens_out": 9
+    },
+    {
+     "id": "P032",
+     "category": "missing_document",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 230,
+     "tokens_out": 11
+    },
+    {
+     "id": "P033",
+     "category": "missing_fact",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 277,
+     "tokens_out": 11
+    },
+    {
+     "id": "P034",
+     "category": "missing_fact",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P035",
+     "category": "missing_fact",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 277,
+     "tokens_out": 11
+    },
+    {
+     "id": "P036",
+     "category": "missing_fact",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P037",
+     "category": "missing_fact",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 277,
+     "tokens_out": 11
+    },
+    {
+     "id": "P038",
+     "category": "missing_fact",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P039",
+     "category": "missing_fact",
+     "expected": "CANNOT_VERIFY",
+     "got": "CANNOT_VERIFY",
+     "ok": true,
+     "tokens_in": 277,
+     "tokens_out": 11
+    },
+    {
+     "id": "P040",
+     "category": "missing_fact",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 10
+    },
+    {
+     "id": "P041",
+     "category": "many_documents",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 353,
+     "tokens_out": 10
+    },
+    {
+     "id": "P042",
+     "category": "many_documents",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 353,
+     "tokens_out": 10
+    },
+    {
+     "id": "P043",
+     "category": "many_documents",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 353,
+     "tokens_out": 10
+    },
+    {
+     "id": "P044",
+     "category": "many_documents",
+     "expected": "READY",
+     "got": "NOT_READY",
+     "ok": false,
+     "tokens_in": 353,
+     "tokens_out": 10
+    },
+    {
+     "id": "P045",
+     "category": "many_documents",
+     "expected": "READY",
+     "got": "NOT_READY",
+     "ok": false,
+     "tokens_in": 353,
+     "tokens_out": 10
+    },
+    {
+     "id": "P046",
+     "category": "many_documents",
+     "expected": "READY",
+     "got": "NOT_READY",
+     "ok": false,
+     "tokens_in": 353,
+     "tokens_out": 10
+    },
+    {
+     "id": "P047",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P048",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P049",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P050",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P051",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P052",
+     "category": "contract_length",
+     "expected": "READY",
+     "got": "READY",
+     "ok": true,
+     "tokens_in": 287,
+     "tokens_out": 9
+    },
+    {
+     "id": "P053",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P054",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 311,
+     "tokens_out": 11
+    },
+    {
+     "id": "P055",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 291,
+     "tokens_out": 11
+    },
+    {
+     "id": "P056",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 311,
+     "tokens_out": 11
+    },
+    {
+     "id": "P057",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 291,
+     "tokens_out": 10
+    },
+    {
+     "id": "P058",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 311,
+     "tokens_out": 10
+    },
+    {
+     "id": "P059",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "NOT_READY",
+     "ok": true,
+     "tokens_in": 291,
+     "tokens_out": 10
+    },
+    {
+     "id": "P060",
+     "category": "mixed",
+     "expected": "NOT_READY",
+     "got": "CANNOT_VERIFY",
+     "ok": false,
+     "tokens_in": 311,
+     "tokens_out": 11
+    }
+   ]
+  }
+ }
+}

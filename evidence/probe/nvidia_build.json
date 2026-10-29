@@ -1,0 +1,77 @@
+{
+ "route": "nvidia_build",
+ "route_label": "Route: NVIDIA API Catalog (development)",
+ "probed_at": "2026-10-29T12:01:33+00:00",
+ "models_http": 200,
+ "models_latency_ms": 1381,
+ "total_models": 84,
+ "nemotron_models": [
+  "nvidia/llama-3.1-nemotron-51b-instruct",
+  "nvidia/llama-3.1-nemotron-70b-instruct",
+  "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+  "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+  "nvidia/llama-nemotron-embed-vl-1b-v2",
+  "nvidia/nemotron-3-embed-1b",
+  "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "nvidia/nemotron-3-super-120b-a12b",
+  "nvidia/nemotron-3-ultra-550b-a55b",
+  "nvidia/nemotron-3.5-bolt-e4b",
+  "nvidia/nemotron-3.5-content-safety",
+  "nvidia/nemotron-3.5-embed-1b",
+  "nvidia/nemotron-3.5-embed-8b",
+  "nvidia/nemotron-3.5-lightning-30b-a3b",
+  "nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "nvidia/nemotron-4-340b-instruct",
+  "nvidia/nemotron-4-340b-reward",
+  "nvidia/nemotron-nano-3-30b-a3b",
+  "nvidia/nemotron-parse",
+  "nvidia/nemotron-parse-2.0"
+ ],
+ "chat_check": {
+  "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": 200,
+  "nvidia/nemotron-3-super-120b-a12b": 404,
+  "nvidia/nemotron-3.5-super-vl-120b-a12b": 200,
+  "nvidia/nemotron-3-ultra-550b-a55b": 503,
+  "nvidia/llama-3.1-nemotron-ultra-253b-v1": 404
+ },
+ "confirmed_by_size": {
+  "nano": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+  "super": "nvidia/nemotron-3.5-super-vl-120b-a12b"
+ },
+ "extraction_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+ "thinking_comparison": [
+  {
+   "thinking": false,
+   "latency_ms": 1693,
+   "tokens_in": 123,
+   "tokens_out": 113,
+   "reasoning_tokens": 0,
+   "reasoning_field_present": false,
+   "content_chars": 278,
+   "valid_schema_reply": true,
+   "expiry_quote_found": false
+  },
+  {
+   "thinking": true,
+   "latency_ms": 16502,
+   "tokens_in": 123,
+   "tokens_out": 1093,
+   "reasoning_tokens": 925,
+   "reasoning_field_present": true,
+   "content_chars": 461,
+   "valid_schema_reply": true,
+   "expiry_quote_found": false
+  }
+ ],
+ "schema_enforcement_trials": [
+  "schema_valid",
+  "schema_valid",
+  "schema_valid"
+ ],
+ "schema_enforced_server_side": true,
+ "repair_probe": {
+  "calls": 1,
+  "repair_used": false
+ },
+ "state": "LIVE RUN"
+}

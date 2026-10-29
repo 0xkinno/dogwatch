@@ -48,6 +48,18 @@
    "tag": "MEASURED",
    "value": 1
   },
+  "p10.daily": {
+   "claim": "Daily runs triggered by the timer loop",
+   "source": "eval/results/p10_unattended.json#daily_runs",
+   "tag": "MEASURED",
+   "value": 1
+  },
+  "p10.weekly": {
+   "claim": "Weekly runs triggered by the timer loop",
+   "source": "eval/results/p10_unattended.json#weekly_runs",
+   "tag": "MEASURED",
+   "value": 1
+  },
   "p11.duplicates": {
    "claim": "Duplicate sends after restart",
    "source": "eval/results/p11_restart.json#duplicate_sends",
@@ -59,6 +71,18 @@
    "source": "eval/results/p11_restart.json#sends_observed",
    "tag": "MEASURED",
    "value": 1
+  },
+  "p12.latency_ratio": {
+   "claim": "Latency of Ultra over Super on the same prompts",
+   "source": "eval/results/p12_cost.json",
+   "tag": "MEASURED",
+   "value": 2.35
+  },
+  "p12.weekly_tokens": {
+   "claim": "Tokens used by one weekly drift check across all administrations",
+   "source": "eval/results/p12_cost.json#weekly_check_tokens",
+   "tag": "MEASURED",
+   "value": 49201
   },
   "p3.attacks": {
    "claim": "Attack bodies in the encoding corpus",
@@ -120,6 +144,42 @@
    "tag": "MEASURED",
    "value": 60
   },
+  "p6.super.correct": {
+   "claim": "super matched the pre-registered verdict",
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED",
+   "value": 30
+  },
+  "p6.super.false_alarm": {
+   "claim": "super raised an alarm on a READY profile",
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED",
+   "value": 0
+  },
+  "p6.super.false_safe": {
+   "claim": "super said READY when it should not",
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED",
+   "value": 22
+  },
+  "p6.ultra.correct": {
+   "claim": "ultra matched the pre-registered verdict",
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED",
+   "value": 47
+  },
+  "p6.ultra.false_alarm": {
+   "claim": "ultra raised an alarm on a READY profile",
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED",
+   "value": 8
+  },
+  "p6.ultra.false_safe": {
+   "claim": "ultra said READY when it should not",
+   "source": "eval/results/p6_model_alone.json",
+   "tag": "MEASURED",
+   "value": 0
+  },
   "p7.flips": {
    "claim": "Histories whose verdict flips between conventions",
    "source": "eval/results/p7_conventions.json#flips",
@@ -137,6 +197,72 @@
    "source": "eval/results/p7_conventions.json#rules_stating_a_convention",
    "tag": "MEASURED",
    "value": 0
+  },
+  "p8.bodies": {
+   "claim": "Outgoing model request bodies scanned for identifiers",
+   "source": "eval/results/p8_reading.json#request_bodies_scanned",
+   "tag": "MEASURED",
+   "value": 40
+  },
+  "p8.exact": {
+   "claim": "Specimens whose expiry date was read exactly",
+   "source": "eval/results/p8_reading.json#exact",
+   "tag": "MEASURED",
+   "value": 39
+  },
+  "p8.leaks": {
+   "claim": "Identifier leaks found in those bodies (detectors v2)",
+   "source": "eval/results/p8_reading.json#identifier_leaks_in_request_bodies",
+   "tag": "MEASURED",
+   "value": 0
+  },
+  "p8.specimens": {
+   "claim": "Specimen certificates read",
+   "source": "eval/results/p8_reading.json#specimens",
+   "tag": "MEASURED",
+   "value": 40
+  },
+  "p8.unread": {
+   "claim": "Specimens left UNREAD",
+   "source": "eval/results/p8_reading.json#unread",
+   "tag": "MEASURED",
+   "value": 1
+  },
+  "p8.v1_leaks": {
+   "claim": "Identifier leaks found in the first run (detectors v1)",
+   "source": "eval/results/p8_reading_v1.json#identifier_leaks_in_request_bodies",
+   "tag": "MEASURED",
+   "value": 12
+  },
+  "p8.wrong_confident": {
+   "claim": "Specimens read with a wrong date and no UNREAD flag",
+   "source": "eval/results/p8_reading.json#wrong_but_confident",
+   "tag": "MEASURED",
+   "value": 0
+  },
+  "p9.classified": {
+   "claim": "Pages classified by Nemotron Nano",
+   "source": "eval/results/p9_drift.json#gates.classified",
+   "tag": "MEASURED",
+   "value": 29
+  },
+  "p9.items": {
+   "claim": "Review items raised",
+   "source": "eval/results/p9_drift.json#review_items",
+   "tag": "MEASURED",
+   "value": 27
+  },
+  "p9.requests": {
+   "claim": "Tavily requests made",
+   "source": "eval/results/p9_drift.json#tavily_requests",
+   "tag": "MEASURED",
+   "value": 52
+  },
+  "p9.searched": {
+   "claim": "Pages returned by Tavily search in the drift run",
+   "source": "eval/results/p9_drift.json#gates.searched",
+   "tag": "MEASURED",
+   "value": 49
   },
   "proof.prereg_sha256": {
    "claim": "SHA-256 of the pre-registration file",

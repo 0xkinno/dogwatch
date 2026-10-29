@@ -9,10 +9,11 @@ def client(caps=None):
 
 
 def test_status_is_measured_not_hardcoded(monkeypatch):
-    monkeypatch.delenv("NEBIUS_API_KEY", raising=False)
-    monkeypatch.delenv("TAVILY_API_KEY", raising=False)
+    for k in ("NEBIUS_API_KEY", "NVIDIA_API_KEY", "TAVILY_API_KEY", "MODEL_ROUTE"):
+        monkeypatch.delenv(k, raising=False)
     s = client().get("/api/status").json()
-    assert s["token_factory"]["state"] == "NOT_CONFIGURED" and s["tavily"]["state"] == "NOT_CONFIGURED"
+    assert s["model_route"]["state"] == "NOT_CONFIGURED" and s["tavily"]["state"] == "NOT_CONFIGURED"
+    assert s["model_route"]["route_label"] == "Route: NVIDIA API Catalog (development)"
     assert s["sandboxed"] is False and "substitute" in s["host"]
     assert s["rule_packs"]["in-dgs"]["status"] == "unsourced"
 

@@ -1,26 +1,17 @@
-"""Which Nemotron handles which job. Ids come from docs/models.json, written by the Phase 2 probe."""
+"""Which Nemotron handles which job, on the selected route."""
 from __future__ import annotations
 
-import json
 import os
 from dataclasses import dataclass
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+from .routes import DEFAULT_IDS, confirmed_ids, selected_route
 
-# Role to (size class, thinking, token cap). Size classes resolve to a model id at call time.
+# Role to (size class, thinking, token cap).
 ROLES = {
     "triage": ("nano", False, 400),
     "structure": ("super", False, 2000),
     "plan": ("ultra", True, 3000),
     "drift": ("nano", False, 600),
-}
-
-# Ids listed in the build notes. NOT confirmed until the probe writes docs/models.json.
-UNCONFIRMED_DEFAULTS = {
-    "nano": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
-    "super": "nvidia/nemotron-3-super-120b-a12b",
-    "ultra": "nvidia/Nemotron-3-Ultra-550b-a55b",
 }
 
 
@@ -32,16 +23,16 @@ class Route:
     thinking: bool
     max_tokens: int
     confirmed: bool
+    route: str
+    route_label: str
 
 
-def _models_file() -> dict:
-    p = ROOT / "docs" / "models.json"
-    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+def route(role: str, route_name: str | None = None) -> Route:
+    from .routes import ROUTES
 
-
-def route(role: str) -> Route:
+    r = ROUTES[route_name] if route_name else selected_route()
     size, thinking, cap = ROLES[role]
     env = os.environ.get(f"DOGWATCH_MODEL_{size.upper()}")
-    probed = _models_file().get("confirmed", {}).get(size)
-    model = env or probed or UNCONFIRMED_DEFAULTS[size]
-    return Route(role, size, model, thinking, cap, confirmed=bool(env or probed))
+    probed = confirmed_ids(r.name).get(size)
+    model = env or probed or DEFAULT_IDS[r.name][size]
+    return Route(role, size, model, thinking, cap, confirmed=bool(env or probed), route=r.name, route_label=r.label)

@@ -26,6 +26,8 @@ class Extraction(BaseModel):
 
 SYSTEM = (
     "You read one seafarer document that has already had identifiers replaced by placeholders such as "
-    "[[COC_1]]. Return JSON only. For each field give the value and a quote copied exactly from the text. "
-    "If a field is not in the text, leave value and quote empty. Never guess a date. Never decide validity."
+    "[[COC_1]]. Return JSON only with these keys: doc_type (one of coc, cec, endorsement, bst_pst, bst_fpff, pscrb, "
+    "aff, medical, passport, cdc, gmdss, other), doc_type_quote, administration, capacity, issue_date, expiry_date, "
+    "limitations. Each of the last five is an object with value and quote. A quote must be copied exactly from the "
+    "text. If a field is not in the text, leave value and quote empty. Never guess a date. Never decide validity."
 )

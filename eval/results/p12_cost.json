@@ -1,0 +1,55 @@
+{
+ "set": "P12_cost",
+ "route": "nvidia_build",
+ "route_label": "Route: NVIDIA API Catalog (development)",
+ "price_available": false,
+ "note": "No list price exists for this route, so no dollar figure is shown. Token Factory prices are measured once a key exists (scripts/switch_to_tokenfactory.sh).",
+ "p6_by_model": {
+  "nvidia/nemotron-3.5-super-vl-120b-a12b": {
+   "calls": 60,
+   "tokens_in": 17641,
+   "tokens_out": 579,
+   "mean_latency_ms": 1184,
+   "reasoning_tokens": 0
+  },
+  "nvidia/nemotron-3-ultra-550b-a55b": {
+   "calls": 60,
+   "tokens_in": 17641,
+   "tokens_out": 606,
+   "mean_latency_ms": 2787,
+   "reasoning_tokens": 0
+  }
+ },
+ "p8_reading_per_specimen": {
+  "calls": 40,
+  "tokens_in": 9436,
+  "tokens_out": 5961,
+  "mean_latency_ms": 4255,
+  "reasoning_tokens": 0,
+  "per_specimen_tokens_in": 235,
+  "per_specimen_tokens_out": 149
+ },
+ "p9_drift_week": {
+  "calls": 29,
+  "tokens_in": 47626,
+  "tokens_out": 1575,
+  "mean_latency_ms": 4248,
+  "reasoning_tokens": 0
+ },
+ "p10_weekly_check_one_administration": {
+  "calls": 7,
+  "tokens_in": 11781,
+  "tokens_out": 338,
+  "mean_latency_ms": 4049,
+  "reasoning_tokens": 0
+ },
+ "weekly_check_tokens": 49201,
+ "readiness_run_tokens": 0,
+ "readiness_run_note": "The Navigator computes the verdict in code and calls no model.",
+ "counterfactual_ultra_for_every_call": {
+  "p8_mean_latency_ms_if_ultra": 2787,
+  "p8_mean_latency_ms_actual_super": 1184,
+  "latency_ratio_ultra_over_super": 2.35,
+  "note": "Same prompts (P6), so token counts are equal; the difference is latency and the larger model's price, which is not available on this route."
+ }
+}

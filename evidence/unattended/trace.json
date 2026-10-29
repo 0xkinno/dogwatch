@@ -1,0 +1,67 @@
+{
+ "set": "P10_unattended",
+ "route": "nvidia_build",
+ "route_label": "Route: NVIDIA API Catalog (development)",
+ "timer": "service loop, wake every 6 seconds (runner.tick)",
+ "wakes": [
+  {
+   "wake": 1,
+   "ts": "2026-10-29T12:38:57+00:00",
+   "ran": [
+    "daily",
+    "weekly"
+   ]
+  },
+  {
+   "wake": 2,
+   "ts": "2026-10-29T12:39:03+00:00",
+   "ran": []
+  },
+  {
+   "wake": 3,
+   "ts": "2026-10-29T12:39:09+00:00",
+   "ran": []
+  },
+  {
+   "wake": 4,
+   "ts": "2026-10-29T12:39:15+00:00",
+   "ran": []
+  }
+ ],
+ "runs": [
+  {
+   "kind": "daily",
+   "started": "2026-10-29T12:38:21+00:00",
+   "finished": "2026-10-29T12:38:22+00:00",
+   "summary": {
+    "checked_offers": 1,
+    "notes": [
+     {
+      "contract": "2027-02-01",
+      "overall": "NOT_READY",
+      "summary": "Not ready: Medical fitness certificate lapses 2027-03-14 (day 42 of 181)."
+     }
+    ]
+   }
+  },
+  {
+   "kind": "weekly",
+   "started": "2026-10-29T12:38:22+00:00",
+   "finished": "2026-10-29T12:38:57+00:00",
+   "summary": {
+    "review_items": 4,
+    "lookout_ran": true
+   }
+  }
+ ],
+ "alerts": [
+  {
+   "ts": "2026-10-29T12:38:22+00:00",
+   "kind": "lapse",
+   "text": "Not ready: Medical fitness certificate lapses 2027-03-14 (day 42 of 181)."
+  }
+ ],
+ "tavily_requests": 10,
+ "daily_runs": 1,
+ "weekly_runs": 1
+}

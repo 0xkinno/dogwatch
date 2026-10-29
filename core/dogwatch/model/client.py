@@ -9,6 +9,7 @@ import time
 from pydantic import BaseModel, ValidationError
 
 from . import receipts
+from .routes import ROUTES, api_key, selected_route
 from .routing import route
 
 
@@ -20,28 +21,33 @@ class ModelUnavailable(Exception):
     pass
 
 
-BASE = os.environ.get("TOKEN_FACTORY_BASE_URL", "https://api.tokenfactory.nebius.com/v1/")
+BASE = ROUTES["tokenfactory"].base_url  # kept for callers that print the submission target
 
 _client = None
+_client_route: str | None = None
 
 
 def get_client():
-    """Lazy so that importing this module never needs a key (RECORDED mode, tests)."""
-    global _client
-    if _client is None:
-        from openai import OpenAI
+    """Lazy so that importing this module never needs a key (RECORDED mode, tests). One client per route."""
+    global _client, _client_route
+    r = selected_route()
+    if _client is not None and (_client_route == r.name or _client_route == "injected"):
+        return _client
+    from openai import OpenAI
 
-        key = os.environ.get("NEBIUS_API_KEY")
-        if not key:
-            raise ModelUnavailable("NEBIUS_API_KEY is not set")
-        _client = OpenAI(base_url=BASE, api_key=key, timeout=120)
+    key = api_key(r)
+    if not key:
+        raise ModelUnavailable(f"{r.key_env} is not set for route {r.name}")
+    _client = OpenAI(base_url=r.base_url, api_key=key, timeout=120)
+    _client_route = r.name
     return _client
 
 
 def set_client(c) -> None:
     """Tests and the judge door inject a client here."""
-    global _client
+    global _client, _client_route
     _client = c
+    _client_route = "injected" if c is not None else None
 
 
 _CTRL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
@@ -81,13 +87,21 @@ def _call(role: str, messages: list[dict], json_schema: dict | None, attempt: in
     if json_schema is not None:
         kwargs["response_format"] = {"type": "json_schema", "json_schema": json_schema}
     started = time.time()
-    try:
-        resp = get_client().chat.completions.create(**kwargs)
-    except ModelUnavailable:
-        raise
-    except Exception as e:  # network or API failure: never swallowed into a made-up answer
-        raise ModelUnavailable(f"{type(e).__name__}") from e
-    receipts.record(resp, model=r.model, role=role, attempt=attempt, started=started)
+    resp = None
+    for wait in (0, 4, 10):  # a busy worker (HTTP 503 or 429) is retried; anything else is surfaced
+        if wait:
+            time.sleep(wait)
+        try:
+            resp = get_client().chat.completions.create(**kwargs)
+            break
+        except ModelUnavailable:
+            raise
+        except Exception as e:  # network or API failure: never swallowed into a made-up answer
+            code = getattr(e, "status_code", None)
+            if code in (429, 503) and wait != 10:
+                continue
+            raise ModelUnavailable(f"{type(e).__name__}{'' if code is None else f' HTTP {code}'}") from e
+    receipts.record(resp, model=r.model, role=role, attempt=attempt, started=started, route=r.route)
     return resp
 
 

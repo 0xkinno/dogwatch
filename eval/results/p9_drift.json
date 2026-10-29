@@ -1,0 +1,225 @@
+{
+ "set": "P9_drift",
+ "route": "nvidia_build",
+ "route_label": "Route: NVIDIA API Catalog (development)",
+ "ran_at": "2026-10-29T12:38:00+00:00",
+ "status": "OK",
+ "detail": "",
+ "review_items": 27,
+ "items": [
+  {
+   "administration": "in-dgs",
+   "topic": "medical",
+   "url": "https://www.dgshipping.gov.in/writereaddata/News/202507181056461001460NT-DGSCircularNo31of25.pdf",
+   "quote": "Rule 5(1)(d) of the MS-RPSL Rules mandates that recruitment and placement service providers must verify that the seafarers recruited or placed by them are duly qualified and possess all documents necessary for the jobs concerned.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "in-dgs",
+   "topic": "medical",
+   "url": "https://dgshipping.gov.in/WriteReadData/News/202507181056461001460NT-DGSCircularNo31of25.pdf",
+   "quote": "The STCW Rules mandate that the training and assessment of seafarers are to be administered, supervised, and monitored in accordance with the STCW Convention.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "in-dgs",
+   "topic": "medical",
+   "url": "https://www.dgshipping.gov.in/writereaddata/News/202406031237419982356DGSAdvisorytoseafarers.pdf",
+   "quote": "The seafarers are advised to conduct a thorough research and vetting of recruitment agencies before entering into the Seafarers Employment Agreements (SEA).",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "sg-mpa",
+   "topic": "revalidation",
+   "url": "https://www.mpa.gov.sg/api/media/04abe1ae-11d6-4f78-99c6-2700ded6d09f/sc_no_2_of_2023_rev1.pdf",
+   "quote": "With effect from 1st Jan 2024, List of Active Shipping Circulars will not be published. The circulars which are found on MPA\u2019s website are deemed active.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "sg-mpa",
+   "topic": "revalidation",
+   "url": "https://www.mpa.gov.sg/api/media/ea1998d5-c095-46c4-957e-d65eefdc7463/-sc_no_23_of_2015.pdf",
+   "quote": "The resolutions adopted by MSC 95 include the following: a. Resolution MSC.391(95) \u2013 Adoption of the International Code of Safety for Ships using Gases or Other Low-Flashpoint Fuels (IGF Code) The resolution adopts the Code of Safety for Ships Using Gases or Other Low-Flashpoint Fuels (IGF Code). The IGF Code will not be applicable to ships covered by the International Code of the Construction and Equipment of Ships Carrying Liquefied Gases in Bulk (IGC Code). The IGF Code will take effect on 1 January 2017.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "sg-mpa",
+   "topic": "revalidation",
+   "url": "https://www.mpa.gov.sg/api/media/3b148f4f-78ba-4784-99e6-35aec9d0a7a0/msc-108-20-add-1---report-of-the-maritime-safety-committee-on-its-108th-session-(secretariat).pdf",
+   "quote": "THE MARITIME SAFETY COMMITTEE, RECALLING Article 28(b) of the Convention on the International Maritime Organization concerning the functions of the Committee, RECALLING ALSO article VIII(b) of the International Convention for the Safety of Life at Sea, 1974 (",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "sg-mpa",
+   "topic": "revalidation",
+   "url": "https://www.mpa.gov.sg/api/media/3edce392-fba8-43a3-a348-95cb082d9cb1/msc-102-24-add-1---report-of-the-maritime-safety-committeeon-its-102nd-session-(secretariat).pdf",
+   "quote": "1.3 For the purpose of this chapter: .1 the expression ships constructed means ships the keels of which are laid or which are at a similar stage of construction; .2 the expression sh",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "sg-mpa",
+   "topic": "medical",
+   "url": "https://www.mpa.gov.sg/api/media/9e9c2803-7367-4646-a0ba-03000c32d714/-sc_no_21_of_2015.pdf",
+   "quote": "The resolution adopts the Polar Code to provide a mandatory framework for ships operating in polar waters to ensure safe ship operation and protection of the polar environment.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "sg-mpa",
+   "topic": "medical",
+   "url": "https://www.mpa.gov.sg/port-marine-ops/harbourcraft-and-pleasure-craft-regulations/licensing-of-pleasure-craft",
+   "quote": "Pleasure craft means any craft which is intended for use within the port exclusively for sport or pleasure purposes but does not include any craft which is used to carry passengers on sightseeing tours within the port for which each such passenger is charged a separate and distinct fare.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "au-amsa",
+   "topic": "revalidation",
+   "url": "http://www.amsa.gov.au/about/regulations-and-standards",
+   "quote": "Marine Order 16 implements international load line standards for regulated Australian vessels (RAVs) and foreign vessels, including marking, overloading and logbook entry requirements.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "au-amsa",
+   "topic": "revalidation",
+   "url": "http://www.amsa.gov.au/qualifications-training/international-qualifications/approved-training-courses",
+   "quote": "You are reminded that colleges set and charge their own fees for courses. The AMSA fee for sea service assessment, issue or revalidation of a certificate and the oral examination are separate and in addition to the college fee.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "au-amsa",
+   "topic": "revalidation",
+   "url": "http://www.amsa.gov.au/qualifications-training/equivalent-qualifications-and-skill-recognition/country-eligibility",
+   "quote": "You **cannot transfer or convert** a certificate from a recognised country into an Australian-issued STCW certificate of proficiency or certificate of competency.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "au-amsa",
+   "topic": "revalidation",
+   "url": "http://www.amsa.gov.au/about/regulations-and-standards/index-marine-notices",
+   "quote": "A marine notice provides important safety related information, general guidance and details about upcoming changes to legislation to the shipping and maritime community.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "au-amsa",
+   "topic": "medical",
+   "url": "https://www.amsa.gov.au/sites/default/files/a-guide-to-the-implementation-of-the-mlc-in-australia.pdf",
+   "quote": "The Australian Maritime Safety Authority (AMSA) is the competent authority responsible for regulation of the Convention and its requirements in Australia.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "au-amsa",
+   "topic": "medical",
+   "url": "http://www.amsa.gov.au/forms/seafarer-form-419",
+   "quote": "You must complete and download a new copy of form 419 each time you apply for, revalidate, replace or add an endorsement to an STCW certificate.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "uk-mca",
+   "topic": "revalidation",
+   "url": "https://assets.publishing.service.gov.uk/media/5e565d82e90e07111270580b/MSN_1861_to_tag.doc.pdf",
+   "quote": "To revalidate a United Kingdom (UK) STCW Certificate of Competency you must: \u2022 Hold a UK Certificate of Competency; \u2022 Demonstrate continued competence, relevant to the functions of the Certificate of Competency held by either: o Completing a minimum period of seagoing service; o Demonstrating occupational experience the MCA considers as being equivalent to the seagoing service requirement for revalidation; o Completing the required examinations and, if applicable, additional seagoing service; \u2022 Meet medical standards (including eyesight); \u2022 After 31 December 2016 update or complete safety training; \u2022 If applicable, some ancillary technical training.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "uk-mca",
+   "topic": "revalidation",
+   "url": "https://www.gov.uk/guidance/how-to-revalidate-a-uk-certificate-of-competency",
+   "quote": "You can apply for revalidation if you\u2019ve completed one of the following:",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "uk-mca",
+   "topic": "revalidation",
+   "url": "https://assets.publishing.service.gov.uk/media/5eaaa31986650c4353446225/MGN_496_-_Tagged.pdf",
+   "quote": "The Certificate of Competency issued will be Master Workboat less than 500 GT unlimited area.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "uk-mca",
+   "topic": "revalidation",
+   "url": "https://assets.publishing.service.gov.uk/media/63a045b88fa8f5390e5603ed/Merchant_Shipping_Notice_1856__Amendment_1_.pdf",
+   "quote": "The 2022 Regulations revoked and replaced the previous regulations, the Merchant Shipping (Standards of Training, Certification and Watchkeeping) Regulations 2015 (SI 2015/782).",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "uk-mca",
+   "topic": "medical",
+   "url": "https://assets.publishing.service.gov.uk/media/5a81c70fe5274a2e8ab55c54/MSN_1839.pdf",
+   "quote": "The requirements do not apply to seafarers on fishing vessels, pleasure vessels (not used commercially) and offshore installations whilst on their working stations.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "uk-mca",
+   "topic": "medical",
+   "url": "https://assets.publishing.service.gov.uk/media/5a80e41fed915d74e33fcfe9/MSN1856.pdf",
+   "quote": "This Merchant Shipping Notice (MSN) sets out and explains the regulatory requirements regarding the implementation of training elements applicable under Chapter II of the Standards of Training, Certification and Watchkeeping (STCW) Convention and Code.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "uk-mca",
+   "topic": "medical",
+   "url": "https://assets.publishing.service.gov.uk/media/5a80116fe5274a2e8ab4dfe4/MSN_1857.pdf",
+   "quote": "It also details the requirements to obtain non-STCW Marine Engineer Operators Licences (MEOL) and Senior Marine Engineer Operators Licences (SMEOL).",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "ng-nimasa",
+   "topic": "revalidation",
+   "url": "https://nimasa.gov.ng/wp-content/uploads/2023/04/MTI-New-Guidelines-Final-Copy-pdf-version.pdf",
+   "quote": "20.0 The Application Package",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "ng-nimasa",
+   "topic": "revalidation",
+   "url": "https://nimasa.gov.ng/wp-content/uploads/2025/01/nig92406.pdf",
+   "quote": "2. Agency for Maritime Safety Administration.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "ng-nimasa",
+   "topic": "medical",
+   "url": "https://nimasa.gov.ng/wp-content/uploads/2022/03/Compendium.pdf",
+   "quote": "The Internal management policies contained in this compilation have been approved by the Governing Board to address far-reaching process requirements and employees\u2019 work-life and performance management balance.",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "ng-nimasa",
+   "topic": "medical",
+   "url": "https://nimasa.gov.ng/what-we-do/maritime-labour-employment/maritime-labour-convention",
+   "quote": "Regulation 1.1 \u2013 Minimum age",
+   "action": "review: a person decides whether to release a new rule pack"
+  },
+  {
+   "administration": "ng-nimasa",
+   "topic": "medical",
+   "url": "https://nimasa.gov.ng/what-we-do/maritime-safety-security/tanker-endorsement-of-certificate-of-competency",
+   "quote": "Officer or rating assigned specific duties or responsibilities related to cargo or cargo equipment on tankers must complete basic training for tanker operations before taking up such duties.",
+   "action": "review: a person decides whether to release a new rule pack"
+  }
+ ],
+ "gates": {
+  "searched": 49,
+  "off_domain": 0,
+  "keyword_miss": 13,
+  "already_seen": 7,
+  "quote_refused": 1,
+  "classified": 29
+ },
+ "tavily_requests": 52,
+ "tavily_requests_by_path": {
+  "/search": 10,
+  "/extract": 42
+ },
+ "queries": [
+  "revalidation certificate of competency circular DG Shipping India",
+  "seafarer medical fitness certificate validity circular DG Shipping India",
+  "revalidation certificate of competency circular MPA Singapore",
+  "seafarer medical fitness certificate validity circular MPA Singapore",
+  "revalidation certificate of competency circular AMSA Australia",
+  "seafarer medical fitness certificate validity circular AMSA Australia",
+  "revalidation certificate of competency circular MCA United Kingdom",
+  "seafarer medical fitness certificate validity circular MCA United Kingdom",
+  "revalidation certificate of competency circular NIMASA Nigeria",
+  "seafarer medical fitness certificate validity circular NIMASA Nigeria"
+ ]
+}

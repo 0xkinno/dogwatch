@@ -121,6 +121,7 @@ def test_extract_json_handles_braces_in_strings():
 
 def test_no_key_raises_unavailable(monkeypatch):
     monkeypatch.delenv("NEBIUS_API_KEY", raising=False)
+    monkeypatch.delenv("NVIDIA_API_KEY", raising=False)
     client.set_client(None)
     with pytest.raises(client.ModelUnavailable):
         client.get_client()

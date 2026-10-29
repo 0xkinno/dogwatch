@@ -74,7 +74,7 @@ def detect_mrz(text: str) -> list[Found]:
     return out
 
 
-_PASSPORT_IN = re.compile(r"(?<![A-Z0-9])[A-PR-WY][1-9]\d{6}(?![A-Z0-9])")
+_PASSPORT_IN = re.compile(r"(?<![A-Z0-9])[A-PR-WY][ ]?[1-9](?:[ ]?\d){6}(?![A-Z0-9])")
 
 
 def detect_passport_number(text: str) -> list[Found]:
@@ -84,7 +84,7 @@ def detect_passport_number(text: str) -> list[Found]:
 
 def _labelled(kind: str, label_pattern: str):
     rx = re.compile(
-        r"(?i)(?:" + label_pattern + r")\s*(?:no\.?|number|#)?\s*[:.\-]?\s*([A-Z0-9][A-Z0-9/\-]{4,19})(?![A-Z0-9])"
+        r"(?i)(?:" + label_pattern + r")\s*(?:no\.?|number|#)?\s*[:.\-]?\s*([A-Z0-9][A-Z0-9/\-]{3,19}(?:[ ](?=[A-Z0-9/\-]*[0-9/])[A-Z0-9/\-]{1,12}){0,2})(?![A-Z0-9])"
     )
 
     def detect(text: str) -> list[Found]:
@@ -123,6 +123,25 @@ def detect_phone(text: str) -> list[Found]:
             continue
         out.append(Found("PHONE", s, m.start(), m.start() + len(s)))
     return out
+
+
+def known_values_detector(values: list[tuple[str, str]]):
+    """Detector built from the vault's own identifier table: exact, case-insensitive matches of values the vault holds,
+    for example the holder's name, which no pattern can find."""
+    pairs = [(k, v) for k, v in values if v and len(v) >= 4]
+
+    def detect(text: str) -> list[Found]:
+        low = text.casefold()
+        out = []
+        for kind, v in pairs:
+            # OCR inserts stray punctuation and spaces between words, so match the words with a loose separator
+            words = [re.escape(w) for w in re.split(r"[\s.,;:_\-]+", v) if w]
+            rx = re.compile(r"[\s.,;:_\-]{0,3}".join(words), re.I)
+            for m in rx.finditer(text):
+                out.append(Found(kind, m.group(0), m.start(), m.end()))
+        return out
+
+    return detect
 
 
 DEFAULT_DETECTORS = (detect_mrz, detect_passport_number, detect_coc, detect_indos, detect_cdc, detect_coe,

@@ -27,6 +27,7 @@ class Receipt:
     response_id: str
     model: str
     role: str
+    route: str
     tokens_in: int
     tokens_out: int
     reasoning_tokens: int
@@ -36,23 +37,23 @@ class Receipt:
     ts: float
 
 
-def cost_for(model: str, tokens_in: int, tokens_out: int) -> float | None:
-    price = pricing().get("models", {}).get(model)
+def cost_for(model: str, tokens_in: int, tokens_out: int, route: str = "") -> float | None:
+    price = pricing().get("routes", {}).get(route, {}).get(model)
     if not price:
         return None  # never invent a price
     return round((tokens_in * price["input_per_m"] + tokens_out * price["output_per_m"]) / 1_000_000, 8)
 
 
-def record(response, *, model: str, role: str, attempt: int, started: float) -> Receipt:
+def record(response, *, model: str, role: str, attempt: int, started: float, route: str = "unknown") -> Receipt:
     usage = getattr(response, "usage", None)
     t_in = int(getattr(usage, "prompt_tokens", 0) or 0)
     t_out = int(getattr(usage, "completion_tokens", 0) or 0)
     details = getattr(usage, "completion_tokens_details", None)
     reasoning = int(getattr(details, "reasoning_tokens", 0) or 0) if details else 0
     rc = Receipt(
-        response_id=str(getattr(response, "id", "")), model=model, role=role, tokens_in=t_in, tokens_out=t_out,
+        response_id=str(getattr(response, "id", "")), model=model, role=role, route=route, tokens_in=t_in, tokens_out=t_out,
         reasoning_tokens=reasoning, latency_ms=int((time.time() - started) * 1000), attempt=attempt,
-        cost_usd=cost_for(model, t_in, t_out), ts=time.time(),
+        cost_usd=cost_for(model, t_in, t_out, route), ts=time.time(),
     )
     path = receipts_path()
     path.parent.mkdir(parents=True, exist_ok=True)

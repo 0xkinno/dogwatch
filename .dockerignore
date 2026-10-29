@@ -1,0 +1,5 @@
+*
+!core
+!openshell/sandbox
+**/__pycache__
+**/.pytest_cache
