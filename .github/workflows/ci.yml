@@ -33,3 +33,14 @@ jobs:
         run: cd radio && python -m pytest -q
       - name: seal
         run: cd seal && python -m pytest -q
+  web:
+    name: web
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: cd web && npm ci
+      - run: cd web && npx tsc --noEmit
+      - run: cd web && npx next build

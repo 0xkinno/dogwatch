@@ -101,9 +101,9 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [x] Glow cards with cursor-tracking light
 - [x] API endpoints with caps and kill switch; `/api/status` measured, never hard-coded
 - [x] Recorded mode labelled on every page that uses it
-- [ ] Vercel deploy; API host deploy; reachability script passes
+- [x] Vercel deploy; API host deploy; reachability script passes
 - [x] Playwright across eight viewports: no overflow, no overlaps, zero console errors, axe clean, screenshots saved
-- [ ] Daily live probe workflow against the deployed URL
+- [x] Daily live probe workflow against the deployed URL
 
 ## Phase 9. Contribution and feedback
 - [ ] `FRICTION.md`: reproducible notes on Token Factory, OpenShell, NemoClaw, Hermes with suggested fixes

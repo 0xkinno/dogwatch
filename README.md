@@ -16,7 +16,7 @@ The idea underneath is simple. An assistant does not have to see your documents 
 
 | | |
 |---|---|
-| Live app | not deployed yet, see [Run it](#run-it) |
+| Live app | [dogwatch-eight.vercel.app](https://dogwatch-eight.vercel.app), API host [dogwatch-api.vercel.app](https://dogwatch-api.vercel.app/api/status) (Vercel, a substitute host: the product itself runs on the seafarer's machine) |
 | For judges | [JUDGE.md](JUDGE.md) |
 | Demo video | not recorded yet |
 | Track | Personal AI |
@@ -243,7 +243,7 @@ Nothing. The repository starts in the submission period.
 
 ## Run it
 
-Hosted: not deployed yet. Local without keys: see [Explore](#explore-in-2-minutes). Web: `cd web && npm install && npm run build && npm start`. With a model: copy `.env.example` to `.env`, set `NVIDIA_API_KEY` (development route) or `NEBIUS_API_KEY` (Token Factory), then `python scripts/probe.py`. The OpenShell stack needs a Linux 6.2 or newer kernel with Docker Engine 28 or newer: `openshell/scripts/up.sh`, with `wsl-start.sh`, `wsl-docker28.sh` and `seal-up.sh` for WSL builds.
+Hosted: the live app above (Vercel, a substitute host, labelled in `/api/status`). Local without keys: see [Explore](#explore-in-2-minutes). Web: `cd web && npm install && npm run build && npm start`. With a model: copy `.env.example` to `.env`, set `NVIDIA_API_KEY` (development route) or `NEBIUS_API_KEY` (Token Factory), then `python scripts/probe.py`. The OpenShell stack needs a Linux 6.2 or newer kernel with Docker Engine 28 or newer: `openshell/scripts/up.sh`, with `wsl-start.sh`, `wsl-docker28.sh` and `seal-up.sh` for WSL builds.
 
 ## Feedback for Nebius and NVIDIA
 

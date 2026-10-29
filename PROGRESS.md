@@ -12,7 +12,7 @@ Last updated 2026-10-28. State words: LIVE RUN, LOCAL BUILD, FIXTURE, NOT RUN.
 | 5 Always-on loop and human actions | LOCAL BUILD; Tavily and unattended runs live | Telegram bot verified, first message and email NOT RUN (owner action) |
 | 6 OpenShell integration | partial | see `PLATFORM_PROBE.md` |
 | 7 Proof campaign | partial | P3, P6 (engine and Nemotron), P7, P8, P9, P10, P11, P12 run; P1 sandbox, P2, P4, P5 NOT RUN |
-| 8 Web app and judge door | LOCAL BUILD | redesigned, 64 Playwright checks pass, 7 equal-size screenshots |
+| 8 Web app and judge door | deployed | Vercel web and Vercel Python API (substitute host); reachability script passes; Playwright passes locally (64) and against the live URL (15 of 16 first run, the failure passed on rerun) |
 | 9 Contribution and feedback | partial | `FRICTION.md`, `SDK_SURFACE.md`; upstream PR waits for the owner |
 | 10 Presentation and submission | partial | README, JUDGE.md, Devpost draft complete; video, deploy link, red team, submission pending |
 
