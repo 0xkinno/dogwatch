@@ -1,0 +1,431 @@
+{
+ "set": "P6_engine",
+ "profiles": 60,
+ "correct": 60,
+ "false_safe": 0,
+ "false_alarm": 0,
+ "wrong_other": 0,
+ "miss_ids": [],
+ "cases": [
+  {
+   "id": "P001",
+   "category": "boundary_end",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P002",
+   "category": "boundary_end",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P003",
+   "category": "boundary_end",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P004",
+   "category": "boundary_end",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P005",
+   "category": "boundary_end",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P006",
+   "category": "boundary_end",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P007",
+   "category": "boundary_start",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P008",
+   "category": "boundary_start",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P009",
+   "category": "boundary_start",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P010",
+   "category": "boundary_start",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P011",
+   "category": "travel_buffer",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P012",
+   "category": "travel_buffer",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P013",
+   "category": "travel_buffer",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P014",
+   "category": "travel_buffer",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P015",
+   "category": "travel_buffer_before",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P016",
+   "category": "travel_buffer_before",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P017",
+   "category": "leap_year",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P018",
+   "category": "leap_year",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P019",
+   "category": "leap_year",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P020",
+   "category": "leap_year",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P021",
+   "category": "leap_year",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P022",
+   "category": "leap_year",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P023",
+   "category": "leap_year",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P024",
+   "category": "leap_year",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P025",
+   "category": "missing_document",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P026",
+   "category": "missing_document",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P027",
+   "category": "missing_document",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P028",
+   "category": "missing_document",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P029",
+   "category": "missing_document",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P030",
+   "category": "missing_document",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P031",
+   "category": "missing_document",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P032",
+   "category": "missing_document",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P033",
+   "category": "missing_fact",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P034",
+   "category": "missing_fact",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P035",
+   "category": "missing_fact",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P036",
+   "category": "missing_fact",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P037",
+   "category": "missing_fact",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P038",
+   "category": "missing_fact",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P039",
+   "category": "missing_fact",
+   "expected": "CANNOT_VERIFY",
+   "got": "CANNOT_VERIFY",
+   "ok": true
+  },
+  {
+   "id": "P040",
+   "category": "missing_fact",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P041",
+   "category": "many_documents",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P042",
+   "category": "many_documents",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P043",
+   "category": "many_documents",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P044",
+   "category": "many_documents",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P045",
+   "category": "many_documents",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P046",
+   "category": "many_documents",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P047",
+   "category": "contract_length",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P048",
+   "category": "contract_length",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P049",
+   "category": "contract_length",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P050",
+   "category": "contract_length",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P051",
+   "category": "contract_length",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P052",
+   "category": "contract_length",
+   "expected": "READY",
+   "got": "READY",
+   "ok": true
+  },
+  {
+   "id": "P053",
+   "category": "mixed",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P054",
+   "category": "mixed",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P055",
+   "category": "mixed",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P056",
+   "category": "mixed",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P057",
+   "category": "mixed",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P058",
+   "category": "mixed",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P059",
+   "category": "mixed",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  },
+  {
+   "id": "P060",
+   "category": "mixed",
+   "expected": "NOT_READY",
+   "got": "NOT_READY",
+   "ok": true
+  }
+ ]
+}

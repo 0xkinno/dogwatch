@@ -1,0 +1,119 @@
+{
+ "facts": {
+  "need.contract_floor": {
+   "claim": "Six months at that floor (USD)",
+   "source": "evidence/need/sources.json#ilo-wage-2027 x 6",
+   "tag": "SOURCED",
+   "value": 4224
+  },
+  "need.ilo_wage": {
+   "claim": "ILO minimum monthly basic wage for an able seafarer from 1 Jan 2027 (USD)",
+   "source": "evidence/need/sources.json#ilo-wage-2027",
+   "tag": "SOURCED",
+   "value": 704
+  },
+  "need.officer_shortfall": {
+   "claim": "STCW certified officer shortfall in the 2021 workforce report",
+   "source": "evidence/need/sources.json#ics-officer-shortfall-2021",
+   "tag": "SOURCED",
+   "value": 26240
+  },
+  "p11.duplicates": {
+   "claim": "Duplicate sends after restart",
+   "source": "eval/results/p11_restart.json#duplicate_sends",
+   "tag": "MEASURED",
+   "value": 0
+  },
+  "p11.sends": {
+   "claim": "Emails sent after a kill and restart with one pending approval (local capture transport)",
+   "source": "eval/results/p11_restart.json#sends_observed",
+   "tag": "MEASURED",
+   "value": 1
+  },
+  "p3.attacks": {
+   "claim": "Attack bodies in the encoding corpus",
+   "source": "eval/results/p3_seal_corpus.json#attacks",
+   "tag": "MEASURED",
+   "value": 200
+  },
+  "p3.legit": {
+   "claim": "Legitimate bodies in the encoding corpus",
+   "source": "eval/results/p3_seal_corpus.json#legitimate",
+   "tag": "MEASURED",
+   "value": 200
+  },
+  "p3.literal.false_blocks": {
+   "claim": "Legitimate bodies a literal-only guard blocked",
+   "source": "eval/results/p3_seal_corpus.json#literal.false_blocks",
+   "tag": "MEASURED",
+   "value": 0
+  },
+  "p3.literal.missed": {
+   "claim": "Attacks a literal-only guard let through",
+   "source": "eval/results/p3_seal_corpus.json#literal.missed",
+   "tag": "MEASURED",
+   "value": 158
+  },
+  "p3.seal.false_blocks": {
+   "claim": "Legitimate bodies the Seal blocked (v2)",
+   "source": "eval/results/p3_seal_corpus.json#seal.false_blocks",
+   "tag": "MEASURED",
+   "value": 0
+  },
+  "p3.seal.missed": {
+   "claim": "Attacks the Seal let through (v2)",
+   "source": "eval/results/p3_seal_corpus.json#seal.missed",
+   "tag": "MEASURED",
+   "value": 0
+  },
+  "p3.seal_v1.missed": {
+   "claim": "Attacks the first version of the Seal let through",
+   "source": "eval/results/p3_seal_corpus_v1.json#seal.missed",
+   "tag": "MEASURED",
+   "value": 8
+  },
+  "p6.engine.correct": {
+   "claim": "Profiles where the Navigator matched the pre-registered verdict",
+   "source": "eval/results/p6_engine.json#correct",
+   "tag": "MEASURED",
+   "value": 60
+  },
+  "p6.engine.false_safe": {
+   "claim": "Navigator said READY when it should not",
+   "source": "eval/results/p6_engine.json#false_safe",
+   "tag": "MEASURED",
+   "value": 0
+  },
+  "p6.profiles": {
+   "claim": "Synthetic seafarer profiles",
+   "source": "eval/results/p6_engine.json#profiles",
+   "tag": "MEASURED",
+   "value": 60
+  },
+  "p7.flips": {
+   "claim": "Histories whose verdict flips between conventions",
+   "source": "eval/results/p7_conventions.json#flips",
+   "tag": "MEASURED",
+   "value": 7
+  },
+  "p7.histories": {
+   "claim": "Sea-service histories checked under every convention",
+   "source": "eval/results/p7_conventions.json#histories",
+   "tag": "MEASURED",
+   "value": 60
+  },
+  "p7.rules_stating_convention": {
+   "claim": "Sourced rules that state a counting convention",
+   "source": "eval/results/p7_conventions.json#rules_stating_a_convention",
+   "tag": "MEASURED",
+   "value": 0
+  },
+  "proof.prereg_sha256": {
+   "claim": "SHA-256 of the pre-registration file",
+   "source": "eval/cases/prereg.json",
+   "tag": "MEASURED",
+   "value": "5d80256515ad2b45e2bb06566c63be1455957ab154731ef4e07ee0e73abc2fa9"
+  }
+ },
+ "generated_from": "eval/results and evidence/need"
+}

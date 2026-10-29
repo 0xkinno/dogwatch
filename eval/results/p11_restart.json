@@ -1,0 +1,33 @@
+{
+ "set": "P11_restart",
+ "transport": "FIXTURE (local capture, no provider)",
+ "sends_observed": 1,
+ "duplicate_sends": 0,
+ "approval_resumed": true,
+ "steps": [
+  {
+   "step": "draft created, status PENDING",
+   "status": "PENDING"
+  },
+  {
+   "step": "approved, then the process is killed before sending",
+   "status": "APPROVED"
+  },
+  {
+   "step": "restart: pending approval resumed",
+   "pending": [
+    "d-36f850dd"
+   ]
+  },
+  {
+   "step": "send after restart",
+   "result": "LIVE",
+   "sent": true
+  },
+  {
+   "step": "second send attempt",
+   "result": "DUPLICATE_SUPPRESSED"
+  }
+ ],
+ "ok": true
+}

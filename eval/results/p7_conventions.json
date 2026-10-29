@@ -1,0 +1,805 @@
+{
+ "set": "P7_counting_conventions",
+ "histories": 60,
+ "flips": 7,
+ "per_rule": {
+  "AU-SS-360D-5Y": {
+   "histories": 36,
+   "flips": 5,
+   "states_convention": "unstated"
+  },
+  "UK-SS-3M-6M": {
+   "histories": 24,
+   "flips": 2,
+   "states_convention": "unstated"
+  }
+ },
+ "day_total_errors": [],
+ "rules_stating_a_convention": [],
+ "rules_checked": [
+  "AU-SS-360D-5Y",
+  "UK-SS-3M-6M"
+ ],
+ "cases": [
+  {
+   "id": "C001",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C002",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C003",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C004",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C005",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C006",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C007",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C008",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C009",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C010",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C011",
+   "rule": "AU-SS-360D-5Y",
+   "flip": true,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": true,
+    "days_365": false
+   },
+   "verdict": "ASK_ADMINISTRATION"
+  },
+  {
+   "id": "C012",
+   "rule": "AU-SS-360D-5Y",
+   "flip": true,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": false,
+    "days_360": true,
+    "days_365": false
+   },
+   "verdict": "ASK_ADMINISTRATION"
+  },
+  {
+   "id": "C013",
+   "rule": "AU-SS-360D-5Y",
+   "flip": true,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": false,
+    "days_360": true,
+    "days_365": false
+   },
+   "verdict": "ASK_ADMINISTRATION"
+  },
+  {
+   "id": "C014",
+   "rule": "AU-SS-360D-5Y",
+   "flip": true,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": false,
+    "days_360": true,
+    "days_365": false
+   },
+   "verdict": "ASK_ADMINISTRATION"
+  },
+  {
+   "id": "C015",
+   "rule": "AU-SS-360D-5Y",
+   "flip": true,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": false
+   },
+   "verdict": "ASK_ADMINISTRATION"
+  },
+  {
+   "id": "C016",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C017",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C018",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C019",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C020",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C021",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C022",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C023",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C024",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C025",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C026",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C027",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C028",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C029",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C030",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C031",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C032",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C033",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C034",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C035",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C036",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C037",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C038",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C039",
+   "rule": "UK-SS-3M-6M",
+   "flip": true,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": true,
+    "days_365": false
+   },
+   "verdict": "ASK_ADMINISTRATION"
+  },
+  {
+   "id": "C040",
+   "rule": "UK-SS-3M-6M",
+   "flip": true,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": false
+   },
+   "verdict": "ASK_ADMINISTRATION"
+  },
+  {
+   "id": "C041",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C042",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C043",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C044",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C045",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C046",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C047",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C048",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C049",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C050",
+   "rule": "UK-SS-3M-6M",
+   "flip": false,
+   "meets": {
+    "days_inclusive": true,
+    "days_exclusive": true,
+    "calendar_months": true,
+    "days_360": true,
+    "days_365": true
+   },
+   "verdict": "MEETS"
+  },
+  {
+   "id": "C051",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C052",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C053",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C054",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C055",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C056",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C057",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C058",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C059",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  },
+  {
+   "id": "C060",
+   "rule": "AU-SS-360D-5Y",
+   "flip": false,
+   "meets": {
+    "days_inclusive": false,
+    "days_exclusive": false,
+    "calendar_months": false,
+    "days_360": false,
+    "days_365": false
+   },
+   "verdict": "SHORT"
+  }
+ ]
+}

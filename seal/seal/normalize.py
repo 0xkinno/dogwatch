@@ -22,7 +22,7 @@ MAX_TOKENS = 200
 
 _SEPS = re.compile(r"[\s\-./_" + "".join(chr(c) for c in (0x200B, 0x200C, 0x200D, 0x2060, 0xFEFF, 0x00AD)) + "]+")
 _HOMO = str.maketrans({"o": "0", "i": "1", "l": "1", "s": "5", "b": "8"})
-_B64 = re.compile(r"[A-Za-z0-9+/_\-]{12,}={0,2}")
+_B64 = re.compile(r"[A-Za-z0-9+/_\-]{8,}={0,2}")
 _HEX = re.compile(r"(?:[0-9a-fA-F]{2}){6,}")
 
 

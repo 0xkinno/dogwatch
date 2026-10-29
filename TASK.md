@@ -78,17 +78,17 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [x] `eval/cases/prereg.json` committed and its SHA-256 recorded before any run
 - [ ] P1 boundary proven
 - [ ] P2 injection inbox with and without the sandbox
-- [ ] P3 encoding corpus: literal guard vs Seal, both directions
+- [x] P3 encoding corpus: literal guard vs Seal, both directions
 - [ ] P4 fail closed
 - [ ] P5 credential placeholder
 - [ ] P6 engine vs Nemotron alone (Super and Ultra)
-- [ ] P7 counting-convention finding
+- [x] P7 counting-convention finding
 - [ ] P8 reading on specimen certificates; no identifier in any request body
 - [ ] P9 drift watch
 - [ ] P10 unattended daily and weekly runs recorded
-- [ ] P11 restart with a pending approval, no duplicate send
+- [x] P11 restart with a pending approval, no duplicate send
 - [ ] P12 cost per weekly check and per readiness run
-- [ ] `scripts/facts.py` writes `docs/FACTS.json`; `scripts/check_facts.py` in CI
+- [x] `scripts/facts.py` writes `docs/FACTS.json`; `scripts/check_facts.py` in CI
 - [ ] `PROOF.md` and `EVIDENCE.md` with LIVE RUN / LOCAL BUILD / FIXTURE / NOT RUN states
 
 ## Phase 8. Web app and judge door
