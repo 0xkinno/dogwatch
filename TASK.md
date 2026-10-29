@@ -14,9 +14,9 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [ ] First commit pushed and the attribution check is green
 
 ## Phase 1. Rules and sponsor intelligence
-- [ ] `RULES_EXTRACT.md`: criteria, track text, required items, video rules, deadline in WAT, Devpost form fields
-- [ ] `SPONSOR_INTEL.md`: OpenShell primitives with doc paths, NemoClaw and Hermes status, Token Factory models, Tavily, newest releases and preview status
-- [ ] Depth ladder written for OpenShell, Token Factory and Nemotron (shallow, deep, newest)
+- [x] `RULES_EXTRACT.md`: criteria, track text, required items, video rules, deadline in WAT, Devpost form fields
+- [x] `SPONSOR_INTEL.md`: OpenShell primitives with doc paths, NemoClaw and Hermes status, Token Factory models, Tavily, newest releases and preview status
+- [x] Depth ladder written for OpenShell, Token Factory and Nemotron (shallow, deep, newest)
 
 ## Phase 2. Platform probe
 - [ ] Token Factory `GET /v1/models` output saved; exact Nemotron ids recorded
