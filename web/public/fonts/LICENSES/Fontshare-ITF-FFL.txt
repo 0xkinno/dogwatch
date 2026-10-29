@@ -1,0 +1,9 @@
+General Sans and Satoshi are distributed by Fontshare (Indian Type Foundry) under the ITF Free Font License
+(commercial use permitted, self-hosting permitted). The full licence text is published by Fontshare at
+https://www.fontshare.com/licenses/itf-ffl and with each font download at https://www.fontshare.com.
+
+Files in this folder: GeneralSans-Semibold.woff2, Satoshi-Regular.woff2, Satoshi-Medium.woff2.
+Retrieved on 2026-10-28 from the Fontshare CDN through the public Fontshare CSS API.
+
+The automated fetch of the licence page returned a script-rendered shell, so the licence text itself was not
+captured in this folder. Before release, download the licence file from the font pages and replace this note with it.

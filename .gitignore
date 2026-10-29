@@ -44,3 +44,9 @@ Thumbs.db
 # Local agent state (settings.json stays tracked)
 .claude/*
 !.claude/settings.json
+.npm-install.log
+.web-start.log
+.web-dev.log
+.pw-install.log
+.pw.json
+*.tsbuildinfo

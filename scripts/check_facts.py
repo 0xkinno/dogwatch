@@ -36,6 +36,8 @@ def main() -> int:
         text = f.read_text(encoding="utf-8")
         for rx in (marker, attr):
             for key, shown in rx.findall(text):
+                if shown.strip().startswith("{fact(") and key in shown:
+                    continue  # rendered from FACTS at build time
                 if key not in current:
                     problems.append(f"{f.relative_to(ROOT)}: unknown fact {key}")
                 elif shown.strip() != fmt(current[key]["value"]) and shown.strip() != str(current[key]["value"]):

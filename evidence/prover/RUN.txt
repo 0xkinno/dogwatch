@@ -1,0 +1,3 @@
+# openshell-prover 0.1.6, run 2026-10-28T17:39Z
+# candidate: openshell/policy/dogwatch.yaml without network_middlewares (declared policy)
+no running sandbox: effective export not available, declared candidate checked instead

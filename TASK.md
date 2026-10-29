@@ -25,11 +25,11 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [ ] OpenShell installed on WSL2; `openshell sandbox create` works
 - [ ] `nebius-token-factory.yaml` profile linted, imported, attached; a sandboxed call to Token Factory succeeds with a placeholder key
 - [ ] Content-guard middleware example smoke test runs (or the failure is recorded)
-- [ ] `openshell-prover` runs a boundary check and returns a counterexample on a test file
+- [x] `openshell-prover` runs a boundary check and returns a counterexample on a test file
 - [ ] Policy advisor enabled; one proposal submitted and rejected through the CLI
 - [ ] NemoClaw install attempted; Hermes (`nemohermes`) attempted; results recorded
 - [ ] Nebius AI Cloud access checked (Serverless Endpoint or VM)
-- [ ] `PLATFORM_PROBE.md` written from real outputs; tier decisions recorded
+- [x] `PLATFORM_PROBE.md` written from real outputs; tier decisions recorded
 
 ## Phase 3. Moment and thesis
 - [ ] Every source in the instruction's source table fetched; quotes and retrieval dates in `evidence/need/sources.json`
@@ -38,7 +38,7 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [x] `THESIS.md`: five-line pitch, hook, one sentence, guarantee, crew, interruption budget
 
 ## Phase 4. Core engine
-- [ ] Encrypted vault store and identifier registry (host side API)
+- [x] Encrypted vault store and identifier registry (host side API)
 - [x] Identifier detectors with check-digit tests (MRZ, passport, CoC, INDoS, CDC, CoE, email, phone)
 - [x] Placeholder replacement with stable ids and overlap handling
 - [ ] Local OCR in the sandbox image
@@ -70,7 +70,7 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [ ] `openshell/policy/dogwatch.yaml` applied; effective policy exported
 - [ ] Tavily provider profile attached
 - [ ] Seal middleware implemented with all normalizations; registered fail closed
-- [ ] `boundary.yaml` and five attack proposals; `prove.sh` outputs committed
+- [x] `boundary.yaml` and five attack proposals; `prove.sh` outputs committed
 - [ ] Advisor flow: a denied request becomes a proposal the seafarer rejects from Telegram
 - [ ] Hermes tier: skills loaded in `nemohermes` (only if the probe passed; otherwise marked designed, not run)
 
@@ -89,31 +89,31 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [x] P11 restart with a pending approval, no duplicate send
 - [ ] P12 cost per weekly check and per readiness run
 - [x] `scripts/facts.py` writes `docs/FACTS.json`; `scripts/check_facts.py` in CI
-- [ ] `PROOF.md` and `EVIDENCE.md` with LIVE RUN / LOCAL BUILD / FIXTURE / NOT RUN states
+- [x] `PROOF.md` and `EVIDENCE.md` with LIVE RUN / LOCAL BUILD / FIXTURE / NOT RUN states
 
 ## Phase 8. Web app and judge door
 - [ ] Fonts self-hosted with license files; tokens in place
-- [ ] Square capsule nav with hover glow
-- [ ] Hero image generated or licensed; placed right with paper fade; never behind text
-- [ ] Watch Dial SVG component driven by real verdicts
-- [ ] Landing sections 1 to 9
-- [ ] `/watch`, `/contract`, `/outbox`, `/boundary`, `/proof`, `/judge`, `/how`
-- [ ] Glow cards with cursor-tracking light
-- [ ] API endpoints with caps and kill switch; `/api/status` measured, never hard-coded
-- [ ] Recorded mode labelled on every page that uses it
+- [x] Square capsule nav with hover glow
+- [x] Hero image generated or licensed; placed right with paper fade; never behind text
+- [x] Watch Dial SVG component driven by real verdicts
+- [x] Landing sections 1 to 9
+- [x] `/watch`, `/contract`, `/outbox`, `/boundary`, `/proof`, `/judge`, `/how`
+- [x] Glow cards with cursor-tracking light
+- [x] API endpoints with caps and kill switch; `/api/status` measured, never hard-coded
+- [x] Recorded mode labelled on every page that uses it
 - [ ] Vercel deploy; API host deploy; reachability script passes
-- [ ] Playwright across eight viewports: no overflow, no overlaps, zero console errors, axe clean, screenshots saved
+- [x] Playwright across eight viewports: no overflow, no overlaps, zero console errors, axe clean, screenshots saved
 - [ ] Daily live probe workflow against the deployed URL
 
 ## Phase 9. Contribution and feedback
 - [ ] `FRICTION.md`: reproducible notes on Token Factory, OpenShell, NemoClaw, Hermes with suggested fixes
 - [ ] Nebius Token Factory provider profile prepared as an upstream PR (open only after Kinnoski approves)
-- [ ] `SDK_SURFACE.md`: every sponsor feature, file:line, version, live or recorded or designed, and "not used, so not claimed"
+- [x] `SDK_SURFACE.md`: every sponsor feature, file:line, version, live or recorded or designed, and "not used, so not claimed"
 
 ## Phase 10. Presentation and submission
-- [ ] README written to the required structure, numbers from FACTS only
-- [ ] 2x2 product screenshots and banner committed
-- [ ] `JUDGE.md` with 60-second, 3-minute and 10-minute paths
+- [x] README written to the required structure, numbers from FACTS only
+- [x] 2x2 product screenshots and banner committed
+- [x] `JUDGE.md` with 60-second, 3-minute and 10-minute paths
 - [ ] Demo video under 3:00 recorded and uploaded to YouTube (public)
 - [ ] `SUBMISSION_DEVPOST.md` mirrors the live form, track Personal AI, feedback section complete
 - [ ] Red team: five fresh judge agents on the deployed URL; defects fixed; clean round logged in `REDTEAM_LOG.md`

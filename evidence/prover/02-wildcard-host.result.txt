@@ -1,0 +1,3 @@
+result: unsupported
+coverage: domains=filesystem,network_l4,network_rest,process,landlock
+reason: candidate policy has overlapping exact and wildcard endpoints with different implicit destination IP modes

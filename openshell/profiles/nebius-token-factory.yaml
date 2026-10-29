@@ -1,0 +1,29 @@
+# Nebius Token Factory provider profile, modelled on providers/nvidia.yaml in NVIDIA/OpenShell (Apache-2.0).
+# No such profile ships with OpenShell. Status: written from the example, lint and import pending (PLATFORM_PROBE.md).
+#   openshell provider profile lint   -f openshell/profiles/nebius-token-factory.yaml
+#   openshell provider profile import -f openshell/profiles/nebius-token-factory.yaml --global
+# Credential scope: NEBIUS_API_KEY, sent as a bearer authorization header to api.tokenfactory.nebius.com only.
+# Smoke test: openshell sandbox create --provider nebius-token-factory -- \
+#               curl -sS https://api.tokenfactory.nebius.com/v1/models
+
+id: nebius-token-factory
+display_name: Nebius Token Factory
+description: Nebius Token Factory OpenAI-compatible inference (chat completions, models)
+category: inference
+inference_capable: true
+credentials:
+  - name: api_key
+    description: Nebius Token Factory API key
+    env_vars: [NEBIUS_API_KEY]
+    required: true
+    auth_style: bearer
+    header_name: authorization
+discovery:
+  credentials: [api_key]
+endpoints:
+  - host: api.tokenfactory.nebius.com
+    port: 443
+    protocol: rest
+    access: read-write
+    enforcement: enforce
+binaries: [/sandbox/.venv/bin/python3, /usr/bin/curl]

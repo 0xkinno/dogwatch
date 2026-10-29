@@ -18,6 +18,36 @@
    "tag": "SOURCED",
    "value": 26240
   },
+  "p1.attack_proposals": {
+   "claim": "Attack proposals run through the prover",
+   "source": "evidence/prover/*.result.txt",
+   "tag": "MEASURED",
+   "value": 5
+  },
+  "p1.declared_within": {
+   "claim": "Declared Dogwatch policy reported within_boundary (1 = yes)",
+   "source": "evidence/prover/dogwatch-declared.result.txt",
+   "tag": "MEASURED",
+   "value": 1
+  },
+  "p1.exceeds": {
+   "claim": "Attack proposals the prover reported as exceeds_boundary with a counterexample",
+   "source": "evidence/prover/*.result.txt",
+   "tag": "MEASURED",
+   "value": 3
+  },
+  "p1.unsupported": {
+   "claim": "Attack proposals the prover refused to bless (unsupported)",
+   "source": "evidence/prover/*.result.txt",
+   "tag": "MEASURED",
+   "value": 1
+  },
+  "p1.within": {
+   "claim": "Attack proposals the prover reported within_boundary",
+   "source": "evidence/prover/*.result.txt",
+   "tag": "MEASURED",
+   "value": 1
+  },
   "p11.duplicates": {
    "claim": "Duplicate sends after restart",
    "source": "eval/results/p11_restart.json#duplicate_sends",

@@ -53,6 +53,15 @@ def build() -> dict:
         add("p7.histories", "Sea-service histories checked under every convention", p7["histories"], "eval/results/p7_conventions.json#histories")
         add("p7.flips", "Histories whose verdict flips between conventions", p7["flips"], "eval/results/p7_conventions.json#flips")
         add("p7.rules_stating_convention", "Sourced rules that state a counting convention", len(p7["rules_stating_a_convention"]), "eval/results/p7_conventions.json#rules_stating_a_convention")
+    prover = ROOT / "evidence" / "prover"
+    if prover.exists() and list(prover.glob("*.result.txt")):
+        first = {f.name: f.read_text(encoding="utf-8").splitlines()[0].replace("result: ", "") for f in prover.glob("*.result.txt")}
+        atk = {k: v for k, v in first.items() if k[0].isdigit()}
+        add("p1.attack_proposals", "Attack proposals run through the prover", len(atk), "evidence/prover/*.result.txt")
+        add("p1.exceeds", "Attack proposals the prover reported as exceeds_boundary with a counterexample", sum(v == "exceeds_boundary" for v in atk.values()), "evidence/prover/*.result.txt")
+        add("p1.unsupported", "Attack proposals the prover refused to bless (unsupported)", sum(v == "unsupported" for v in atk.values()), "evidence/prover/*.result.txt")
+        add("p1.within", "Attack proposals the prover reported within_boundary", sum(v == "within_boundary" for v in atk.values()), "evidence/prover/*.result.txt")
+        add("p1.declared_within", "Declared Dogwatch policy reported within_boundary (1 = yes)", int(first.get("dogwatch-declared.result.txt") == "within_boundary"), "evidence/prover/dogwatch-declared.result.txt")
     p11 = load("p11_restart.json")
     if p11:
         add("p11.sends", "Emails sent after a kill and restart with one pending approval (local capture transport)", p11["sends_observed"], "eval/results/p11_restart.json#sends_observed")
