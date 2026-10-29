@@ -1,0 +1,101 @@
+{
+  "retrieved": "2026-10-28",
+  "sources": [
+    {
+      "id": "ilo-wage-2027",
+      "claim": "ILO minimum monthly basic wage for an able seafarer, from 1 January 2027",
+      "value": 704,
+      "unit": "USD per month",
+      "url": "https://www.ilo.org/resource/news/subcommittee-wages-seafarers-reaches-agreement-increase-seafarer-minimum",
+      "quote": "update the current ILO minimum monthly basic wage for an able seafarer from US$673 to US$690 as of 1 January 2026, US$704 as of 1 January 2027",
+      "snapshot": "snapshots/ilo_jmc_wage_agreement.txt",
+      "status": "VERIFIED_ON_SOURCE_PAGE",
+      "note": "A floor for an able seafarer under a bipartite agreement, not Arjun's wage and not a legal minimum in every flag state."
+    },
+    {
+      "id": "ics-officer-shortfall-2021",
+      "claim": "Current shortfall of STCW certified officers in the 2021 BIMCO/ICS Seafarer Workforce Report",
+      "value": 26240,
+      "unit": "officers",
+      "url": "https://www.hellenicshippingnews.com/?p=880386",
+      "primary_url": "https://www.ics-shipping.org/?p=12692",
+      "quote": "a current shortfall of 26,240 STCW certified officers",
+      "snapshot": "snapshots/ics_workforce_report_press_reprint.txt",
+      "status": "VERIFIED_ON_PRESS_RELEASE_REPRINT",
+      "note": "The ICS and BIMCO pages refused automated access (HTTP 403). The figure is read from a trade-press reprint of the joint press release."
+    },
+    {
+      "id": "ics-workforce-size-2021",
+      "claim": "Seafarers serving the world merchant fleet in the 2021 report",
+      "value": 1890000,
+      "unit": "seafarers",
+      "url": "https://www.hellenicshippingnews.com/?p=880386",
+      "primary_url": "https://www.ics-shipping.org/?p=12692",
+      "quote": "1.89 million seafarers currently serve the world merchant fleet",
+      "snapshot": "snapshots/ics_workforce_report_press_reprint.txt",
+      "status": "VERIFIED_ON_PRESS_RELEASE_REPRINT"
+    },
+    {
+      "id": "amsa-carry-original",
+      "claim": "Certificates required by the Convention must be carried in original form on board",
+      "url": "https://www.amsa.gov.au/sites/default/files/2025-05-Marine-notice-revalidation-Australian-STCW-certificates.pdf",
+      "quote": "certificate s required by the Convention must be carried in their original form on board the ship",
+      "snapshot": "../../core/rulepacks/au-amsa/sources/amsa_marine_notice_2025_05.txt",
+      "status": "VERIFIED_ON_SOURCE_PAGE"
+    },
+    {
+      "id": "amsa-sea-service",
+      "claim": "AMSA qualifying sea service for revalidation",
+      "url": "https://www.amsa.gov.au/qualifications-training/international-qualifications/revalidation-stcw-master-and-deck-certificates",
+      "quote": "360 days sea service in the 5 years before you apply",
+      "snapshot": "../../core/rulepacks/au-amsa/sources/amsa_revalidate_page.txt",
+      "status": "VERIFIED_ON_SOURCE_PAGE"
+    },
+    {
+      "id": "uk-sea-service-12m",
+      "claim": "UK CoC revalidation sea service option (historical notice)",
+      "url": "https://assets.publishing.service.gov.uk/media/5a748921e5274a7f9c586c53/MIN_501__M_.pdf",
+      "quote": "for at least 12 months (which need not be continuous) during the preceding 5 years",
+      "snapshot": "../../core/rulepacks/uk-mca/sources/mca_min501.txt",
+      "status": "VERIFIED_ON_SOURCE_PAGE",
+      "note": "The notice states that it expires 30 April 2015. Kept as a dated reference and labelled so in the rule."
+    },
+    {
+      "id": "uk-tanker-3m",
+      "claim": "Tanker endorsement revalidation sea service",
+      "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/945374/MIN_494.pdf",
+      "quote": "for a period of at least 3 months in total in the proceeding 5 years",
+      "snapshot": "../../core/rulepacks/uk-mca/sources/mca_min494.txt",
+      "status": "VERIFIED_ON_SOURCE_PAGE"
+    },
+    {
+      "id": "stcw-five-years",
+      "claim": "STCW Regulation I/11 revalidation interval",
+      "url": "https://law.resource.org/pub/us/cfr/ibr/inc/imo/imo.stcw.supp.2017.pdf",
+      "quote": "at intervals not exceeding five years",
+      "snapshot": "../../core/rulepacks/stcw-core/sources/imo_stcw_supplement_2017.txt",
+      "status": "VERIFIED_ON_SOURCE_PAGE"
+    },
+    {
+      "id": "sg-apply-12m",
+      "claim": "Singapore MPA: revalidation applications not more than twelve months before expiry",
+      "url": "https://www.mpa.gov.sg/docs/mpalibraries/circulars-and-notices/sc_no_3_of_2026",
+      "status": "NOT_VERIFIED",
+      "note": "The page returned HTTP 404 to automated fetches. A search snippet mentions the twelve month rule, but the page itself was not read, so no rule is shipped for it."
+    },
+    {
+      "id": "in-dgs-refresher",
+      "claim": "India DG Shipping: refresher course within 12 months before revalidation",
+      "url": "https://betadgs.dgshipping.gov.in/download/1758280393_68cd3ac9b33cf_revalidation-and-up-gradation-of-certificates.pdf",
+      "status": "NOT_VERIFIED",
+      "note": "The host did not accept connections from the build machine. No India rule is shipped until the document is read."
+    },
+    {
+      "id": "paris-mou-deficiencies",
+      "claim": "Certificate and documentation deficiencies in port state control",
+      "url": "https://parismou.org",
+      "status": "NOT_RUN",
+      "note": "Annual report not fetched yet."
+    }
+  ]
+}

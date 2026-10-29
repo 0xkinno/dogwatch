@@ -1,0 +1,36 @@
+- id: UK-TANKER-3M-5Y
+  administration: MCA
+  applies_to: {document: [endorsement], endorsement: [oil_tanker, chemical_tanker, gas_tanker]}
+  kind: tanker_sea_service
+  params: {required_months: 3, window_years: 5, convention: unstated}
+  status: dated notice, confirm currency with the administration
+  source:
+    url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/945374/MIN_494.pdf
+    retrieved: "2026-10-28"
+    section: MIN 494 paragraph 3.1
+    file: mca_min494.txt
+    quote: for a period of at least 3 months in total in the proceeding 5 years
+- id: UK-SS-3M-6M
+  administration: MCA
+  applies_to: {document: [coc]}
+  kind: sea_service
+  params: {required_months: 3, window_months: 6, convention: unstated}
+  status: dated notice, confirm currency with the administration
+  source:
+    url: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/945374/MIN_494.pdf
+    retrieved: "2026-10-28"
+    section: MIN 494 paragraph 4.1
+    file: mca_min494.txt
+    quote: Three months in total during the preceding six months immediately prior to revalidating
+- id: UK-SS-12M-5Y
+  administration: MCA
+  applies_to: {document: [coc]}
+  kind: sea_service
+  params: {required_months: 12, window_years: 5, convention: unstated}
+  status: historical, the notice states that it expires 30 April 2015
+  source:
+    url: https://assets.publishing.service.gov.uk/media/5a748921e5274a7f9c586c53/MIN_501__M_.pdf
+    retrieved: "2026-10-28"
+    section: MIN 501 paragraph 1.2(a)
+    file: mca_min501.txt
+    quote: for at least 12 months (which need not be continuous) during the preceding 5 years

@@ -1,0 +1,11 @@
+- id: STCW-I11-5Y
+  administration: IMO
+  applies_to: {document: [coc, endorsement]}
+  kind: revalidation_interval
+  params: {years: 5}
+  source:
+    url: https://law.resource.org/pub/us/cfr/ibr/inc/imo/imo.stcw.supp.2017.pdf
+    retrieved: "2026-10-28"
+    section: STCW Regulation I/11 paragraph 1 (MSC.396(95))
+    file: imo_stcw_supplement_2017.txt
+    quote: at intervals not exceeding five years

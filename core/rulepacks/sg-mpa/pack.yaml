@@ -1,0 +1,6 @@
+id: sg-mpa
+version: "2026.10.28"
+administration: MPA (Singapore)
+description: No rule shipped. The source was not read, so the engine answers ASK_ADMINISTRATION.
+status: unsourced
+rules_file: rules/rules.yaml

@@ -1,0 +1,208 @@
+1
+Maritime and Coastguard Agency LogMARINE INFORMATION NOTE
+MIN 494 (M)
+Revalidating a Certificate of Competency: New
+Requirements for Masters and Officers
+Notice to all owners, operators, managers, Masters (STCW) and officers (STCW) of
+merchant ships and yachts.
+This notice should be read with MGN 9 and replaces MIN 423 .
+This MIN expires 01 August 2015
+Summary
+The regulations for the revalidation of an STCW Certificate of Competency are about to go
+out to consultation. This MIN extends the validity of the information from MIN 423, with some
+minor amendments and updates to references.
+1 Introduction
+1.1 The STCW Convention 1978 has been amended by the 2010 Manila Amendments and
+contains new requirements for all seafarers. Seafarers revalidating their Certificates of
+Competency (CoC) will be required to submit additional evidence to ensure their Certificate
+is valid for service on certain types of ships after 31 December 2016.
+2. Training Requirements
+2.1 Deck Certificate of Competency Revalidation, ECDIS requirements
+The 2010 Manila Amendments to the STCW Code bring in the requirement for Deck Officers
+working onboard ships fitted with an Electronic Chart Display Information System (ECDIS) to
+undergo specific education and training.
+As of 1 January 2012 seafarers requiring revalidation of UK CoCs issued in compliance with
+STCW Regulation II/1, II/2 and II/3 (maintain a safe navigational watch; use of ECDIS to
+maintain safety of navigation; and maintain the safety of navigation through the use of ECDIS
+and associated navigation systems to assist command decision making) need to comply with
+the new STCW requirements to ensure their CoC remains valid on ships fitted with ECDIS
+after 31 December 2016.
+
+- 2 -
+For the revalidation of UK CoC valid after 31 December 2016, the seafarer must have
+completed one of the following:
+ MCA approved Navigation Radar and ARPA Simulator (NARAS)/ Navigation
+Aids and Equipment and Simulator Training (NAEST) (Operational Level)
+course completed on or after 1January 2005; or
+ MCA approved NARAS/ NAEST (management level) course completed on or
+after 1 January 2005; or
+ MCA approved ECDIS course completed on or after 1 January 2005; or
+ An ECDIS simulator training course in compliance with the current IMO Model
+Course 1.27 and accepted by the MCA for the purpose of CoC revalidation
+only.
+For a list of MCA approved and accepted courses please refer to www.gov.uk and
+search “MCA Approved Training Providers” or “MCA ATP”.
+The original course certificate must be submitted with the application. Deck Officers not
+meeting the above requirement will receive the following CoC limitation:
+“From the 1 January 2017 this certificate is not valid for service on ships fitted with
+ECDIS”.
+Deck Officers may subsequently request the removal of this limitation by providing
+documentary evidence of MCA approved ECDIS training and submitting the applicable fee.
+2.2 Engineering Certificate of Competency Revalidation, High Voltage (HV)
+requirements
+The 2010 Manila Amendments to the STCW Code bring in the requirement for engineers to
+undergo education and training in High Voltage systems, at both the operational and
+management levels. This requirement comes into force on the 1 January 2017 but will affect
+the revalidation of Engineering Certificates of Competency (CoC) from 1 January 2012.
+No additional action is required for Engineer Officers who do not work on and do not intend to
+work on ships with High Voltage systems. These Engineer Officers will receive the following
+CoC limitation:
+“From the 1 January 2017 this certificate is not valid for service on ships fitted with
+High Voltage (over 1000V) systems”.
+Engineer Officers who do not want this limitation placed on their CoC should read the following
+section applicable to their Certificate.
+Note: A High Voltage (over 1000V) system is where voltage is generated and distributed at
+high voltage or transformed to and distributed at high voltage. It does not include systems
+where high voltage is utilised locally e.g. ignition systems, radio transmission, radar and other
+navigational equipment.
+- 3 -
+EOOW CoC Reg. III/1 (Operational Level)
+To avoid having the High Voltage limitation, Engineer Officers of the Watch will need to show
+compliance with the 2010 Manila Amendments. In addition to the current revalidation
+requirements, they will have to provide documentary evidence of:
+• completion of High Voltage (HV) course(*); or
+• completion of the following sea service in the engine room on vessels fitted with
+HV systems;
+o 6 months in the preceding five years; or
+o 3 months sea service during the last twelve months.
+Sea service evidence should be provided in the form of a company letter signed by an
+authorised official within the company.
+Second/Chief Engineer Officer CoC Reg. III/2 and III/3 (Management Level)
+To avoid having the High Voltage limitation, Senior Engineer Officers will need to show
+compliance with 2010 Manila Amendments. In addition to the current revalidation
+requirements, they will have to provide documentary evidence of completion of High Voltage
+(HV) course (*).
+* High Voltage Courses
+Courses previously undertaken prior to 1 July 2013 do not need to be MCA approved but you
+must provide documentary evidence confirming the course covers at least the following topics:
+• At the operational level;
+• The hazards associated with High Voltage systems;
+• The functional, operational and safety requirements for a marine high-
+voltage system;
+• Basic arrangement of High Voltage systems and their protective devices;
+• Safety procedures related to High Voltage systems; and
+• Immediate actions to be taken under fault conditions.
+• At the management level:
+o The functional, operational and safety requirements for a marine high-
+voltage system;
+o Assignment of suitably qualified personnel to carry out maintenance and
+repair of high-voltage switchgear of various types;
+o Taking remedial action necessary during faults in a high-voltage system;
+o Producing a switching strategy for isolating components of a high-voltage
+system;
+o Selecting suitable apparatus for isolation and testing of high-voltage
+equipment;
+- 4 -
+o Carrying out a switching and isolation procedure on a marine high-voltage
+system, complete with safety documentation; and
+o Performing tests of insulation resistance and polarization index on high-
+voltage equipment.
+The original certificate and course syllabus must be submitted with the application. High
+Voltage courses completed after 1 July 2013 must be MCA approved.
+Engineer Officers may subsequently request the removal of the High Voltage limitation by
+providing documentary evidence of a MCA approved High Voltage training and submitting the
+applicable fee.
+2.3 Updating-Refresher Training Requirements
+The 2010 Manila Amendments to the STCW Code bring in new requirements for seafarers
+required to hold any of the following safety training courses:
+• Personal Survival Techniques (STCW Table A-VI/1-1)
+• Fire Prevention and Fire Fighting (STCW Table A-VI/1-2)
+• Proficiency in Survival Craft and Rescue Boats Other Than Fast Rescue Boats
+(STCW Table A-VI/2-1)
+• Proficiency in Fast Rescue Boats (STCW Table A-VI/2-2)
+• Advanced Fire Fighting (STCW Table A-VI/3)
+There is no requirement to provide documentary evidence for having completed updating-
+refresher training if a seafarer applies for CoC revalidation before 1 January 2017.
+Seafarers revalidating their Certificates of Competency (CoC) after 1 January 2017 will be
+required to submit documentary evidence of having completed MCA approved updating-
+refresher training.
+From 1 January 2017 Port State Control Officers may require seafarers to provide
+documentary evidence of having maintained the required standard of competence, to
+undertake the tasks, duties and responsibilities listed above. Presenting the documentary
+evidence obtained on completing an MCA approved updating-refresher course will meet this
+requirement.
+Details of updating-refresher training are published in MIN 469.
+2.4 Leadership and Management Requirements
+The 2010 Manila Amendment to the STCW Code brings in new requirements for leadership
+and management. Additional education and training in human element, leadership and
+management will be introduced into the UK Certification structure before 1 July 2013.
+Seafarers meeting the current Certificate of Competency revalidation requirements will not
+need to undertake the additional training in order to revalidate their existing Certificate of
+Competency. Candidates for new Certificates of Competency, and those upgrading to the next
+level will be required to undertake the new training in full. For further information please refer
+to MIN 482.
+- 5 -
+3. Tanker Endorsement Requirements
+3.1 The 2010 Manila Amendments define continued professional competence for seafarers
+revalidating tanker endorsements under Regulation I/11 as:
+Approved seagoing service, performing duties appropriate to the tanker certificate or
+endorsement held, for a period of at least 3 months in total in the proceeding 5 years; or
+Successfully completing an approved relevant training course or courses.
+As of 1 January 2012 seafarers revalidating tanker endorsements, in addition to the current
+revalidation requirements, must provide evidence of approved tanker sea service appropriate
+to the endorsement(s) in their CoC. Evidence must be submitted in the form of original sea
+service testimonials or an original MCA approved course certificate as per MGN 9.
+For an Oil Tanker endorsement to be revalidated the seafarer must submit documentary
+evidence of 3 months of sea service on board an Oil Tanker.
+For a Chemical Tanker endorsement to be revalidated the seafarer must submit documentary
+evidence of 3 months of sea service on board a Chemical Tanker.
+For a Gas Tanker endorsement to be revalidated the seafarer must submit documentary
+evidence of 3 months of sea service on board a Gas Tanker.
+For a Vegetable Oil Tanker endorsement to be revalidated the seafarer must submit
+documentary evidence of 3 months of sea service on board a Vegetable Oil Tanker.
+Seafarers unable to provide evidence appropriate to a tanker endorsement in their CoC, but
+able to demonstrate the current revalidation requirements for tanker endorsements, will have
+that tanker endorsement revalidated until 31 December 2016. Depending on the tanker
+endorsement(s) that cannot be revalidated past 31 December 2016 they will receive the
+appropriate limitation(s) in their CoC:
+“From the 1 January 2017 this certificate is not valid for service on *Oil/Chemical/Gas/
+Vegetable Oil Tankers”
+* Include as appropriate
+Seafarers may subsequently request the removal of the tanker limitation by providing
+documentary evidence of approved training or appropriate sea service and submitting the
+applicable fee.
+4. Sea Time Requirements
+4.1 In addition to sea time requirements listed in MGN 9 the 2010 Manila Amendments allow
+Certificates of Competency to be revalidated if the seafarer has approved sea going service,
+performing functions appropriate to the certificate held for a period of at least: Three months in
+total during the preceding six months immediately prior to revalidating. In addition to the
+current revalidation requirements, seafarers providing evidence of three months sea service
+within six months immediately prior to their application will be eligible for revalidation.
+5. Validity Periods
+5.1 The 2010 Manila Amendments allow an application for revalidation of a Certificate of
+Competency (CoC) made within six months of the certificate expiry date to be revalidated until
+the fifth anniversary of the certificate expiry date.
+- 6 -
+Providing the current revalidation requirements are met, Certificates of Competency received
+for revalidation within a period six months prior to expiring shall be revalidated until the fifth
+anniversary of the current CoC expiry date. Certificates received outside of this six months
+period will be revalidated for five years from the date of revalidation.
+More Information
+Seafarer Training and Cetification
+Maritime and Coastguard Agency,
+Bay 1/21
+Spring Place,
+105 Commercial Road,
+Southampton,
+SO15 1EG.
+Tel : +44 (0) 23 8032 9231.
+Fax : +44 (0) 23 8032 9254.
+e-mail: revalidation@mcga.gov.uk .
+General Inquiries: infoline@mcga.gov.uk .
+MCA Website Address: www.gov.uk/government/organisations/maritime-and-coastguard-agency .
+File Ref: N/A
+Published: October 2014
+Please note that all addresses and
+telephone numbers are correct at time of publishing.
+© Crown Copyright 2014
+Safer Lives, Safer Ships, Cleaner Seas.

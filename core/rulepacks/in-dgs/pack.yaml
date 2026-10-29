@@ -1,0 +1,6 @@
+id: in-dgs
+version: "2026.10.28"
+administration: DG Shipping (India)
+description: No rule shipped. The source was not read, so the engine answers ASK_ADMINISTRATION.
+status: unsourced
+rules_file: rules/rules.yaml

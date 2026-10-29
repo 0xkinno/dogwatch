@@ -1,0 +1,5 @@
+id: uk-mca
+version: "2026.10.28"
+administration: MCA (United Kingdom)
+description: UK Maritime and Coastguard Agency notices. Both notices are dated; see each rule status.
+rules_file: rules/rules.yaml

@@ -1,0 +1,5 @@
+id: au-amsa
+version: "2026.10.28"
+administration: AMSA (Australia)
+description: Australian Maritime Safety Authority revalidation rules read from AMSA pages
+rules_file: rules/rules.yaml

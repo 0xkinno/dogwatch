@@ -1,0 +1,6 @@
+id: ng-nimasa
+version: "2026.10.28"
+administration: NIMASA (Nigeria)
+description: No rule shipped. The source was not read, so the engine answers ASK_ADMINISTRATION.
+status: unsourced
+rules_file: rules/rules.yaml

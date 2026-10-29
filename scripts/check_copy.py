@@ -29,6 +29,7 @@ TEXT_EXT = {
 }
 TEXT_NAMES = {"commit-msg", ".gitignore", ".gitattributes", ".env.example", "LICENSE"}
 SKIP_FILES = {"LICENSE"}  # standard licence text is used verbatim
+# Verbatim third-party snapshots under /sources/ and /snapshots/ are quoted evidence, not our copy.
 
 
 def tracked_files() -> list[str]:
@@ -56,7 +57,7 @@ def main() -> int:
     problems: list[str] = []
     for rel in tracked_files():
         p = ROOT / rel
-        if not p.is_file() or rel in SKIP_FILES:
+        if not p.is_file() or rel in SKIP_FILES or "/sources/" in rel or "/snapshots/" in rel:
             continue
         if p.suffix.lower() not in TEXT_EXT and p.name not in TEXT_NAMES:
             continue

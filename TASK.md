@@ -33,22 +33,22 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 
 ## Phase 3. Moment and thesis
 - [ ] Every source in the instruction's source table fetched; quotes and retrieval dates in `evidence/need/sources.json`
-- [ ] `MOMENT.md` with the "What is true / Source" table
-- [ ] Money figure asserted by a test reading `sources.json`
-- [ ] `THESIS.md`: five-line pitch, hook, one sentence, guarantee, crew, interruption budget
+- [x] `MOMENT.md` with the "What is true / Source" table
+- [x] Money figure asserted by a test reading `sources.json`
+- [x] `THESIS.md`: five-line pitch, hook, one sentence, guarantee, crew, interruption budget
 
 ## Phase 4. Core engine
 - [ ] Encrypted vault store and identifier registry (host side API)
-- [ ] Identifier detectors with check-digit tests (MRZ, passport, CoC, INDoS, CDC, CoE, email, phone)
-- [ ] Placeholder replacement with stable ids and overlap handling
+- [x] Identifier detectors with check-digit tests (MRZ, passport, CoC, INDoS, CDC, CoE, email, phone)
+- [x] Placeholder replacement with stable ids and overlap handling
 - [ ] Local OCR in the sandbox image
 - [ ] Bosun structuring with Nemotron Super, thinking off, Pydantic validation, one repair retry
-- [ ] Quote verification in code; dates parsed from verified quotes only
-- [ ] Rule pack format, loader, SHA-256 per pack
+- [x] Quote verification in code; dates parsed from verified quotes only
+- [x] Rule pack format, loader, SHA-256 per pack
 - [ ] Rule packs: stcw-core, in-dgs, uk-mca, sg-mpa, au-amsa, ng-nimasa, every quote verified against a snapshot by test
-- [ ] Sea-service calculator with all counting conventions, overlaps, leap days
-- [ ] Readiness engine: per-document states and overall verdict; unread facts never READY
-- [ ] Receipts for every model call (id, model, tokens, latency, cost)
+- [x] Sea-service calculator with all counting conventions, overlaps, leap days
+- [x] Readiness engine: per-document states and overall verdict; unread facts never READY
+- [x] Receipts for every model call (id, model, tokens, latency, cost)
 
 ## Phase 5. Always-on loop and human actions
 - [ ] Officer of the Watch loop with daily and weekly timers, durable state, restart safe

@@ -1,0 +1,5 @@
+id: stcw-core
+version: "2026.10.28"
+administration: IMO
+description: Convention level rules read from the IMO STCW supplement
+rules_file: rules/rules.yaml

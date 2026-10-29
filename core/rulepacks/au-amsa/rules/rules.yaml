@@ -1,0 +1,55 @@
+- id: AU-SS-360D-5Y
+  administration: AMSA
+  applies_to: {document: [coc]}
+  kind: sea_service
+  params: {required_days: 360, window_years: 5, convention: unstated}
+  source:
+    url: https://www.amsa.gov.au/qualifications-training/international-qualifications/revalidation-stcw-master-and-deck-certificates
+    retrieved: "2026-10-28"
+    section: Revalidate, (2) Check your sea service
+    file: amsa_revalidate_page.txt
+    quote: 360 days sea service in the 5 years before you apply
+- id: AU-SS-90D-6M
+  administration: AMSA
+  applies_to: {document: [coc]}
+  kind: sea_service
+  params: {required_days: 90, window_months: 6, convention: unstated}
+  source:
+    url: https://www.amsa.gov.au/qualifications-training/international-qualifications/revalidation-stcw-master-and-deck-certificates
+    retrieved: "2026-10-28"
+    section: Revalidate, (2) Check your sea service
+    file: amsa_revalidate_page.txt
+    quote: 90 days sea service in the 6 months before you apply
+- id: AU-WINDOW-6M
+  administration: AMSA
+  applies_to: {document: [coc, endorsement]}
+  kind: window_open
+  params: {months_before_expiry: 6}
+  source:
+    url: https://www.amsa.gov.au/qualifications-training/international-qualifications/revalidation-stcw-master-and-deck-certificates
+    retrieved: "2026-10-28"
+    section: Revalidate, Apply early
+    file: amsa_revalidate_page.txt
+    quote: apply to revalidate in the 6 months before your certificate expires
+- id: AU-NO-WORK-EXPIRED
+  administration: AMSA
+  applies_to: {document: [coc, endorsement, medical]}
+  kind: validity
+  params: {}
+  source:
+    url: https://www.amsa.gov.au/qualifications-training/international-qualifications/revalidation-stcw-master-and-deck-certificates
+    retrieved: "2026-10-28"
+    section: Revalidate, When to revalidate
+    file: amsa_revalidate_page.txt
+    quote: You must not work in an STCW role if your certificate has expired
+- id: AU-CARRY-ORIGINAL
+  administration: AMSA
+  applies_to: {document: [coc, endorsement, medical]}
+  kind: carry_requirement
+  params: {}
+  source:
+    url: https://www.amsa.gov.au/sites/default/files/2025-05-Marine-notice-revalidation-Australian-STCW-certificates.pdf
+    retrieved: "2026-10-28"
+    section: Carrying certificates on board
+    file: amsa_marine_notice_2025_05.txt
+    quote: must be carried in their original form on board the ship on which the holder is serving
