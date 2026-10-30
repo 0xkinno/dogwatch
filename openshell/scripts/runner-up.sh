@@ -53,4 +53,6 @@ for _ in $(seq 1 120); do
   grep -qi 'error' "$STATE/sandbox-create.log" && { sed 's/\x1b\[[0-9;]*m//g' "$STATE/sandbox-create.log" | tail -15; exit 1; }
   sleep 3
 done
-openshell sandbox get dogwatch | sed 's/\x1b\[[0-9;]*m//g' | head -12
+openshell sandbox get dogwatch > "$STATE/sandbox-get.txt" 2>&1 || true
+tr -d '' < "$STATE/sandbox-get.txt" | head -12 || true
+grep -qi "phase: *ready" "$STATE/sandbox-get.txt" || { echo "sandbox is not Ready"; exit 1; }
