@@ -54,7 +54,7 @@ export async function runOffer(text: string): Promise<Labelled<{ reply: string; 
       }
       if (r.ok) {
         const j = await r.json();
-        return { mode: "DEMO", data: { reply: j.reply, result: j.result } };
+        return { mode: "DEMO", data: { reply: j.reply, result: j.result }, note: `${j.route_label ?? ""}. Plan text from: ${j.plan_source ?? "n/a"}. ${j.caps ?? ""}` };
       }
     } catch {
       /* fall through */

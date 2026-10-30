@@ -46,6 +46,22 @@ export function ContractBar({ start, end, documents }: { start: string; end: str
                 </div>
               )}
               {unknown && <div style={{ marginTop: 6, fontSize: 14 }} className="muted">{d.arithmetic}</div>}
+              <details className="why" style={{ marginTop: 8, fontSize: 14 }}>
+                <summary>Show the rules and arithmetic behind this answer</summary>
+                <div className="stack" style={{ marginTop: 8 }}>
+                  <div className="mono">{d.arithmetic}</div>
+                  {d.rules.map((r) => (
+                    <div key={r.rule_id} className="quote">{r.quote} <span className="src">({r.rule_id}, {r.section}, retrieved {r.retrieved}) <a href={r.url}>source</a></span></div>
+                  ))}
+                  {(d.sea_service as { rule: { rule_id: string; quote: string; url: string; section: string; retrieved: string }; verdict: string; arithmetic: string }[]).map((s) => (
+                    <div key={s.rule.rule_id}>
+                      <div className="quote">{s.rule.quote} <span className="src">({s.rule.rule_id}, {s.rule.section}, retrieved {s.rule.retrieved}) <a href={s.rule.url}>source</a></span></div>
+                      <div className="src">Sea service verdict: {s.verdict.replaceAll("_", " ")}. {s.arithmetic}</div>
+                    </div>
+                  ))}
+                  {!d.rules.length && !d.sea_service.length && <div className="src">No administration rule is needed for this answer: it compares the date printed on the certificate with the contract window.</div>}
+                </div>
+              </details>
             </div>
           </div>
         );

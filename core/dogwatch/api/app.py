@@ -132,7 +132,10 @@ def create_app(caps: Caps | None = None) -> FastAPI:
             res = engine.run_readiness(ARJUN, {**CONTRACT_OFFER, "start": win[0].isoformat(), "end": win[1].isoformat()},
                                        date.fromisoformat(DEMO_TODAY))
             pl = planner.write_plan(res)
-            return {"mode": "DEMO", "triage": t, "reply": f"{res['summary']} {pl['text']}", "plan_source": pl["source"], "result": res}
+            from ..model.routes import selected_route
+            r = selected_route()
+            return {"mode": "DEMO", "triage": t, "reply": f"{res['summary']} {pl['text']}", "plan_source": pl["source"], "result": res,
+                    "route_label": f"Route: {r.label}", "caps": caps.describe()}
         finally:
             caps.release(browser)
 

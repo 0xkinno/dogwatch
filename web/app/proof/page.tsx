@@ -108,6 +108,25 @@ export default function Proof() {
         </GlowCard>
 
         <GlowCard className="stack">
+          <div className="row"><h2 className="h-md display">Every miss, case by case</h2><ModeChip mode={String(live.p6_model.route_label)} /></div>
+          {Object.entries(live.p6_model.contestants as Record<string, any>).map(([k, c]) => (
+            <details key={k}>
+              <summary>Nemotron {k} alone: {(c.miss_ids as string[]).length} missed profiles</summary>
+              <div className="table-wrap" tabIndex={0} role="region" aria-label="Scrollable table" style={{ marginTop: 10 }}>
+                <table>
+                  <thead><tr><th scope="col">Profile</th><th scope="col">Category</th><th scope="col">Expected</th><th scope="col">Said</th></tr></thead>
+                  <tbody>{(c.cases as any[]).filter((x) => !x.ok).map((x) => (<tr key={x.id}><td className="mono">{x.id}</td><td>{x.category}</td><td>{x.expected}</td><td>{x.got}</td></tr>))}</tbody>
+                </table>
+              </div>
+            </details>
+          ))}
+          <details>
+            <summary>Reading: the specimen that was left UNREAD</summary>
+            <p className="src" style={{ marginTop: 10 }}>{(live.p8.miss_ids as string[]).join(", ") || "none"}: rotated and blurred, so no quote could be verified and the field stayed UNREAD instead of being guessed.</p>
+          </details>
+        </GlowCard>
+
+        <GlowCard className="stack">
           <div className="row"><h2 className="h-md display">P8 Reading specimen certificates</h2><ModeChip mode={String(live.p8.route_label)} /></div>
           <p>
             <span data-fact="p8.exact">{fact("p8.exact")}</span> of <span data-fact="p8.specimens">{fact("p8.specimens")}</span> specimens read with the exact expiry date; <span data-fact="p8.unread">{fact("p8.unread")}</span> left UNREAD; <span data-fact="p8.wrong_confident">{fact("p8.wrong_confident")}</span> read wrongly without a flag. OCR runs locally with Tesseract; only placeholder text reaches the model.
