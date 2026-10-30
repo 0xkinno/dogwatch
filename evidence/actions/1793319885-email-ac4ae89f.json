@@ -1,0 +1,12 @@
+{
+  "kind": "email",
+  "recipient": "k***@g***.com",
+  "digest": "ac4ae89f",
+  "result": {
+    "sent": true,
+    "mode": "LIVE",
+    "status": 200,
+    "id": "01a18a31-eb3a-788a-8a1f-83347fa17791"
+  },
+  "ts": 1793319885.654764
+}

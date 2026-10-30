@@ -215,7 +215,25 @@ def build_conventions():
     return out
 
 
+def build_conventions_v2():
+    """Version 2 of the counting-convention set: histories near the thresholds of the India and Singapore rules read on 2026-10-30.
+    Added because those packs gained rules after v1 was run; v1 is untouched."""
+    out, n = [], 0
+    apply_date = date(2027, 3, 1)
+    for rule, days_range in (("IN-SS-1Y-5Y", range(356, 376)), ("SG-SS-12M-5Y", range(356, 376)), ("SG-SS-3M-6M", range(84, 100))):
+        for days in days_range:
+            n += 1
+            start = apply_date - timedelta(days=25 + days)
+            out.append({"id": f"V{n:03d}", "rule": rule, "apply_date": apply_date.isoformat(),
+                        "entries": [{"sign_on": start.isoformat(), "sign_off": (start + timedelta(days=days - 1)).isoformat()}], "inclusive_days": days})
+    return out
+
+
 def main():
+    if "--v2" in __import__("sys").argv:
+        (CASES / "conventions_v2.json").write_text(json.dumps(build_conventions_v2(), indent=1), encoding="utf-8", newline="\n")
+        print("v2 written")
+        return
     CASES.mkdir(exist_ok=True)
     (CASES / "seal_corpus.json").write_text(json.dumps(build_seal_corpus(), indent=1), encoding="utf-8", newline="\n")
     (CASES / "profiles.json").write_text(json.dumps(build_profiles(), indent=1), encoding="utf-8", newline="\n")

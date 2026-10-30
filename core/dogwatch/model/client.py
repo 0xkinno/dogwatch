@@ -38,7 +38,7 @@ def get_client():
     key = api_key(r)
     if not key:
         raise ModelUnavailable(f"{r.key_env} is not set for route {r.name}")
-    _client = OpenAI(base_url=r.base_url, api_key=key, timeout=120)
+    _client = OpenAI(base_url=r.base_url, api_key=key, timeout=75, max_retries=0)
     _client_route = r.name
     return _client
 

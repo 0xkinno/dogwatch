@@ -1,1 +1,24 @@
-[]
+- id: IN-SS-1Y-5Y
+  administration: DG Shipping
+  applies_to: {document: [coc]}
+  kind: sea_service
+  params: {required_months: 12, window_years: 5, convention: unstated}
+  status: TEAP manual dated 2019, read through Tavily Extract; the host refuses connections from the build network. Confirm currency with the administration
+  source:
+    url: https://betadgs.dgshipping.gov.in/download/1758280208_68cd3a1056d42_1755346557-68a0767d5a3d1-201911091126031424111teapbmanual.pdf
+    retrieved: "2026-10-30"
+    section: TEAP Part B, Appendix 1/11F, criterion A-1
+    file: dgs_teap_part_b_appendix_1_11F.txt
+    quote: of One year; performing functions appropriate to the certificate held, in the five years preceding the date of application for revalidation
+- id: IN-REVAL-COURSE
+  administration: DG Shipping
+  applies_to: {document: [coc]}
+  kind: refresher
+  params: {requires: revalidation_course}
+  status: TEAP manual dated 2019, read through Tavily Extract. Confirm currency with the administration
+  source:
+    url: https://betadgs.dgshipping.gov.in/download/1758280208_68cd3a1056d42_1755346557-68a0767d5a3d1-201911091126031424111teapbmanual.pdf
+    retrieved: "2026-10-30"
+    section: TEAP Part B, Appendix 1/11F, requirements
+    file: dgs_teap_part_b_appendix_1_11F.txt
+    quote: In addition to successful completion of revalidation course, candidate is required to fulfill any of the following criteria

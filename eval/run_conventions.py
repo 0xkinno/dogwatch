@@ -17,7 +17,9 @@ from dogwatch.navigator.seaservice import check_requirement  # noqa: E402
 def main():
     packs = load_all()
     rules = {r.id: r for p in packs.values() for r in p.rules}
-    cases = json.loads((HERE / "cases" / "conventions.json").read_text(encoding="utf-8"))
+    case_file = sys.argv[1] if len(sys.argv) > 1 else "conventions.json"
+    result_name = sys.argv[2] if len(sys.argv) > 2 else "p7_conventions.json"
+    cases = json.loads((HERE / "cases" / case_file).read_text(encoding="utf-8"))
     rows, per_rule = [], {}
     arithmetic_errors = []
     for c in cases:
@@ -38,7 +40,7 @@ def main():
            "day_total_errors": arithmetic_errors, "rules_stating_a_convention": [i for i, r in rules.items() if r.params.get("convention", "unstated") != "unstated"],
            "rules_checked": sorted(per_rule), "cases": rows}
     (HERE / "results").mkdir(exist_ok=True)
-    (HERE / "results" / "p7_conventions.json").write_text(json.dumps(out, indent=1), encoding="utf-8", newline="\n")
+    (HERE / "results" / result_name).write_text(json.dumps(out, indent=1), encoding="utf-8", newline="\n")
     print({k: out[k] for k in ("histories", "flips", "per_rule", "day_total_errors", "rules_stating_a_convention")})
 
 

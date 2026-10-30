@@ -1,1 +1,48 @@
-[]
+- id: SG-WINDOW-12M
+  administration: MPA
+  applies_to: {document: [coc, endorsement]}
+  kind: window_open
+  params: {months_before_expiry: 12}
+  status: read through Tavily Extract of the official PDF; the original page was unreachable from the build network
+  source:
+    url: https://www.mpa.gov.sg/api/media/ac83414c-6450-4a3a-94ca-3acf56ebab8f/sc_no_3_of_2026.pdf
+    retrieved: "2026-10-30"
+    section: Shipping Circular 3 of 2026, paragraph 3
+    file: mpa_sc_3_of_2026.txt
+    quote: not submit applications for certificate revalidation more than twelve months prior to the certificate expiration date(s)
+- id: SG-SS-12M-5Y
+  administration: MPA
+  applies_to: {document: [coc]}
+  kind: sea_service
+  params: {required_months: 12, window_years: 5, convention: unstated}
+  status: read through Tavily Extract of the official PDF; the original page was unreachable from the build network
+  source:
+    url: https://www.mpa.gov.sg/api/media/ac83414c-6450-4a3a-94ca-3acf56ebab8f/sc_no_3_of_2026.pdf
+    retrieved: "2026-10-30"
+    section: Shipping Circular 3 of 2026, deck officer COCs, continued professional competence
+    file: mpa_sc_3_of_2026.txt
+    quote: twelve months in total during the preceding five years
+- id: SG-SS-3M-6M
+  administration: MPA
+  applies_to: {document: [coc]}
+  kind: sea_service
+  params: {required_months: 3, window_months: 6, convention: unstated}
+  status: read through Tavily Extract of the official PDF; the original page was unreachable from the build network
+  source:
+    url: https://www.mpa.gov.sg/api/media/ac83414c-6450-4a3a-94ca-3acf56ebab8f/sc_no_3_of_2026.pdf
+    retrieved: "2026-10-30"
+    section: Shipping Circular 3 of 2026, deck officer COCs, continued professional competence
+    file: mpa_sc_3_of_2026.txt
+    quote: three months in total during the preceding six months immediately prior to revalidating
+- id: SG-MIN-VALIDITY-6M
+  administration: MPA
+  applies_to: {document: [coc]}
+  kind: application_constraint
+  params: {min_remaining_months: 6}
+  status: read through Tavily Extract of the official PDF; the original page was unreachable from the build network
+  source:
+    url: https://www.mpa.gov.sg/api/media/ac83414c-6450-4a3a-94ca-3acf56ebab8f/sc_no_3_of_2026.pdf
+    retrieved: "2026-10-30"
+    section: Shipping Circular 3 of 2026, certificate requirements table notes
+    file: mpa_sc_3_of_2026.txt
+    quote: must have at least six months remaining validity to be eligible for the COC revalidation process

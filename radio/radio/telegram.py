@@ -38,6 +38,9 @@ class Telegram:
     def send_document(self, chat_id: int, filename: str, content: bytes, caption: str = ""):
         return self._call("sendDocument", chat_id=chat_id, caption=caption, files={"document": (filename, content)})
 
+    def send_photo(self, chat_id: int, filename: str, content: bytes, caption: str = ""):
+        return self._call("sendPhoto", chat_id=chat_id, caption=caption, files={"photo": (filename, content)})
+
     def answer_callback(self, callback_id: str, text: str = ""):
         return self._call("answerCallbackQuery", callback_query_id=callback_id, text=text)
 

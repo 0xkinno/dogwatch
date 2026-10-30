@@ -1,6 +1,5 @@
 id: sg-mpa
-version: "2026.10.28"
+version: "2026.10.30"
 administration: MPA (Singapore)
-description: No rule shipped. The source was not read, so the engine answers ASK_ADMINISTRATION.
-status: unsourced
+description: Singapore MPA Shipping Circular 3 of 2026, read through Tavily Extract of the official PDF
 rules_file: rules/rules.yaml

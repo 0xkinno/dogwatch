@@ -1,0 +1,48 @@
+{
+ "set": "Live_flow",
+ "host": "build machine (Windows 10, WSL2)",
+ "route": "nvidia_build",
+ "route_label": "Route: NVIDIA API Catalog (development)",
+ "mailer": "Resend",
+ "telegram_message_ids": {
+  "offer_echo": 8,
+  "photo": 9,
+  "ledger_reply": 10,
+  "approval_prompt": 11,
+  "ics_document": 12
+ },
+ "notes": [],
+ "offer_source": "synthetic offer injected by the test driver (not sent by the owner)",
+ "triage": {
+  "label": "contract_offer",
+  "source": "MODEL"
+ },
+ "reply_text": "Not ready: Medical fitness certificate lapses 2027-03-14 (day 42 of 181). Not ready: Medical fitness certificate lapses on 14 Mar 2027, day 42 of 181 of the contract. Book the renewal before joining. Everything else is checked in code and listed in the packet. Approve the packet to send it to your agent. Packet ac4ae89f ready: approve?",
+ "navigator_overall": "NOT_READY",
+ "plan_source": "TEMPLATE",
+ "ledger": {
+  "entry_read": true,
+  "ledger_entries_now": 3,
+  "days_five_years_inclusive": 480
+ },
+ "approval": "executed by the test driver after waiting 40 s (the owner did not tap Approve)",
+ "email": {
+  "sent": true,
+  "mode": "LIVE",
+  "resend_message_id": "01a18a31-eb3a-788a-8a1f-83347fa17791",
+  "recipient": "k***@g***.com",
+  "attachment": "readiness.pdf"
+ },
+ "notified_by_notifier": [],
+ "p11_live": {
+  "transport": "live Telegram and live Resend",
+  "approval_resumed_after_restart": true,
+  "first_send": "LIVE",
+  "first_resend_id": "01a18a31-f133-7e74-bcda-2052fa4959f1",
+  "second_attempt": "DUPLICATE_SUPPRESSED",
+  "emails_sent": 1,
+  "duplicate_sends": 0,
+  "telegram_message_id": 15
+ },
+ "ok": true
+}

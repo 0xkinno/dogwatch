@@ -1,0 +1,16 @@
+{
+ "version": 2,
+ "registered": "2026-10-30",
+ "reason": "India and Singapore rule packs gained sourced rules on 2026-10-30, after the v1 run. v1 is unchanged.",
+ "sets": {
+  "P7_counting_conventions_v2": {
+   "file": "cases/conventions_v2.json",
+   "sha256": "a06d2cff575b56dab875cb4a1f5713e7d8e681cdf342b84054e19e8e99800c7a",
+   "histories": 56,
+   "expected": "none; measures disagreement",
+   "metrics": {
+    "flip": "verdict differs between at least two counting conventions"
+   }
+  }
+ }
+}

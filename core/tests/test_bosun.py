@@ -125,3 +125,23 @@ def test_no_key_raises_unavailable(monkeypatch):
     client.set_client(None)
     with pytest.raises(client.ModelUnavailable):
         client.get_client()
+
+
+def test_ledger_entry_verified_and_parsed():
+    from dogwatch.bosun import ledger
+    from dogwatch.vault.placeholders import Registry as R
+    text = "SPECIMEN DISCHARGE BOOK\nVessel: MT Specimen Three\nCapacity: Second Officer\nSigned on: 05/03/2025\nSigned off: 18/09/2025\n"
+    ex = ledger.LedgerExtraction.model_validate({
+        "vessel": {"value": "MT Specimen Three", "quote": "Vessel: MT Specimen Three"},
+        "capacity": {"value": "Second Officer", "quote": "Capacity: Second Officer"},
+        "sign_on": {"value": "x", "quote": "Signed on: 05/03/2025"}, "sign_off": {"value": "x", "quote": "Signed off: 18/09/2025"}})
+    r = ledger.read_entry(text, registry=R(), administration_hint="india", structure=lambda t: ex)
+    assert r.entry and str(r.entry.sign_on) == "2025-03-05" and str(r.entry.sign_off) == "2025-09-18" and r.entry.vessel == "MT Specimen Three"
+
+
+def test_ledger_refuses_invented_date():
+    from dogwatch.bosun import ledger
+    from dogwatch.vault.placeholders import Registry as R
+    ex = ledger.LedgerExtraction.model_validate({"sign_on": {"value": "", "quote": "Signed on: 01/01/2020"}, "sign_off": {"value": "", "quote": "Signed off: 02/02/2020"}})
+    r = ledger.read_entry("Vessel: X\nSigned on: 05/03/2025\n", registry=R(), structure=lambda t: ex)
+    assert r.entry is None and r.quotes_refused == 2

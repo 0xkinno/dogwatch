@@ -150,5 +150,6 @@ def test_pack_hash_stable_and_present():
 
 def test_unsourced_packs_ship_no_rules():
     packs = load_all()
-    for k in ("in-dgs", "sg-mpa", "ng-nimasa"):
-        assert packs[k].rules == [] and packs[k].status == "unsourced"
+    assert packs["ng-nimasa"].rules == [] and packs["ng-nimasa"].status == "unsourced"
+    assert {r.id for r in packs["sg-mpa"].rules} >= {"SG-WINDOW-12M", "SG-SS-12M-5Y", "SG-SS-3M-6M"}
+    assert {r.id for r in packs["in-dgs"].rules} >= {"IN-SS-1Y-5Y", "IN-REVAL-COURSE"}

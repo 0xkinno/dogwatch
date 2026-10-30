@@ -1,6 +1,5 @@
 id: in-dgs
-version: "2026.10.28"
+version: "2026.10.30"
 administration: DG Shipping (India)
-description: No rule shipped. The source was not read, so the engine answers ASK_ADMINISTRATION.
-status: unsourced
+description: DG Shipping TEAP Part B manual, Appendix 1/11F, read through Tavily Extract. No renewal window rule is shipped for India; the engine answers Ask administration for it.
 rules_file: rules/rules.yaml
