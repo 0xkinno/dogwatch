@@ -11,7 +11,7 @@ const CONV_LABEL: Record<string, string> = {
   days_exclusive: "Days, sign-off day not counted",
   calendar_months: "Calendar months",
   days_360: "Months of 30 days",
-  days_365: "Years of 365 days",
+  days_365: "Months of 365/12 days",
 };
 
 export default function Watch() {

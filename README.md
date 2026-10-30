@@ -12,7 +12,7 @@ It is 04:10 on the four-to-eight watch in the Arabian Sea. Arjun Menon, Second O
 
 Dogwatch reads his certificates on his own machine, works out every expiry and sea-service window in code, and drafts the renewal packet. It answers inside his twenty minutes: not ready, the medical lapses on day 42 of 181, book it before joining, and a packet for the agent is ready to approve. He approves on Telegram, and only then does anything that identifies him leave his machine.
 
-The idea underneath is simple. An assistant does not have to see your documents to help with them. The cloud model gets placeholders such as `[[COC_1]]`. A gateway outside the agent allows four destinations. A middleware called the Seal refuses any request that carries a vault value, even one that has been encoded. And no model is ever allowed to decide whether a certificate is valid, because on the same sixty profiles a model on its own said READY when it was not.
+The idea underneath is simple. An assistant does not have to see your documents to help with them. The cloud model gets placeholders such as `[[COC_1]]`. A gateway outside the agent allows four destinations. A middleware called the Seal refuses any request that carries a vault value, even one that has been encoded (tested on 200 encoded cases; the final Seal was tuned on those same cases, so that result is a regression check). And no model is ever allowed to decide whether a certificate is valid, because on the same sixty profiles a model on its own said READY when it was not.
 
 **Three numbers worth remembering.** Nemotron Super on its own said READY on <!--fact:p6.super.false_safe-->22<!--/fact--> of <!--fact:p6.profiles-->60<!--/fact--> profiles that were not ready, so no model decides validity here. A literal guard let <!--fact:p3.literal.missed-->158<!--/fact--> of <!--fact:p3.attacks-->200<!--/fact--> encoded identifiers through, so a middleware that decodes before it matches stands at every door. And the sandbox run of 20 injected manning-agency emails with and without OpenShell (P2) is built and waiting for its first Linux 6.2 runner (NOT RUN, see [OpenShell](#nvidia-openshell)).
 
@@ -179,7 +179,7 @@ OpenShell is the boundary. What it enforces, and where the evidence is (full tab
 | Policy with L7 rules per binary and four doors | The model route, Tavily, the Radio Officer API and `policy.local`; every other destination denied | [`openshell/policy/dogwatch.yaml`](openshell/policy/dogwatch.yaml) |
 | Supervisor middleware (the Seal) | Registered with the gateway as `dogwatch-seal` with `on_error: fail_closed`; a policy naming it before registration is refused at admission | LIVE RUN, [`seal/seal/server.py`](seal/seal/server.py), gateway log in [`PLATFORM_PROBE.md`](PLATFORM_PROBE.md) |
 | Provider profiles and credential placeholders | The stock NVIDIA profile linted, imported and became a provider; the agent sees a placeholder and the gateway injects the key at egress | LIVE RUN (profile), [`openshell/profiles/`](openshell/profiles/) |
-| Sandbox, `policy.local` advisor, P2, P4, P5 | The sandbox image is built and the proof workflow is written | NOT RUN: needs a Linux 6.2 host. [`.github/workflows/sandbox-proofs.yml`](.github/workflows/sandbox-proofs.yml) runs P1 on the effective policy, P2, P4, P5 and the advisor flow on a GitHub Actions ubuntu-24.04 runner, labelled as that host and never as the seafarer's machine |
+| Sandbox, `policy.local` advisor, P1 on the effective policy, P2, P4, P5 | The sandbox image is built and the proof workflow is written | NOT RUN: needs a Linux 6.2 host. [`.github/workflows/sandbox-proofs.yml`](.github/workflows/sandbox-proofs.yml) runs P1 on the effective policy, P2, P4, P5 and the advisor flow on a GitHub Actions ubuntu-24.04 runner, labelled as that host and never as the seafarer's machine |
 
 The friction on the way (kernel 5.10 without Landlock ABI 3, Docker Engine 28, no systemd) is in [FRICTION.md](FRICTION.md).
 
@@ -215,7 +215,7 @@ May not: decide validity, compute a date or a count, write a digit Arjun will ac
 | Nemotron on Nebius Token Factory | NOT RUN, no key (dry run of the switch script done) |
 | Tavily Search and Extract | LIVE RUN, also used to read the Singapore and India sources |
 | OpenShell prover, gateway, profile, Seal registration | LIVE RUN |
-| OpenShell sandbox, advisor, P2, P4, P5 | NOT RUN, workflow ready for a Linux 6.2 runner |
+| OpenShell sandbox, advisor, P1 on the effective policy, P2, P4, P5 | NOT RUN, workflow ready for a Linux 6.2 runner |
 | Telegram and Resend email | LIVE RUN, see the live flow below |
 | NemoClaw, Hermes, Nebius Serverless | NOT USED, not claimed |
 | Hosted judge door host | substitute host (Vercel), labelled on every response |
@@ -278,7 +278,7 @@ Administrations count sea service differently, and none of the sources read here
 ## Limits stated plainly
 
 - **Evidence is internal.** Every set was built by this project and pre-registered before its run. The Navigator's 60 of 60 and the Seal's 0 missed are results on sets the author built or tuned on, so they are regression checks. The independent results are the ones where a model fails: Super alone, a literal guard, and the first Seal.
-- **The sandbox has not run.** The kernel on the build machine cannot enforce OpenShell's Landlock policy, so P2, P4, P5 and the advisor flow wait for the Actions runner. The prover results and the Seal tests over gRPC are real; enforcement from outside the agent is designed and not yet shown.
+- **The sandbox has not run.** The kernel on the build machine cannot enforce OpenShell's Landlock policy, so P1 on the effective policy, P2, P4, P5 and the advisor flow wait for the Actions runner. The prover results and the Seal tests over gRPC are real; enforcement from outside the agent is designed and not yet shown.
 - **One route.** All model results came from the NVIDIA API Catalog. Nothing here was measured on Nebius Token Factory.
 - **Thin rule coverage.** India has 2 sourced rules, Singapore 4, Australia 5, the United Kingdom 3, the STCW core 1, and Nigeria none. A rule that could not be sourced does not exist, and the engine says Ask administration instead.
 - **A specimen, not a pilot.** The profile is a specimen built for the demonstration. No seafarer has used it.

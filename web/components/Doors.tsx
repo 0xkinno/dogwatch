@@ -1,6 +1,6 @@
 export function Doors() {
   const doors = [
-    { y: 70, name: "Token Factory", sub: "POST /v1/chat/completions" },
+    { y: 70, name: "Model route", sub: "Token Factory or API Catalog (dev)" },
     { y: 140, name: "Tavily", sub: "POST /search, /extract" },
     { y: 210, name: "Radio Officer", sub: "drafts, questions, inbox" },
     { y: 280, name: "policy.local", sub: "advisor, built in" },

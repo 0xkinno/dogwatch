@@ -20,4 +20,13 @@ Accepted and disclosed, not fixable here:
 Reviewer claims checked and not defects: README does not use the word the third reviewer suspected; README already states the India and Singapore packs are sourced via Tavily Extract (the reviewer saw a stale remote, pushes are blocked on credentials).
 
 ## Round 2
-Run after the fixes are deployed (see evidence/final/).
+Three reviewers again, on the redeployed app. No exposed secrets, no fabricated numbers; counts and dates reconcile across pages.
+Fixed:
+- /boundary doors named only Token Factory while every result used the NVIDIA API Catalog. The door is now labelled "Model route" with both hosts, and the page states that the prover run predates the Catalog door and is repeated by the sandbox workflow.
+- /watch label "Years of 365 days" was a month figure; now "Months of 365/12 days".
+- README unrun list now includes P1 on the effective policy; the Seal sentence now carries the tuning caveat.
+- /judge says the plan text is a labelled template when the large model is busy.
+- Nav label "Open your watch" renamed "See the specimen watch".
+Not changed: P-code legend and jargon glossary (listed for round 3), outbox wording on the renewal window.
+## Round 3
+Pending: run after this deploy.

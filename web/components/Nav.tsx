@@ -103,7 +103,7 @@ export function Nav() {
           ))}
         </ul>
         <Link href="/watch" className="btn btn-ink cta" style={{ minHeight: 44, padding: "0 22px" }}>
-          Open your watch
+          See the specimen watch
         </Link>
         <button ref={btnRef} className="menu-btn" aria-expanded={open} aria-controls="nav-sheet" onClick={() => setOpen(!open)}>
           {open ? "Close" : "Menu"}
@@ -117,7 +117,7 @@ export function Nav() {
             </li>
           ))}
           <li className="small-only">
-            <Link href="/watch">Open your watch</Link>
+            <Link href="/watch">See the specimen watch</Link>
           </li>
         </ul>
       </div>

@@ -21,7 +21,7 @@ export default function Judge() {
             <h2 className="h-md display">60 seconds</h2>
             <ol style={{ paddingLeft: 18, margin: 0 }}>
               <li>Press Check below. The medical lapses on day 42 of 181 with its source quote.</li>
-              <li>Run the offer flow. It uses triage, the Navigator and the plan writer.</li>
+              <li>Run the offer flow. It uses triage, the Navigator and the plan writer; when the large model is busy the plan text is a labelled template.</li>
               <li>Open the proof page and read the misses.</li>
             </ol>
             <Link className="btn btn-ink" href="/proof">Open the proof</Link>
