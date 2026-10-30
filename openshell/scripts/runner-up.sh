@@ -36,7 +36,7 @@ sudo systemctl stop openshell-gateway 2>/dev/null || true
 pkill -f openshell-gateway 2>/dev/null || true
 for _ in $(seq 1 20); do ss -ltn | grep -q ':17670' || break; sleep 1; done
 ss -ltn | grep -q ':17670' && { echo "port 17670 still in use by:"; ss -ltnp | grep ':17670'; exit 1; }
-nohup openshell-gateway > "$STATE/gateway.log" 2>&1 &
+OPENSHELL_DRIVERS=docker nohup openshell-gateway > "$STATE/gateway.log" 2>&1 &
 for _ in $(seq 1 90); do ss -ltn | grep -q ':17670' && break; sleep 2; done
 ss -ltn | grep -q ':17670' || { sed 's/\x1b\[[0-9;]*m//g' "$STATE/gateway.log" | tail -20; exit 1; }
 echo "gateway processes:"; pgrep -af openshell-gateway || true
