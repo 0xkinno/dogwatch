@@ -1,0 +1,45 @@
+{
+ "host": "GitHub Actions ubuntu-24.04 runner",
+ "run_url": "https://github.com/0xkinno/dogwatch/actions/runs/41009598425",
+ "ran_at": "2026-10-30T05:47:03Z",
+ "set": "P4_fail_closed",
+ "before_kill": [
+  {
+   "tag": "before0",
+   "error": "no output",
+   "stderr": "/sandbox/.venv/bin/python3: can't find '__main__' module in '/sandbox/p4_probe.py'\n"
+  },
+  {
+   "tag": "before1",
+   "error": "no output",
+   "stderr": "/sandbox/.venv/bin/python3: can't find '__main__' module in '/sandbox/p4_probe.py'\n"
+  },
+  {
+   "tag": "before2",
+   "error": "no output",
+   "stderr": "/sandbox/.venv/bin/python3: can't find '__main__' module in '/sandbox/p4_probe.py'\n"
+  }
+ ],
+ "seal_killed": true,
+ "while_down": [
+  {
+   "tag": "seal_down0",
+   "error": "no output",
+   "stderr": "/sandbox/.venv/bin/python3: can't find '__main__' module in '/sandbox/p4_probe.py'\n"
+  },
+  {
+   "tag": "seal_down1",
+   "error": "no output",
+   "stderr": "/sandbox/.venv/bin/python3: can't find '__main__' module in '/sandbox/p4_probe.py'\n"
+  },
+  {
+   "tag": "seal_down2",
+   "error": "no output",
+   "stderr": "/sandbox/.venv/bin/python3: can't find '__main__' module in '/sandbox/p4_probe.py'\n"
+  }
+ ],
+ "allowed_before": 0,
+ "allowed_while_down": 0,
+ "denied_while_down": 3,
+ "denial_log_lines": []
+}

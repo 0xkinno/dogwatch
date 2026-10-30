@@ -40,7 +40,7 @@ export default function Boundary() {
         <GlowCard tone="amber" className="stack">
           <div className="row"><h2 className="h-md display">Prover results</h2><ModeChip mode="LOCAL BUILD" /></div>
           <p className="src" style={{ margin: 0 }}>
-            {runNote ? runNote.split("\n").filter((l) => l.startsWith("#")).join(" ") : "No prover run recorded yet."} The prover run predates the NVIDIA API Catalog door: it checked the policy with the Token Factory model door only, while every live model result used the Catalog door (the policy file now names both). The run is repeated on the effective policy by the sandbox workflow. The prover checks the declared policy; it does not model network middleware, so the Seal is tested separately. The sandbox effective export is NOT RUN: the sandbox cannot start on this kernel (see below).
+            {runNote ? runNote.split("\n").filter((l) => l.startsWith("#")).join(" ") : "No prover run recorded yet."} The prover run predates the NVIDIA API Catalog door: it checked the policy with the Token Factory model door only, while every live model result used the Catalog door (the policy file now names both). On a GitHub Actions runner the prover checked the running sandbox's effective policy and found the stock NVIDIA provider profile too wide (GET / on the model host); the profile is narrowed and not yet re-proved. The prover checks the declared policy; it does not model network middleware, so the Seal is tested separately. The sandbox effective export is NOT RUN: the sandbox cannot start on this kernel (see below).
           </p>
           <div className="table-wrap" tabIndex={0} role="region" aria-label="Scrollable table">
             <table>

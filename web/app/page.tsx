@@ -101,7 +101,7 @@ export default function Home() {
             <div className="folio">No. 03 &nbsp; The boundary</div>
             <h2 id="boundary-t" className="display h-lg">Four doors, <span className="serif">one Seal.</span></h2>
             <p className="lede" style={{ marginTop: 14 }}>
-              The assistant is designed to work inside an NVIDIA OpenShell sandbox; that run is not done yet (see below). The cloud model sees placeholders, never a certificate number. A gateway outside the agent allows four destinations, and a middleware called the Seal refuses any request that carries a vault value, even in an encoded form.
+              The assistant is designed to work inside an NVIDIA OpenShell sandbox; the sandbox has started on a CI runner, and the probes inside it are still pending (see below). The cloud model sees placeholders, never a certificate number. A gateway outside the agent allows four destinations, and a middleware called the Seal refuses any request that carries a vault value, even in an encoded form.
             </p>
           </Reveal>
           <div className="two-col" style={{ alignItems: "start", marginTop: 32 }}>

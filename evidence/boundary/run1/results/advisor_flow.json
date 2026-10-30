@@ -1,0 +1,19 @@
+{
+ "host": "GitHub Actions ubuntu-24.04 runner",
+ "run_url": "https://github.com/0xkinno/dogwatch/actions/runs/41009598425",
+ "ran_at": "2026-10-30T05:47:01Z",
+ "set": "Advisor_flow",
+ "inside_sandbox": {
+  "error": "/sandbox/.venv/bin/python3: can't find '__main__' module in '/sandbox/advisor_probe.py'\n"
+ },
+ "pending_before_reject": "No network rules for sandbox 'dogwatch'\n",
+ "rejected": null,
+ "config_log_lines": [
+  "[1793338792.642] [sandbox] [OCSF ] [ocsf] CONFIG:ENRICHED [INFO] Enriched policy with baseline filesystem paths for proxy mode",
+  "[1793338792.648] [sandbox] [OCSF ] [ocsf] CONFIG:CONFIGURED [INFO] OPA runtime binary identity mode configured [source:proto require_binary_identity:true] [source:proto]",
+  "[1793338792.656] [sandbox] [OCSF ] [ocsf] CONFIG:ENABLED [INFO] TLS termination enabled: ephemeral CA generated",
+  "[1793338792.656] [sandbox] [OCSF ] [ocsf] CONFIG:READY [INFO] Policy DNS connected to isolation boundary",
+  "[1793338792.704] [sandbox] [OCSF ] [ocsf] CONFIG:LOADED [INFO] Acknowledged initial policy revision as loaded [version:2] [hash:a2243646db89e61415d34d0f2a823dcfe4b8d7d570609c9ebf8e92567303a490]"
+ ],
+ "rejected_from": "CLI (Telegram not wired to the runner)"
+}

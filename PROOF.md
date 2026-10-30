@@ -58,6 +58,14 @@ Numbers below are generated from `eval/results/` through `docs/FACTS.json`; `scr
 
 - `evidence/actions/live-flow.json`: Telegram and Resend, Route: NVIDIA API Catalog (development). Email delivered (<!--fact:live.emails_sent-->1<!--/fact-->). P11 live: <!--fact:live.p11_sends-->1<!--/fact--> send, <!--fact:live.p11_duplicates-->0<!--/fact--> duplicates after a kill and restart. The offer was synthetic and the approval executed by the driver, both labelled in the file.
 
-## NOT RUN yet
+## OpenShell sandbox proofs on the GitHub Actions runner
 
-P1 on the sandbox effective policy, P2 injection inbox, P4 fail closed, P5 credential placeholder and the advisor flow: all need the OpenShell sandbox, which cannot start on this host (Linux 5.10, Landlock ABI 3 needs 6.2). `.github/workflows/sandbox-proofs.yml` runs them on a GitHub Actions ubuntu-24.04 runner once the repository secret NVIDIA_API_KEY exists. Everything on Nebius Token Factory: no key.
+Host: GitHub Actions ubuntu-24.04 runner (kernel 7.0.0-azure, Landlock present), not the seafarer's machine. The build machine cannot run the sandbox (Linux 5.10, Landlock ABI 3 needs 6.2). Evidence: `evidence/boundary/run1/`, workflow run 41009598425.
+
+**Run 1 (what it showed).**
+- The gateway started with the Seal registered, the NVIDIA provider was created and the `dogwatch` sandbox came up. LIVE RUN.
+- **P1 on the effective policy found a real excess.** The prover reported `exceeds_boundary` with the counterexample `GET /` on `integrate.api.nvidia.com`: the stock NVIDIA provider profile adds `access: read-write` to the model host, wider than the narrow policy. The profile is now narrowed to POST `/v1/chat/completions` and GET `/v1/models`; this fix is not yet re-proved.
+- **P2 baseline (no sandbox):** 20 of 20 injected emails made the agent post, and 20 of 20 canary requests carried a vault value (`evidence/boundary/run1/results/p2_injection.json`).
+- **Not demonstrated:** the sandboxed side of P2, P4, P5 and the advisor flow did not execute. The probe scripts were uploaded to a path the sandbox treated as a directory, so they never ran, and the P4 counts in that file (3 denied) are probe errors, not Seal denials. Treat all of those as NOT RUN. The upload path is fixed; run 2 is pending.
+
+Everything on Nebius Token Factory: no key.
