@@ -1,6 +1,6 @@
 # JUDGE.md
 
-No login and no key are needed for any path below. Live app: https://dogwatch-eight.vercel.app (API: https://dogwatch-api.vercel.app, a substitute host). Every result says whether it is LIVE, DEMO (the same code path run in the browser) or RECORDED.
+No login and no key are needed for any path below. Live app: https://dogwatch-eight.vercel.app (API: https://dogwatch-api.vercel.app/api/status, a substitute host). Every result says whether it is LIVE, DEMO (the same code path run in the browser) or RECORDED.
 
 ## 60 seconds
 

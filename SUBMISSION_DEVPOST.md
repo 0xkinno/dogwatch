@@ -47,7 +47,7 @@ Run the probe and the evidence on Token Factory when a key exists, run the sandb
 NVIDIA Nemotron, NVIDIA OpenShell, Tavily, Python, FastAPI, gRPC, Next.js, TypeScript, Framer Motion, Playwright.
 
 ## Try it out
-Repository: https://github.com/0xkinno/dogwatch. Live app: https://dogwatch-eight.vercel.app (API host: https://dogwatch-api.vercel.app, a Vercel substitute host, labelled in /api/status).
+Repository: https://github.com/0xkinno/dogwatch. Live app: https://dogwatch-eight.vercel.app (API host: https://dogwatch-api.vercel.app/api/status, a Vercel substitute host, labelled in /api/status).
 
 ## Video
 Not recorded yet.
