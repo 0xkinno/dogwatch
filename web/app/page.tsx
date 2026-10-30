@@ -107,7 +107,7 @@ export default function Home() {
           <div className="two-col" style={{ alignItems: "start", marginTop: 32 }}>
             <Reveal><GlowCard><Doors /></GlowCard></Reveal>
             <Reveal delay={0.1}><GlowCard tone="amber" className="stack">
-              <div className="row"><ModeChip mode="LOCAL BUILD" /><span className="src">Seal decisions on the pre-registered corpus (P3). The sandbox started on a GitHub Actions runner; P5 and the advisor flow passed there, P1 found two excesses that are fixed, and sandboxed P2 and P4 are inconclusive until the re-run.</span></div>
+              <div className="row"><ModeChip mode="LOCAL BUILD" /><span className="src">Seal decisions on the pre-registered corpus (P3). The sandbox ran on a GitHub Actions runner (not the build machine): it denied 20 of 20 injected posts (P2), failed closed with the Seal stopped (P4) and showed the agent only a placeholder (P5). The advisor flow is shown by one run, from the command line. P1 found two profile excesses, now fixed; its re-proof on the effective policy was unsupported by the prover, so it is not a pass.</span></div>
               {denials.map((c) => (
                 <pre key={c.id} tabIndex={0} aria-label={`Seal decision for case ${c.id}`}>{`${c.id}  transform=${c.transform}\nliteral guard: ${c.literal_denied ? "denied" : "allowed"}\nseal: deny  path=${c.seal_path.join(">")}`}</pre>
               ))}

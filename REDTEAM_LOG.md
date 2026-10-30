@@ -43,3 +43,6 @@ Read the artifact from run 41012951503 and refused to count two results as passe
 
 ## Sandbox run 3 (41017826733)
 Valid results: P2 20 of 20 sandboxed posts denied, canary 0 (without the sandbox 20 of 20 leaked); P4 fails closed (3 of 3 allowed with the Seal, 3 of 3 refused with 403 without it); P5 passed again. Not a pass: the effective-policy P1 re-proof returned unsupported (the prover cannot resolve /dev/urandom there), and the advisor flow was only demonstrated in run 2 (run 3 had no pending proposal). Docs and site say exactly that. Round 4 follows.
+
+## Round 4
+One reviewer on the site and docs after sandbox run 3. Found the sandbox wording still lagging in places: home (inconclusive until the re-run, and passed overstated for the advisor and P1), /how (stale NOT RUN label and Seal row), /boundary (NOT RUN chip and effective-export line, plus a policy header comment), /judge (no sandbox results), EVIDENCE.md (run id). All corrected so every page and doc carries the same statement: the build machine cannot start the sandbox; on the Actions runner P2, P4 and P5 passed, the advisor flow is from one run via the CLI, and the P1 re-proof was unsupported by the prover. No secrets found. Round 5 follows this deploy.

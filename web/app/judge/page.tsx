@@ -29,7 +29,7 @@ export default function Judge() {
           <GlowCard tone="amber" className="stack">
             <h2 className="h-md display">3 minutes</h2>
             <ol style={{ paddingLeft: 18, margin: 0 }}>
-              <li>Read the boundary page: the four doors and the prover results.</li>
+              <li>Read the boundary page: the four doors and the prover results. The sandbox cannot start on the build machine; its proofs ran on a GitHub Actions runner: 20 of 20 injected posts denied (P2), fails closed with the Seal stopped (P4), the agent sees only a placeholder (P5). The effective-policy re-proof (P1) was unsupported by the prover.</li>
               <li>Open the outbox: a draft with placeholders and its digest.</li>
               <li>Read how the model is routed and where no model is allowed.</li>
             </ol>
