@@ -109,7 +109,7 @@ flowchart LR
 ```
 
 ```
-SEAFARER'S MACHINE (Linux 6.2 or newer with Docker, or WSL2 on a recent kernel)
+SEAFARER'S MACHINE (Linux 6.2 or newer with Docker; WSL2 only if its kernel is 6.2 or newer, which the build machine's was not)
 +-----------------------------------------------------------------------------------+
 | OpenShell gateway  (policy, provider credentials, prover, advisor, middleware)   |
 |   +-- Sandbox "dogwatch"  (read-only vault mount, no other network)              |

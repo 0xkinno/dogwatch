@@ -17,11 +17,12 @@ const CREW = [
 
 const SDK: [string, string, string][] = [
   ["OpenShell policy prover", "LOCAL BUILD", "Run on the build machine, version 0.1.6. Declared policy within the boundary; attack proposals reported with counterexamples."],
-  ["OpenShell provider profile for Token Factory", "WRITTEN", "File exists in openshell/profiles. Lint and import are NOT RUN yet."],
-  ["OpenShell supervisor middleware (the Seal)", "LOCAL BUILD", "Built against the middleware proto and tested over gRPC. Registered in a running gateway: NOT RUN."],
-  ["OpenShell sandbox and policy advisor", "NOT RUN", "Designed. The gateway has not been started on the build machine."],
-  ["Nemotron on Nebius Token Factory", "NOT RUN", "Client, routing, receipts and schema repair are written and tested against a fake client. No live call has been made."],
-  ["Tavily search and extract", "NOT RUN", "Client and gates are written and tested against a fake transport. No live call has been made."],
+  ["OpenShell provider profile (NVIDIA API Catalog)", "LOCAL BUILD", "The stock NVIDIA profile was linted, imported and attached as a provider on the build machine. The Token Factory profile is written and not yet imported."],
+  ["OpenShell supervisor middleware (the Seal)", "LOCAL BUILD", "Registered with a gateway started on the build machine, and a policy naming it before registration was refused at admission. Sandbox enforcement with the Seal in the path: NOT RUN."],
+  ["OpenShell sandbox and policy advisor", "NOT RUN", "The sandbox supervisor exited before ready: the build machine kernel (5.10) lacks Landlock ABI 3. The proofs are set to run on a GitHub Actions ubuntu-24.04 runner."],
+  ["Nemotron via the NVIDIA API Catalog (development route)", "LOCAL BUILD", "Live calls with receipts that name the route. Every model result on this site came from this route."],
+  ["Nemotron on Nebius Token Factory", "NOT RUN", "The submission route. No key was available, so no Token Factory call has been made. One script switches the route and re-runs the evidence."],
+  ["Tavily search and extract", "LOCAL BUILD", "Live calls: the rule-drift watch, and extraction of the Singapore and India rule sources that could not be opened directly."],
   ["NemoClaw, Hermes, Nebius Serverless", "NOT USED", "Not used, so not claimed."],
 ];
 

@@ -22,7 +22,7 @@ export default function Home() {
 
   const strip = [
     { k: "04:10 on watch", href: "#check", v: <>Medical lapses <b className="bad">day {med?.day_x ?? "?"}</b> of {med?.day_y ?? "?"}</> },
-    { k: "Encoded attacks, 200 cases", href: "/proof", v: <>Seal missed <b data-fact="p3.seal.missed">{fact("p3.seal.missed")}</b>, literal guard <b className="bad" data-fact="p3.literal.missed">{fact("p3.literal.missed")}</b></> },
+    { k: "Encoded attacks, 200 cases", href: "/proof", v: <>Seal missed <b data-fact="p3.seal.missed">{fact("p3.seal.missed")}</b>, literal guard <b className="bad" data-fact="p3.literal.missed">{fact("p3.literal.missed")}</b> <span className="src">(Seal v2 was tuned on these cases: a regression check, not an independent score)</span></> },
     { k: "Super alone, NVIDIA API Catalog (dev)", href: "/proof", v: <><b className="bad" data-fact="p6.super.false_safe">{fact("p6.super.false_safe")}</b> false-safe, Navigator <b data-fact="p6.engine.false_safe">{fact("p6.engine.false_safe")}</b></> },
   ];
 
@@ -101,7 +101,7 @@ export default function Home() {
             <div className="folio">No. 03 &nbsp; The boundary</div>
             <h2 id="boundary-t" className="display h-lg">Four doors, <span className="serif">one Seal.</span></h2>
             <p className="lede" style={{ marginTop: 14 }}>
-              The assistant works inside an NVIDIA OpenShell sandbox. The cloud model sees placeholders, never a certificate number. A gateway outside the agent allows four destinations, and a middleware called the Seal refuses any request that carries a vault value, even in an encoded form.
+              The assistant is designed to work inside an NVIDIA OpenShell sandbox; that run is not done yet (see below). The cloud model sees placeholders, never a certificate number. A gateway outside the agent allows four destinations, and a middleware called the Seal refuses any request that carries a vault value, even in an encoded form.
             </p>
           </Reveal>
           <div className="two-col" style={{ alignItems: "start", marginTop: 32 }}>

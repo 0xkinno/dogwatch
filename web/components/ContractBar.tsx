@@ -59,7 +59,7 @@ export function ContractBar({ start, end, documents }: { start: string; end: str
                       <div className="src">Sea service verdict: {s.verdict.replaceAll("_", " ")}. {s.arithmetic}</div>
                     </div>
                   ))}
-                  {!d.rules.length && !d.sea_service.length && <div className="src">No administration rule is needed for this answer: it compares the date printed on the certificate with the contract window.</div>}
+                  {!d.rules.length && !d.sea_service.length && <div className="src">This answer compares the date printed on the certificate with the contract window, so no rule is quoted. The renewal window itself is a separate question for the administration.</div>}
                 </div>
               </details>
             </div>

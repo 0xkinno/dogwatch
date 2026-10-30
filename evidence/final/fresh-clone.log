@@ -1,0 +1,22 @@
+== git clone
+   6 s
+== python -m venv .venv
+   59 s
+== pip install -r requirements.txt
+   233 s
+== core tests
+   41 s
+== radio tests
+   12 s
+== seal tests
+   6 s
+== python eval/run_seal_corpus.py
+   1 s
+== python eval/run_conventions.py
+   1 s
+== python scripts/check_facts.py
+   2 s
+== python scripts/check_copy.py
+   4 s
+TOTAL 365 s, failures: 0, clone of: C:/Users/hp/Downloads/DOGWATCH
+exit 0
