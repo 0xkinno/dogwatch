@@ -35,5 +35,5 @@ Fixed:
 - /how profile row now says "narrowed and not yet re-proved".
 - PROOF.md said the Nemotron comparison was NOT RUN; it is scoped to Token Factory, since it ran on the NVIDIA API Catalog.
 - /judge no longer says "Run the contract check"; it says open the page and press Check.
-Not changed: adding Contract and Outbox to the nav (layout risk, both reachable from the home page and /judge), the P-code and jargon glossary, the outbox renewal wording. "Fictional" appears only in EVIDENCE.md, which is permitted.
+Not changed: adding Contract and Outbox to the nav (layout risk, both reachable from the home page and /judge), the P-code and jargon glossary, the outbox renewal wording. The one banned word still appears only where the evidence file allows it.
 Round 4 is pending sandbox run 2 (the sandboxed probes); until it produces results those four stay NOT RUN.
