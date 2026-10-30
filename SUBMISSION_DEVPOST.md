@@ -50,7 +50,7 @@ NVIDIA Nemotron, NVIDIA OpenShell, Tavily, Python, FastAPI, gRPC, Next.js, TypeS
 Repository: https://github.com/0xkinno/dogwatch. Live app: https://dogwatch-eight.vercel.app (API host: https://dogwatch-api.vercel.app/api/status, a Vercel substitute host, labelled in /api/status).
 
 ## Video
-Not recorded yet.
+https://youtu.be/GOJ-oNZSZw4 (2:52, public).
 
 ## Testing instructions
 No login. Open the live app, press Check on the contract card, run the offer flow on `/judge`. Offline commands are in `JUDGE.md`.
@@ -88,6 +88,6 @@ Specific and reproducible; the long form is `FRICTION.md`.
 - What next? Run the sandbox proofs on a Linux 6.2 runner, run the evidence on Token Factory when a key exists, and read the Nigeria and Paris MoU sources.
 
 ## Open items before submitting
-1. Demo video link, the AI_TOOLS line, (the sandbox proofs have run: GitHub Actions runs 41009598425, 41012951503 and 41017826733; P2 denied 20 of 20 injected posts, P4 failed closed, P5 showed a placeholder, the advisor flow is from one run via the CLI, the P1 re-proof was unsupported by the prover).
+1. The AI_TOOLS line, the final Devpost submission (the demo video is at https://youtu.be/GOJ-oNZSZw4; the sandbox proofs have run: GitHub Actions runs 41009598425, 41012951503 and 41017826733; P2 denied 20 of 20 injected posts, P4 failed closed, P5 showed a placeholder, the advisor flow is from one run via the CLI, the P1 re-proof was unsupported by the prover).
 2. Confirm the repository About section shows the Apache-2.0 licence.
 3. Owner approval to submit.

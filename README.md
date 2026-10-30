@@ -20,7 +20,7 @@ The idea underneath is simple. An assistant does not have to see your documents 
 |---|---|
 | Live app | [dogwatch-eight.vercel.app](https://dogwatch-eight.vercel.app), API host [dogwatch-api.vercel.app](https://dogwatch-api.vercel.app/api/status) (Vercel, a substitute host: the product itself runs on the seafarer's machine) |
 | For judges | [JUDGE.md](JUDGE.md) |
-| Demo video | not recorded yet |
+| Demo video | [Watch on YouTube](https://youtu.be/GOJ-oNZSZw4) |
 | Track | Personal AI |
 | Built with | Nemotron on the NVIDIA API Catalog; Token Factory route built and tested in code, not run (see [Routes](#which-route-produced-which-result)). NVIDIA OpenShell. Tavily |
 

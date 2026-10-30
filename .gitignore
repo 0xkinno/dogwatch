@@ -52,3 +52,4 @@ Thumbs.db
 *.tsbuildinfo
 .deploy-api/
 .live.log
+.deploy.log
