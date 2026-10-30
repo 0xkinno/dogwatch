@@ -30,6 +30,12 @@ chmod 600 "$HOME/.config/openshell/gateway.toml"
 export OPENSHELL_LOCAL_TLS_DIR="$HOME/.local/state/openshell/tls"; mkdir -p "$OPENSHELL_LOCAL_TLS_DIR"
 openshell-gateway config preflight
 openshell-gateway generate-certs --output-dir "$OPENSHELL_LOCAL_TLS_DIR" --server-san host.openshell.internal
+# The installer may already have started a gateway without the Seal registered: stop any running one first.
+systemctl --user stop openshell-gateway 2>/dev/null || true
+sudo systemctl stop openshell-gateway 2>/dev/null || true
+pkill -f openshell-gateway 2>/dev/null || true
+for _ in $(seq 1 20); do ss -ltn | grep -q ':17670' || break; sleep 1; done
+ss -ltn | grep -q ':17670' && { echo "port 17670 still in use by:"; ss -ltnp | grep ':17670'; exit 1; }
 nohup openshell-gateway > "$STATE/gateway.log" 2>&1 &
 for _ in $(seq 1 90); do ss -ltn | grep -q ':17670' && break; sleep 2; done
 ss -ltn | grep -q ':17670' || { sed 's/\x1b\[[0-9;]*m//g' "$STATE/gateway.log" | tail -20; exit 1; }
