@@ -107,7 +107,7 @@ export default function Home() {
           <div className="two-col" style={{ alignItems: "start", marginTop: 32 }}>
             <Reveal><GlowCard><Doors /></GlowCard></Reveal>
             <Reveal delay={0.1}><GlowCard tone="amber" className="stack">
-              <div className="row"><ModeChip mode="LOCAL BUILD" /><span className="src">Seal decisions on the pre-registered corpus (P3). The sandboxed run is NOT RUN: this machine&apos;s kernel is below the Landlock level OpenShell requires.</span></div>
+              <div className="row"><ModeChip mode="LOCAL BUILD" /><span className="src">Seal decisions on the pre-registered corpus (P3). The sandbox started on a GitHub Actions runner and its effective policy was proved (one excess found and narrowed); the sandboxed probes are NOT RUN.</span></div>
               {denials.map((c) => (
                 <pre key={c.id} tabIndex={0} aria-label={`Seal decision for case ${c.id}`}>{`${c.id}  transform=${c.transform}\nliteral guard: ${c.literal_denied ? "denied" : "allowed"}\nseal: deny  path=${c.seal_path.join(">")}`}</pre>
               ))}

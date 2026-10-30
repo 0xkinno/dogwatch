@@ -151,8 +151,8 @@ export default function Proof() {
         </GlowCard>
 
         <GlowCard tone="port" className="stack">
-          <div className="row"><h2 className="h-md display">Not run yet</h2><ModeChip mode="NOT RUN" /></div>
-          <p style={{ margin: 0 }}>P1 on the sandbox effective policy, P2 injection inbox with and without the sandbox, P4 fail closed, and P5 credential placeholder. OpenShell 0.1.6 needs Landlock ABI 3, which arrives with Linux 6.2; this machine runs WSL kernel 5.10, so the sandbox cannot start here. The gateway, the Seal registration and the sandbox image all ran; the supervisor exited before it became ready. Needs a Linux 6.2 or newer host.</p>
+          <div className="row"><h2 className="h-md display">OpenShell sandbox proofs</h2><ModeChip mode="NOT RUN" /></div>
+          <p style={{ margin: 0 }}>On the build machine (WSL kernel 5.10, no Landlock ABI 3) the sandbox cannot start. On a GitHub Actions ubuntu-24.04 runner (run 41009598425, not the seafarer's machine) it did start: the gateway ran with the Seal registered, and P1 on the running sandbox's effective policy found the stock NVIDIA provider profile too wide (GET / on the model host). That profile is now narrowed and not yet re-proved. The sandboxed side of P2, P4, P5 and the advisor flow did not execute in that run and are NOT RUN. The same run's baseline without a sandbox: 20 of 20 injected emails made the agent post and 20 of 20 canary requests carried a vault value.</p>
         </GlowCard>
       </section>
     </>

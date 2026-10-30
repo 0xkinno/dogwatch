@@ -25,7 +25,7 @@ Numbers below are generated from `eval/results/` through `docs/FACTS.json`; `scr
 ### P6 Navigator against the oracle (LOCAL BUILD, synthetic profiles)
 
 - <!--fact:p6.profiles-->60<!--/fact--> profiles, expected verdicts written by an independent oracle before the run. The Navigator matched <!--fact:p6.engine.correct-->60<!--/fact-->; false-safe <!--fact:p6.engine.false_safe-->0<!--/fact-->.
-- This is a self-built set and is not the headline. The comparison with Nemotron on the same profiles is NOT RUN until a Token Factory key is available.
+- This is a self-built set and is not the headline. The comparison with Nemotron on the same profiles ran on the NVIDIA API Catalog (see P6 above); it is NOT RUN on Token Factory, which has no key.
 
 ### P7 Counting conventions (LOCAL BUILD, synthetic histories)
 

@@ -29,4 +29,11 @@ Fixed:
 - Nav label "Open your watch" renamed "See the specimen watch".
 Not changed: P-code legend and jargon glossary (listed for round 3), outbox wording on the renewal window.
 ## Round 3
-Pending: run after this deploy.
+Run on the deploy that carried the sandbox run 1 results. Three reviewers; no secrets found, numbers reconcile.
+Fixed:
+- The sandbox status was stale on /proof, /boundary, /how and the home page ("cannot start", "set to run"). One canonical statement now appears on all four and in README, PROOF.md and EVIDENCE.md: the build machine cannot start the sandbox; on GitHub Actions run 41009598425 it started, P1 on the effective policy found the stock NVIDIA profile too wide (narrowed, not re-proved), sandboxed P2, P4, P5 and the advisor did not execute (NOT RUN), and the no-sandbox P2 baseline leaked in 20 of 20 emails.
+- /how profile row now says "narrowed and not yet re-proved".
+- PROOF.md said the Nemotron comparison was NOT RUN; it is scoped to Token Factory, since it ran on the NVIDIA API Catalog.
+- /judge no longer says "Run the contract check"; it says open the page and press Check.
+Not changed: adding Contract and Outbox to the nav (layout risk, both reachable from the home page and /judge), the P-code and jargon glossary, the outbox renewal wording. "Fictional" appears only in EVIDENCE.md, which is permitted.
+Round 4 is pending sandbox run 2 (the sandboxed probes); until it produces results those four stay NOT RUN.

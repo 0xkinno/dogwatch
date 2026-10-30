@@ -47,7 +47,7 @@ export default function Judge() {
         </div>
 
         <GlowCard className="stack">
-          <h2 className="h-md display">Run the contract check</h2>
+          <h2 className="h-md display">Open the contract check and press Check</h2>
           <ContractRunner />
         </GlowCard>
 

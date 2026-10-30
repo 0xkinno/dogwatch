@@ -80,7 +80,7 @@ export default function Boundary() {
               What ran on this machine, live: OpenShell 0.1.6 installed, the gateway started, the Seal registered with it (the gateway log names the registration), the stock NVIDIA provider profile linted, imported and attached as a provider, and the Dogwatch sandbox image built. A policy that named the Seal before it was registered was refused at admission.
             </p>
             <p>
-              What did not: the sandbox itself. The supervisor started, then exited before it was ready. OpenShell requires the Landlock LSM at ABI 3 or newer, which arrives with Linux 6.2, and this WSL kernel is 5.10. So the injected-inbox run with and without the sandbox (P2), the fail-closed test (P4), the credential placeholder test (P5) and the advisor flow are NOT RUN, and nothing is shown for them. They need a Linux 6.2 or newer host.
+              On the build machine (WSL kernel 5.10, no Landlock ABI 3) the sandbox cannot start. On a GitHub Actions ubuntu-24.04 runner (run 41009598425, not the seafarer&apos;s machine) it did start: the gateway ran with the Seal registered, and P1 on the running sandbox&apos;s effective policy found the stock NVIDIA provider profile too wide (GET / on the model host). That profile is now narrowed and not yet re-proved. The sandboxed side of P2, P4, P5 and the advisor flow did not execute in that run and are NOT RUN. The same run&apos;s baseline without a sandbox: 20 of 20 injected emails made the agent post and 20 of 20 canary requests carried a vault value.
             </p>
           </GlowCard>
         </div>
