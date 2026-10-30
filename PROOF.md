@@ -60,4 +60,4 @@ Numbers below are generated from `eval/results/` through `docs/FACTS.json`; `scr
 
 ## NOT RUN yet
 
-P1 on the sandbox effective policy, P2 injection inbox, P4 fail closed, P5 credential placeholder and the advisor flow: all need the OpenShell sandbox, which cannot start on this host (Linux 5.10, Landlock ABI 3 needs 6.2). `.github/workflows/sandbox-proofs.yml` runs them on a GitHub Actions ubuntu-24.04 runner once the repository secret NVIDIA_API_KEY exists. Everything on Nebius Token Factory: no key. Tracked in `TASK.md`.
+P1 on the sandbox effective policy, P2 injection inbox, P4 fail closed, P5 credential placeholder and the advisor flow: all need the OpenShell sandbox, which cannot start on this host (Linux 5.10, Landlock ABI 3 needs 6.2). `.github/workflows/sandbox-proofs.yml` runs them on a GitHub Actions ubuntu-24.04 runner once the repository secret NVIDIA_API_KEY exists. Everything on Nebius Token Factory: no key.

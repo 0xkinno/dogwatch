@@ -24,6 +24,8 @@ The idea underneath is simple. An assistant does not have to see your documents 
 | Track | Personal AI |
 | Built with | Nemotron on the NVIDIA API Catalog; Token Factory route built and tested in code, not run (see [Routes](#which-route-produced-which-result)). NVIDIA OpenShell. Tavily |
 
+**Contents:** [Screenshots](#product-screenshots) · [Problem](#the-problem) · [What it does](#what-dogwatch-does) · [Explore](#explore-in-2-minutes) · [Architecture](#architecture) · [Routes](#which-route-produced-which-result) · [OpenShell](#nvidia-openshell) · [Nemotron](#nvidia-nemotron) · [Tavily](#tavily) · [Track fit](#how-it-fits-the-personal-ai-track) · [Measured](#measured) · [The finding](#the-finding) · [Limits](#limits-stated-plainly) · [Run it](#run-it)
+
 ## Product screenshots
 
 All are 1440 by 900 captures of the running app, taken by Playwright (`web/tests/shots.spec.ts`).
@@ -33,7 +35,9 @@ All are 1440 by 900 captures of the running app, taken by Playwright (`web/tests
 | ![The check: dial and contract lanes](docs/img/check.png) | ![Arjun's documents on watch](docs/img/watch.png) |
 | ![The boundary and prover results](docs/img/boundary.png) | ![Proof, misses first](docs/img/proof.png) |
 
-The Telegram approval screenshot is pending: the bot is built and tested against a fake transport, and the first live message needs the owner to open the bot once.
+The live flow on Telegram, `@Dogwatchdev_bot`: the discharge-book specimen photo and the ledger reply, the not-ready verdict with its digest and Approve and Reject buttons, the calendar file, and the restart check (first send live, second attempt suppressed as a duplicate). Model route for this run: NVIDIA API Catalog (development). The buttons act only while the radio process is running; a tap on an old message after the run has ended does nothing.
+
+<p align="center"><img src="docs/img/telegram.png" alt="Telegram chat with the Dogwatch bot showing the ledger update, the not-ready verdict with Approve and Reject buttons, the calendar file and the duplicate-suppressed restart" width="420"></p>
 
 ## The problem
 
@@ -271,6 +275,14 @@ NOT RUN: P2 injected inbox, P4 fail closed, P5 credential placeholder (all need 
 
 Administrations count sea service differently, and none of the sources read here states which convention applies. Of <!--fact:p7.histories-->60<!--/fact--> histories near the thresholds, <!--fact:p7.flips-->7<!--/fact--> change verdict with the counting convention, so the engine returns Ask administration there instead of guessing. The second finding is that a literal guard misses most encodings, and the third is that the identifiers most likely to leak are the ones OCR damages.
 
+## Limits stated plainly
+
+- **Evidence is internal.** Every set was built by this project and pre-registered before its run. The Navigator's 60 of 60 and the Seal's 0 missed are results on sets the author built or tuned on, so they are regression checks. The independent results are the ones where a model fails: Super alone, a literal guard, and the first Seal.
+- **The sandbox has not run.** The kernel on the build machine cannot enforce OpenShell's Landlock policy, so P2, P4, P5 and the advisor flow wait for the Actions runner. The prover results and the Seal tests over gRPC are real; enforcement from outside the agent is designed and not yet shown.
+- **One route.** All model results came from the NVIDIA API Catalog. Nothing here was measured on Nebius Token Factory.
+- **Thin rule coverage.** India has 2 sourced rules, Singapore 4, Australia 5, the United Kingdom 3, the STCW core 1, and Nigeria none. A rule that could not be sourced does not exist, and the engine says Ask administration instead.
+- **A specimen, not a pilot.** The profile is a specimen built for the demonstration. No seafarer has used it.
+
 ## Recovery
 
 Restart: a pending approval resumes, and the draft's idempotency key plus an atomic send claim stop a second send. Model down or busy: HTTP 429 and 503 are retried, then the plan falls back to a deterministic template, labelled. Tavily down: `DRIFT_UNAVAILABLE`, never "no change". Middleware down: OpenShell blocks traffic when a `fail_closed` middleware fails, and a policy naming an unregistered middleware is refused at admission; the live kill test is NOT RUN.
@@ -297,6 +309,6 @@ AI assistance, specimens, synthetic data and the image source are in [DISCLOSURE
 
 ## Repository map
 
-`core/` engine, `radio/` host side, `seal/` middleware, `openshell/` policy, profiles and sandbox image, `skills/` six SKILL.md folders, `eval/` cases, specimens and results, `evidence/`, `web/` app, `scripts/`. Also [TASK.md](TASK.md), [PROGRESS.md](PROGRESS.md), [MILESTONES.md](MILESTONES.md), [PROOF.md](PROOF.md), [SDK_SURFACE.md](SDK_SURFACE.md), [PLATFORM_PROBE.md](PLATFORM_PROBE.md), [FRICTION.md](FRICTION.md), [JUDGE.md](JUDGE.md), [DISCLOSURES.md](DISCLOSURES.md), [SUBMISSION_DEVPOST.md](SUBMISSION_DEVPOST.md).
+`core/` engine, `radio/` host side, `seal/` middleware, `openshell/` policy, profiles and sandbox image, `skills/` six SKILL.md folders, `eval/` cases, specimens and results, `evidence/`, `web/` app, `scripts/`. Also [PROGRESS.md](PROGRESS.md), [MILESTONES.md](MILESTONES.md), [PROOF.md](PROOF.md), [SDK_SURFACE.md](SDK_SURFACE.md), [PLATFORM_PROBE.md](PLATFORM_PROBE.md), [FRICTION.md](FRICTION.md), [JUDGE.md](JUDGE.md), [DISCLOSURES.md](DISCLOSURES.md), [SUBMISSION_DEVPOST.md](SUBMISSION_DEVPOST.md).
 
 License: Apache-2.0.

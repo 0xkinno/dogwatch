@@ -16,6 +16,6 @@ Last updated 2026-10-28. State words: LIVE RUN, LOCAL BUILD, FIXTURE, NOT RUN.
 | 9 Contribution and feedback | partial | `FRICTION.md`, `SDK_SURFACE.md`; upstream PR waits for the owner |
 | 10 Presentation and submission | partial | README, JUDGE.md, Devpost draft complete; video, deploy link, red team, submission pending |
 
-See `TASK.md` for the checklist; only verified items are ticked.
+The task checklist is kept outside the repository; only verified items are ticked there.
 
-Remaining unticked items in `TASK.md`, and why: the ng-nimasa rule pack (no Nigerian source was read); the sandbox, advisor, P1-on-sandbox, P2, P4 and P5 items (they need a Linux 6.2 host, workflow ready); the Token Factory items (no key); the demo video, red team and submission items (owner steps, and the red team is Step 8); the font licence text (the Fontshare licence page is script rendered); the OpenShell Nebius profile lint and attach (needs a gateway and is part of `switch_to_tokenfactory.sh`); the upstream profile PR (needs the owner's approval).
+Remaining unticked items in the task checklist, and why: the ng-nimasa rule pack (no Nigerian source was read); the sandbox, advisor, P1-on-sandbox, P2, P4 and P5 items (they need a Linux 6.2 host, workflow ready); the Token Factory items (no key); the demo video, red team and submission items (owner steps, and the red team is Step 8); the font licence text (the Fontshare licence page is script rendered); the OpenShell Nebius profile lint and attach (needs a gateway and is part of `switch_to_tokenfactory.sh`); the upstream profile PR (needs the owner's approval).
