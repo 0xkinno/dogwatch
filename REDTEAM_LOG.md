@@ -46,3 +46,6 @@ Valid results: P2 20 of 20 sandboxed posts denied, canary 0 (without the sandbox
 
 ## Round 4
 One reviewer on the site and docs after sandbox run 3. Found the sandbox wording still lagging in places: home (inconclusive until the re-run, and passed overstated for the advisor and P1), /how (stale NOT RUN label and Seal row), /boundary (NOT RUN chip and effective-export line, plus a policy header comment), /judge (no sandbox results), EVIDENCE.md (run id). All corrected so every page and doc carries the same statement: the build machine cannot start the sandbox; on the Actions runner P2, P4 and P5 passed, the advisor flow is from one run via the CLI, and the P1 re-proof was unsupported by the prover. No secrets found. Round 5 follows this deploy.
+
+## Round 5
+One reviewer. Two of its High findings (home and /how lagging) were a stale fetch: the live HTML contains neither the old home sentence nor the old /how row. Real findings fixed: JUDGE.md still said India and Singapore ship no rules (now 2 and 4, Nigeria none); SUBMISSION_DEVPOST.md still listed the sandbox run as an open item; EVIDENCE.md grouped P5 with P2 and P4 (split, with their run ids); the home page showed only the first P7 figure (v2 added). Not changed: the banned word in EVIDENCE.md (the evidence file is where the rule allows it). Nothing else new; round 6 is not needed.

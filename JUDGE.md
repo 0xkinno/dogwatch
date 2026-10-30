@@ -39,5 +39,5 @@ Every live model result ran on the NVIDIA API Catalog (development route); Nebiu
 ## What to look for
 
 - The Navigator never calls a model. Every verdict carries rule ids, source quotes, URLs, the pack hash and the arithmetic.
-- A rule that could not be sourced does not exist: the India and Singapore packs ship no rules, and the engine answers Ask administration.
+- A rule that could not be sourced does not exist: the Nigeria pack ships no rules, India has 2 and Singapore 4 (each quote verified against a snapshot read through Tavily Extract), and the engine answers Ask administration where no sourced rule exists, for example India's renewal window.
 - Both versions of the Seal run are published, including the 8 attacks the first version missed.

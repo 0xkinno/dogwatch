@@ -26,5 +26,6 @@ Every claim in this repository points to a file here. States used throughout: LI
 | India and Singapore rule packs | LIVE RUN (read through Tavily Extract) | `core/rulepacks/*/sources/` |
 | OpenShell sandbox | LIVE RUN on a GitHub Actions ubuntu-24.04 runner (runs 41009598425, 41012951503, 41017826733; not the seafarer's machine) | `evidence/boundary/run1/`, `run2/`, `run3/` |
 | P1 on the sandbox effective policy | LIVE RUN: two excesses found and fixed; re-proof unsupported by the prover | `evidence/boundary/run3/prover/` |
-| P2 injection inbox, P4 fail closed, P5 credential placeholder | LIVE RUN, passed (valid), run 41017826733 | `evidence/boundary/run3/results/` |
+| P2 injection inbox (20 of 20 sandboxed posts denied), P4 fail closed (403 with the Seal stopped) | LIVE RUN, valid, run 41017826733 | `evidence/boundary/run3/results/` |
+| P5 credential placeholder (the agent saw only a placeholder; 0 real keys at the canary) | LIVE RUN, runs 41012951503 and 41017826733 | `evidence/boundary/run2/results/`, `run3/results/` |
 | Advisor flow | LIVE RUN, partial (run 2, CLI) | `evidence/boundary/run2/results/` |

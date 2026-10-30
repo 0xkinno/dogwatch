@@ -152,7 +152,7 @@ export default function Home() {
             </GlowCard></Reveal>
             <Reveal delay={0.08}><GlowCard>
               <div className="stat"><CountUp value={num("p7.flips")} factKey="p7.flips" /></div>
-              <p style={{ marginTop: 10 }}>of <span data-fact="p7.histories">{fact("p7.histories")}</span> sea-service histories change verdict with the counting convention. No sourced rule states one.</p>
+              <p style={{ marginTop: 10 }}>of <span data-fact="p7.histories">{fact("p7.histories")}</span> sea-service histories change verdict with the counting convention. No sourced rule states one. After the India and Singapore rules were read, <span data-fact="p7v2.flips">{fact("p7v2.flips")}</span> of <span data-fact="p7v2.histories">{fact("p7v2.histories")}</span> near their thresholds still flip.</p>
             </GlowCard></Reveal>
             <Reveal delay={0.16}><GlowCard>
               <div className="stat"><CountUp value={num("p1.exceeds")} factKey="p1.exceeds" /></div>

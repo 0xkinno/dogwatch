@@ -88,6 +88,6 @@ Specific and reproducible; the long form is `FRICTION.md`.
 - What next? Run the sandbox proofs on a Linux 6.2 runner, run the evidence on Token Factory when a key exists, and read the Nigeria and Paris MoU sources.
 
 ## Open items before submitting
-1. Demo video link, the AI_TOOLS line, and the sandbox-proofs workflow run (needs the NVIDIA_API_KEY repository secret).
+1. Demo video link, the AI_TOOLS line, (the sandbox proofs have run: GitHub Actions runs 41009598425, 41012951503 and 41017826733; P2 denied 20 of 20 injected posts, P4 failed closed, P5 showed a placeholder, the advisor flow is from one run via the CLI, the P1 re-proof was unsupported by the prover).
 2. Confirm the repository About section shows the Apache-2.0 licence.
 3. Owner approval to submit.
