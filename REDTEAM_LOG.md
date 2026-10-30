@@ -40,3 +40,6 @@ Round 4 is pending sandbox run 2 (the sandboxed probes); until it produces resul
 
 ## Sandbox run 2 review (self-check before round 4)
 Read the artifact from run 41012951503 and refused to count two results as passes. P2 with the sandbox showed 0 posts only because all 20 model calls were denied (the interpreter resolves to /usr/bin/python3.12, which the policy did not list); P4 failed before the Seal was stopped, so it had no baseline. Both are recorded INCONCLUSIVE, the policy and profile now list the path, the profile's extra curl binary is removed (the second P1 excess), and the probe results now carry a `valid` flag that is false when the baseline did not work. P5 and the advisor flow are recorded as passed. Round 4 follows sandbox run 3.
+
+## Sandbox run 3 (41017826733)
+Valid results: P2 20 of 20 sandboxed posts denied, canary 0 (without the sandbox 20 of 20 leaked); P4 fails closed (3 of 3 allowed with the Seal, 3 of 3 refused with 403 without it); P5 passed again. Not a pass: the effective-policy P1 re-proof returned unsupported (the prover cannot resolve /dev/urandom there), and the advisor flow was only demonstrated in run 2 (run 3 had no pending proposal). Docs and site say exactly that. Round 4 follows.

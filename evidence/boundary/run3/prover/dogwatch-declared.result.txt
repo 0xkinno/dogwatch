@@ -1,0 +1,2 @@
+result: within_boundary
+coverage: domains=filesystem,network_l4,network_rest,process,landlock

@@ -1,0 +1,3 @@
+result: unsupported
+coverage: domains=filesystem,network_l4,network_rest,process,landlock
+reason: filesystem read containment for '/dev/urandom' depends on sandbox path resolution; use matching paths in candidate and boundary

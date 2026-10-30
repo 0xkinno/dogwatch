@@ -1,0 +1,2 @@
+# openshell-prover 0.1.6, run 2026-10-30T07:11Z
+# candidate: openshell/policy/dogwatch.yaml without network_middlewares (declared policy)

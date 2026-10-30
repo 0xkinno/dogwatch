@@ -24,7 +24,7 @@ Every claim in this repository points to a file here. States used throughout: LI
 | Nebius Token Factory | NOT RUN (no key) | `scripts/switch_to_tokenfactory.sh` |
 | Telegram and Resend live flow, P11 live | LIVE RUN (offer synthetic, approval by the driver, both labelled) | `evidence/actions/live-flow.json` |
 | India and Singapore rule packs | LIVE RUN (read through Tavily Extract) | `core/rulepacks/*/sources/` |
-| OpenShell sandbox | LIVE RUN on a GitHub Actions ubuntu-24.04 runner (runs 41009598425, 41012951503; not the seafarer's machine) | `evidence/boundary/run1/`, `evidence/boundary/run2/` |
-| P1 on the sandbox effective policy | LIVE RUN: two excesses found and fixed, re-proof pending | `evidence/boundary/run2/prover/` |
-| P5 credential placeholder, advisor flow | LIVE RUN, passed (advisor via CLI) | `evidence/boundary/run2/results/` |
-| Sandboxed P2, P4 | INCONCLUSIVE (policy missed the python3.12 path), re-run pending | `PROOF.md` |
+| OpenShell sandbox | LIVE RUN on a GitHub Actions ubuntu-24.04 runner (runs 41009598425, 41012951503, 41017826733; not the seafarer's machine) | `evidence/boundary/run1/`, `run2/`, `run3/` |
+| P1 on the sandbox effective policy | LIVE RUN: two excesses found and fixed; re-proof unsupported by the prover | `evidence/boundary/run3/prover/` |
+| P2 injection inbox, P4 fail closed, P5 credential placeholder | LIVE RUN, passed (valid) | `evidence/boundary/run3/results/` |
+| Advisor flow | LIVE RUN, partial (run 2, CLI) | `evidence/boundary/run2/results/` |
