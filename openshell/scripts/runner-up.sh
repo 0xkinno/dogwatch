@@ -54,5 +54,6 @@ for _ in $(seq 1 120); do
   sleep 3
 done
 openshell sandbox get dogwatch > "$STATE/sandbox-get.txt" 2>&1 || true
-tr -d '' < "$STATE/sandbox-get.txt" | head -12 || true
-grep -qi "phase: *ready" "$STATE/sandbox-get.txt" || { echo "sandbox is not Ready"; exit 1; }
+sed 's/\[[0-9;]*m//g' "$STATE/sandbox-get.txt" > "$STATE/sandbox-get.clean.txt"
+head -12 "$STATE/sandbox-get.clean.txt" || true
+grep -qi "phase: *ready" "$STATE/sandbox-get.clean.txt" || { echo "sandbox is not Ready"; exit 1; }
