@@ -1,5 +1,6 @@
 # Stock NVIDIA provider profile from NVIDIA/OpenShell (providers/nvidia.yaml, Apache-2.0), with the binaries list
-# edited to the interpreters used by Dogwatch. Attached for the nvidia_build development route.
+# edited to the interpreters used by Dogwatch and the endpoint narrowed from access: read-write to the two calls the model
+# route makes (the prover on the running sandbox found the stock read-write access exceeds the boundary, run 41009598425). Attached for the nvidia_build development route.
 # Credential: NVIDIA_API_KEY, bearer, to integrate.api.nvidia.com only.
 id: nvidia
 display_name: NVIDIA
@@ -19,6 +20,8 @@ endpoints:
   - host: integrate.api.nvidia.com
     port: 443
     protocol: rest
-    access: read-write
     enforcement: enforce
+    rules:
+      - allow: { method: POST, path: /v1/chat/completions }
+      - allow: { method: GET, path: /v1/models }
 binaries: [/sandbox/.venv/bin/python3, /usr/bin/python3, /usr/bin/curl, /usr/local/bin/curl]

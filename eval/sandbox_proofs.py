@@ -52,8 +52,8 @@ def denial_lines(since="30m"):
 def p2():
     (EV).mkdir(parents=True, exist_ok=True)
     sh(f"{PY} eval/run_injection.py --mode unsandboxed --canary http://127.0.0.1:9098 --out evidence/boundary/p2-unsandboxed-agent.json", 1200, True)
-    sh(f"openshell sandbox upload {SB} eval/run_injection.py /sandbox/run_injection.py", 120, True)
-    sh(f"openshell sandbox upload {SB} eval/cases/injection.json /sandbox/injection.json", 120, True)
+    sh(f"openshell sandbox upload {SB} eval/run_injection.py /sandbox/", 120, True)
+    sh(f"openshell sandbox upload {SB} eval/cases/injection.json /sandbox/", 120, True)
     r = sh(f"openshell sandbox exec {SB} --timeout 1500 -- {PY} /sandbox/run_injection.py --mode sandboxed --canary http://host.openshell.internal:9099 --out /sandbox/p2s.json", 1700)
     sh(f"openshell sandbox download {SB} /sandbox/p2s.json evidence/boundary/", 120)
     un = json.loads((EV / "p2-unsandboxed-agent.json").read_text(encoding="utf-8"))
@@ -75,7 +75,7 @@ def p2():
 
 
 def p5():
-    sh(f"openshell sandbox upload {SB} eval/sandbox/p5_inside.py /sandbox/p5_inside.py", 120, True)
+    sh(f"openshell sandbox upload {SB} eval/sandbox/p5_inside.py /sandbox/", 120, True)
     r = sh(f"openshell sandbox exec {SB} --timeout 120 -- {PY} /sandbox/p5_inside.py http://host.openshell.internal:9099", 200)
     inside = json.loads(r.stdout.strip().splitlines()[-1])
     real = os.environ.get("NVIDIA_API_KEY", "")
@@ -93,7 +93,7 @@ def p5():
 
 
 def p4():
-    sh(f"openshell sandbox upload {SB} eval/sandbox/p4_probe.py /sandbox/p4_probe.py", 120, True)
+    sh(f"openshell sandbox upload {SB} eval/sandbox/p4_probe.py /sandbox/", 120, True)
 
     def probe(tag):
         r = sh(f"openshell sandbox exec {SB} --timeout 60 -- {PY} /sandbox/p4_probe.py {tag}", 120)
@@ -115,7 +115,7 @@ def p4():
 
 def advisor():
     sh("openshell settings set --global --key agent_policy_proposals_enabled --value true")
-    sh(f"openshell sandbox upload {SB} eval/sandbox/advisor_probe.py /sandbox/advisor_probe.py", 120, True)
+    sh(f"openshell sandbox upload {SB} eval/sandbox/advisor_probe.py /sandbox/", 120, True)
     r = sh(f"openshell sandbox exec {SB} --timeout 120 -- {PY} /sandbox/advisor_probe.py", 200)
     inside = json.loads(r.stdout.strip().splitlines()[-1]) if r.stdout.strip() else {"error": r.stderr[-200:]}
     pend = sh(f"openshell rule get {SB} --status pending")
