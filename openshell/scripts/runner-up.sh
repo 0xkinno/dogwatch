@@ -56,4 +56,4 @@ done
 openshell sandbox get dogwatch > "$STATE/sandbox-get.txt" 2>&1 || true
 sed 's/\[[0-9;]*m//g' "$STATE/sandbox-get.txt" > "$STATE/sandbox-get.clean.txt"
 head -12 "$STATE/sandbox-get.clean.txt" || true
-grep -qi "phase: *ready" "$STATE/sandbox-get.clean.txt" || { echo "sandbox is not Ready"; exit 1; }
+grep -qiE "phase:.*ready" "$STATE/sandbox-get.clean.txt" || { echo "sandbox is not Ready"; exit 1; }
