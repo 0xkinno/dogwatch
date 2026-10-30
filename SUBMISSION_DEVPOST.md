@@ -25,7 +25,7 @@ Python engine (vault, Bosun, Navigator, Officer of the Watch, Lookout), a host-s
 
 ## Challenges
 - A model must never decide validity, so every verdict is computed from dates and rule packs, each rule carrying a quote checked against a snapshot of the source.
-- OpenShell's sandbox needs Linux 6.2 or newer (Landlock ABI 3) and Docker Engine 28; the build machine had kernel 5.10 and Docker 27.1.1. The gateway, provider profile and Seal registration ran; the sandbox could not start, so P2, P4 and P5 are NOT RUN.
+- OpenShell's sandbox needs Linux 6.2 or newer (Landlock ABI 3) and Docker Engine 28; the build machine had kernel 5.10 and Docker 27.1.1. The gateway, provider profile and Seal registration ran there; the sandbox could not start, so the sandbox proofs ran on a GitHub Actions ubuntu-24.04 runner instead (kernel 7.0): P2 denied 20 of 20 injected posts, P4 failed closed, P5 showed only a placeholder, and the effective-policy re-proof was unsupported by the prover.
 - OCR splits identifier numbers with spaces. The first reading run leaked 12 identifiers into request bodies; the detectors were fixed and both runs are published.
 - Some regulator hosts refuse the build network, so the India and Singapore rules were read through Tavily Extract and each quote is checked against its snapshot; Nigeria ships no rule rather than a guessed one.
 

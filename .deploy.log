@@ -1,20 +1,19 @@
 <claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
 Vercel CLI 64.5.0 (Node.js 24.14.1)
 Deploying dogwatch
-Uploading [--------------------] (0.0B/41.5KB)
-Uploading [======--------------] (14.4KB/41.5KB)
-Uploading [==========----------] (20.9KB/41.5KB)
-Uploading [================----] (34.8KB/41.5KB)
-Uploading [====================] (41.5KB/41.5KB)
-  Inspect         https://vercel.com/kinnoskis-projects/dogwatch/5eBvQoR1vTF7Zu8ZmYgk6MDatyKC
-  Production      https://dogwatch-8sq6nslcc-kinnoskis-projects.vercel.app
+Uploading [--------------------] (0.0B/41.8KB)
+Uploading [======--------------] (14.2KB/41.8KB)
+Uploading [==========----------] (21.0KB/41.8KB)
+Uploading [====================] (41.8KB/41.8KB)
+  Inspect         https://vercel.com/kinnoskis-projects/dogwatch/BYEX5tn1VEzhfkNGfQF8mWxBgDpR
+  Production      https://dogwatch-qv9xd3u6t-kinnoskis-projects.vercel.app
 Building…
 Building…
 Running build in Washington, D.C., USA (East) – iad1
 Build machine configuration: 2 cores, 8 GB
 Retrieving list of deployment files...
 Downloading 135 deployment files...
-Restored build cache from previous deployment (AorXJezJP29J7Gxaehn2Qu1v4NvX)
+Restored build cache from previous deployment (5eBvQoR1vTF7Zu8ZmYgk6MDatyKC)
 Running "vercel build"
 Vercel CLI 65.4.0
 Installing dependencies...
@@ -29,7 +28,7 @@ npm warn Unknown env config "cache-dir". This will stop working in the next majo
 > next build
 ▲ Next.js 15.5.28
 Creating an optimized production build ...
-✓ Compiled successfully in 7.3s
+✓ Compiled successfully in 5.5s
 Linting and checking validity of types ...
 Collecting page data ...
 Generating static pages (0/11) ...
@@ -54,24 +53,24 @@ Route (app)                                 Size  First Load JS
 ├ chunks/4bd1b696-c023c6e3521b1417.js  54.2 kB
 └ other shared chunks (total)          1.92 kB
 ○  (Static)  prerendered as static content
-Traced Next.js server files in: 154.06ms
-Created all serverless functions in: 334.935ms
-Collected static files (public/, static/, .next/static): 8.303ms
-Build Completed in /vercel/output [44s]
+Traced Next.js server files in: 132.602ms
+Created all serverless functions in: 248.248ms
+Collected static files (public/, static/, .next/static): 11.944ms
+Build Completed in /vercel/output [34s]
 Deploying outputs...
-[2K[1A[2K[G  Production      https://dogwatch-8sq6nslcc-kinnoskis-projects.vercel.app
+[2K[1A[2K[G  Production      https://dogwatch-qv9xd3u6t-kinnoskis-projects.vercel.app
 Completing…
 ▲ Aliased         https://dogwatch-eight.vercel.app
 {
   "status": "ok",
   "deployment": {
-    "id": "dpl_5eBvQoR1vTF7Zu8ZmYgk6MDatyKC",
-    "url": "https://dogwatch-8sq6nslcc-kinnoskis-projects.vercel.app",
+    "id": "dpl_BYEX5tn1VEzhfkNGfQF8mWxBgDpR",
+    "url": "https://dogwatch-qv9xd3u6t-kinnoskis-projects.vercel.app",
     "productionUrl": "https://dogwatch-eight.vercel.app",
-    "inspectorUrl": "https://vercel.com/kinnoskis-projects/dogwatch/5eBvQoR1vTF7Zu8ZmYgk6MDatyKC",
+    "inspectorUrl": "https://vercel.com/kinnoskis-projects/dogwatch/BYEX5tn1VEzhfkNGfQF8mWxBgDpR",
     "readyState": "READY",
     "target": "production",
-    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_5eBvQoR1vTF7Zu8ZmYgk6MDatyKC",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_BYEX5tn1VEzhfkNGfQF8mWxBgDpR",
     "buildMachine": {
       "cores": 2,
       "memory": 8192,
@@ -83,14 +82,14 @@ Completing…
       "vercel_authentication"
     ]
   },
-  "message": "Deployment dogwatch-8sq6nslcc-kinnoskis-projects.vercel.app ready. Production URL: https://dogwatch-eight.vercel.app",
+  "message": "Deployment dogwatch-qv9xd3u6t-kinnoskis-projects.vercel.app ready. Production URL: https://dogwatch-eight.vercel.app",
   "next": [
     {
       "command": "vercel curl https://dogwatch-eight.vercel.app",
       "when": "Verify deployment, including when Deployment Protection is enabled"
     },
     {
-      "command": "vercel inspect dogwatch-8sq6nslcc-kinnoskis-projects.vercel.app",
+      "command": "vercel inspect dogwatch-qv9xd3u6t-kinnoskis-projects.vercel.app",
       "when": "Inspect deployment"
     },
     {

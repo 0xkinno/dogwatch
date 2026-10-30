@@ -44,9 +44,9 @@ NOT RUN: no key (billing needs a card and the available cards were declined). Th
 | Sandbox image | LIVE RUN | `openshell/sandbox/Dockerfile`, 285 MB, Python venv, Tesseract, Dogwatch core |
 | `openshell sandbox create` | NOT RUN to completion | with Docker 27.1.1: `Docker responded with status code 500: getent unable to find entry "1000:1000" in passwd database` (Docker 28 is required). With Docker 28.0.4: container created, then `ControlSupervisorStartFailed: Docker sandbox exited before supervisor became ready` |
 | Why the supervisor exits | diagnosed | the support matrix requires the Landlock LSM at ABI 3 or newer, introduced in Linux 6.2; this kernel is 5.10.102 |
-| Content-guard example smoke test | NOT RUN | it needs the sandbox |
-| Policy advisor | NOT RUN | needs a running sandbox |
-| Sandboxed call, P2, P4, P5, advisor | NOT RUN | need a Linux 6.2 host. WSL cannot run a 6.x kernel on this Windows build (WSL 2.9.13 failed with HCS_E_INVALID_JSON and was rolled back), so `.github/workflows/sandbox-proofs.yml` runs them on a GitHub Actions ubuntu-24.04 runner; it needs the repository secret NVIDIA_API_KEY and prints the runner's kernel and LSM list first |
+| Content-guard example smoke test | NOT RUN | not attempted on the runner |
+| Policy advisor | LIVE RUN (runner, run 2) | a denied request became a pending proposal, rejected from the CLI |
+| Sandboxed call, P2, P4, P5, advisor | LIVE RUN on a GitHub Actions ubuntu-24.04 runner | WSL cannot run a 6.x kernel on this Windows build (WSL 2.9.13 failed with HCS_E_INVALID_JSON and was rolled back), so `.github/workflows/sandbox-proofs.yml` ran them on the runner (kernel 7.0, Landlock present): P2 denied 20 of 20 injected posts, P4 failed closed, P5 showed a placeholder, the advisor flow produced a proposal in run 2. See `PROOF.md` |
 | Boundary prover | LIVE RUN | results below |
 
 ### Prover results (`evidence/prover/`, re-run after the NVIDIA door and the sandbox user were added to the policy)
