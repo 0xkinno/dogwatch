@@ -1,5 +1,29 @@
 {
  "facts": {
+  "live.emails_sent": {
+   "claim": "Packet emails delivered through Resend in the live flow",
+   "source": "eval/results/live_flow.json#email.sent",
+   "tag": "MEASURED",
+   "value": 1
+  },
+  "live.ledger_days": {
+   "claim": "Sea-service days in the last five years after the discharge-book photo was read (days, both endpoints)",
+   "source": "eval/results/live_flow.json#ledger",
+   "tag": "MEASURED",
+   "value": 480
+  },
+  "live.p11_duplicates": {
+   "claim": "Duplicate sends after restart on the live transport",
+   "source": "eval/results/live_flow.json#p11_live.duplicate_sends",
+   "tag": "MEASURED",
+   "value": 0
+  },
+  "live.p11_sends": {
+   "claim": "Emails sent after a kill and restart on the live transport (P11)",
+   "source": "eval/results/live_flow.json#p11_live.emails_sent",
+   "tag": "MEASURED",
+   "value": 1
+  },
   "need.contract_floor": {
    "claim": "Six months at that floor (USD)",
    "source": "evidence/need/sources.json#ilo-wage-2027 x 6",
@@ -197,6 +221,18 @@
    "source": "eval/results/p7_conventions.json#rules_stating_a_convention",
    "tag": "MEASURED",
    "value": 0
+  },
+  "p7v2.flips": {
+   "claim": "Of those, histories whose verdict flips between conventions",
+   "source": "eval/results/p7_conventions_v2.json#flips",
+   "tag": "MEASURED",
+   "value": 12
+  },
+  "p7v2.histories": {
+   "claim": "India and Singapore sea-service histories checked under every convention (set v2)",
+   "source": "eval/results/p7_conventions_v2.json#histories",
+   "tag": "MEASURED",
+   "value": 56
   },
   "p8.bodies": {
    "claim": "Outgoing model request bodies scanned for identifiers",

@@ -93,6 +93,18 @@ def build() -> dict:
     if p11:
         add("p11.sends", "Emails sent after a kill and restart with one pending approval (local capture transport)", p11["sends_observed"], "eval/results/p11_restart.json#sends_observed")
         add("p11.duplicates", "Duplicate sends after restart", p11["duplicate_sends"], "eval/results/p11_restart.json#duplicate_sends")
+    p7b = load("p7_conventions_v2.json")
+    if p7b:
+        add("p7v2.histories", "India and Singapore sea-service histories checked under every convention (set v2)", p7b["histories"], "eval/results/p7_conventions_v2.json#histories")
+        add("p7v2.flips", "Of those, histories whose verdict flips between conventions", p7b["flips"], "eval/results/p7_conventions_v2.json#flips")
+    lf = load("live_flow.json")
+    if lf:
+        add("live.emails_sent", "Packet emails delivered through Resend in the live flow", int(bool(lf["email"]["sent"])), "eval/results/live_flow.json#email.sent")
+        add("live.p11_sends", "Emails sent after a kill and restart on the live transport (P11)", lf["p11_live"]["emails_sent"], "eval/results/live_flow.json#p11_live.emails_sent")
+        add("live.p11_duplicates", "Duplicate sends after restart on the live transport", lf["p11_live"]["duplicate_sends"], "eval/results/live_flow.json#p11_live.duplicate_sends")
+        add("live.ledger_days", "Sea-service days in the last five years after the discharge-book photo was read (days, both endpoints)", lf["ledger"]["days_five_years_inclusive"], "eval/results/live_flow.json#ledger")
+    for nm, key in (("p2", "p2_injection.json"), ("p4", "p4_fail_closed.json"), ("p5", "p5_credential.json")):
+        pass
     src = ROOT / "evidence" / "need" / "sources.json"
     if src.exists():
         by = {s["id"]: s for s in json.loads(src.read_text(encoding="utf-8"))["sources"]}
