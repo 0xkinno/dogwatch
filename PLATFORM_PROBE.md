@@ -30,7 +30,7 @@ Nebius Token Factory is the submission target. No Token Factory key exists (the 
 
 ### Route: Nebius Token Factory
 
-NOT RUN. No key. Model ids in `routes.py` for this route are the ones named in the build notes and remain marked unconfirmed until the probe runs.
+NOT RUN: no key (billing needs a card and the available cards were declined). The switch script was dry-run on 2026-10-30 with a fake key: `scripts/switch_to_tokenfactory.sh` reached `GET https://api.tokenfactory.nebius.com/v1/models` and stopped at the auth step with HTTP 401, leaving `.env` untouched. Model ids for this route stay marked unconfirmed until a real probe runs.
 
 ## OpenShell (release 0.1.6)
 
@@ -46,7 +46,7 @@ NOT RUN. No key. Model ids in `routes.py` for this route are the ones named in t
 | Why the supervisor exits | diagnosed | the support matrix requires the Landlock LSM at ABI 3 or newer, introduced in Linux 6.2; this kernel is 5.10.102 |
 | Content-guard example smoke test | NOT RUN | it needs the sandbox |
 | Policy advisor | NOT RUN | needs a running sandbox |
-| Sandboxed call, P2, P4, P5 | NOT RUN | need the sandbox |
+| Sandboxed call, P2, P4, P5, advisor | NOT RUN | need a Linux 6.2 host. WSL cannot run a 6.x kernel on this Windows build (WSL 2.9.13 failed with HCS_E_INVALID_JSON and was rolled back), so `.github/workflows/sandbox-proofs.yml` runs them on a GitHub Actions ubuntu-24.04 runner; it needs the repository secret NVIDIA_API_KEY and prints the runner's kernel and LSM list first |
 | Boundary prover | LIVE RUN | results below |
 
 ### Prover results (`evidence/prover/`, re-run after the NVIDIA door and the sandbox user were added to the policy)

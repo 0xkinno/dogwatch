@@ -15,7 +15,7 @@ def test_status_is_measured_not_hardcoded(monkeypatch):
     assert s["model_route"]["state"] == "NOT_CONFIGURED" and s["tavily"]["state"] == "NOT_CONFIGURED"
     assert s["model_route"]["route_label"] == "Route: NVIDIA API Catalog (development)"
     assert s["sandboxed"] is False and "substitute" in s["host"]
-    assert s["rule_packs"]["in-dgs"]["status"] == "unsourced"
+    assert s["rule_packs"]["in-dgs"]["status"] == "sourced" and s["rule_packs"]["ng-nimasa"]["status"] == "unsourced"
 
 
 def test_readiness_arjun_day_42():

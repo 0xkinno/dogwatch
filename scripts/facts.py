@@ -105,6 +105,20 @@ def build() -> dict:
         add("live.ledger_days", "Sea-service days in the last five years after the discharge-book photo was read (days, both endpoints)", lf["ledger"]["days_five_years_inclusive"], "eval/results/live_flow.json#ledger")
     for nm, key in (("p2", "p2_injection.json"), ("p4", "p4_fail_closed.json"), ("p5", "p5_credential.json")):
         pass
+    import collections
+    agg = collections.defaultdict(lambda: {"calls": 0, "tokens": 0})
+    for f in (ROOT / "evidence" / "receipts").glob("*.jsonl"):
+        if f.name.startswith("probe-"):
+            continue
+        for line in f.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                r = json.loads(line)
+                a = agg[r["role"]]
+                a["calls"] += 1
+                a["tokens"] += r["tokens_in"] + r["tokens_out"]
+    for role, a in agg.items():
+        add(f"routing.{role}.calls", f"Model calls recorded for the {role} role", a["calls"], "evidence/receipts/*.jsonl")
+        add(f"routing.{role}.tokens", f"Tokens (in plus out) recorded for the {role} role", a["tokens"], "evidence/receipts/*.jsonl")
     src = ROOT / "evidence" / "need" / "sources.json"
     if src.exists():
         by = {s["id"]: s for s in json.loads(src.read_text(encoding="utf-8"))["sources"]}

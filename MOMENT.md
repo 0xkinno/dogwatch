@@ -20,13 +20,17 @@ Dogwatch computes it from his own certificates, on his own machine, and answers 
 
 Money figure: a six month contract measured at the ILO floor is 6 x US$704 = US$4,224. `tests/test_sources.py` reads the 704 from `evidence/need/sources.json` and asserts the arithmetic.
 
-## Not yet read from the source (so not used)
+## Read through Tavily Extract (2026-10-30)
 
-- India DG Shipping revalidation circulars: the host refused connections from the build machine.
-- Singapore MPA Shipping Circular 3 of 2026: the page returned 404 to automated fetches.
+This network cannot reach the DG Shipping or MPA hosts, so Tavily Extract fetched them from its own servers and the text is snapshotted under `core/rulepacks/*/sources/`.
+
+- Singapore: MPA Shipping Circular 3 of 2026. Applications for revalidation not more than twelve months before expiry; twelve months in the preceding five years, or three months in the preceding six, of seagoing service; at least six months of remaining validity.
+- India: DG Shipping TEAP Part B manual (2019), Appendix 1/11F. A revalidation course, plus one year of approved seagoing service in the five years before applying. The manual is dated; confirm currency with the administration. India has no renewal-window rule, so the engine answers `ASK_ADMINISTRATION` for it.
+
+## Not read (so not used)
+
 - Paris MoU annual report deficiency tables: not fetched.
-
-Until those are read, the India and Singapore packs hold no rules and the engine answers `ASK_ADMINISTRATION` for anything that needs them. `evidence/need/sources.json` lists each with its status.
+- Nigeria NIMASA: no source read, so the pack ships no rule.
 
 ## The founder stake
 

@@ -44,3 +44,12 @@ jobs:
       - run: cd web && npm ci
       - run: cd web && npx tsc --noEmit
       - run: cd web && npx next build
+  links:
+    name: links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-retries 2 --timeout 30 --accept "200..=299,301,302,403,429,999" --exclude "localhost" --exclude "shields.io" --exclude "0xkinno/dogwatch/actions" README.md JUDGE.md MOMENT.md PROOF.md EVIDENCE.md SPONSOR_INTEL.md SUBMISSION_DEVPOST.md
+          fail: true

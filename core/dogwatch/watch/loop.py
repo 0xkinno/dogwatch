@@ -96,7 +96,8 @@ class Watch:
         if created:
             self.budget.allow("lapse" if lapse else "approval", today)
             self.notifier.post_draft(self.state.draft(draft_id))
-        reply = f"{result['summary']} {pl['text']} Packet {short(pk['digest'])} ready: approve?"
+        body = pl["text"] if pl["text"].startswith(("Not ready", "Ready", "Cannot verify")) else f"{result['summary']} {pl['text']}"
+        reply = f"{body} Packet {short(pk['digest'])} ready: approve?"
         return {"label": "contract_offer", "triage": t, "result": result, "plan": pl, "draft_id": draft_id,
                 "digest": pk["digest"], "reply": reply, "duplicate": not created}
 

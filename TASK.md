@@ -55,13 +55,13 @@ Dogwatch build tasks, in dependency order. Mark a task `[x]` only when it is com
 - [x] Nano triage of incoming messages (no tools)
 - [x] Ultra plan writer around locked value tokens; free-digit check falls back to template
 - [x] Interruption budget in code (two questions per day; lapses and approvals always pass)
-- [ ] Radio Officer: Telegram pairing and long polling
+- [x] Radio Officer: Telegram pairing and long polling
 - [x] Approval tokens bound to packet digest; single use; expiry
 - [x] Recipient allowlist
 - [x] Rehydration and PDF packet built host side
-- [ ] Email send to the test "manning agent" inbox; record in `evidence/actions/` with recipient redacted
-- [ ] `.ics` booking window sent to Telegram
-- [ ] Discharge-book photo flow updates the ledger
+- [x] Email send to the test "manning agent" inbox; record in `evidence/actions/` with recipient redacted
+- [x] `.ics` booking window sent to Telegram
+- [x] Discharge-book photo flow updates the ledger
 - [x] Lookout drift watch with Tavily Search and Extract, domain and keyword gates, review items only
 - [x] Six skills with `SKILL.md` and CLI entries
 

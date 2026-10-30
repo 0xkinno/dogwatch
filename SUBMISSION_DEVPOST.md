@@ -12,7 +12,7 @@ An always-on, private assistant that keeps a seafarer's certificates under his c
 Personal AI
 
 ## Route statement (put this first in the description)
-Every live model result in this submission ran on the NVIDIA API Catalog (build.nvidia.com), the development route for the same Nemotron models, because a Nebius Token Factory key could not be obtained (the promotional credit could not be claimed because of card restrictions). Token Factory is the intended target: the client defaults to it whenever `NEBIUS_API_KEY` exists, and `scripts/switch_to_tokenfactory.sh` re-runs the probe and the evidence on it. Nothing in this submission is described as a Token Factory run.
+Every live model result in this submission ran on the NVIDIA API Catalog (build.nvidia.com), the development route for the same Nemotron models. Nebius Token Factory could not be used: its billing requires a card and the available cards were declined, so no key was issued. The Token Factory route is built and tested in code (the client defaults to it whenever `NEBIUS_API_KEY` exists, the provider-integrity test allows exactly those two hosts, and `scripts/switch_to_tokenfactory.sh` re-runs the probe and the evidence on it; its dry run with a fake key fails only at the auth step). It has not been run, and nothing here is described as a Token Factory run.
 
 ## Inspiration
 Arjun is a Second Officer on a product tanker with twenty minutes of internet a day. A manning agent offers him six months, and one certificate lapses in the middle of it. He would find out at the agency desk, not at sea. The builder is pursuing STCW certification and wanted the papers watched by something that does not need to see them.
@@ -27,7 +27,7 @@ Python engine (vault, Bosun, Navigator, Officer of the Watch, Lookout), a host-s
 - A model must never decide validity, so every verdict is computed from dates and rule packs, each rule carrying a quote checked against a snapshot of the source.
 - OpenShell's sandbox needs Linux 6.2 or newer (Landlock ABI 3) and Docker Engine 28; the build machine had kernel 5.10 and Docker 27.1.1. The gateway, provider profile and Seal registration ran; the sandbox could not start, so P2, P4 and P5 are NOT RUN.
 - OCR splits identifier numbers with spaces. The first reading run leaked 12 identifiers into request bodies; the detectors were fixed and both runs are published.
-- Some regulator pages could not be read from the build machine, so those rule packs ship no rules rather than guessed ones.
+- Some regulator hosts refuse the build network, so the India and Singapore rules were read through Tavily Extract and each quote is checked against its snapshot; Nigeria ships no rule rather than a guessed one.
 
 ## Accomplishments
 - Nemotron alone against an independent oracle (60 profiles): Super 30 correct with 22 false-safe, Ultra 47 correct with 8 false alarms, Navigator 60 correct.
@@ -41,7 +41,7 @@ Python engine (vault, Bosun, Navigator, Officer of the Watch, Lookout), a host-s
 Sourced rules do not state a counting convention for sea service, and 7 of 60 histories near the thresholds flip verdict with it. A literal guard misses most encodings. Thinking on used about ten times the tokens and time of thinking off on one real extraction. Listed models are not always callable: one Nemotron id in the catalog list returned 404.
 
 ## What's next
-Run the probe and the evidence on Token Factory when a key exists, run the sandbox proofs (P2, P4, P5) on a Linux 6.2 host, read the India and Singapore sources, and send the first live Telegram and email packet.
+Run the probe and the evidence on Token Factory when a key exists, run the sandbox proofs (P2, P4, P5) on a Linux 6.2 runner, and read the Nigeria and Paris MoU sources.
 
 ## Built with
 NVIDIA Nemotron, NVIDIA OpenShell, Tavily, Python, FastAPI, gRPC, Next.js, TypeScript, Framer Motion, Playwright.
@@ -60,27 +60,34 @@ New, created in the submission period. The first commit is dated 2026-10-28.
 
 ## Feedback on Nebius Token Factory, AI Cloud and NVIDIA tools
 
-Written to be specific and reproducible; the long form is `FRICTION.md`.
+Specific and reproducible; the long form is `FRICTION.md`.
 
-**Which Nemotron models and why.** Nano (`nvidia/nemotron-3-nano-omni-30b-a3b-reasoning`) for triage and drift reading, because those are frequent, short, untrusted-text jobs where latency and cost matter and a wrong answer is caught by a gate. Super (`nvidia/nemotron-3.5-super-vl-120b-a12b`) for structuring documents into fields with quotes, because it followed the schema and returned verifiable quotes (39 of 40 specimens exact). Ultra (`nvidia/nemotron-3-ultra-550b-a55b`) only when a verdict needs a plan written around locked values, because it was about 2.35 times slower than Super on the same prompts and is not needed for extraction.
+**Which Nemotron models, with the real ids from the receipts, and why.** Triage and drift reading: `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning`, because these are frequent short jobs over untrusted text where a wrong answer is caught by a gate (4 and 36 recorded calls). Structuring: `nvidia/nemotron-3.5-super-vl-120b-a12b`, because it followed the schema and returned quotes that code could verify (42 calls, 39 of 40 specimens exact). Plan writing: `nvidia/nemotron-3-ultra-550b-a55b`, only when a verdict needs a plan; in the recorded runs it answered HTTP 503 (busy), so a labelled template was used and zero plan calls completed. It was about 2.35 times slower than Super on the same prompts.
 
-**Approach.** Code decides, models explain. A model structures placeholder text, code verifies each quote and parses each date, the Navigator computes verdicts, and a model writes prose around value tokens with a free-digit check that falls back to a template. A supervisor middleware (the Seal) refuses any request carrying a vault value, and the OpenShell prover checks the policy against a boundary.
+**Approach.** Code decides, models explain. A model structures placeholder text, code verifies each quote and parses each date, the Navigator computes verdicts, and a model writes prose around value tokens with a free-digit check that falls back to a template. A supervisor middleware (the Seal) refuses requests carrying a vault value, and NVIDIA's prover checks the policy against a boundary.
 
-**Comparison.** Nemotron alone against the engine on 60 pre-registered profiles: Super said READY on 22 that were not ready; Ultra had none of those but 8 false alarms; the engine matched all 60. Thinking on versus off: about ten times the tokens and time. The Navigator's score is on a self-built set and is not the headline.
+**Comparison.** Nemotron alone against the engine on 60 pre-registered profiles: Super said READY on 22 that were not ready; Ultra had none of those but 8 false alarms; the engine matched all 60 (a self-built set, so not the headline). Thinking on versus off on one real extraction: about ten times the tokens and time, 1,093 versus 113 output tokens.
 
-**What worked on Nebius.** Not tested live. The Token Factory key could not be obtained (promotional credit blocked by card restrictions), so every live run used the NVIDIA API Catalog. What worked there: `chat_template_kwargs.enable_thinking=false`, server-side JSON schema enforcement (3 of 3 trials), and OpenAI-compatible calls. What did not: a model listed by `GET /models` that returned 404 on chat, and HTTP 503 worker limits on the largest models, which the client retries.
+**What worked on Nebius.** Nothing could be tested: Token Factory billing requires a card and the available cards were declined, so no key was issued. Onboarding rating below reflects that. What worked on the NVIDIA API Catalog, which is the route that ran: OpenAI-compatible calls, `chat_template_kwargs.enable_thinking=false`, and server-side JSON schema enforcement (3 of 3 trials). What did not: a model listed by `GET /models` that returned 404 on chat, and HTTP 503 worker limits on the largest models, which the client retries.
 
-**Ratings, 1 to 10, with reasons** (for what was actually used):
-- NVIDIA API Catalog and Nemotron: 8. Fast, OpenAI-compatible, schema enforced; loses points for listed-but-uncallable ids and 503s on the largest models.
-- NVIDIA OpenShell: 7. The prover, policy schema and supervisor middleware contract are excellent and well documented; loses points because a sandbox failure on an unsupported kernel or Docker version gives a message that does not name the cause (see FRICTION.md items 8 and 9).
-- Nebius Token Factory: not rated, not used live.
-- Nebius AI Cloud: not rated, not used.
+**Ratings, 1 to 10, with a short why** (from real use):
+- Nemotron (via the NVIDIA API Catalog): 8. Strong at structuring with quotes and following a schema; loses points for 503s on Ultra and listed-but-uncallable ids.
+- NVIDIA OpenShell: 7. The prover, policy schema and middleware contract are excellent and documented; loses points because an unsupported kernel or Docker version gives an error that does not name the cause (FRICTION.md items 8 and 9).
+- Tavily: 9. Search plus Extract worked at runtime and also fetched two government PDFs this network could not reach; loses a point for returning no text on some PDFs.
+- Nebius Token Factory onboarding: 2. A card is required and the available cards were declined, so no key was issued. Not rated on the product, which was never reached.
+- Nebius AI Cloud: not used.
 
 **Tavily runtime use.** Yes. The Lookout calls Tavily Search and Extract at runtime for the weekly rule-drift watch: 52 live requests in the recorded run, gated by domain, keyword and a verified quote, producing review items only.
 
-**AI tools used.** An AI coding assistant (a large language model agent run in the terminal) helped write code and documents under the owner's direction and review; the owner approved every commit. Models used in the product: NVIDIA Nemotron (Nano, Super, Ultra). Third-party services: Tavily. Image: the hero image was generated by the owner with an image generator.
+**AI tools used.** AI_TOOLS: <Kinnoski fills this>
+
+**Learning questions (drafts).**
+- What surprised you? That a model alone said READY on 22 of 60 profiles, and that OCR damage, not the model, caused the identifier leaks.
+- What would you do differently? Read the sandbox kernel and Docker requirements first, and pre-register the injected-inbox set before building the Seal.
+- What did you learn about the tools? A literal guard misses most encodings; a decoder before the matcher fixes that. Listed models are not always callable. Thinking costs about ten times the tokens.
+- What next? Run the sandbox proofs on a Linux 6.2 runner, run the evidence on Token Factory when a key exists, and read the Nigeria and Paris MoU sources.
 
 ## Open items before submitting
-1. Demo video link.
+1. Demo video link, the AI_TOOLS line, and the sandbox-proofs workflow run (needs the NVIDIA_API_KEY repository secret).
 2. Confirm the repository About section shows the Apache-2.0 licence.
 3. Owner approval to submit.

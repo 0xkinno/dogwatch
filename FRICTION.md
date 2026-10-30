@@ -33,3 +33,9 @@ Not yet reached with a key. Items to be added from the probe: model ids returned
 - Devpost refuses plain HTTP fetches (HTTP 403), so the rules page was read in a browser.
 - Next.js 15.5 refuses TypeScript 7 (`The TypeScript 7 native compiler does not provide the JavaScript compiler API`); the project pins TypeScript 6.
 - Fontshare's licence page is script rendered, so its text cannot be fetched without a browser; the font files come from the public CSS API.
+
+## Reading sources from a blocked network
+
+16. **Tavily Extract fetched official government PDFs that this network could not reach** (MPA Shipping Circular 3 of 2026, the DG Shipping TEAP manual). It returned no text for some other PDFs (the DG Shipping revalidation PDF, an IRClass order), so a "no text" result must not be read as "empty document". Suggestion: return an extraction status and the byte length fetched.
+
+17. **WSL on Windows build 21996 cannot run a 6.x kernel.** `wsl --update` to WSL 2.9.13 failed with HCS_E_INVALID_JSON and was rolled back to the inbox WSL (kernel 5.10). OpenShell then cannot start a sandbox locally. Suggestion: a preflight that prints the kernel and Landlock ABI and says which Windows builds are supported.

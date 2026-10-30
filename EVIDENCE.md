@@ -22,5 +22,7 @@ Every claim in this repository points to a file here. States used throughout: LI
 | OpenShell gateway, provider profile, Seal registration | LIVE RUN | `PLATFORM_PROBE.md`, `openshell/scripts/` |
 | Tavily | LIVE RUN | `eval/results/p9_drift.json` |
 | Nebius Token Factory | NOT RUN (no key) | `scripts/switch_to_tokenfactory.sh` |
-| OpenShell sandbox, Telegram first message, email | NOT RUN | `PLATFORM_PROBE.md` |
+| Telegram and Resend live flow, P11 live | LIVE RUN (offer synthetic, approval by the driver, both labelled) | `evidence/actions/live-flow.json` |
+| India and Singapore rule packs | LIVE RUN (read through Tavily Extract) | `core/rulepacks/*/sources/` |
+| OpenShell sandbox | NOT RUN | `.github/workflows/sandbox-proofs.yml` |
 | P1 on the sandbox effective policy, P2, P4, P5 | NOT RUN (kernel below Landlock ABI 3) | `PROOF.md` |

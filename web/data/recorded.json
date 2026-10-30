@@ -1,7 +1,7 @@
 {
  "mode": "RECORDED",
- "run_id": "build-d310a8c",
- "recorded_at": "2026-10-29",
+ "run_id": "build-0e53a66",
+ "recorded_at": "2026-10-30",
  "persona": {
   "name": "Arjun Menon",
   "role": "Second Officer, product tanker",
@@ -35,7 +35,28 @@
     "day_y": null,
     "renewal": null,
     "rules": [],
-    "sea_service": []
+    "sea_service": [
+     {
+      "rule": {
+       "rule_id": "IN-SS-1Y-5Y",
+       "kind": "sea_service",
+       "quote": "of One year; performing functions appropriate to the certificate held, in the five years preceding the date of application for revalidation",
+       "url": "https://betadgs.dgshipping.gov.in/download/1758280208_68cd3a1056d42_1755346557-68a0767d5a3d1-201911091126031424111teapbmanual.pdf",
+       "section": "TEAP Part B, Appendix 1/11F, criterion A-1",
+       "retrieved": "2026-10-30",
+       "status": "TEAP manual dated 2019, read through Tavily Extract; the host refuses connections from the build network. Confirm currency with the administration",
+       "pack": "in-dgs",
+       "pack_sha256": "18a303183f84275e1ae3251a45e87738c77ea1537b5d1099c333906e7536ad35"
+      },
+      "verdict": "MEETS",
+      "agree": true,
+      "window": [
+       "2021-10-28",
+       "2026-10-27"
+      ],
+      "arithmetic": "days_inclusive=398 days vs 360; days_exclusive=396 days vs 360; calendar_months=13.1 months vs 12; days_360=13.2667 months vs 12; days_365=13.0849 months vs 12"
+     }
+    ]
    },
    {
     "document_id": "cec",
@@ -109,9 +130,9 @@
   "summary": "Not ready: Medical fitness certificate lapses 2027-03-14 (day 42 of 181).",
   "pack_hashes": {
    "au-amsa": "136d5ac374ff7c3d1d21ff3114c0640c69750733910132fb08f6fe295003d2b6",
-   "in-dgs": "806fa8153d1fa8dd35db695e25382746951671bd00fc2ae13a6867e973e8a5e9",
+   "in-dgs": "18a303183f84275e1ae3251a45e87738c77ea1537b5d1099c333906e7536ad35",
    "ng-nimasa": "2779d517201f08d7abd7ff6267047c0dd25fb7ac1df2e1f90ef79a65d4dd50db",
-   "sg-mpa": "ca3307b6065160108141580c75f3203e15d76c4622b25bebb9ae6e18cfb4f895",
+   "sg-mpa": "76d20a481990c6f7b0aa134c3158d994d2411ad7ea20fe214365aca02468e16b",
    "stcw-core": "f4d6d1f9f8cb2eb8421447d78bd780e3a82274e17701aef98ec3033c2727fbbe",
    "uk-mca": "598547d577eb08419df2a97e025b7d5520f62c34b4da318e4049789f558606b1"
   }
@@ -361,6 +382,90 @@
    "claim": "Duplicate sends after restart",
    "value": 0,
    "source": "eval/results/p11_restart.json#duplicate_sends",
+   "tag": "MEASURED"
+  },
+  "p7v2.histories": {
+   "claim": "India and Singapore sea-service histories checked under every convention (set v2)",
+   "value": 56,
+   "source": "eval/results/p7_conventions_v2.json#histories",
+   "tag": "MEASURED"
+  },
+  "p7v2.flips": {
+   "claim": "Of those, histories whose verdict flips between conventions",
+   "value": 12,
+   "source": "eval/results/p7_conventions_v2.json#flips",
+   "tag": "MEASURED"
+  },
+  "live.emails_sent": {
+   "claim": "Packet emails delivered through Resend in the live flow",
+   "value": 1,
+   "source": "eval/results/live_flow.json#email.sent",
+   "tag": "MEASURED"
+  },
+  "live.p11_sends": {
+   "claim": "Emails sent after a kill and restart on the live transport (P11)",
+   "value": 1,
+   "source": "eval/results/live_flow.json#p11_live.emails_sent",
+   "tag": "MEASURED"
+  },
+  "live.p11_duplicates": {
+   "claim": "Duplicate sends after restart on the live transport",
+   "value": 0,
+   "source": "eval/results/live_flow.json#p11_live.duplicate_sends",
+   "tag": "MEASURED"
+  },
+  "live.ledger_days": {
+   "claim": "Sea-service days in the last five years after the discharge-book photo was read (days, both endpoints)",
+   "value": 480,
+   "source": "eval/results/live_flow.json#ledger",
+   "tag": "MEASURED"
+  },
+  "routing.triage.calls": {
+   "claim": "Model calls recorded for the triage role",
+   "value": 4,
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED"
+  },
+  "routing.triage.tokens": {
+   "claim": "Tokens (in plus out) recorded for the triage role",
+   "value": 420,
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED"
+  },
+  "routing.structure.calls": {
+   "claim": "Model calls recorded for the structure role",
+   "value": 42,
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED"
+  },
+  "routing.structure.tokens": {
+   "claim": "Tokens (in plus out) recorded for the structure role",
+   "value": 15951,
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED"
+  },
+  "routing.drift.calls": {
+   "claim": "Model calls recorded for the drift role",
+   "value": 36,
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED"
+  },
+  "routing.drift.tokens": {
+   "claim": "Tokens (in plus out) recorded for the drift role",
+   "value": 61320,
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED"
+  },
+  "routing.p6.calls": {
+   "claim": "Model calls recorded for the p6 role",
+   "value": 120,
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED"
+  },
+  "routing.p6.tokens": {
+   "claim": "Tokens (in plus out) recorded for the p6 role",
+   "value": 36467,
+   "source": "evidence/receipts/*.jsonl",
    "tag": "MEASURED"
   },
   "need.ilo_wage": {
@@ -7534,17 +7639,17 @@
   }
  ],
  "receipts": {
-  "count": 197,
+  "count": 203,
   "by_model": {
    "nvidia_build|nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": {
-    "calls": 36,
-    "tokens_in": 59407,
-    "tokens_out": 1913
+    "calls": 40,
+    "tokens_in": 59791,
+    "tokens_out": 1949
    },
    "nvidia_build|nvidia/nemotron-3.5-super-vl-120b-a12b": {
-    "calls": 101,
-    "tokens_in": 27152,
-    "tokens_out": 6567
+    "calls": 103,
+    "tokens_in": 27444,
+    "tokens_out": 6829
    },
    "nvidia_build|nvidia/nemotron-3-ultra-550b-a55b": {
     "calls": 60,
@@ -7620,9 +7725,9 @@
    },
    "pack_hashes": {
     "au-amsa": "136d5ac374ff7c3d1d21ff3114c0640c69750733910132fb08f6fe295003d2b6",
-    "in-dgs": "806fa8153d1fa8dd35db695e25382746951671bd00fc2ae13a6867e973e8a5e9",
+    "in-dgs": "18a303183f84275e1ae3251a45e87738c77ea1537b5d1099c333906e7536ad35",
     "ng-nimasa": "2779d517201f08d7abd7ff6267047c0dd25fb7ac1df2e1f90ef79a65d4dd50db",
-    "sg-mpa": "ca3307b6065160108141580c75f3203e15d76c4622b25bebb9ae6e18cfb4f895",
+    "sg-mpa": "76d20a481990c6f7b0aa134c3158d994d2411ad7ea20fe214365aca02468e16b",
     "stcw-core": "f4d6d1f9f8cb2eb8421447d78bd780e3a82274e17701aef98ec3033c2727fbbe",
     "uk-mca": "598547d577eb08419df2a97e025b7d5520f62c34b4da318e4049789f558606b1"
    }
@@ -7630,7 +7735,7 @@
   "recipients": [
    "manning-agent@example.test"
   ],
-  "digest": "d57d9342582471051bb110adbaee9dfd601f6a4dd74dd6a2445afe544a026101",
+  "digest": "36823892e85df32b46597fece6f5bc5aaa8883b3059700e97a75bb50a7c7f2ac",
   "status": "PENDING",
   "plan_source": "TEMPLATE",
   "sent": []
@@ -7714,16 +7819,20 @@
   {
    "id": "sg-apply-12m",
    "claim": "Singapore MPA: revalidation applications not more than twelve months before expiry",
-   "url": "https://www.mpa.gov.sg/docs/mpalibraries/circulars-and-notices/sc_no_3_of_2026",
-   "status": "NOT_VERIFIED",
-   "note": "The page returned HTTP 404 to automated fetches. A search snippet mentions the twelve month rule, but the page itself was not read, so no rule is shipped for it."
+   "url": "https://www.mpa.gov.sg/api/media/ac83414c-6450-4a3a-94ca-3acf56ebab8f/sc_no_3_of_2026.pdf",
+   "status": "VERIFIED_VIA_TAVILY_EXTRACT",
+   "note": "The original page returned 404 from the build network. Tavily Extract fetched the official PDF from its own servers on 2026-10-30.",
+   "quote": "not submit applications for certificate revalidation more than twelve months prior to the certificate expiration date(s)",
+   "snapshot": "../../core/rulepacks/sg-mpa/sources/mpa_sc_3_of_2026.txt"
   },
   {
-   "id": "in-dgs-refresher",
-   "claim": "India DG Shipping: refresher course within 12 months before revalidation",
-   "url": "https://betadgs.dgshipping.gov.in/download/1758280393_68cd3ac9b33cf_revalidation-and-up-gradation-of-certificates.pdf",
-   "status": "NOT_VERIFIED",
-   "note": "The host did not accept connections from the build machine. No India rule is shipped until the document is read."
+   "id": "in-dgs-sea-service",
+   "claim": "India DG Shipping: one year of approved seagoing service in the five years before applying for revalidation, plus the revalidation course",
+   "url": "https://betadgs.dgshipping.gov.in/download/1758280208_68cd3a1056d42_1755346557-68a0767d5a3d1-201911091126031424111teapbmanual.pdf",
+   "status": "VERIFIED_VIA_TAVILY_EXTRACT",
+   "note": "TEAP Part B manual dated 2019. The host refuses connections from the build network; Tavily Extract fetched it on 2026-10-30. Confirm currency with the administration. The DG Shipping revalidation PDF named in the build notes returned no text through Tavily, so it was not used.",
+   "quote": "of One year; performing functions appropriate to the certificate held, in the five years preceding the date of application for revalidation",
+   "snapshot": "../../core/rulepacks/in-dgs/sources/dgs_teap_part_b_appendix_1_11F.txt"
   },
   {
    "id": "paris-mou-deficiencies",
@@ -7798,11 +7907,34 @@
    ]
   },
   "in-dgs": {
-   "rules": 0,
-   "status": "unsourced",
-   "sha256": "806fa8153d1fa8dd35db695e25382746951671bd00fc2ae13a6867e973e8a5e9",
+   "rules": 2,
+   "status": "sourced",
+   "sha256": "18a303183f84275e1ae3251a45e87738c77ea1537b5d1099c333906e7536ad35",
    "administration": "DG Shipping (India)",
-   "rule_list": []
+   "rule_list": [
+    {
+     "rule_id": "IN-SS-1Y-5Y",
+     "kind": "sea_service",
+     "quote": "of One year; performing functions appropriate to the certificate held, in the five years preceding the date of application for revalidation",
+     "url": "https://betadgs.dgshipping.gov.in/download/1758280208_68cd3a1056d42_1755346557-68a0767d5a3d1-201911091126031424111teapbmanual.pdf",
+     "section": "TEAP Part B, Appendix 1/11F, criterion A-1",
+     "retrieved": "2026-10-30",
+     "status": "TEAP manual dated 2019, read through Tavily Extract; the host refuses connections from the build network. Confirm currency with the administration",
+     "pack": "in-dgs",
+     "pack_sha256": "18a303183f84275e1ae3251a45e87738c77ea1537b5d1099c333906e7536ad35"
+    },
+    {
+     "rule_id": "IN-REVAL-COURSE",
+     "kind": "refresher",
+     "quote": "In addition to successful completion of revalidation course, candidate is required to fulfill any of the following criteria",
+     "url": "https://betadgs.dgshipping.gov.in/download/1758280208_68cd3a1056d42_1755346557-68a0767d5a3d1-201911091126031424111teapbmanual.pdf",
+     "section": "TEAP Part B, Appendix 1/11F, requirements",
+     "retrieved": "2026-10-30",
+     "status": "TEAP manual dated 2019, read through Tavily Extract. Confirm currency with the administration",
+     "pack": "in-dgs",
+     "pack_sha256": "18a303183f84275e1ae3251a45e87738c77ea1537b5d1099c333906e7536ad35"
+    }
+   ]
   },
   "ng-nimasa": {
    "rules": 0,
@@ -7812,11 +7944,56 @@
    "rule_list": []
   },
   "sg-mpa": {
-   "rules": 0,
-   "status": "unsourced",
-   "sha256": "ca3307b6065160108141580c75f3203e15d76c4622b25bebb9ae6e18cfb4f895",
+   "rules": 4,
+   "status": "sourced",
+   "sha256": "76d20a481990c6f7b0aa134c3158d994d2411ad7ea20fe214365aca02468e16b",
    "administration": "MPA (Singapore)",
-   "rule_list": []
+   "rule_list": [
+    {
+     "rule_id": "SG-WINDOW-12M",
+     "kind": "window_open",
+     "quote": "not submit applications for certificate revalidation more than twelve months prior to the certificate expiration date(s)",
+     "url": "https://www.mpa.gov.sg/api/media/ac83414c-6450-4a3a-94ca-3acf56ebab8f/sc_no_3_of_2026.pdf",
+     "section": "Shipping Circular 3 of 2026, paragraph 3",
+     "retrieved": "2026-10-30",
+     "status": "read through Tavily Extract of the official PDF; the original page was unreachable from the build network",
+     "pack": "sg-mpa",
+     "pack_sha256": "76d20a481990c6f7b0aa134c3158d994d2411ad7ea20fe214365aca02468e16b"
+    },
+    {
+     "rule_id": "SG-SS-12M-5Y",
+     "kind": "sea_service",
+     "quote": "twelve months in total during the preceding five years",
+     "url": "https://www.mpa.gov.sg/api/media/ac83414c-6450-4a3a-94ca-3acf56ebab8f/sc_no_3_of_2026.pdf",
+     "section": "Shipping Circular 3 of 2026, deck officer COCs, continued professional competence",
+     "retrieved": "2026-10-30",
+     "status": "read through Tavily Extract of the official PDF; the original page was unreachable from the build network",
+     "pack": "sg-mpa",
+     "pack_sha256": "76d20a481990c6f7b0aa134c3158d994d2411ad7ea20fe214365aca02468e16b"
+    },
+    {
+     "rule_id": "SG-SS-3M-6M",
+     "kind": "sea_service",
+     "quote": "three months in total during the preceding six months immediately prior to revalidating",
+     "url": "https://www.mpa.gov.sg/api/media/ac83414c-6450-4a3a-94ca-3acf56ebab8f/sc_no_3_of_2026.pdf",
+     "section": "Shipping Circular 3 of 2026, deck officer COCs, continued professional competence",
+     "retrieved": "2026-10-30",
+     "status": "read through Tavily Extract of the official PDF; the original page was unreachable from the build network",
+     "pack": "sg-mpa",
+     "pack_sha256": "76d20a481990c6f7b0aa134c3158d994d2411ad7ea20fe214365aca02468e16b"
+    },
+    {
+     "rule_id": "SG-MIN-VALIDITY-6M",
+     "kind": "application_constraint",
+     "quote": "must have at least six months remaining validity to be eligible for the COC revalidation process",
+     "url": "https://www.mpa.gov.sg/api/media/ac83414c-6450-4a3a-94ca-3acf56ebab8f/sc_no_3_of_2026.pdf",
+     "section": "Shipping Circular 3 of 2026, certificate requirements table notes",
+     "retrieved": "2026-10-30",
+     "status": "read through Tavily Extract of the official PDF; the original page was unreachable from the build network",
+     "pack": "sg-mpa",
+     "pack_sha256": "76d20a481990c6f7b0aa134c3158d994d2411ad7ea20fe214365aca02468e16b"
+    }
+   ]
   },
   "stcw-core": {
    "rules": 1,

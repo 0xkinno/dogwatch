@@ -16,13 +16,17 @@ PY="${PYTHON:-python}"
 [ -x .venv/Scripts/python.exe ] && PY=.venv/Scripts/python.exe
 
 set -a; . <(tr -d '\r' < .env | grep -E '^[A-Za-z_][A-Za-z0-9_]*='); set +a
+NEBIUS_API_KEY="${NEBIUS_API_KEY_OVERRIDE:-$NEBIUS_API_KEY}"   # the override exists only for the dry run
 : "${NEBIUS_API_KEY:?NEBIUS_API_KEY is empty in .env}"
+export NEBIUS_API_KEY
 
+if [ -z "${DRY_RUN:-}" ]; then
 if grep -q '^MODEL_ROUTE=' .env; then sed -i 's/^MODEL_ROUTE=.*/MODEL_ROUTE=tokenfactory/' .env; else echo 'MODEL_ROUTE=tokenfactory' >> .env; fi
+fi
 export MODEL_ROUTE=tokenfactory
 
-mkdir -p eval/results/devroute
-for f in p6_model_alone p8_reading p8_reading_v1 p9_drift p10_unattended p12_cost; do
+[ -z "${DRY_RUN:-}" ] && mkdir -p eval/results/devroute || true
+[ -n "${DRY_RUN:-}" ] || for f in p6_model_alone p8_reading p8_reading_v1 p9_drift p10_unattended p12_cost; do
   [ -f "eval/results/$f.json" ] && cp -n "eval/results/$f.json" "eval/results/devroute/$f.json"
 done
 

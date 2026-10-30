@@ -79,16 +79,20 @@
     {
       "id": "sg-apply-12m",
       "claim": "Singapore MPA: revalidation applications not more than twelve months before expiry",
-      "url": "https://www.mpa.gov.sg/docs/mpalibraries/circulars-and-notices/sc_no_3_of_2026",
-      "status": "NOT_VERIFIED",
-      "note": "The page returned HTTP 404 to automated fetches. A search snippet mentions the twelve month rule, but the page itself was not read, so no rule is shipped for it."
+      "url": "https://www.mpa.gov.sg/api/media/ac83414c-6450-4a3a-94ca-3acf56ebab8f/sc_no_3_of_2026.pdf",
+      "status": "VERIFIED_VIA_TAVILY_EXTRACT",
+      "note": "The original page returned 404 from the build network. Tavily Extract fetched the official PDF from its own servers on 2026-10-30.",
+      "quote": "not submit applications for certificate revalidation more than twelve months prior to the certificate expiration date(s)",
+      "snapshot": "../../core/rulepacks/sg-mpa/sources/mpa_sc_3_of_2026.txt"
     },
     {
-      "id": "in-dgs-refresher",
-      "claim": "India DG Shipping: refresher course within 12 months before revalidation",
-      "url": "https://betadgs.dgshipping.gov.in/download/1758280393_68cd3ac9b33cf_revalidation-and-up-gradation-of-certificates.pdf",
-      "status": "NOT_VERIFIED",
-      "note": "The host did not accept connections from the build machine. No India rule is shipped until the document is read."
+      "id": "in-dgs-sea-service",
+      "claim": "India DG Shipping: one year of approved seagoing service in the five years before applying for revalidation, plus the revalidation course",
+      "url": "https://betadgs.dgshipping.gov.in/download/1758280208_68cd3a1056d42_1755346557-68a0767d5a3d1-201911091126031424111teapbmanual.pdf",
+      "status": "VERIFIED_VIA_TAVILY_EXTRACT",
+      "note": "TEAP Part B manual dated 2019. The host refuses connections from the build network; Tavily Extract fetched it on 2026-10-30. Confirm currency with the administration. The DG Shipping revalidation PDF named in the build notes returned no text through Tavily, so it was not used.",
+      "quote": "of One year; performing functions appropriate to the certificate held, in the five years preceding the date of application for revalidation",
+      "snapshot": "../../core/rulepacks/in-dgs/sources/dgs_teap_part_b_appendix_1_11F.txt"
     },
     {
       "id": "paris-mou-deficiencies",

@@ -305,6 +305,54 @@
    "source": "eval/cases/prereg.json",
    "tag": "MEASURED",
    "value": "5d80256515ad2b45e2bb06566c63be1455957ab154731ef4e07ee0e73abc2fa9"
+  },
+  "routing.drift.calls": {
+   "claim": "Model calls recorded for the drift role",
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED",
+   "value": 36
+  },
+  "routing.drift.tokens": {
+   "claim": "Tokens (in plus out) recorded for the drift role",
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED",
+   "value": 61320
+  },
+  "routing.p6.calls": {
+   "claim": "Model calls recorded for the p6 role",
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED",
+   "value": 120
+  },
+  "routing.p6.tokens": {
+   "claim": "Tokens (in plus out) recorded for the p6 role",
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED",
+   "value": 36467
+  },
+  "routing.structure.calls": {
+   "claim": "Model calls recorded for the structure role",
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED",
+   "value": 42
+  },
+  "routing.structure.tokens": {
+   "claim": "Tokens (in plus out) recorded for the structure role",
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED",
+   "value": 15951
+  },
+  "routing.triage.calls": {
+   "claim": "Model calls recorded for the triage role",
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED",
+   "value": 4
+  },
+  "routing.triage.tokens": {
+   "claim": "Tokens (in plus out) recorded for the triage role",
+   "source": "evidence/receipts/*.jsonl",
+   "tag": "MEASURED",
+   "value": 420
   }
  },
  "generated_from": "eval/results and evidence/need"

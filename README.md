@@ -14,13 +14,15 @@ Dogwatch reads his certificates on his own machine, works out every expiry and s
 
 The idea underneath is simple. An assistant does not have to see your documents to help with them. The cloud model gets placeholders such as `[[COC_1]]`. A gateway outside the agent allows four destinations. A middleware called the Seal refuses any request that carries a vault value, even one that has been encoded. And no model is ever allowed to decide whether a certificate is valid, because on the same sixty profiles a model on its own said READY when it was not.
 
+**Three numbers worth remembering.** Nemotron Super on its own said READY on <!--fact:p6.super.false_safe-->22<!--/fact--> of <!--fact:p6.profiles-->60<!--/fact--> profiles that were not ready, so no model decides validity here. A literal guard let <!--fact:p3.literal.missed-->158<!--/fact--> of <!--fact:p3.attacks-->200<!--/fact--> encoded identifiers through, so a middleware that decodes before it matches stands at every door. And the sandbox run of 20 injected manning-agency emails with and without OpenShell (P2) is built and waiting for its first Linux 6.2 runner (NOT RUN, see [OpenShell](#nvidia-openshell)).
+
 | | |
 |---|---|
 | Live app | [dogwatch-eight.vercel.app](https://dogwatch-eight.vercel.app), API host [dogwatch-api.vercel.app](https://dogwatch-api.vercel.app/api/status) (Vercel, a substitute host: the product itself runs on the seafarer's machine) |
 | For judges | [JUDGE.md](JUDGE.md) |
 | Demo video | not recorded yet |
 | Track | Personal AI |
-| Built with | NVIDIA Nemotron (Nebius Token Factory is the submission target, see [Routes](#which-route-produced-which-result)), NVIDIA OpenShell, Tavily |
+| Built with | Nemotron on the NVIDIA API Catalog; Token Factory route built and tested in code, not run (see [Routes](#which-route-produced-which-result)). NVIDIA OpenShell. Tavily |
 
 ## Product screenshots
 
@@ -44,7 +46,7 @@ Arjun's moment, in present tense. A manning agent messages him: six months, join
 | STCW certificates are revalidated at intervals not exceeding five years. | [IMO STCW supplement, Regulation I/11](https://law.resource.org/pub/us/cfr/ibr/inc/imo/imo.stcw.supp.2017.pdf) | 2026-10-28 |
 | The ILO minimum monthly basic wage for an able seafarer is US$<!--fact:need.ilo_wage-->704<!--/fact--> from 1 January 2027, so six months is US$<!--fact:need.contract_floor-->4224<!--/fact-->. A floor, not Arjun's wage. | [ILO](https://www.ilo.org/resource/news/subcommittee-wages-seafarers-reaches-agreement-increase-seafarer-minimum) | 2026-10-28 |
 
-India DG Shipping and Singapore MPA sources could not be read from the build machine (the host refused connections, and the MPA page returned 404), so those packs ship no rules and the engine answers Ask administration for anything that needs them. See [MOMENT.md](MOMENT.md).
+The India DG Shipping and Singapore MPA hosts refuse this network, so those sources were read through Tavily Extract, which fetches from its own servers: Singapore from MPA Shipping Circular 3 of 2026, India from the DG Shipping TEAP Part B manual (2019, confirm currency). Only rules whose quotes a test verifies are shipped; India has no renewal-window rule, so the engine answers Ask administration for that. See [MOMENT.md](MOMENT.md).
 
 ## What Dogwatch does
 
@@ -58,7 +60,13 @@ What always reaches him: a lapse on an offered contract, and any approval reques
 
 ## Explore in 2 minutes
 
-Open [JUDGE.md](JUDGE.md). Offline, with no keys:
+Start on the live app, no login:
+
+1. Open [`/contract`](https://dogwatch-eight.vercel.app/contract). Arjun is NOT READY: the medical lapses on day 42 of 181, with the rule and its source quote on the page.
+2. Open [`/boundary`](https://dogwatch-eight.vercel.app/boundary). See the prover counterexamples and the Seal decisions.
+3. Open [`/proof`](https://dogwatch-eight.vercel.app/proof). Misses come first, case by case, with the route each run used.
+
+Then, offline with no keys (see [JUDGE.md](JUDGE.md) for the 3 and 10 minute paths):
 
 ```bash
 python -m venv .venv && . .venv/bin/activate
@@ -146,34 +154,44 @@ sequenceDiagram
 
 ## Which route produced which result
 
-Nebius Token Factory is the submission target. Its API key is not available to this project (the promotional credit could not be claimed because of card restrictions), so every live model result in this repository ran on the **NVIDIA API Catalog (development route)**, which serves the same Nemotron families. That route is chosen by `MODEL_ROUTE` in `core/dogwatch/model/routes.py`: Token Factory is the default whenever `NEBIUS_API_KEY` exists, `nvidia_build` otherwise. Exactly those two hosts are allowed, and `core/tests/test_provider_integrity.py` fails the build if any other inference host appears in the code.
+Nebius Token Factory is the target. No Token Factory key exists for this project: billing there needs a card, and the available cards were declined. So every live model result here ran on the **NVIDIA API Catalog (development route)**, which serves the same Nemotron families, and nothing is described as a Token Factory run.
+
+The code is ready for the day a key appears. `MODEL_ROUTE` in `core/dogwatch/model/routes.py` picks Token Factory whenever `NEBIUS_API_KEY` exists and the catalog otherwise. Exactly those two hosts are allowed, and `core/tests/test_provider_integrity.py` fails the build if any other inference host appears. `scripts/switch_to_tokenfactory.sh` re-runs the probe, P6, P8 and P12 on Token Factory; its dry run with a fake key was executed and fails only at the auth step (HTTP 401 from `GET /models`).
 
 | Result | Route |
 |---|---|
-| Probe, P6 against Nemotron, P8, P9, P10, P12 | Route: NVIDIA API Catalog (development) |
-| Anything on Nebius Token Factory | NOT RUN, `bash scripts/switch_to_tokenfactory.sh` re-runs the probe, P6, P8 and P12 the moment a key exists |
+| Probe, P6 against Nemotron, P8, P9, P10, P12, the live Telegram and email flow | Route: NVIDIA API Catalog (development) |
+| Anything on Nebius Token Factory | NOT RUN, no key |
 
-Every receipt records its route, `/api/status` reports it, the UI prints it next to each result, and every result file carries `route_label`. A run on one route is never described as a run on the other. Model ids differ between the routes and are confirmed from `GET /models` on each, not assumed.
+Every receipt records its route, `/api/status` reports it, the UI prints it beside each result and every result file carries `route_label`. Model ids differ between routes and are confirmed from `GET /models` plus a chat check on each, never assumed.
 
 ## NVIDIA OpenShell
 
-What ran, on this machine, and what did not (full table in [SDK_SURFACE.md](SDK_SURFACE.md)):
+OpenShell is the boundary. What it enforces, and where the evidence is (full table in [SDK_SURFACE.md](SDK_SURFACE.md)):
 
-| Primitive | State |
-|---|---|
-| Policy prover (`openshell-prover`, release 0.1.6) | LIVE RUN. The declared policy is within the boundary; <!--fact:p1.exceeds-->3<!--/fact--> of <!--fact:p1.attack_proposals-->5<!--/fact--> attack proposals exceed it with a counterexample, <!--fact:p1.unsupported-->1<!--/fact--> is refused as unsupported, <!--fact:p1.within-->1<!--/fact--> is within the boundary because OpenShell never authorizes a link-local destination |
-| Gateway, provider profile, Seal registration | LIVE RUN. The gateway started, the stock NVIDIA profile linted, imported and became a provider, the Seal registered and the gateway log names it, and a policy that referenced the Seal before registration was refused |
-| Dogwatch sandbox image | LIVE RUN (built) |
-| The sandbox itself, policy advisor, P2, P4, P5 | NOT RUN. The supervisor starts and exits before it is ready. OpenShell requires the Landlock LSM at ABI 3, introduced in Linux 6.2, and this WSL kernel is 5.10 |
-| Prover on the sandbox's effective policy | NOT RUN, needs the sandbox. The declared policy was checked instead |
+| Primitive | What it does for Dogwatch | Evidence |
+|---|---|---|
+| Policy prover (`openshell-prover` 0.1.6) | The declared policy is within the boundary; <!--fact:p1.exceeds-->3<!--/fact--> of <!--fact:p1.attack_proposals-->5<!--/fact--> attack proposals exceed it with a counterexample, <!--fact:p1.unsupported-->1<!--/fact--> is refused as unsupported, <!--fact:p1.within-->1<!--/fact--> is within because OpenShell never authorizes a link-local destination | LIVE RUN, [`openshell/scripts/prove.sh`](openshell/scripts/prove.sh), [`evidence/prover/`](evidence/prover/) |
+| Policy with L7 rules per binary and four doors | The model route, Tavily, the Radio Officer API and `policy.local`; every other destination denied | [`openshell/policy/dogwatch.yaml`](openshell/policy/dogwatch.yaml) |
+| Supervisor middleware (the Seal) | Registered with the gateway as `dogwatch-seal` with `on_error: fail_closed`; a policy naming it before registration is refused at admission | LIVE RUN, [`seal/seal/server.py`](seal/seal/server.py), gateway log in [`PLATFORM_PROBE.md`](PLATFORM_PROBE.md) |
+| Provider profiles and credential placeholders | The stock NVIDIA profile linted, imported and became a provider; the agent sees a placeholder and the gateway injects the key at egress | LIVE RUN (profile), [`openshell/profiles/`](openshell/profiles/) |
+| Sandbox, `policy.local` advisor, P2, P4, P5 | The sandbox image is built and the proof workflow is written | NOT RUN: needs a Linux 6.2 host. [`.github/workflows/sandbox-proofs.yml`](.github/workflows/sandbox-proofs.yml) runs P1 on the effective policy, P2, P4, P5 and the advisor flow on a GitHub Actions ubuntu-24.04 runner, labelled as that host and never as the seafarer's machine |
 
-Getting this far took two workarounds that are written up in [FRICTION.md](FRICTION.md): the installer cannot restart the gateway on WSL without systemd, and the Docker driver needs Engine 28 or newer (the machine had 27.1.1), so a second isolated 28.0.4 daemon ran on its own socket.
+The friction on the way (kernel 5.10 without Landlock ABI 3, Docker Engine 28, no systemd) is in [FRICTION.md](FRICTION.md).
 
 ## NVIDIA Nemotron
 
-Routing by job: Nano for triage and drift reading, Super for structuring, Ultra with a capped reasoning budget when a verdict needs a plan. Thinking is off for extraction. On one real extraction, thinking on used about ten times the tokens and time of thinking off (probe in `evidence/probe/nvidia_build.json`). JSON schema was enforced server side on that route in three of three trials, and a reply wrapped in prose or code fences still parses because the client extracts the first JSON object and allows one repair retry.
+Routing by job, with the real receipts behind each row (Route: NVIDIA API Catalog, development):
 
-Models answering chat on the development route today: `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning`, `nvidia/nemotron-3.5-super-vl-120b-a12b` and `nvidia/nemotron-3-ultra-550b-a55b`. The catalog also lists `nvidia/nemotron-3-super-120b-a12b`, which returned HTTP 404 when called, so the id list alone is not trusted.
+| Role | Model id | Thinking | Calls | Tokens (in plus out) | Why this model |
+|---|---|---|---|---|---|
+| Triage | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` | off | <!--fact:routing.triage.calls-->4<!--/fact--> | <!--fact:routing.triage.tokens-->420<!--/fact--> | short, frequent, untrusted text; a wrong label is caught by a gate |
+| Structure | `nvidia/nemotron-3.5-super-vl-120b-a12b` | off | <!--fact:routing.structure.calls-->42<!--/fact--> | <!--fact:routing.structure.tokens-->15951<!--/fact--> | followed the schema and returned quotes that code could verify (39 of 40 specimens exact) |
+| Drift reading | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` | off | <!--fact:routing.drift.calls-->36<!--/fact--> | <!--fact:routing.drift.tokens-->61320<!--/fact--> | many pages, cheap per page, and a person reviews every item |
+| Plan writer | `nvidia/nemotron-3-ultra-550b-a55b` | on, capped | 0 completed in the recorded runs | 0 | only when a verdict needs a plan; it answered HTTP 503 (busy) in the live flow, so a labelled deterministic template was used |
+| P6 contestants | Super and Ultra | off | <!--fact:routing.p6.calls-->120<!--/fact--> | <!--fact:routing.p6.tokens-->36467<!--/fact--> | the comparison against the engine |
+
+On one real extraction, thinking on used about ten times the tokens and time of thinking off (`evidence/probe/nvidia_build.json`). JSON schema was enforced server side in three of three trials on this route, and a reply wrapped in prose still parses because the client extracts the first JSON object and allows one repair retry. The catalog lists `nvidia/nemotron-3-super-120b-a12b`, which returned HTTP 404 on chat, so an id list alone is not trusted.
 
 ## Tavily
 
@@ -188,16 +206,36 @@ May not: decide validity, compute a date or a count, write a digit Arjun will ac
 
 | Service | State |
 |---|---|
-| Navigator, vault, Bosun, Radio Officer, Seal, Lookout logic | LOCAL BUILD, tested (132 tests across three packages) |
+| Navigator, vault, Bosun, ledger reader, Radio Officer, Seal, Lookout | LOCAL BUILD, tested (134 tests across three packages) |
 | Nemotron on the NVIDIA API Catalog | LIVE RUN (development route) |
-| Nemotron on Nebius Token Factory | NOT RUN, no key |
-| Tavily | LIVE RUN |
-| OpenShell prover, gateway, Seal registration | LIVE RUN |
-| OpenShell sandbox, advisor | NOT RUN, kernel below Landlock ABI 3 |
-| Telegram | bot verified (`getMe`), first message NOT RUN until the owner opens the bot |
-| Email | NOT RUN. Gmail SMTP is blocked on this network, and Resend needs a key |
+| Nemotron on Nebius Token Factory | NOT RUN, no key (dry run of the switch script done) |
+| Tavily Search and Extract | LIVE RUN, also used to read the Singapore and India sources |
+| OpenShell prover, gateway, profile, Seal registration | LIVE RUN |
+| OpenShell sandbox, advisor, P2, P4, P5 | NOT RUN, workflow ready for a Linux 6.2 runner |
+| Telegram and Resend email | LIVE RUN, see the live flow below |
 | NemoClaw, Hermes, Nebius Serverless | NOT USED, not claimed |
-| Hosted judge door host | substitute host, labelled on every response |
+| Hosted judge door host | substitute host (Vercel), labelled on every response |
+
+## How it fits the Personal AI track
+
+| Track phrase | Dogwatch feature | Proof |
+|---|---|---|
+| always-on | The Officer of the Watch loop runs a daily check and a weekly drift watch unattended | [`evidence/unattended/trace.json`](evidence/unattended/trace.json) |
+| private, data under your control | Vault on the seafarer's machine, placeholders, the Seal, an OpenShell boundary | [`/boundary`](https://dogwatch-eight.vercel.app/boundary), [`evidence/prover/`](evidence/prover/) |
+| persistent memory | Encrypted vault, sea-service ledger and a durable SQLite decision log that survive a restart | P11 live: <!--fact:live.p11_sends-->1<!--/fact--> send, <!--fact:live.p11_duplicates-->0<!--/fact--> duplicates |
+| reusable skills | Six `SKILL.md` folders with CLI entries | [`skills/`](skills/) |
+| tools and information you choose | A four-door allowlist and the policy advisor | [`openshell/policy/dogwatch.yaml`](openshell/policy/dogwatch.yaml) |
+| tasks across daily workflows | A Telegram conversation, a packet emailed to the agent, a calendar file | [`evidence/actions/live-flow.json`](evidence/actions/live-flow.json) |
+| NemoClaw, OpenShell, Hermes, Nebius Serverless | OpenShell is used; the others are not | [SDK_SURFACE.md](SDK_SURFACE.md) |
+
+## How it answers the judging criteria
+
+| Criterion | Where |
+|---|---|
+| Technological Implementation | Four Nemotron roles routed by job with receipts, schema-validated output with a repair retry, a supervisor middleware tested over gRPC and registered live, a prover-checked policy, FACTS enforced in CI |
+| Design | A complete path from a Telegram offer to an emailed packet, a phone-first web app with eight routes, 64 viewport checks and 64 nav checks, and motion that explains state |
+| Potential Impact | A named audience with sourced figures: <!--fact:need.officer_shortfall-->26,240<!--/fact--> missing officers, and a contract worth US$<!--fact:need.contract_floor-->4224<!--/fact--> at the ILO floor |
+| Quality of the Idea | Placeholders extended from credentials to identity, a model that is never allowed to decide validity, and a measured result that shows why |
 
 ## Measured
 
@@ -221,7 +259,11 @@ The Navigator's own score is on a set this project built, so it is not the headl
 
 **Cost** (P12): one weekly drift check across all administrations used <!--fact:p12.weekly_tokens-->49201<!--/fact--> tokens; a readiness run uses 0 because the Navigator calls no model; Ultra answered the same prompts about <!--fact:p12.latency_ratio-->2.35<!--/fact--> times slower than Super. No dollar figure is shown: the development route has no list price and a price is never invented.
 
-**Restart** (P11, fixture transport): <!--fact:p11.sends-->1<!--/fact--> send and <!--fact:p11.duplicates-->0<!--/fact--> duplicates after a kill with an approval pending.
+**Live human loop** (Route: NVIDIA API Catalog, Telegram and Resend, `evidence/actions/live-flow.json`): the offer, the NOT_READY reply with the day count, a SPECIMEN discharge-book photo read into the ledger (sea service now <!--fact:live.ledger_days-->480<!--/fact--> days in five years, both endpoints counted), the approval prompt with the digest, the email with the packet PDF delivered through Resend (<!--fact:live.emails_sent-->1<!--/fact--> sent), and the `.ics` sent to Telegram. The offer was a synthetic message injected by the test driver and the approval was executed by the driver after a 40 second wait, because the owner was not at the phone; both are recorded as such in the evidence file. The plan text came from the labelled template because Ultra answered HTTP 503.
+
+**Restart** (P11, live Telegram and live Resend): <!--fact:live.p11_sends-->1<!--/fact--> send and <!--fact:live.p11_duplicates-->0<!--/fact--> duplicates after a kill with an approval pending. The earlier fixture run is kept (`eval/results/p11_restart.json`).
+
+**India and Singapore** (P7 version 2, registered after the new rules were read): <!--fact:p7v2.flips-->12<!--/fact--> of <!--fact:p7v2.histories-->56<!--/fact--> histories near the India and Singapore thresholds change verdict with the counting convention. Singapore's rules are quoted from MPA Shipping Circular 3 of 2026 and India's from the DG Shipping TEAP Part B manual (2019, confirm currency), both read through Tavily Extract because this network cannot reach those hosts; every quote is checked against its snapshot by test.
 
 NOT RUN: P2 injected inbox, P4 fail closed, P5 credential placeholder (all need the sandbox), and anything on Token Factory.
 

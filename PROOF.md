@@ -50,6 +50,14 @@ Numbers below are generated from `eval/results/` through `docs/FACTS.json`; `scr
 - P10: <!--fact:p10.daily-->1<!--/fact--> daily and <!--fact:p10.weekly-->1<!--/fact--> weekly run triggered by the timer loop, `evidence/unattended/trace.json`.
 - P12: <!--fact:p12.weekly_tokens-->49201<!--/fact--> tokens for one weekly drift check; a readiness run uses 0 tokens; Ultra about <!--fact:p12.latency_ratio-->2.35<!--/fact--> times slower than Super. No price exists on this route, so no dollar figure.
 
+### P7 version 2 (India and Singapore rules)
+
+- Registered after the new rules were read (`eval/cases/prereg_v2.json`, SHA-256 58241a130101014f5366756186d37aec806f414b10a2f7a40ac4a3f36bd8cd63; the case file was committed before the run, and v1 is unchanged): <!--fact:p7v2.flips-->12<!--/fact--> of <!--fact:p7v2.histories-->56<!--/fact--> histories flip between counting conventions.
+
+### Live human loop and P11 on the live transport
+
+- `evidence/actions/live-flow.json`: Telegram and Resend, Route: NVIDIA API Catalog (development). Email delivered (<!--fact:live.emails_sent-->1<!--/fact-->). P11 live: <!--fact:live.p11_sends-->1<!--/fact--> send, <!--fact:live.p11_duplicates-->0<!--/fact--> duplicates after a kill and restart. The offer was synthetic and the approval executed by the driver, both labelled in the file.
+
 ## NOT RUN yet
 
-P1 on the sandbox effective policy, P2 injection inbox, P4 fail closed, P5 credential placeholder: all need the OpenShell sandbox, which cannot start on this host (Linux 5.10, Landlock ABI 3 needs 6.2). Everything on Nebius Token Factory: no key. Tracked in `TASK.md`.
+P1 on the sandbox effective policy, P2 injection inbox, P4 fail closed, P5 credential placeholder and the advisor flow: all need the OpenShell sandbox, which cannot start on this host (Linux 5.10, Landlock ABI 3 needs 6.2). `.github/workflows/sandbox-proofs.yml` runs them on a GitHub Actions ubuntu-24.04 runner once the repository secret NVIDIA_API_KEY exists. Everything on Nebius Token Factory: no key. Tracked in `TASK.md`.

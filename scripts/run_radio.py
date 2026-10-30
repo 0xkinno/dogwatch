@@ -2,7 +2,7 @@
 """Run the Radio Officer: Telegram long polling, the Officer of the Watch, approvals and email.
 
 Needs TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in .env, a model route key, and for the send step RESEND_API_KEY and
-RESEND_FROM (Gmail SMTP is not used: it needs an app password and many networks block SMTP ports). Pair once by sending
+RESEND_FROM (Resend is the only sender; Gmail SMTP is not used). Pair once by sending
 "/pair CODE" to the bot with the code printed at start. Usage: python scripts/run_radio.py [--once]
 """
 from __future__ import annotations
