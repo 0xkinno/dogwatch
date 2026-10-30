@@ -179,7 +179,7 @@ OpenShell is the boundary. What it enforces, and where the evidence is (full tab
 | Policy with L7 rules per binary and four doors | The model route, Tavily, the Radio Officer API and `policy.local`; every other destination denied | [`openshell/policy/dogwatch.yaml`](openshell/policy/dogwatch.yaml) |
 | Supervisor middleware (the Seal) | Registered with the gateway as `dogwatch-seal` with `on_error: fail_closed`; a policy naming it before registration is refused at admission | LIVE RUN, [`seal/seal/server.py`](seal/seal/server.py), gateway log in [`PLATFORM_PROBE.md`](PLATFORM_PROBE.md) |
 | Provider profiles and credential placeholders | The stock NVIDIA profile linted, imported and became a provider; the agent sees a placeholder and the gateway injects the key at egress | LIVE RUN (profile), [`openshell/profiles/`](openshell/profiles/) |
-| Sandbox, `policy.local` advisor, P1 on the effective policy, P2, P4, P5 | Sandbox started on a GitHub Actions ubuntu-24.04 runner (Landlock present). P1 on the effective policy found the stock NVIDIA profile too wide, now narrowed. The sandboxed probes did not execute in run 1 | LIVE RUN (sandbox, P1), NOT RUN (sandboxed P2, P4, P5, advisor): run 2 pending, [evidence](evidence/boundary/run1/), [`sandbox-proofs.yml`](.github/workflows/sandbox-proofs.yml) |
+| Sandbox, `policy.local` advisor, P1 on the effective policy, P2, P4, P5 | Sandbox started on a GitHub Actions ubuntu-24.04 runner. P5 and the advisor flow passed; P1 found two excesses in the provider profile, fixed; sandboxed P2 and P4 are inconclusive until the re-run | LIVE RUN (sandbox, P5, advisor, P1), INCONCLUSIVE (sandboxed P2, P4): [evidence](evidence/boundary/run2/), [`sandbox-proofs.yml`](.github/workflows/sandbox-proofs.yml) |
 
 The friction on the way (kernel 5.10 without Landlock ABI 3, Docker Engine 28, no systemd) is in [FRICTION.md](FRICTION.md).
 
@@ -215,8 +215,8 @@ May not: decide validity, compute a date or a count, write a digit Arjun will ac
 | Nemotron on Nebius Token Factory | NOT RUN, no key (dry run of the switch script done) |
 | Tavily Search and Extract | LIVE RUN, also used to read the Singapore and India sources |
 | OpenShell prover, gateway, profile, Seal registration | LIVE RUN |
-| OpenShell sandbox and P1 on the effective policy | LIVE RUN on a GitHub Actions ubuntu-24.04 runner (not the seafarer's machine) |
-| Sandboxed P2, P4, P5, advisor | NOT RUN: run 1 did not execute the probes, the fix is pushed, run 2 pending |
+| OpenShell sandbox, P5, advisor flow, P1 on the effective policy | LIVE RUN on a GitHub Actions ubuntu-24.04 runner (not the seafarer's machine) |
+| Sandboxed P2 and P4 | INCONCLUSIVE: the policy missed the interpreter path, fixed, re-run pending |
 | Telegram and Resend email | LIVE RUN, see the live flow below |
 | NemoClaw, Hermes, Nebius Serverless | NOT USED, not claimed |
 | Hosted judge door host | substitute host (Vercel), labelled on every response |
@@ -270,7 +270,7 @@ The Navigator's own score is on a set this project built, so it is not the headl
 
 **India and Singapore** (P7 version 2, registered after the new rules were read): <!--fact:p7v2.flips-->12<!--/fact--> of <!--fact:p7v2.histories-->56<!--/fact--> histories near the India and Singapore thresholds change verdict with the counting convention. Singapore's rules are quoted from MPA Shipping Circular 3 of 2026 and India's from the DG Shipping TEAP Part B manual (2019, confirm currency), both read through Tavily Extract because this network cannot reach those hosts; every quote is checked against its snapshot by test.
 
-**Sandbox run 1** (GitHub Actions runner): P1 on the running sandbox's effective policy found that the stock NVIDIA provider profile exceeded the boundary (`GET /` on the model host); the profile is now narrowed. The P2 baseline without a sandbox leaked a vault value in 20 of 20 injected emails. NOT RUN: the sandboxed side of P2, P4, P5 and the advisor flow, because the probes did not execute in run 1. Also NOT RUN: anything on Token Factory.
+**Sandbox runs on a GitHub Actions runner.** On the build machine (WSL kernel 5.10, no Landlock ABI 3) the sandbox cannot start. On a GitHub Actions ubuntu-24.04 runner (runs 41009598425 and 41012951503, not the seafarer's machine) it did. P5 passed live: inside the sandbox the agent saw an opaque placeholder (57 characters, not an API key), and the canary received 0 real keys from the sandbox against 1 without it. The advisor flow worked: a denied model request became a pending proposal annotated by the prover and was rejected from the command line (Telegram was not wired to the runner). P1 on the effective policy found two excesses, the stock profile's read-write access and its extra curl binary; both are fixed and not yet re-proved. P2 with the sandbox and P4 are inconclusive: the sandbox denied the model host because the interpreter resolves to /usr/bin/python3.12, which the policy did not list, so all 20 sandboxed model calls errored and 0 posts is not evidence of a defence, and P4's calls failed before the Seal was stopped. The policy now lists that path and the re-run is pending. The same run without a sandbox: 20 of 20 injected emails made the agent post and 20 of 20 canary requests carried a vault value. Also NOT RUN: anything on Token Factory.
 
 ## The finding
 
@@ -279,7 +279,7 @@ Administrations count sea service differently, and none of the sources read here
 ## Limits stated plainly
 
 - **Evidence is internal.** Every set was built by this project and pre-registered before its run. The Navigator's 60 of 60 and the Seal's 0 missed are results on sets the author built or tuned on, so they are regression checks. The independent results are the ones where a model fails: Super alone, a literal guard, and the first Seal.
-- **Enforcement is not yet shown end to end.** The sandbox starts on an Actions runner and the prover checks its effective policy, but the sandboxed injection, fail-closed, credential-placeholder and advisor probes have not produced results yet. The build machine's kernel cannot run the sandbox at all.
+- **Enforcement is not yet shown end to end.** The sandbox runs on an Actions runner; P5 and the advisor flow passed there, but the sandboxed injection and fail-closed tests are inconclusive until the re-run with the corrected policy. The build machine's kernel cannot run the sandbox at all.
 - **One route.** All model results came from the NVIDIA API Catalog. Nothing here was measured on Nebius Token Factory.
 - **Thin rule coverage.** India has 2 sourced rules, Singapore 4, Australia 5, the United Kingdom 3, the STCW core 1, and Nigeria none. A rule that could not be sourced does not exist, and the engine says Ask administration instead.
 - **A specimen, not a pilot.** The profile is a specimen built for the demonstration. No seafarer has used it.

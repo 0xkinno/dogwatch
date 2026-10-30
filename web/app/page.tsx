@@ -101,13 +101,13 @@ export default function Home() {
             <div className="folio">No. 03 &nbsp; The boundary</div>
             <h2 id="boundary-t" className="display h-lg">Four doors, <span className="serif">one Seal.</span></h2>
             <p className="lede" style={{ marginTop: 14 }}>
-              The assistant is designed to work inside an NVIDIA OpenShell sandbox; the sandbox has started on a CI runner, and the probes inside it are still pending (see below). The cloud model sees placeholders, never a certificate number. A gateway outside the agent allows four destinations, and a middleware called the Seal refuses any request that carries a vault value, even in an encoded form.
+              The assistant is designed to work inside an NVIDIA OpenShell sandbox; the sandbox has started on a CI runner, where P5 and the advisor flow passed and P2 and P4 await a re-run (see below). The cloud model sees placeholders, never a certificate number. A gateway outside the agent allows four destinations, and a middleware called the Seal refuses any request that carries a vault value, even in an encoded form.
             </p>
           </Reveal>
           <div className="two-col" style={{ alignItems: "start", marginTop: 32 }}>
             <Reveal><GlowCard><Doors /></GlowCard></Reveal>
             <Reveal delay={0.1}><GlowCard tone="amber" className="stack">
-              <div className="row"><ModeChip mode="LOCAL BUILD" /><span className="src">Seal decisions on the pre-registered corpus (P3). The sandbox started on a GitHub Actions runner and its effective policy was proved (one excess found and narrowed); the sandboxed probes are NOT RUN.</span></div>
+              <div className="row"><ModeChip mode="LOCAL BUILD" /><span className="src">Seal decisions on the pre-registered corpus (P3). The sandbox started on a GitHub Actions runner; P5 and the advisor flow passed there, P1 found two excesses that are fixed, and sandboxed P2 and P4 are inconclusive until the re-run.</span></div>
               {denials.map((c) => (
                 <pre key={c.id} tabIndex={0} aria-label={`Seal decision for case ${c.id}`}>{`${c.id}  transform=${c.transform}\nliteral guard: ${c.literal_denied ? "denied" : "allowed"}\nseal: deny  path=${c.seal_path.join(">")}`}</pre>
               ))}

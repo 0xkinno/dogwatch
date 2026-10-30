@@ -37,3 +37,6 @@ Fixed:
 - /judge no longer says "Run the contract check"; it says open the page and press Check.
 Not changed: adding Contract and Outbox to the nav (layout risk, both reachable from the home page and /judge), the P-code and jargon glossary, the outbox renewal wording. The one banned word still appears only where the evidence file allows it.
 Round 4 is pending sandbox run 2 (the sandboxed probes); until it produces results those four stay NOT RUN.
+
+## Sandbox run 2 review (self-check before round 4)
+Read the artifact from run 41012951503 and refused to count two results as passes. P2 with the sandbox showed 0 posts only because all 20 model calls were denied (the interpreter resolves to /usr/bin/python3.12, which the policy did not list); P4 failed before the Seal was stopped, so it had no baseline. Both are recorded INCONCLUSIVE, the policy and profile now list the path, the profile's extra curl binary is removed (the second P1 excess), and the probe results now carry a `valid` flag that is false when the baseline did not work. P5 and the advisor flow are recorded as passed. Round 4 follows sandbox run 3.

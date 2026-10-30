@@ -24,6 +24,7 @@ Every claim in this repository points to a file here. States used throughout: LI
 | Nebius Token Factory | NOT RUN (no key) | `scripts/switch_to_tokenfactory.sh` |
 | Telegram and Resend live flow, P11 live | LIVE RUN (offer synthetic, approval by the driver, both labelled) | `evidence/actions/live-flow.json` |
 | India and Singapore rule packs | LIVE RUN (read through Tavily Extract) | `core/rulepacks/*/sources/` |
-| OpenShell sandbox | LIVE RUN on a GitHub Actions ubuntu-24.04 runner (run 41009598425, not the seafarer's machine) | `evidence/boundary/run1/`, `.github/workflows/sandbox-proofs.yml` |
-| P1 on the sandbox effective policy | LIVE RUN: found the stock NVIDIA profile too wide, narrowed, re-proof pending | `evidence/boundary/run1/prover/` |
-| Sandboxed P2, P4, P5, advisor | NOT RUN (probes did not execute in run 1, run 2 pending) | `PROOF.md` |
+| OpenShell sandbox | LIVE RUN on a GitHub Actions ubuntu-24.04 runner (runs 41009598425, 41012951503; not the seafarer's machine) | `evidence/boundary/run1/`, `evidence/boundary/run2/` |
+| P1 on the sandbox effective policy | LIVE RUN: two excesses found and fixed, re-proof pending | `evidence/boundary/run2/prover/` |
+| P5 credential placeholder, advisor flow | LIVE RUN, passed (advisor via CLI) | `evidence/boundary/run2/results/` |
+| Sandboxed P2, P4 | INCONCLUSIVE (policy missed the python3.12 path), re-run pending | `PROOF.md` |

@@ -26,7 +26,7 @@ network_policies:
         rules:
           - allow: { method: POST, path: /v1/chat/completions }
           - allow: { method: GET, path: /v1/models }
-    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/curl }]
+    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/python3.12 }, { path: /usr/bin/curl }]
   nvidia-api-catalog:
     name: NVIDIA API Catalog chat only (development route)
     endpoints:
@@ -37,7 +37,7 @@ network_policies:
         rules:
           - allow: { method: POST, path: /v1/chat/completions }
           - allow: { method: GET, path: /v1/models }
-    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/curl }]
+    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/python3.12 }, { path: /usr/bin/curl }]
   tavily:
     name: Tavily search and extract
     endpoints:
@@ -48,7 +48,7 @@ network_policies:
         rules:
           - allow: { method: POST, path: /search }
           - allow: { method: POST, path: /extract }
-    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/curl }]
+    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/python3.12 }, { path: /usr/bin/curl }]
   radio-officer:
     name: Radio Officer drafts and questions
     endpoints:
@@ -61,4 +61,4 @@ network_policies:
           - allow: { method: POST, path: /questions }
           - allow: { method: GET, path: /inbox }
           - allow: { method: POST, path: /vault/identifiers }
-    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/curl }]
+    binaries: [{ path: /sandbox/.venv/bin/python3 }, { path: /usr/bin/python3 }, { path: /usr/bin/python3.12 }, { path: /usr/bin/curl }]

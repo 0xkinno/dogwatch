@@ -1,0 +1,2 @@
+{"host": "GitHub Actions ubuntu-24.04 runner", "kernel": "7.0.0-1017-azure", "lsm": "lockdown,capability,landlock,yama,apparmor,ima,evm",
+ "run_url": "https://github.com/0xkinno/dogwatch/actions/runs/41012951503"}

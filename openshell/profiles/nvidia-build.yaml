@@ -24,4 +24,4 @@ endpoints:
     rules:
       - allow: { method: POST, path: /v1/chat/completions }
       - allow: { method: GET, path: /v1/models }
-binaries: [/sandbox/.venv/bin/python3, /usr/bin/python3, /usr/bin/curl, /usr/local/bin/curl]
+binaries: [/sandbox/.venv/bin/python3, /usr/bin/python3, /usr/bin/python3.12, /usr/bin/curl]

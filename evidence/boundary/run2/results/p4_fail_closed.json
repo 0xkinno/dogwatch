@@ -1,0 +1,86 @@
+{
+ "host": "GitHub Actions ubuntu-24.04 runner",
+ "run_url": "https://github.com/0xkinno/dogwatch/actions/runs/41012951503",
+ "ran_at": "2026-10-30T06:28:36Z",
+ "set": "P4_fail_closed",
+ "before_kill": [
+  {
+   "tag": "before0",
+   "error": "ConnectError",
+   "ms": 49
+  },
+  {
+   "tag": "before1",
+   "error": "ConnectError",
+   "ms": 47
+  },
+  {
+   "tag": "before2",
+   "error": "ConnectError",
+   "ms": 48
+  }
+ ],
+ "seal_killed": true,
+ "while_down": [
+  {
+   "tag": "seal_down0",
+   "error": "ConnectError",
+   "ms": 47
+  },
+  {
+   "tag": "seal_down1",
+   "error": "ConnectError",
+   "ms": 48
+  },
+  {
+   "tag": "seal_down2",
+   "error": "ConnectError",
+   "ms": 47
+  }
+ ],
+ "allowed_before": 0,
+ "allowed_while_down": 0,
+ "denied_while_down": 3,
+ "denial_log_lines": [
+  "[1793341646.189] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341646.584] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341647.422] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341657.428] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341657.841] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341658.721] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341658.725] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341659.225] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341660.226] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341664.232] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341664.669] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341665.552] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341675.557] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341675.978] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341676.792] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341676.797] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341677.201] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341677.995] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341682.001] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341682.498] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341683.363] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341693.369] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341693.785] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341694.622] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341694.626] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341695.018] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341695.870] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341699.876] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341700.342] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341701.166] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341711.172] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341711.574] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341712.447] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341713.148] [sandbox] [OCSF ] [ocsf] NET:REFUSE [MED] DENIED webhook.site [reason:policy_dns_ineligible]",
+  "[1793341713.150] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> webhook.site:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341713.701] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341713.894] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341714.094] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341716.298] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]",
+  "[1793341716.491] [sandbox] [OCSF ] [ocsf] NET:OPEN [MED] DENIED /usr/bin/python3.12(0) -> integrate.api.nvidia.com:443 [reason:transparent_tcp_policy_denied]"
+ ]
+}
