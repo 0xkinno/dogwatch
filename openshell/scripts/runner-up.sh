@@ -39,6 +39,8 @@ ss -ltn | grep -q ':17670' && { echo "port 17670 still in use by:"; ss -ltnp | g
 nohup openshell-gateway > "$STATE/gateway.log" 2>&1 &
 for _ in $(seq 1 90); do ss -ltn | grep -q ':17670' && break; sleep 2; done
 ss -ltn | grep -q ':17670' || { sed 's/\x1b\[[0-9;]*m//g' "$STATE/gateway.log" | tail -20; exit 1; }
+echo "gateway processes:"; pgrep -af openshell-gateway || true
+echo "gateway log (middleware lines):"; sed 's/\[[0-9;]*m//g' "$STATE/gateway.log" | grep -i -E "middleware|config|seal|listen" | head -10 || true
 openshell gateway add https://127.0.0.1:17670 --local --name openshell >/dev/null 2>&1 || true
 
 docker build -q -f "$ROOT/openshell/sandbox/Dockerfile" -t dogwatch-sandbox:local "$ROOT"
